@@ -1,0 +1,35 @@
+---
+abstract: 'Interface to Popular Shipping Services'
+author:
+  - 'Andrew Baerg <baergaj@cpan.org>'
+  - 'Al Newkirk <awncorp@cpan.org>'
+build_requires:
+  Test::More: 0
+configure_requires:
+  ExtUtils::MakeMaker: 6.30
+dynamic_config: 0
+generated_by: 'Dist::Zilla version 4.200006, CPAN::Meta::Converter version 2.110930'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: Shipment
+requires:
+  Class::Std::Fast::Storable: 0
+  Data::Currency: 0
+  DateTime: 0
+  File::Util: 0
+  Getopt::Long: 0
+  LWP::UserAgent: 0
+  Locale::SubCountry: 0
+  MIME::Base64: 0
+  Moose: 0
+  Moose::Util::TypeConstraints: 0
+  MooseX::Aliases: 0
+  MooseX::Types::DateTimeX: 0
+  Pod::Usage: 0
+  SOAP::Lite: 0
+  Scalar::Util: 0
+  Term::ReadKey: 0
+  Try::Tiny: 0
+version: 0.01111360
