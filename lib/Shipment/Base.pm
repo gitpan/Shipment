@@ -1,6 +1,6 @@
 package Shipment::Base;
 BEGIN {
-  $Shipment::Base::VERSION = '0.01111360';
+  $Shipment::Base::VERSION = '0.01111361';
 }
 use strict;
 use warnings;
@@ -277,7 +277,7 @@ Shipment::Base
 
 =head1 VERSION
 
-version 0.01111360
+version 0.01111361
 
 =head1 SYNOPSIS
 

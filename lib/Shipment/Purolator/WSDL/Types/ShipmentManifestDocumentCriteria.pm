@@ -1,6 +1,6 @@
 package Shipment::Purolator::WSDL::Types::ShipmentManifestDocumentCriteria;
 BEGIN {
-  $Shipment::Purolator::WSDL::Types::ShipmentManifestDocumentCriteria::VERSION = '0.01111360';
+  $Shipment::Purolator::WSDL::Types::ShipmentManifestDocumentCriteria::VERSION = '0.01111361';
 }
 use strict;
 use warnings;
@@ -64,7 +64,7 @@ Shipment::Purolator::WSDL::Types::ShipmentManifestDocumentCriteria
 
 =head1 VERSION
 
-version 0.01111360
+version 0.01111361
 
 =head1 DESCRIPTION
 

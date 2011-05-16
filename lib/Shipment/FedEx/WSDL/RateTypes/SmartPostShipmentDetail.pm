@@ -1,6 +1,6 @@
 package Shipment::FedEx::WSDL::RateTypes::SmartPostShipmentDetail;
 BEGIN {
-  $Shipment::FedEx::WSDL::RateTypes::SmartPostShipmentDetail::VERSION = '0.01111360';
+  $Shipment::FedEx::WSDL::RateTypes::SmartPostShipmentDetail::VERSION = '0.01111361';
 }
 use strict;
 use warnings;
@@ -79,7 +79,7 @@ Shipment::FedEx::WSDL::RateTypes::SmartPostShipmentDetail
 
 =head1 VERSION
 
-version 0.01111360
+version 0.01111361
 
 =head1 DESCRIPTION
 

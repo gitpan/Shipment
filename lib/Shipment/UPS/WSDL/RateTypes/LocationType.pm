@@ -1,6 +1,6 @@
 package Shipment::UPS::WSDL::RateTypes::LocationType;
 BEGIN {
-  $Shipment::UPS::WSDL::RateTypes::LocationType::VERSION = '0.01111360';
+  $Shipment::UPS::WSDL::RateTypes::LocationType::VERSION = '0.01111361';
 }
 use strict;
 use warnings;
@@ -74,7 +74,7 @@ Shipment::UPS::WSDL::RateTypes::LocationType
 
 =head1 VERSION
 
-version 0.01111360
+version 0.01111361
 
 =head1 DESCRIPTION
 

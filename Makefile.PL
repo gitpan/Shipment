@@ -42,7 +42,7 @@ my %WriteMakefileArgs = (
     'Term::ReadKey' => '0',
     'Try::Tiny' => '0'
   },
-  'VERSION' => '0.01111360',
+  'VERSION' => '0.01111361',
   'test' => {
     'TESTS' => 't/*.t'
   }

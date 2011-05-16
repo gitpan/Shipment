@@ -1,7 +1,7 @@
 
 package Shipment::Purolator::WSDL::Elements::SuggestedAddress;
 BEGIN {
-  $Shipment::Purolator::WSDL::Elements::SuggestedAddress::VERSION = '0.01111360';
+  $Shipment::Purolator::WSDL::Elements::SuggestedAddress::VERSION = '0.01111361';
 }
 use strict;
 use warnings;
@@ -36,7 +36,7 @@ Shipment::Purolator::WSDL::Elements::SuggestedAddress
 
 =head1 VERSION
 
-version 0.01111360
+version 0.01111361
 
 =head1 DESCRIPTION
 

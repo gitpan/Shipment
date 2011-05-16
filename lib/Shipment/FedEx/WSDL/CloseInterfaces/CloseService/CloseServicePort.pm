@@ -1,6 +1,6 @@
 package Shipment::FedEx::WSDL::CloseInterfaces::CloseService::CloseServicePort;
 BEGIN {
-  $Shipment::FedEx::WSDL::CloseInterfaces::CloseService::CloseServicePort::VERSION = '0.01111360';
+  $Shipment::FedEx::WSDL::CloseInterfaces::CloseService::CloseServicePort::VERSION = '0.01111361';
 }
 use strict;
 use warnings;
@@ -257,7 +257,7 @@ Shipment::FedEx::WSDL::CloseInterfaces::CloseService::CloseServicePort
 
 =head1 VERSION
 
-version 0.01111360
+version 0.01111361
 
 =head1 SYNOPSIS
 

@@ -1,6 +1,6 @@
 package Shipment::Purolator::WSDL::Types::GetServicesOptionsRequestContainer;
 BEGIN {
-  $Shipment::Purolator::WSDL::Types::GetServicesOptionsRequestContainer::VERSION = '0.01111360';
+  $Shipment::Purolator::WSDL::Types::GetServicesOptionsRequestContainer::VERSION = '0.01111361';
 }
 use strict;
 use warnings;
@@ -77,7 +77,7 @@ Shipment::Purolator::WSDL::Types::GetServicesOptionsRequestContainer
 
 =head1 VERSION
 
-version 0.01111360
+version 0.01111361
 
 =head1 DESCRIPTION
 

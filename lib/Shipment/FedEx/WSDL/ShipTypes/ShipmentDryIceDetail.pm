@@ -1,6 +1,6 @@
 package Shipment::FedEx::WSDL::ShipTypes::ShipmentDryIceDetail;
 BEGIN {
-  $Shipment::FedEx::WSDL::ShipTypes::ShipmentDryIceDetail::VERSION = '0.01111360';
+  $Shipment::FedEx::WSDL::ShipTypes::ShipmentDryIceDetail::VERSION = '0.01111361';
 }
 use strict;
 use warnings;
@@ -69,7 +69,7 @@ Shipment::FedEx::WSDL::ShipTypes::ShipmentDryIceDetail
 
 =head1 VERSION
 
-version 0.01111360
+version 0.01111361
 
 =head1 DESCRIPTION
 

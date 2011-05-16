@@ -1,6 +1,6 @@
 package Shipment::UPS::WSDL::ShipInterfaces::VoidService::VoidPort;
 BEGIN {
-  $Shipment::UPS::WSDL::ShipInterfaces::VoidService::VoidPort::VERSION = '0.01111360';
+  $Shipment::UPS::WSDL::ShipInterfaces::VoidService::VoidPort::VERSION = '0.01111361';
 }
 use strict;
 use warnings;
@@ -110,7 +110,7 @@ Shipment::UPS::WSDL::ShipInterfaces::VoidService::VoidPort
 
 =head1 VERSION
 
-version 0.01111360
+version 0.01111361
 
 =head1 SYNOPSIS
 
