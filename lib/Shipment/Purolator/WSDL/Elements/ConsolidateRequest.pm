@@ -1,7 +1,7 @@
 
 package Shipment::Purolator::WSDL::Elements::ConsolidateRequest;
 BEGIN {
-  $Shipment::Purolator::WSDL::Elements::ConsolidateRequest::VERSION = '0.01111361';
+  $Shipment::Purolator::WSDL::Elements::ConsolidateRequest::VERSION = '0.01111450';
 }
 use strict;
 use warnings;
@@ -36,7 +36,7 @@ Shipment::Purolator::WSDL::Elements::ConsolidateRequest
 
 =head1 VERSION
 
-version 0.01111361
+version 0.01111450
 
 =head1 DESCRIPTION
 

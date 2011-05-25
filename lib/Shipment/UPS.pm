@@ -1,15 +1,14 @@
 package Shipment::UPS;
 BEGIN {
-  $Shipment::UPS::VERSION = '0.01111361';
+  $Shipment::UPS::VERSION = '0.01111450';
 }
 use strict;
 use warnings;
 
 
 use Try::Tiny;
-use Moose;
+use Moose 2.0000;
 use Moose::Util::TypeConstraints;
-use Shipment::SOAP::WSDL;
 
 extends 'Shipment::Base';
 
@@ -222,9 +221,9 @@ sub _build_services {
           cost => Data::Currency->new($service->get_TotalCharges->get_MonetaryValue, $service->get_TotalCharges->get_CurrencyCode),
         );
     }
-    $services{ground} = ($services{'03'}) ? $services{'03'} : $services{'11'};
-    $services{express} = $services{'02'} if $services{'02'};
-    $services{priority} = $services{'01'} if $services{'01'};
+    $services{ground} = $services{'03'} || $services{'11'} || Shipment::Service->new();
+    $services{express} = $services{'02'} || Shipment::Service->new();
+    $services{priority} = $services{'01'} || Shipment::Service->new();
 
     if ( $response->get_Response->get_Alert ) {
       warn $response->get_Response->get_Alert->get_Description->get_value;
@@ -876,7 +875,7 @@ Shipment::UPS
 
 =head1 VERSION
 
-version 0.01111361
+version 0.01111450
 
 =head1 SYNOPSIS
 

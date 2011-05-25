@@ -1,13 +1,13 @@
 package Shipment::FedEx;
 BEGIN {
-  $Shipment::FedEx::VERSION = '0.01111361';
+  $Shipment::FedEx::VERSION = '0.01111450';
 }
 use strict;
 use warnings;
 
 
 use Try::Tiny;
-use Moose;
+use Moose 2.0000;
 use Moose::Util::TypeConstraints;
 use Shipment::SOAP::WSDL;
 
@@ -789,7 +789,7 @@ Shipment::FedEx
 
 =head1 VERSION
 
-version 0.01111361
+version 0.01111450
 
 =head1 SYNOPSIS
 

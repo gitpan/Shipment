@@ -11969,7 +11969,7 @@ Shipment::SOAP::WSDL
 
 =head1 VERSION
 
-version 0.01111361
+version 0.01111450
 
 =head1 AUTHORS
 

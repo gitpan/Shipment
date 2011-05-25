@@ -1,13 +1,13 @@
 package Shipment::Address;
 BEGIN {
-  $Shipment::Address::VERSION = '0.01111361';
+  $Shipment::Address::VERSION = '0.01111450';
 }
 use strict;
 use warnings;
 
 
-use Moose;
-use MooseX::Aliases;
+use Moose 2.0000;
+use MooseX::Aliases 0.10;
 
 
 has 'name' => (
@@ -187,7 +187,7 @@ Shipment::Address
 
 =head1 VERSION
 
-version 0.01111361
+version 0.01111450
 
 =head1 SYNOPSIS
 

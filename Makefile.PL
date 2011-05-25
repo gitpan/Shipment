@@ -32,9 +32,9 @@ my %WriteMakefileArgs = (
     'LWP::UserAgent' => '0',
     'Locale::SubCountry' => '0',
     'MIME::Base64' => '0',
-    'Moose' => '0',
+    'Moose' => '2.0000',
     'Moose::Util::TypeConstraints' => '0',
-    'MooseX::Aliases' => '0',
+    'MooseX::Aliases' => '0.10',
     'MooseX::Types::DateTimeX' => '0',
     'Pod::Usage' => '0',
     'SOAP::Lite' => '0',
@@ -42,7 +42,7 @@ my %WriteMakefileArgs = (
     'Term::ReadKey' => '0',
     'Try::Tiny' => '0'
   },
-  'VERSION' => '0.01111361',
+  'VERSION' => '0.01111450',
   'test' => {
     'TESTS' => 't/*.t'
   }

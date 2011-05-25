@@ -1,12 +1,12 @@
 package Shipment::Generic;
 BEGIN {
-  $Shipment::Generic::VERSION = '0.01111361';
+  $Shipment::Generic::VERSION = '0.01111450';
 }
 use strict;
 use warnings;
 
 
-use Moose;
+use Moose 2.0000;
 
 extends 'Shipment::Base';
 
@@ -114,7 +114,7 @@ Shipment::Generic
 
 =head1 VERSION
 
-version 0.01111361
+version 0.01111450
 
 =head1 SYNOPSIS
 

@@ -1,6 +1,6 @@
 package Shipment::Package;
 BEGIN {
-  $Shipment::Package::VERSION = '0.01111361';
+  $Shipment::Package::VERSION = '0.01111450';
 }
 use strict;
 use warnings;
@@ -8,7 +8,7 @@ use warnings;
 
 use Data::Currency;
 
-use Moose;
+use Moose 2.0000;
 
 
 has 'id' => (
@@ -90,7 +90,7 @@ Shipment::Package
 
 =head1 VERSION
 
-version 0.01111361
+version 0.01111450
 
 =head1 SYNOPSIS
 

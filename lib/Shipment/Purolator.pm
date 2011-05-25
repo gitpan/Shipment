@@ -1,13 +1,13 @@
 package Shipment::Purolator;
 BEGIN {
-  $Shipment::Purolator::VERSION = '0.01111361';
+  $Shipment::Purolator::VERSION = '0.01111450';
 }
 use strict;
 use warnings;
 
 
 use Try::Tiny;
-use Moose;
+use Moose 2.0000;
 use Moose::Util::TypeConstraints;
 use Shipment::SOAP::WSDL;
 
@@ -714,7 +714,7 @@ Shipment::Purolator
 
 =head1 VERSION
 
-version 0.01111361
+version 0.01111450
 
 =head1 SYNOPSIS
 

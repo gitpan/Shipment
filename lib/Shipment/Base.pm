@@ -1,6 +1,6 @@
 package Shipment::Base;
 BEGIN {
-  $Shipment::Base::VERSION = '0.01111361';
+  $Shipment::Base::VERSION = '0.01111450';
 }
 use strict;
 use warnings;
@@ -8,7 +8,7 @@ use warnings;
 
 use Data::Currency;
 use Shipment::Service;
-use Moose;
+use Moose 2.0000;
 use Moose::Util::TypeConstraints;
 
 
@@ -277,7 +277,7 @@ Shipment::Base
 
 =head1 VERSION
 
-version 0.01111361
+version 0.01111450
 
 =head1 SYNOPSIS
 

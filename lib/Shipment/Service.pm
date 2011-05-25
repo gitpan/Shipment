@@ -1,6 +1,6 @@
 package Shipment::Service;
 BEGIN {
-  $Shipment::Service::VERSION = '0.01111361';
+  $Shipment::Service::VERSION = '0.01111450';
 }
 use strict;
 use warnings;
@@ -8,7 +8,7 @@ use warnings;
 
 use MooseX::Types::DateTimeX qw( DateTime );
 use Data::Currency;
-use Moose;
+use Moose 2.0000;
 
 
 has 'id' => (
@@ -76,7 +76,7 @@ Shipment::Service
 
 =head1 VERSION
 
-version 0.01111361
+version 0.01111450
 
 =head1 SYNOPSIS
 

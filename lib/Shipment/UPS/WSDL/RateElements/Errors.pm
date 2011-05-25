@@ -1,7 +1,7 @@
 
 package Shipment::UPS::WSDL::RateElements::Errors;
 BEGIN {
-  $Shipment::UPS::WSDL::RateElements::Errors::VERSION = '0.01111361';
+  $Shipment::UPS::WSDL::RateElements::Errors::VERSION = '0.01111450';
 }
 use strict;
 use warnings;
@@ -78,7 +78,7 @@ Shipment::UPS::WSDL::RateElements::Errors
 
 =head1 VERSION
 
-version 0.01111361
+version 0.01111450
 
 =head1 DESCRIPTION
 
