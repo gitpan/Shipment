@@ -1,6 +1,6 @@
 package Shipment::Purolator::WSDL::Interfaces::ShippingDocumentsService::ShippingDocumentsServiceEndpoint;
 BEGIN {
-  $Shipment::Purolator::WSDL::Interfaces::ShippingDocumentsService::ShippingDocumentsServiceEndpoint::VERSION = '0.01111450';
+  $Shipment::Purolator::WSDL::Interfaces::ShippingDocumentsService::ShippingDocumentsServiceEndpoint::VERSION = '0.01111510';
 }
 use strict;
 use warnings;
@@ -178,7 +178,7 @@ Shipment::Purolator::WSDL::Interfaces::ShippingDocumentsService::ShippingDocumen
 
 =head1 VERSION
 
-version 0.01111450
+version 0.01111510
 
 =head1 SYNOPSIS
 

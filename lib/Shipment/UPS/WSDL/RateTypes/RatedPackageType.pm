@@ -1,6 +1,6 @@
 package Shipment::UPS::WSDL::RateTypes::RatedPackageType;
 BEGIN {
-  $Shipment::UPS::WSDL::RateTypes::RatedPackageType::VERSION = '0.01111450';
+  $Shipment::UPS::WSDL::RateTypes::RatedPackageType::VERSION = '0.01111510';
 }
 use strict;
 use warnings;
@@ -84,7 +84,7 @@ Shipment::UPS::WSDL::RateTypes::RatedPackageType
 
 =head1 VERSION
 
-version 0.01111450
+version 0.01111510
 
 =head1 DESCRIPTION
 

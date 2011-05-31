@@ -1,7 +1,7 @@
 
 package Shipment::Purolator::WSDL::Elements::PickupType;
 BEGIN {
-  $Shipment::Purolator::WSDL::Elements::PickupType::VERSION = '0.01111450';
+  $Shipment::Purolator::WSDL::Elements::PickupType::VERSION = '0.01111510';
 }
 use strict;
 use warnings;
@@ -36,7 +36,7 @@ Shipment::Purolator::WSDL::Elements::PickupType
 
 =head1 VERSION
 
-version 0.01111450
+version 0.01111510
 
 =head1 DESCRIPTION
 

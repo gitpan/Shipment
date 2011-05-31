@@ -1,6 +1,6 @@
 package Shipment::FedEx::WSDL::RateTypes::NotificationParameter;
 BEGIN {
-  $Shipment::FedEx::WSDL::RateTypes::NotificationParameter::VERSION = '0.01111450';
+  $Shipment::FedEx::WSDL::RateTypes::NotificationParameter::VERSION = '0.01111510';
 }
 use strict;
 use warnings;
@@ -69,7 +69,7 @@ Shipment::FedEx::WSDL::RateTypes::NotificationParameter
 
 =head1 VERSION
 
-version 0.01111450
+version 0.01111510
 
 =head1 DESCRIPTION
 

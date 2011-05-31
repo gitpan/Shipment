@@ -1,6 +1,6 @@
 package Shipment::UPS::WSDL::RateTypes::NMFCCommodityType;
 BEGIN {
-  $Shipment::UPS::WSDL::RateTypes::NMFCCommodityType::VERSION = '0.01111450';
+  $Shipment::UPS::WSDL::RateTypes::NMFCCommodityType::VERSION = '0.01111510';
 }
 use strict;
 use warnings;
@@ -69,7 +69,7 @@ Shipment::UPS::WSDL::RateTypes::NMFCCommodityType
 
 =head1 VERSION
 
-version 0.01111450
+version 0.01111510
 
 =head1 DESCRIPTION
 

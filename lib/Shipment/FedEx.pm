@@ -1,6 +1,6 @@
 package Shipment::FedEx;
 BEGIN {
-  $Shipment::FedEx::VERSION = '0.01111450';
+  $Shipment::FedEx::VERSION = '0.01111510';
 }
 use strict;
 use warnings;
@@ -37,6 +37,13 @@ has 'proxy_domain' => (
     ws.fedex.com:443
   ) ] ),
   default => 'wsbeta.fedex.com:443',
+);
+
+
+has 'residential_address' => (
+  is => 'rw',
+  isa => 'Bool',
+  default => 0,
 );
 
 
@@ -198,6 +205,7 @@ sub _build_services {
               StateOrProvinceCode =>  $self->to_address()->province_code,
               PostalCode          =>  $self->to_address()->postal_code,
               CountryCode         =>  $self->to_address()->country_code,
+              Residential         =>  $self->residential_address,
             },
           },
           PackageCount =>  1,
@@ -223,7 +231,7 @@ sub _build_services {
           ),
         );
     }
-    $services{ground} = $services{'FEDEX_GROUND'} || $services{'INTERNATIONAL_GROUND'} || Shipment::Service->new();
+    $services{ground} = $services{'FEDEX_GROUND'} || $services{'GROUND_HOME_DELIVERY'} || $services{'INTERNATIONAL_GROUND'} || Shipment::Service->new();
     $services{express} = $services{'FEDEX_2_DAY'} || $services{'INTERNATIONAL_ECONOMY'} || Shipment::Service->new();
     $services{priority} = $services{'PRIORITY_OVERNIGHT'} || $services{'INTERNATIONAL_PRIORITY'} || Shipment::Service->new();
 
@@ -359,6 +367,7 @@ sub rate {
               StateOrProvinceCode =>  $self->to_address()->province_code,
               PostalCode          =>  $self->to_address()->postal_code,
               CountryCode         =>  $self->to_address()->country_code,
+              Residential         =>  $self->residential_address,
             },
           },
           PackageCount =>  $self->count_packages,
@@ -533,6 +542,7 @@ sub ship {
                   StateOrProvinceCode =>  $self->to_address()->province_code,
                   PostalCode          =>  $self->to_address()->postal_code,
                   CountryCode         =>  $self->to_address()->country_code,
+                  Residential         =>  $self->residential_address,
                 },
               },
               ShippingChargesPayment =>  { 
@@ -789,7 +799,7 @@ Shipment::FedEx
 
 =head1 VERSION
 
-version 0.01111450
+version 0.01111510
 
 =head1 SYNOPSIS
 
@@ -839,6 +849,12 @@ This determines whether you will use the FedEx Web Services Testing Environment 
   * wsbeta.fedex.com:443 (testing)
   * ws.fedex.com:443 (live)
 
+=head2 residential_address
+
+Flag the ship to address as residential.
+
+Default is false.
+
 =head2 label_stock_type
 
 The label dimensions/type. 
@@ -874,7 +890,7 @@ This calls getRates from the Rate Services API
 Each Service that is returned is added to services
 
 The following service mapping is used:
-  * ground => FEDEX_GROUND or INTERNATIONAL_GROUND
+  * ground => FEDEX_GROUND or GROUND_HOME_DELIVERY or INTERNATIONAL_GROUND
   * express => FEDEX_2_DAY or INTERNATIONAL_ECONOMY
   * priority => PRIORITY_OVERNIGHT or INTERNATIONAL_PRIORITY
 

@@ -1,6 +1,6 @@
 package Shipment::Base;
 BEGIN {
-  $Shipment::Base::VERSION = '0.01111450';
+  $Shipment::Base::VERSION = '0.01111510';
 }
 use strict;
 use warnings;
@@ -168,8 +168,13 @@ has 'error' => (
 
 
 has 'notice' => (
+  traits  => ['String'],
   is => 'rw',
   isa => 'Str',
+  default => q{},
+  handles => {
+    add_notice  => 'append',
+  },
 );
 
 
@@ -277,7 +282,7 @@ Shipment::Base
 
 =head1 VERSION
 
-version 0.01111450
+version 0.01111510
 
 =head1 SYNOPSIS
 

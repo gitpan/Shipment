@@ -1,6 +1,6 @@
 package Shipment::FedEx::WSDL::ShipTypes::FreightShipmentRoleType;
 BEGIN {
-  $Shipment::FedEx::WSDL::ShipTypes::FreightShipmentRoleType::VERSION = '0.01111450';
+  $Shipment::FedEx::WSDL::ShipTypes::FreightShipmentRoleType::VERSION = '0.01111510';
 }
 use strict;
 use warnings;
@@ -25,7 +25,7 @@ Shipment::FedEx::WSDL::ShipTypes::FreightShipmentRoleType
 
 =head1 VERSION
 
-version 0.01111450
+version 0.01111510
 
 =head1 DESCRIPTION
 

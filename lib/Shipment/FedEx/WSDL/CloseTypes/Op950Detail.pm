@@ -1,6 +1,6 @@
 package Shipment::FedEx::WSDL::CloseTypes::Op950Detail;
 BEGIN {
-  $Shipment::FedEx::WSDL::CloseTypes::Op950Detail::VERSION = '0.01111450';
+  $Shipment::FedEx::WSDL::CloseTypes::Op950Detail::VERSION = '0.01111510';
 }
 use strict;
 use warnings;
@@ -74,7 +74,7 @@ Shipment::FedEx::WSDL::CloseTypes::Op950Detail
 
 =head1 VERSION
 
-version 0.01111450
+version 0.01111510
 
 =head1 DESCRIPTION
 

@@ -1,6 +1,6 @@
 package Shipment::Purolator;
 BEGIN {
-  $Shipment::Purolator::VERSION = '0.01111450';
+  $Shipment::Purolator::VERSION = '0.01111510';
 }
 use strict;
 use warnings;
@@ -560,20 +560,41 @@ sub fetch_documents {
       use Shipment::Label;
       my $ua = LWP::UserAgent->new('Shipping::Purolator');
       my $req = HTTP::Request->new(GET => $response->get_Documents()->get_Document()->get_DocumentDetails()->[0]->get_DocumentDetail()->get_URL()->get_value);
+      ## for multi-piece shipments, the labels are not always ready immediately after generating the shipment... sleep for a couple of seconds before trying.
+      sleep 2;
       my $res = $ua->request($req);
-      $self->documents(
-        Shipment::Label->new(
-          tracking_id   => $self->tracking_id,
-          content_type  => $res->header('Content-Type'),
-          data          => $res->content,
-          file_name     => $self->tracking_id . '-documents.pdf',
-        )
-      );
 
-      foreach ($self->all_packages) {
-        $_->label->content_type( $res->header('Content-Type') );
-        $_->label->data( $res->content );
-        $_->label->file_name( $_->tracking_id . '.pdf' );
+      if ($res->is_success) {
+        $self->documents(
+          Shipment::Label->new(
+            tracking_id   => $self->tracking_id,
+            content_type  => $res->header('Content-Type'),
+            data          => $res->content,
+            file_name     => $self->tracking_id . '-documents.pdf',
+          )
+        );
+
+        foreach ($self->all_packages) {
+          $_->label->content_type( $res->header('Content-Type') );
+          $_->label->data( $res->content );
+          $_->label->file_name( $_->tracking_id . '.pdf' );
+        }
+      } else {
+        warn $res->status_line;
+        $self->documents(
+          Shipment::Label->new(
+            tracking_id   => $self->tracking_id,
+            content_type  => 'text/plain',
+            data          => $req->uri,
+            file_name     => $self->tracking_id . '-documents.pdf',
+          )
+        );
+
+        foreach ($self->all_packages) {
+          $_->label->content_type( 'text/plain' );
+          $_->label->data( $req->uri );
+          $_->label->file_name( $_->tracking_id . '.pdf' );
+        } 
       }
 
     } catch {
@@ -714,7 +735,7 @@ Shipment::Purolator
 
 =head1 VERSION
 
-version 0.01111450
+version 0.01111510
 
 =head1 SYNOPSIS
 
