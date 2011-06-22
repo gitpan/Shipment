@@ -1,7 +1,7 @@
 
 package Shipment::Purolator::WSDL::Elements::GetServiceRulesRequestContainer;
 BEGIN {
-  $Shipment::Purolator::WSDL::Elements::GetServiceRulesRequestContainer::VERSION = '0.01111510';
+  $Shipment::Purolator::WSDL::Elements::GetServiceRulesRequestContainer::VERSION = '0.01111730';
 }
 use strict;
 use warnings;
@@ -36,7 +36,7 @@ Shipment::Purolator::WSDL::Elements::GetServiceRulesRequestContainer
 
 =head1 VERSION
 
-version 0.01111510
+version 0.01111730
 
 =head1 DESCRIPTION
 

@@ -1,6 +1,6 @@
 package Shipment::Purolator::WSDL::Types::VoidShipmentRequestContainer;
 BEGIN {
-  $Shipment::Purolator::WSDL::Types::VoidShipmentRequestContainer::VERSION = '0.01111510';
+  $Shipment::Purolator::WSDL::Types::VoidShipmentRequestContainer::VERSION = '0.01111730';
 }
 use strict;
 use warnings;
@@ -67,7 +67,7 @@ Shipment::Purolator::WSDL::Types::VoidShipmentRequestContainer
 
 =head1 VERSION
 
-version 0.01111510
+version 0.01111730
 
 =head1 DESCRIPTION
 

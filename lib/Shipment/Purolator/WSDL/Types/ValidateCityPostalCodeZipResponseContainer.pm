@@ -1,6 +1,6 @@
 package Shipment::Purolator::WSDL::Types::ValidateCityPostalCodeZipResponseContainer;
 BEGIN {
-  $Shipment::Purolator::WSDL::Types::ValidateCityPostalCodeZipResponseContainer::VERSION = '0.01111510';
+  $Shipment::Purolator::WSDL::Types::ValidateCityPostalCodeZipResponseContainer::VERSION = '0.01111730';
 }
 use strict;
 use warnings;
@@ -72,7 +72,7 @@ Shipment::Purolator::WSDL::Types::ValidateCityPostalCodeZipResponseContainer
 
 =head1 VERSION
 
-version 0.01111510
+version 0.01111730
 
 =head1 DESCRIPTION
 

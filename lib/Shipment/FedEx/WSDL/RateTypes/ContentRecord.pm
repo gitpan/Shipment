@@ -1,6 +1,6 @@
 package Shipment::FedEx::WSDL::RateTypes::ContentRecord;
 BEGIN {
-  $Shipment::FedEx::WSDL::RateTypes::ContentRecord::VERSION = '0.01111510';
+  $Shipment::FedEx::WSDL::RateTypes::ContentRecord::VERSION = '0.01111730';
 }
 use strict;
 use warnings;
@@ -79,7 +79,7 @@ Shipment::FedEx::WSDL::RateTypes::ContentRecord
 
 =head1 VERSION
 
-version 0.01111510
+version 0.01111730
 
 =head1 DESCRIPTION
 

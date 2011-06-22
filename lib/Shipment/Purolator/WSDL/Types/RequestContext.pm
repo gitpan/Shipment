@@ -1,6 +1,6 @@
 package Shipment::Purolator::WSDL::Types::RequestContext;
 BEGIN {
-  $Shipment::Purolator::WSDL::Types::RequestContext::VERSION = '0.01111510';
+  $Shipment::Purolator::WSDL::Types::RequestContext::VERSION = '0.01111730';
 }
 use strict;
 use warnings;
@@ -79,7 +79,7 @@ Shipment::Purolator::WSDL::Types::RequestContext
 
 =head1 VERSION
 
-version 0.01111510
+version 0.01111730
 
 =head1 DESCRIPTION
 

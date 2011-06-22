@@ -2,7 +2,7 @@ NAME
     Shipment - Interface to Popular Shipping Services
 
 VERSION
-    version 0.01111510
+    version 0.01111730
 
 SYNOPSIS
       use Shipment;

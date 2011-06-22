@@ -1,6 +1,6 @@
 package Shipment::UPS::WSDL::ShipTypes::ShipmentType;
 BEGIN {
-  $Shipment::UPS::WSDL::ShipTypes::ShipmentType::VERSION = '0.01111510';
+  $Shipment::UPS::WSDL::ShipTypes::ShipmentType::VERSION = '0.01111730';
 }
 use strict;
 use warnings;
@@ -125,7 +125,7 @@ __PACKAGE__->_factory(
 
 package Shipment::UPS::WSDL::ShipTypes::ShipmentType::_ShipmentServiceOptions;
 BEGIN {
-  $Shipment::UPS::WSDL::ShipTypes::ShipmentType::_ShipmentServiceOptions::VERSION = '0.01111510';
+  $Shipment::UPS::WSDL::ShipTypes::ShipmentType::_ShipmentServiceOptions::VERSION = '0.01111730';
 }
 use strict;
 use warnings;
@@ -248,7 +248,7 @@ Shipment::UPS::WSDL::ShipTypes::ShipmentType
 
 =head1 VERSION
 
-version 0.01111510
+version 0.01111730
 
 =head1 DESCRIPTION
 

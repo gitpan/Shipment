@@ -1,6 +1,6 @@
 package Shipment::UPS;
 BEGIN {
-  $Shipment::UPS::VERSION = '0.01111510';
+  $Shipment::UPS::VERSION = '0.01111730';
 }
 use strict;
 use warnings;
@@ -9,6 +9,7 @@ use warnings;
 use Try::Tiny;
 use Moose 2.0000;
 use Moose::Util::TypeConstraints;
+use Shipment::SOAP::WSDL;
 
 extends 'Shipment::Base';
 
@@ -932,7 +933,7 @@ Shipment::UPS
 
 =head1 VERSION
 
-version 0.01111510
+version 0.01111730
 
 =head1 SYNOPSIS
 

@@ -1,6 +1,6 @@
 package Shipment::FedEx::WSDL::RateTypes::LinearUnits;
 BEGIN {
-  $Shipment::FedEx::WSDL::RateTypes::LinearUnits::VERSION = '0.01111510';
+  $Shipment::FedEx::WSDL::RateTypes::LinearUnits::VERSION = '0.01111730';
 }
 use strict;
 use warnings;
@@ -25,7 +25,7 @@ Shipment::FedEx::WSDL::RateTypes::LinearUnits
 
 =head1 VERSION
 
-version 0.01111510
+version 0.01111730
 
 =head1 DESCRIPTION
 

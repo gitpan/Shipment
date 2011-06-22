@@ -1,6 +1,6 @@
 package Shipment::Purolator::WSDL::Types::DocumentStatus;
 BEGIN {
-  $Shipment::Purolator::WSDL::Types::DocumentStatus::VERSION = '0.01111510';
+  $Shipment::Purolator::WSDL::Types::DocumentStatus::VERSION = '0.01111730';
 }
 use strict;
 use warnings;
@@ -25,7 +25,7 @@ Shipment::Purolator::WSDL::Types::DocumentStatus
 
 =head1 VERSION
 
-version 0.01111510
+version 0.01111730
 
 =head1 DESCRIPTION
 

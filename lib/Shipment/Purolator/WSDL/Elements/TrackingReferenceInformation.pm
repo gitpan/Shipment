@@ -1,7 +1,7 @@
 
 package Shipment::Purolator::WSDL::Elements::TrackingReferenceInformation;
 BEGIN {
-  $Shipment::Purolator::WSDL::Elements::TrackingReferenceInformation::VERSION = '0.01111510';
+  $Shipment::Purolator::WSDL::Elements::TrackingReferenceInformation::VERSION = '0.01111730';
 }
 use strict;
 use warnings;
@@ -36,7 +36,7 @@ Shipment::Purolator::WSDL::Elements::TrackingReferenceInformation
 
 =head1 VERSION
 
-version 0.01111510
+version 0.01111730
 
 =head1 DESCRIPTION
 

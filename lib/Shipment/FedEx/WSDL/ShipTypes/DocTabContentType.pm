@@ -1,6 +1,6 @@
 package Shipment::FedEx::WSDL::ShipTypes::DocTabContentType;
 BEGIN {
-  $Shipment::FedEx::WSDL::ShipTypes::DocTabContentType::VERSION = '0.01111510';
+  $Shipment::FedEx::WSDL::ShipTypes::DocTabContentType::VERSION = '0.01111730';
 }
 use strict;
 use warnings;
@@ -25,7 +25,7 @@ Shipment::FedEx::WSDL::ShipTypes::DocTabContentType
 
 =head1 VERSION
 
-version 0.01111510
+version 0.01111730
 
 =head1 DESCRIPTION
 

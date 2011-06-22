@@ -1,6 +1,6 @@
 package Shipment::Purolator::WSDL::Types::ArrayOfShortAddress;
 BEGIN {
-  $Shipment::Purolator::WSDL::Types::ArrayOfShortAddress::VERSION = '0.01111510';
+  $Shipment::Purolator::WSDL::Types::ArrayOfShortAddress::VERSION = '0.01111730';
 }
 use strict;
 use warnings;
@@ -64,7 +64,7 @@ Shipment::Purolator::WSDL::Types::ArrayOfShortAddress
 
 =head1 VERSION
 
-version 0.01111510
+version 0.01111730
 
 =head1 DESCRIPTION
 
