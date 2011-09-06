@@ -1,6 +1,6 @@
 package Shipment::FedEx::WSDL::ShipTypes::HoldAtLocationDetail;
 BEGIN {
-  $Shipment::FedEx::WSDL::ShipTypes::HoldAtLocationDetail::VERSION = '0.01111730';
+  $Shipment::FedEx::WSDL::ShipTypes::HoldAtLocationDetail::VERSION = '0.01112490';
 }
 use strict;
 use warnings;
@@ -74,7 +74,7 @@ Shipment::FedEx::WSDL::ShipTypes::HoldAtLocationDetail
 
 =head1 VERSION
 
-version 0.01111730
+version 0.01112490
 
 =head1 DESCRIPTION
 

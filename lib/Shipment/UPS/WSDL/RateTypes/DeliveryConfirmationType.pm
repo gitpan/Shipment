@@ -1,6 +1,6 @@
 package Shipment::UPS::WSDL::RateTypes::DeliveryConfirmationType;
 BEGIN {
-  $Shipment::UPS::WSDL::RateTypes::DeliveryConfirmationType::VERSION = '0.01111730';
+  $Shipment::UPS::WSDL::RateTypes::DeliveryConfirmationType::VERSION = '0.01112490';
 }
 use strict;
 use warnings;
@@ -64,7 +64,7 @@ Shipment::UPS::WSDL::RateTypes::DeliveryConfirmationType
 
 =head1 VERSION
 
-version 0.01111730
+version 0.01112490
 
 =head1 DESCRIPTION
 

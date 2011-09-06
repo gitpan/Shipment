@@ -32,4 +32,4 @@ requires:
   Scalar::Util: 0
   Term::ReadKey: 0
   Try::Tiny: 0
-version: 0.01111730
+version: 0.01112490

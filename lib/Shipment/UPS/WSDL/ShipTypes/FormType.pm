@@ -1,6 +1,6 @@
 package Shipment::UPS::WSDL::ShipTypes::FormType;
 BEGIN {
-  $Shipment::UPS::WSDL::ShipTypes::FormType::VERSION = '0.01111730';
+  $Shipment::UPS::WSDL::ShipTypes::FormType::VERSION = '0.01112490';
 }
 use strict;
 use warnings;
@@ -84,7 +84,7 @@ Shipment::UPS::WSDL::ShipTypes::FormType
 
 =head1 VERSION
 
-version 0.01111730
+version 0.01112490
 
 =head1 DESCRIPTION
 

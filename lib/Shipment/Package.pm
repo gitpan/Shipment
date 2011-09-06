@@ -1,6 +1,6 @@
 package Shipment::Package;
 BEGIN {
-  $Shipment::Package::VERSION = '0.01111730';
+  $Shipment::Package::VERSION = '0.01112490';
 }
 use strict;
 use warnings;
@@ -90,7 +90,7 @@ Shipment::Package
 
 =head1 VERSION
 
-version 0.01111730
+version 0.01112490
 
 =head1 SYNOPSIS
 

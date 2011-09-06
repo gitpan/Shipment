@@ -1,6 +1,6 @@
 package Shipment::Purolator::WSDL::Types::PhoneNumber;
 BEGIN {
-  $Shipment::Purolator::WSDL::Types::PhoneNumber::VERSION = '0.01111730';
+  $Shipment::Purolator::WSDL::Types::PhoneNumber::VERSION = '0.01112490';
 }
 use strict;
 use warnings;
@@ -79,7 +79,7 @@ Shipment::Purolator::WSDL::Types::PhoneNumber
 
 =head1 VERSION
 
-version 0.01111730
+version 0.01112490
 
 =head1 DESCRIPTION
 
