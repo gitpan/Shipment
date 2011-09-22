@@ -1,6 +1,6 @@
 package Shipment::FedEx::WSDL::RateTypes::CustomLabelBarcodeEntry;
 BEGIN {
-  $Shipment::FedEx::WSDL::RateTypes::CustomLabelBarcodeEntry::VERSION = '0.01112490';
+  $Shipment::FedEx::WSDL::RateTypes::CustomLabelBarcodeEntry::VERSION = '0.01112650';
 }
 use strict;
 use warnings;
@@ -89,7 +89,7 @@ Shipment::FedEx::WSDL::RateTypes::CustomLabelBarcodeEntry
 
 =head1 VERSION
 
-version 0.01112490
+version 0.01112650
 
 =head1 DESCRIPTION
 

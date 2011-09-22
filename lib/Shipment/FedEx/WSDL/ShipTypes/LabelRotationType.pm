@@ -1,6 +1,6 @@
 package Shipment::FedEx::WSDL::ShipTypes::LabelRotationType;
 BEGIN {
-  $Shipment::FedEx::WSDL::ShipTypes::LabelRotationType::VERSION = '0.01112490';
+  $Shipment::FedEx::WSDL::ShipTypes::LabelRotationType::VERSION = '0.01112650';
 }
 use strict;
 use warnings;
@@ -25,7 +25,7 @@ Shipment::FedEx::WSDL::ShipTypes::LabelRotationType
 
 =head1 VERSION
 
-version 0.01112490
+version 0.01112650
 
 =head1 DESCRIPTION
 

@@ -1,6 +1,6 @@
 package Shipment::Purolator::WSDL::Types::Weight;
 BEGIN {
-  $Shipment::Purolator::WSDL::Types::Weight::VERSION = '0.01112490';
+  $Shipment::Purolator::WSDL::Types::Weight::VERSION = '0.01112650';
 }
 use strict;
 use warnings;
@@ -69,7 +69,7 @@ Shipment::Purolator::WSDL::Types::Weight
 
 =head1 VERSION
 
-version 0.01112490
+version 0.01112650
 
 =head1 DESCRIPTION
 

@@ -1,6 +1,6 @@
 package Shipment::FedEx::WSDL::RateTypes::UploadDocumentIdProducer;
 BEGIN {
-  $Shipment::FedEx::WSDL::RateTypes::UploadDocumentIdProducer::VERSION = '0.01112490';
+  $Shipment::FedEx::WSDL::RateTypes::UploadDocumentIdProducer::VERSION = '0.01112650';
 }
 use strict;
 use warnings;
@@ -25,7 +25,7 @@ Shipment::FedEx::WSDL::RateTypes::UploadDocumentIdProducer
 
 =head1 VERSION
 
-version 0.01112490
+version 0.01112650
 
 =head1 DESCRIPTION
 

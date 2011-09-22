@@ -1,7 +1,7 @@
 
 package Shipment::Purolator::WSDL::Elements::Language;
 BEGIN {
-  $Shipment::Purolator::WSDL::Elements::Language::VERSION = '0.01112490';
+  $Shipment::Purolator::WSDL::Elements::Language::VERSION = '0.01112650';
 }
 use strict;
 use warnings;
@@ -36,7 +36,7 @@ Shipment::Purolator::WSDL::Elements::Language
 
 =head1 VERSION
 
-version 0.01112490
+version 0.01112650
 
 =head1 DESCRIPTION
 
