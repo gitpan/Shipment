@@ -1,6 +1,6 @@
 package Shipment::FedEx::WSDL::RateTypes::EMailNotificationRecipientType;
-BEGIN {
-  $Shipment::FedEx::WSDL::RateTypes::EMailNotificationRecipientType::VERSION = '0.01112650';
+{
+  $Shipment::FedEx::WSDL::RateTypes::EMailNotificationRecipientType::VERSION = '0.01113430';
 }
 use strict;
 use warnings;
@@ -25,7 +25,7 @@ Shipment::FedEx::WSDL::RateTypes::EMailNotificationRecipientType
 
 =head1 VERSION
 
-version 0.01112650
+version 0.01113430
 
 =head1 DESCRIPTION
 

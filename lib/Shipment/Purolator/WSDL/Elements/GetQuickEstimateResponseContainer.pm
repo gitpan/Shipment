@@ -1,7 +1,7 @@
 
 package Shipment::Purolator::WSDL::Elements::GetQuickEstimateResponseContainer;
-BEGIN {
-  $Shipment::Purolator::WSDL::Elements::GetQuickEstimateResponseContainer::VERSION = '0.01112650';
+{
+  $Shipment::Purolator::WSDL::Elements::GetQuickEstimateResponseContainer::VERSION = '0.01113430';
 }
 use strict;
 use warnings;
@@ -36,7 +36,7 @@ Shipment::Purolator::WSDL::Elements::GetQuickEstimateResponseContainer
 
 =head1 VERSION
 
-version 0.01112650
+version 0.01113430
 
 =head1 DESCRIPTION
 

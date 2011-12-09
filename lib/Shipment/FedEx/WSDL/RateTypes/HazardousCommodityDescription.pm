@@ -1,6 +1,6 @@
 package Shipment::FedEx::WSDL::RateTypes::HazardousCommodityDescription;
-BEGIN {
-  $Shipment::FedEx::WSDL::RateTypes::HazardousCommodityDescription::VERSION = '0.01112650';
+{
+  $Shipment::FedEx::WSDL::RateTypes::HazardousCommodityDescription::VERSION = '0.01113430';
 }
 use strict;
 use warnings;
@@ -94,7 +94,7 @@ Shipment::FedEx::WSDL::RateTypes::HazardousCommodityDescription
 
 =head1 VERSION
 
-version 0.01112650
+version 0.01113430
 
 =head1 DESCRIPTION
 

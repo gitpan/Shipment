@@ -1,6 +1,6 @@
 package Shipment::UPS;
-BEGIN {
-  $Shipment::UPS::VERSION = '0.01112650';
+{
+  $Shipment::UPS::VERSION = '0.01113430';
 }
 use strict;
 use warnings;
@@ -218,7 +218,7 @@ sub _build_services {
             },
             PackageWeight => {
               UnitOfMeasurement => {
-                Code => 'LBS',
+                Code => $units_type_map{$self->weight_unit} || $self->weight_unit,
               },
               Weight => 1,
             },
@@ -244,11 +244,6 @@ sub _build_services {
         if ($service->get_NegotiatedRateCharges) {
           $rate = $service->get_NegotiatedRateCharges->get_TotalCharge->get_MonetaryValue;
           $currency = $service->get_NegotiatedRateCharges->get_TotalCharge->get_CurrencyCode;
-        }
-        else {
-          my $notice =  "Shipper Account/UserId is not qualified to receive negotiated rates. Using published rates.";
-          warn $notice;
-          $self->add_notice( $notice . "\n" );
         }
       }
       $services{$service->get_Service()->get_Code()->get_value} = Shipment::Service->new(
@@ -397,11 +392,6 @@ sub rate {
       if ($response->get_RatedShipment->get_NegotiatedRateCharges) {
         $rate = $response->get_RatedShipment->get_NegotiatedRateCharges->get_TotalCharge->get_MonetaryValue;
         $currency = $response->get_RatedShipment->get_NegotiatedRateCharges->get_TotalCharge->get_CurrencyCode;
-      }
-      else {
-        my $notice =  "Shipper Account/UserId is not qualified to receive negotiated rates. Using published rates.";
-        warn $notice;
-        $self->add_notice( $notice . "\n" );
       }
     }
     $self->service( 
@@ -605,11 +595,6 @@ sub ship {
       if ($response->get_ShipmentResults->get_NegotiatedRateCharges) {
         $rate = $response->get_ShipmentResults->get_NegotiatedRateCharges->get_TotalCharge->get_MonetaryValue;
         $currency = $response->get_ShipmentResults->get_NegotiatedRateCharges->get_TotalCharge->get_CurrencyCode;
-      }
-      else {
-        my $notice =  "Shipper Account/UserId is not qualified to receive negotiated rates. Using published rates.";
-        warn $notice;
-        $self->add_notice( $notice . "\n" );
       }
     }
     $self->service( 
@@ -996,7 +981,7 @@ Shipment::UPS
 
 =head1 VERSION
 
-version 0.01112650
+version 0.01113430
 
 =head1 SYNOPSIS
 

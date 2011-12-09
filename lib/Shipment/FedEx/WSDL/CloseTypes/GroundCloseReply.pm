@@ -1,6 +1,6 @@
 package Shipment::FedEx::WSDL::CloseTypes::GroundCloseReply;
-BEGIN {
-  $Shipment::FedEx::WSDL::CloseTypes::GroundCloseReply::VERSION = '0.01112650';
+{
+  $Shipment::FedEx::WSDL::CloseTypes::GroundCloseReply::VERSION = '0.01113430';
 }
 use strict;
 use warnings;
@@ -99,7 +99,7 @@ Shipment::FedEx::WSDL::CloseTypes::GroundCloseReply
 
 =head1 VERSION
 
-version 0.01112650
+version 0.01113430
 
 =head1 DESCRIPTION
 

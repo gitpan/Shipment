@@ -1,6 +1,6 @@
 package Shipment::UPS::WSDL::RateTypes::PayerAddressType;
-BEGIN {
-  $Shipment::UPS::WSDL::RateTypes::PayerAddressType::VERSION = '0.01112650';
+{
+  $Shipment::UPS::WSDL::RateTypes::PayerAddressType::VERSION = '0.01113430';
 }
 use strict;
 use warnings;
@@ -69,7 +69,7 @@ Shipment::UPS::WSDL::RateTypes::PayerAddressType
 
 =head1 VERSION
 
-version 0.01112650
+version 0.01113430
 
 =head1 DESCRIPTION
 

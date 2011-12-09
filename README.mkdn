@@ -4,14 +4,14 @@ Shipment - Interface to Popular Shipping Services
 
 # VERSION
 
-version 0.01112650
+version 0.01113430
 
 # SYNOPSIS
 
-  use Shipment;
+    use Shipment;
 
-  my $shipment = Shipment->new;
-     
+    my $shipment = Shipment->new;
+       
 
      $shipment->ups(
         from_address => $shipment->address(...),
@@ -19,15 +19,15 @@ version 0.01112650
         packages => [$shipment->package(...)]
      );
 
-  foreach my $service ( $shipment->all_services ) {
-    print $service->id . "\n";
-  }
+    foreach my $service ( $shipment->all_services ) {
+      print $service->id . "\n";
+    }
 
-  $shipment->rate( 'express' );
-  print $service->cost . "\n";
+    $shipment->rate( 'express' );
+    print $service->cost . "\n";
 
-  $shipment->ship( 'ground' );
-  $shipment->get_package(0)->label->save;
+    $shipment->ship( 'ground' );
+    $shipment->get_package(0)->label->save;
 
 # DESCRIPTION
 

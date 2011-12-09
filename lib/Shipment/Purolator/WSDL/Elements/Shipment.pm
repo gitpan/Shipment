@@ -1,7 +1,7 @@
 
 package Shipment::Purolator::WSDL::Elements::Shipment;
-BEGIN {
-  $Shipment::Purolator::WSDL::Elements::Shipment::VERSION = '0.01112650';
+{
+  $Shipment::Purolator::WSDL::Elements::Shipment::VERSION = '0.01113430';
 }
 use strict;
 use warnings;
@@ -36,7 +36,7 @@ Shipment::Purolator::WSDL::Elements::Shipment
 
 =head1 VERSION
 
-version 0.01112650
+version 0.01113430
 
 =head1 DESCRIPTION
 

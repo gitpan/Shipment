@@ -1,7 +1,7 @@
 
 package Shipment::FedEx::WSDL::ShipElements::DeleteTagRequest;
-BEGIN {
-  $Shipment::FedEx::WSDL::ShipElements::DeleteTagRequest::VERSION = '0.01112650';
+{
+  $Shipment::FedEx::WSDL::ShipElements::DeleteTagRequest::VERSION = '0.01113430';
 }
 use strict;
 use warnings;
@@ -36,7 +36,7 @@ Shipment::FedEx::WSDL::ShipElements::DeleteTagRequest
 
 =head1 VERSION
 
-version 0.01112650
+version 0.01113430
 
 =head1 DESCRIPTION
 

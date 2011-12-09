@@ -1,8 +1,8 @@
 #!/usr/bin/perl -w
 
 package wsdl2perl;
-BEGIN {
-  $wsdl2perl::VERSION = '0.01112650';
+{
+  $wsdl2perl::VERSION = '0.01113430';
 }
 
 
@@ -120,7 +120,7 @@ wsdl2perl
 
 =head1 VERSION
 
-version 0.01112650
+version 0.01113430
 
 =head1 SYNOPSIS
 

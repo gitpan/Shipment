@@ -1,6 +1,6 @@
 package Shipment::Purolator;
-BEGIN {
-  $Shipment::Purolator::VERSION = '0.01112650';
+{
+  $Shipment::Purolator::VERSION = '0.01113430';
 }
 use strict;
 use warnings;
@@ -735,7 +735,7 @@ Shipment::Purolator
 
 =head1 VERSION
 
-version 0.01112650
+version 0.01113430
 
 =head1 SYNOPSIS
 

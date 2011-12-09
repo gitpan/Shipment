@@ -1,6 +1,6 @@
 package Shipment::UPS::WSDL::ShipTypes::CODType;
-BEGIN {
-  $Shipment::UPS::WSDL::ShipTypes::CODType::VERSION = '0.01112650';
+{
+  $Shipment::UPS::WSDL::ShipTypes::CODType::VERSION = '0.01113430';
 }
 use strict;
 use warnings;
@@ -69,7 +69,7 @@ Shipment::UPS::WSDL::ShipTypes::CODType
 
 =head1 VERSION
 
-version 0.01112650
+version 0.01113430
 
 =head1 DESCRIPTION
 

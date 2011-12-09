@@ -1,6 +1,6 @@
 package Shipment::FedEx::WSDL::ShipTypes::ClientDetail;
-BEGIN {
-  $Shipment::FedEx::WSDL::ShipTypes::ClientDetail::VERSION = '0.01112650';
+{
+  $Shipment::FedEx::WSDL::ShipTypes::ClientDetail::VERSION = '0.01113430';
 }
 use strict;
 use warnings;
@@ -79,7 +79,7 @@ Shipment::FedEx::WSDL::ShipTypes::ClientDetail
 
 =head1 VERSION
 
-version 0.01112650
+version 0.01113430
 
 =head1 DESCRIPTION
 

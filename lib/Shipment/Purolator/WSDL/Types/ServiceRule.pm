@@ -1,6 +1,6 @@
 package Shipment::Purolator::WSDL::Types::ServiceRule;
-BEGIN {
-  $Shipment::Purolator::WSDL::Types::ServiceRule::VERSION = '0.01112650';
+{
+  $Shipment::Purolator::WSDL::Types::ServiceRule::VERSION = '0.01113430';
 }
 use strict;
 use warnings;
@@ -134,7 +134,7 @@ Shipment::Purolator::WSDL::Types::ServiceRule
 
 =head1 VERSION
 
-version 0.01112650
+version 0.01113430
 
 =head1 DESCRIPTION
 

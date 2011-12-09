@@ -1,6 +1,6 @@
 package Shipment::Label;
-BEGIN {
-  $Shipment::Label::VERSION = '0.01112650';
+{
+  $Shipment::Label::VERSION = '0.01113430';
 }
 use strict;
 use warnings;
@@ -73,7 +73,7 @@ Shipment::Label
 
 =head1 VERSION
 
-version 0.01112650
+version 0.01113430
 
 =head1 SYNOPSIS
 
