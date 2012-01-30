@@ -1,6 +1,6 @@
 package Shipment::FedEx::WSDL::ShipTypes::CustomDeliveryWindowDetail;
 {
-  $Shipment::FedEx::WSDL::ShipTypes::CustomDeliveryWindowDetail::VERSION = '0.01113430';
+  $Shipment::FedEx::WSDL::ShipTypes::CustomDeliveryWindowDetail::VERSION = '0.01120300';
 }
 use strict;
 use warnings;
@@ -79,7 +79,7 @@ Shipment::FedEx::WSDL::ShipTypes::CustomDeliveryWindowDetail
 
 =head1 VERSION
 
-version 0.01113430
+version 0.01120300
 
 =head1 DESCRIPTION
 

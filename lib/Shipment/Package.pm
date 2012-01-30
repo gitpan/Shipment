@@ -1,6 +1,6 @@
 package Shipment::Package;
 {
-  $Shipment::Package::VERSION = '0.01113430';
+  $Shipment::Package::VERSION = '0.01120300';
 }
 use strict;
 use warnings;
@@ -17,6 +17,12 @@ has 'id' => (
 );
 
 
+has 'type' => (
+  is => 'rw',
+  isa => 'Str',
+);
+
+
 has 'name' => (
   is => 'rw',
   isa => 'Str',
@@ -26,6 +32,13 @@ has 'name' => (
 has 'notes' => (
   is => 'rw',
   isa => 'Str',
+);
+
+
+has 'fragile' => (
+  is => 'rw',
+  isa => 'Bool',
+  default => 0,
 );
 
 
@@ -90,7 +103,7 @@ Shipment::Package
 
 =head1 VERSION
 
-version 0.01113430
+version 0.01120300
 
 =head1 SYNOPSIS
 
@@ -120,9 +133,15 @@ The package type id as defined by a shipping service
 
 type: String
 
+=head2 type
+
+The package type as defined by a shipping service (i.e. "envelope")
+
+type: String
+
 =head2 name
 
-A descriptive name for the package type (box, tube, custom, etc)
+A descriptive name for the package (i.e. "12x12x12 box")
 
 type: String
 
@@ -131,6 +150,10 @@ type: String
 Notes (i.e. to describe the package contents)
 
 type: String
+
+=head2 fragile
+
+Whether or not the items being sent are fragile
 
 =head2 weight
 

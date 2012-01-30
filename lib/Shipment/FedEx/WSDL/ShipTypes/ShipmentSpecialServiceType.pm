@@ -1,6 +1,6 @@
 package Shipment::FedEx::WSDL::ShipTypes::ShipmentSpecialServiceType;
 {
-  $Shipment::FedEx::WSDL::ShipTypes::ShipmentSpecialServiceType::VERSION = '0.01113430';
+  $Shipment::FedEx::WSDL::ShipTypes::ShipmentSpecialServiceType::VERSION = '0.01120300';
 }
 use strict;
 use warnings;
@@ -25,7 +25,7 @@ Shipment::FedEx::WSDL::ShipTypes::ShipmentSpecialServiceType
 
 =head1 VERSION
 
-version 0.01113430
+version 0.01120300
 
 =head1 DESCRIPTION
 

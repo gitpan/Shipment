@@ -1,12 +1,12 @@
 package Shipment::Service;
 {
-  $Shipment::Service::VERSION = '0.01113430';
+  $Shipment::Service::VERSION = '0.01120300';
 }
 use strict;
 use warnings;
 
 
-use MooseX::Types::DateTimeX qw( DateTime );
+use MooseX::Types::DateTime::ButMaintained qw( DateTime );
 use Data::Currency;
 use Moose 2.0000;
 
@@ -16,8 +16,23 @@ has 'id' => (
   isa => 'Str',
 );
 
+has 'carrier_id' => (
+  is => 'rw',
+  isa => 'Str',
+);
+
 
 has 'name' => (
+  is => 'rw',
+  isa => 'Str',
+);
+
+has 'carrier_name' => (
+  is => 'rw',
+  isa => 'Str',
+);
+
+has 'service_name' => (
   is => 'rw',
   isa => 'Str',
 );
@@ -30,6 +45,11 @@ has 'package' => (
 
 
 has 'etd' => (
+  is => 'rw',
+  isa => 'Num',
+);
+
+has 'pickup_etd' => (
   is => 'rw',
   isa => 'Num',
 );
@@ -49,11 +69,31 @@ has 'eta' => (
 );
 
 
+has 'guaranteed' => (
+  is => 'rw',
+  isa => 'Bool',
+  default => 0,
+);
+
+
 has 'cost' => (
   is => 'rw',
   isa => 'Data::Currency',
   default => sub { Data::Currency->new(0) },
 );
+
+has 'base_cost' => (
+  is => 'rw',
+  isa => 'Data::Currency',
+  default => sub { Data::Currency->new(0) },
+);
+
+has 'tax' => (
+  is => 'rw',
+  isa => 'Data::Currency',
+  default => sub { Data::Currency->new(0) },
+);
+
 
 
 has 'options' => (
@@ -76,7 +116,7 @@ Shipment::Service
 
 =head1 VERSION
 
-version 0.01113430
+version 0.01120300
 
 =head1 SYNOPSIS
 
@@ -100,13 +140,13 @@ for listing available services or storing details about a rate.
 
 =head1 Class Attributes
 
-=head2 id
+=head2 id, carrier_id
 
-The service id as defined by a shipping service
+The service id and carrier id as defined by a shipping service
 
 type: String
 
-=head2 name
+=head2 name, carrier_name, service_name
 
 A descriptive name for the service
 
@@ -118,7 +158,7 @@ The package type accepted by this service
 
 type: Shipment::Package
 
-=head2 etd
+=head2 etd, pickup_etd
 
 The estimated transit days for the service
 
@@ -136,7 +176,13 @@ The estimated time of arrival
 
 type: DateTime
 
-=head2 cost
+=head2 guaranteed
+
+Whether or not the eta is guaranteed by the carrier
+
+type: Bool
+
+=head2 cost, base_cost, tax
 
 The cost of the service
 

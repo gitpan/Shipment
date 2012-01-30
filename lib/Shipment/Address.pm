@@ -1,6 +1,6 @@
 package Shipment::Address;
 {
-  $Shipment::Address::VERSION = '0.01113430';
+  $Shipment::Address::VERSION = '0.01120300';
 }
 use strict;
 use warnings;
@@ -8,6 +8,7 @@ use warnings;
 
 use Moose 2.0000;
 use MooseX::Aliases 0.10;
+use Moose::Util::TypeConstraints;
 
 
 has 'name' => (
@@ -22,6 +23,13 @@ has 'company' => (
   is => 'rw',
   isa => 'Str',
   default => 'n/a',
+);
+
+
+has 'address_type' => (
+  is => 'rw',
+  isa => enum( [ qw/residential business/ ] ),
+  default => 'business',
 );
 
 
@@ -187,7 +195,7 @@ Shipment::Address
 
 =head1 VERSION
 
-version 0.01113430
+version 0.01120300
 
 =head1 SYNOPSIS
 
@@ -233,6 +241,10 @@ The company name
 type: String
 
 default: n/a
+
+=head2 address_type
+
+Whether the address is residential or business
 
 =head2 address1, address2, address3
 

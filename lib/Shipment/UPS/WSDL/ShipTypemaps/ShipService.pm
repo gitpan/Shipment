@@ -1,7 +1,7 @@
 
 package Shipment::UPS::WSDL::ShipTypemaps::ShipService;
 {
-  $Shipment::UPS::WSDL::ShipTypemaps::ShipService::VERSION = '0.01113430';
+  $Shipment::UPS::WSDL::ShipTypemaps::ShipService::VERSION = '0.01120300';
 }
 use strict;
 use warnings;
@@ -1081,7 +1081,7 @@ Shipment::UPS::WSDL::ShipTypemaps::ShipService
 
 =head1 VERSION
 
-version 0.01113430
+version 0.01120300
 
 =head1 DESCRIPTION
 

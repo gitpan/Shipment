@@ -1,6 +1,6 @@
 package Shipment::Purolator::WSDL::Types::OptionIDValuePair;
 {
-  $Shipment::Purolator::WSDL::Types::OptionIDValuePair::VERSION = '0.01113430';
+  $Shipment::Purolator::WSDL::Types::OptionIDValuePair::VERSION = '0.01120300';
 }
 use strict;
 use warnings;
@@ -69,7 +69,7 @@ Shipment::Purolator::WSDL::Types::OptionIDValuePair
 
 =head1 VERSION
 
-version 0.01113430
+version 0.01120300
 
 =head1 DESCRIPTION
 

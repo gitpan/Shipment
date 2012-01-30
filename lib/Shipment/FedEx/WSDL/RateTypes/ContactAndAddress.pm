@@ -1,6 +1,6 @@
 package Shipment::FedEx::WSDL::RateTypes::ContactAndAddress;
 {
-  $Shipment::FedEx::WSDL::RateTypes::ContactAndAddress::VERSION = '0.01113430';
+  $Shipment::FedEx::WSDL::RateTypes::ContactAndAddress::VERSION = '0.01120300';
 }
 use strict;
 use warnings;
@@ -69,7 +69,7 @@ Shipment::FedEx::WSDL::RateTypes::ContactAndAddress
 
 =head1 VERSION
 
-version 0.01113430
+version 0.01120300
 
 =head1 DESCRIPTION
 

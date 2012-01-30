@@ -1,6 +1,6 @@
 package Shipment::UPS::WSDL::RateTypes::ClientInformationType;
 {
-  $Shipment::UPS::WSDL::RateTypes::ClientInformationType::VERSION = '0.01113430';
+  $Shipment::UPS::WSDL::RateTypes::ClientInformationType::VERSION = '0.01120300';
 }
 use strict;
 use warnings;
@@ -50,7 +50,7 @@ __PACKAGE__->_factory(
 
 package Shipment::UPS::WSDL::RateTypes::ClientInformationType::_Property;
 {
-  $Shipment::UPS::WSDL::RateTypes::ClientInformationType::_Property::VERSION = '0.01113430';
+  $Shipment::UPS::WSDL::RateTypes::ClientInformationType::_Property::VERSION = '0.01120300';
 }
 use strict;
 use warnings;
@@ -68,7 +68,7 @@ use base qw(
 
 package Shipment::UPS::WSDL::RateTypes::ClientInformationType::_Property::XmlAttr;
 {
-  $Shipment::UPS::WSDL::RateTypes::ClientInformationType::_Property::XmlAttr::VERSION = '0.01113430';
+  $Shipment::UPS::WSDL::RateTypes::ClientInformationType::_Property::XmlAttr::VERSION = '0.01120300';
 }
 use base qw(SOAP::WSDL::XSD::Typelib::AttributeSet);
 
@@ -113,7 +113,7 @@ Shipment::UPS::WSDL::RateTypes::ClientInformationType
 
 =head1 VERSION
 
-version 0.01113430
+version 0.01120300
 
 =head1 DESCRIPTION
 

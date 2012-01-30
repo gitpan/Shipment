@@ -1,6 +1,6 @@
 package Shipment::FedEx::WSDL::ShipTypes::BinaryBarcode;
 {
-  $Shipment::FedEx::WSDL::ShipTypes::BinaryBarcode::VERSION = '0.01113430';
+  $Shipment::FedEx::WSDL::ShipTypes::BinaryBarcode::VERSION = '0.01120300';
 }
 use strict;
 use warnings;
@@ -69,7 +69,7 @@ Shipment::FedEx::WSDL::ShipTypes::BinaryBarcode
 
 =head1 VERSION
 
-version 0.01113430
+version 0.01120300
 
 =head1 DESCRIPTION
 

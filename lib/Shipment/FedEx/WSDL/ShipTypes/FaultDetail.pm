@@ -1,6 +1,6 @@
 package Shipment::FedEx::WSDL::ShipTypes::FaultDetail;
 {
-  $Shipment::FedEx::WSDL::ShipTypes::FaultDetail::VERSION = '0.01113430';
+  $Shipment::FedEx::WSDL::ShipTypes::FaultDetail::VERSION = '0.01120300';
 }
 use strict;
 use warnings;
@@ -65,7 +65,7 @@ Shipment::FedEx::WSDL::ShipTypes::FaultDetail
 
 =head1 VERSION
 
-version 0.01113430
+version 0.01120300
 
 =head1 DESCRIPTION
 
