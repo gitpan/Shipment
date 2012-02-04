@@ -1,6 +1,6 @@
 package Shipment::Temando::WSDL::Types::LocationPosition;
 {
-  $Shipment::Temando::WSDL::Types::LocationPosition::VERSION = '0.01120300';
+  $Shipment::Temando::WSDL::Types::LocationPosition::VERSION = '0.01120340';
 }
 use strict;
 use warnings;
@@ -25,7 +25,7 @@ Shipment::Temando::WSDL::Types::LocationPosition
 
 =head1 VERSION
 
-version 0.01120300
+version 0.01120340
 
 =head1 DESCRIPTION
 

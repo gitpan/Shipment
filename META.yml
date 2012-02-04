@@ -8,7 +8,7 @@ build_requires:
 configure_requires:
   ExtUtils::MakeMaker: 6.30
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.300003, CPAN::Meta::Converter version 2.112150'
+generated_by: 'Dist::Zilla version 4.300007, CPAN::Meta::Converter version 2.113640'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -17,6 +17,7 @@ name: Shipment
 requires:
   Class::Std::Fast::Storable: 0
   Data::Currency: 0
+  Date::Parse: 0
   DateTime: 0
   File::Util: 0
   Getopt::Long: 0
@@ -35,4 +36,4 @@ requires:
   base: 0
   strict: 0
   warnings: 0
-version: 0.01120300
+version: 0.01120340

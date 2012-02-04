@@ -1,7 +1,7 @@
 
 package Shipment::Temando::WSDL::Elements::addBookingDetailsResponse;
 {
-  $Shipment::Temando::WSDL::Elements::addBookingDetailsResponse::VERSION = '0.01120300';
+  $Shipment::Temando::WSDL::Elements::addBookingDetailsResponse::VERSION = '0.01120340';
 }
 use strict;
 use warnings;
@@ -57,7 +57,7 @@ Shipment::Temando::WSDL::Elements::addBookingDetailsResponse
 
 =head1 VERSION
 
-version 0.01120300
+version 0.01120340
 
 =head1 DESCRIPTION
 

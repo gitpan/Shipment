@@ -1,6 +1,6 @@
 package Shipment::Temando::WSDL::Types::Anywhere;
 {
-  $Shipment::Temando::WSDL::Types::Anywhere::VERSION = '0.01120300';
+  $Shipment::Temando::WSDL::Types::Anywhere::VERSION = '0.01120340';
 }
 use strict;
 use warnings;
@@ -324,7 +324,7 @@ Shipment::Temando::WSDL::Types::Anywhere
 
 =head1 VERSION
 
-version 0.01120300
+version 0.01120340
 
 =head1 DESCRIPTION
 

@@ -1,7 +1,7 @@
 
 package Shipment::Temando::WSDL::Elements::getLocationsResponse;
 {
-  $Shipment::Temando::WSDL::Elements::getLocationsResponse::VERSION = '0.01120300';
+  $Shipment::Temando::WSDL::Elements::getLocationsResponse::VERSION = '0.01120340';
 }
 use strict;
 use warnings;
@@ -61,7 +61,7 @@ __PACKAGE__->_factory(
 
 package Shipment::Temando::WSDL::Elements::getLocationsResponse::_locations;
 {
-  $Shipment::Temando::WSDL::Elements::getLocationsResponse::_locations::VERSION = '0.01120300';
+  $Shipment::Temando::WSDL::Elements::getLocationsResponse::_locations::VERSION = '0.01120340';
 }
 use strict;
 use warnings;
@@ -129,7 +129,7 @@ Shipment::Temando::WSDL::Elements::getLocationsResponse
 
 =head1 VERSION
 
-version 0.01120300
+version 0.01120340
 
 =head1 DESCRIPTION
 

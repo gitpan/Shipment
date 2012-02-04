@@ -26,6 +26,7 @@ my %WriteMakefileArgs = (
   "PREREQ_PM" => {
     "Class::Std::Fast::Storable" => 0,
     "Data::Currency" => 0,
+    "Date::Parse" => 0,
     "DateTime" => 0,
     "File::Util" => 0,
     "Getopt::Long" => 0,
@@ -45,7 +46,7 @@ my %WriteMakefileArgs = (
     "strict" => 0,
     "warnings" => 0
   },
-  "VERSION" => "0.01120300",
+  "VERSION" => "0.01120340",
   "test" => {
     "TESTS" => "t/*.t"
   }

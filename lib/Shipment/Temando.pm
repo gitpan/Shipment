@@ -1,6 +1,6 @@
 package Shipment::Temando;
 {
-  $Shipment::Temando::VERSION = '0.01120300';
+  $Shipment::Temando::VERSION = '0.01120340';
 }
 use strict;
 use warnings;
@@ -513,7 +513,7 @@ Shipment::Temando
 
 =head1 VERSION
 
-version 0.01120300
+version 0.01120340
 
 =head1 SYNOPSIS
 

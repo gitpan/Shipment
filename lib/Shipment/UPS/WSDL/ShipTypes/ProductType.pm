@@ -1,6 +1,6 @@
 package Shipment::UPS::WSDL::ShipTypes::ProductType;
 {
-  $Shipment::UPS::WSDL::ShipTypes::ProductType::VERSION = '0.01120300';
+  $Shipment::UPS::WSDL::ShipTypes::ProductType::VERSION = '0.01120340';
 }
 use strict;
 use warnings;
@@ -144,7 +144,7 @@ Shipment::UPS::WSDL::ShipTypes::ProductType
 
 =head1 VERSION
 
-version 0.01120300
+version 0.01120340
 
 =head1 DESCRIPTION
 

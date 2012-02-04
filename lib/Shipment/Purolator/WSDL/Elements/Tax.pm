@@ -1,7 +1,7 @@
 
 package Shipment::Purolator::WSDL::Elements::Tax;
 {
-  $Shipment::Purolator::WSDL::Elements::Tax::VERSION = '0.01120300';
+  $Shipment::Purolator::WSDL::Elements::Tax::VERSION = '0.01120340';
 }
 use strict;
 use warnings;
@@ -36,7 +36,7 @@ Shipment::Purolator::WSDL::Elements::Tax
 
 =head1 VERSION
 
-version 0.01120300
+version 0.01120340
 
 =head1 DESCRIPTION
 

@@ -1,6 +1,6 @@
 package Shipment::UPS::WSDL::RateTypes::AdditionalCodeDescType;
 {
-  $Shipment::UPS::WSDL::RateTypes::AdditionalCodeDescType::VERSION = '0.01120300';
+  $Shipment::UPS::WSDL::RateTypes::AdditionalCodeDescType::VERSION = '0.01120340';
 }
 use strict;
 use warnings;
@@ -69,7 +69,7 @@ Shipment::UPS::WSDL::RateTypes::AdditionalCodeDescType
 
 =head1 VERSION
 
-version 0.01120300
+version 0.01120340
 
 =head1 DESCRIPTION
 
