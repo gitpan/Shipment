@@ -1,6 +1,6 @@
 package Shipment::UPS;
 {
-  $Shipment::UPS::VERSION = '0.01120340';
+  $Shipment::UPS::VERSION = '0.01120470';
 }
 use strict;
 use warnings;
@@ -981,7 +981,7 @@ Shipment::UPS
 
 =head1 VERSION
 
-version 0.01120340
+version 0.01120470
 
 =head1 SYNOPSIS
 
@@ -1015,7 +1015,7 @@ This class provides an interface to the UPS Online Tools. You must sign up for a
 
 https://www.ups.com/upsdeveloperkit
 
-It is an extension of Shipment::Base.
+It is an extension of L<Shipment::Base>.
 
 It makes extensive use of SOAP::WSDL in order to create/decode xml requests and responses. The Shipment::UPS::WSDL interface was created primarily using the wsdl2perl.pl script from SOAP::WSDL.
 

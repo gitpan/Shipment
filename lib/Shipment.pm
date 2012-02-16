@@ -1,7 +1,7 @@
 # ABSTRACT: Interface to Popular Shipping Services
 package Shipment;
 {
-  $Shipment::VERSION = '0.01120340';
+  $Shipment::VERSION = '0.01120470';
 }
 
 use Moose;
@@ -36,6 +36,11 @@ sub ups {
 }
 
 
+sub temando {
+    shift; return Shipment::UPS->new(@_)
+}
+
+
 sub address {
     shift; return Shipment::Address->new(@_)
 }
@@ -56,7 +61,7 @@ Shipment - Interface to Popular Shipping Services
 
 =head1 VERSION
 
-version 0.01120340
+version 0.01120470
 
 =head1 SYNOPSIS
 
@@ -106,6 +111,11 @@ L<Shipment::Purolator> for more details.
 =head2 ups
 
 The ups method returns a L<Shipment::UPS> object. See L<Shipment::UPS> for
+more details.
+
+=head2 temando
+
+The temando method returns a L<Shipment::Temando> object. See L<Shipment::Temando> for
 more details.
 
 =head2 address

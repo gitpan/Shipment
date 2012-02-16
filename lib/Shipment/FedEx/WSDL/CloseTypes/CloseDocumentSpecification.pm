@@ -1,6 +1,6 @@
 package Shipment::FedEx::WSDL::CloseTypes::CloseDocumentSpecification;
 {
-  $Shipment::FedEx::WSDL::CloseTypes::CloseDocumentSpecification::VERSION = '0.01120340';
+  $Shipment::FedEx::WSDL::CloseTypes::CloseDocumentSpecification::VERSION = '0.01120470';
 }
 use strict;
 use warnings;
@@ -69,7 +69,7 @@ Shipment::FedEx::WSDL::CloseTypes::CloseDocumentSpecification
 
 =head1 VERSION
 
-version 0.01120340
+version 0.01120470
 
 =head1 DESCRIPTION
 

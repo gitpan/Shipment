@@ -1,6 +1,6 @@
 package Shipment::SOAP::WSDL;
 {
-  $Shipment::SOAP::WSDL::VERSION = '0.01120340';
+  $Shipment::SOAP::WSDL::VERSION = '0.01120470';
 }
 
 BEGIN {
@@ -11976,7 +11976,7 @@ Shipment::SOAP::WSDL
 
 =head1 VERSION
 
-version 0.01120340
+version 0.01120470
 
 =head1 AUTHORS
 

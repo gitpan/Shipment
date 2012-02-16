@@ -1,6 +1,6 @@
 package Shipment::Purolator::WSDL::Types::ReceiverInformation;
 {
-  $Shipment::Purolator::WSDL::Types::ReceiverInformation::VERSION = '0.01120340';
+  $Shipment::Purolator::WSDL::Types::ReceiverInformation::VERSION = '0.01120470';
 }
 use strict;
 use warnings;
@@ -69,7 +69,7 @@ Shipment::Purolator::WSDL::Types::ReceiverInformation
 
 =head1 VERSION
 
-version 0.01120340
+version 0.01120470
 
 =head1 DESCRIPTION
 

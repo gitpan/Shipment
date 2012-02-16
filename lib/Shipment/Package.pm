@@ -1,6 +1,6 @@
 package Shipment::Package;
 {
-  $Shipment::Package::VERSION = '0.01120340';
+  $Shipment::Package::VERSION = '0.01120470';
 }
 use strict;
 use warnings;
@@ -71,6 +71,17 @@ has 'insured_value' => (
 );
 
 
+has 'goods_value' => (
+  is => 'rw',
+  isa => 'Data::Currency',
+  lazy => 1,
+  default => sub {
+    my $self = shift;
+    return $self->insured_value;
+  },
+);
+
+
 has 'label' => (
   is => 'rw',
   isa => 'Shipment::Label',
@@ -103,7 +114,7 @@ Shipment::Package
 
 =head1 VERSION
 
-version 0.01120340
+version 0.01120470
 
 =head1 SYNOPSIS
 
@@ -169,7 +180,13 @@ type: Number
 
 =head2 insured_value
 
-The value of the contents. 
+The value of the contents to be insured
+
+type: Data::Currency
+
+=head2 goods_value
+
+The value of the contents
 
 type: Data::Currency
 

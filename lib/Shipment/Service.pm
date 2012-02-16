@@ -1,6 +1,6 @@
 package Shipment::Service;
 {
-  $Shipment::Service::VERSION = '0.01120340';
+  $Shipment::Service::VERSION = '0.01120470';
 }
 use strict;
 use warnings;
@@ -95,10 +95,29 @@ has 'tax' => (
 );
 
 
+has 'extra_charges' => (
+  is => 'rw',
+  isa => 'Data::Currency',
+  default => sub { Data::Currency->new(0) },
+);
+
+has 'adjustments' => (
+  is => 'rw',
+  isa => 'Data::Currency',
+  default => sub { Data::Currency->new(0) },
+);
+
 
 has 'options' => (
   is => 'rw',
   isa => 'HashRef[Str]',
+);
+
+
+has 'extras' => (
+  is => 'rw',
+  isa => 'HashRef[Shipment::Service]',
+  default => sub { {} },
 );
 
 no Moose;
@@ -116,7 +135,7 @@ Shipment::Service
 
 =head1 VERSION
 
-version 0.01120340
+version 0.01120470
 
 =head1 SYNOPSIS
 
@@ -188,11 +207,23 @@ The cost of the service
 
 type: Data::Currency
 
+=head2 extra_charges, adjustments
+
+Any extra charges and adjustments that will be applied, but are not included in the cost
+
+type: Data::Currency
+
 =head2 options
 
-Available options for the service
+Available options for the service (this attribute was added for Purolator)
 
 type: HashRef[Str]
+
+=head2 extras
+
+Extra service charges (Insurance, Carbon Offset, etc) - this attribute was added for Temando
+
+type: HashRef[L<Shipment::Service>]
 
 =head1 AUTHOR
 

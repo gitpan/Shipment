@@ -1,7 +1,7 @@
 
 package Shipment::Temando::WSDL::Elements::makeBookingByRequestResponse;
 {
-  $Shipment::Temando::WSDL::Elements::makeBookingByRequestResponse::VERSION = '0.01120340';
+  $Shipment::Temando::WSDL::Elements::makeBookingByRequestResponse::VERSION = '0.01120470';
 }
 use strict;
 use warnings;
@@ -113,7 +113,7 @@ Shipment::Temando::WSDL::Elements::makeBookingByRequestResponse
 
 =head1 VERSION
 
-version 0.01120340
+version 0.01120470
 
 =head1 DESCRIPTION
 

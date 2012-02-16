@@ -2,7 +2,7 @@ NAME
     Shipment - Interface to Popular Shipping Services
 
 VERSION
-    version 0.01120340
+    version 0.01120470
 
 SYNOPSIS
       use Shipment;
@@ -46,6 +46,10 @@ METHODS
   ups
     The ups method returns a Shipment::UPS object. See Shipment::UPS for
     more details.
+
+  temando
+    The temando method returns a Shipment::Temando object. See
+    Shipment::Temando for more details.
 
   address
     The address method returns a Shipment::Address object. See

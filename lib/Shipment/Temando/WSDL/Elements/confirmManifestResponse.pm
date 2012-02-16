@@ -1,7 +1,7 @@
 
 package Shipment::Temando::WSDL::Elements::confirmManifestResponse;
 {
-  $Shipment::Temando::WSDL::Elements::confirmManifestResponse::VERSION = '0.01120340';
+  $Shipment::Temando::WSDL::Elements::confirmManifestResponse::VERSION = '0.01120470';
 }
 use strict;
 use warnings;
@@ -86,7 +86,7 @@ __PACKAGE__->_factory(
 
 package Shipment::Temando::WSDL::Elements::confirmManifestResponse::_requests;
 {
-  $Shipment::Temando::WSDL::Elements::confirmManifestResponse::_requests::VERSION = '0.01120340';
+  $Shipment::Temando::WSDL::Elements::confirmManifestResponse::_requests::VERSION = '0.01120470';
 }
 use strict;
 use warnings;
@@ -154,7 +154,7 @@ Shipment::Temando::WSDL::Elements::confirmManifestResponse
 
 =head1 VERSION
 
-version 0.01120340
+version 0.01120470
 
 =head1 DESCRIPTION
 
