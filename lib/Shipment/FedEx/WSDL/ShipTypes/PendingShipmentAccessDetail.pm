@@ -1,6 +1,6 @@
 package Shipment::FedEx::WSDL::ShipTypes::PendingShipmentAccessDetail;
 {
-  $Shipment::FedEx::WSDL::ShipTypes::PendingShipmentAccessDetail::VERSION = '0.01120470';
+  $Shipment::FedEx::WSDL::ShipTypes::PendingShipmentAccessDetail::VERSION = '0.01120790';
 }
 use strict;
 use warnings;
@@ -79,7 +79,7 @@ Shipment::FedEx::WSDL::ShipTypes::PendingShipmentAccessDetail
 
 =head1 VERSION
 
-version 0.01120470
+version 0.01120790
 
 =head1 DESCRIPTION
 

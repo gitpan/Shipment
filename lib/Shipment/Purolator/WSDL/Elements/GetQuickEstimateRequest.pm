@@ -1,7 +1,7 @@
 
 package Shipment::Purolator::WSDL::Elements::GetQuickEstimateRequest;
 {
-  $Shipment::Purolator::WSDL::Elements::GetQuickEstimateRequest::VERSION = '0.01120470';
+  $Shipment::Purolator::WSDL::Elements::GetQuickEstimateRequest::VERSION = '0.01120790';
 }
 use strict;
 use warnings;
@@ -36,7 +36,7 @@ Shipment::Purolator::WSDL::Elements::GetQuickEstimateRequest
 
 =head1 VERSION
 
-version 0.01120470
+version 0.01120790
 
 =head1 DESCRIPTION
 

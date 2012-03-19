@@ -1,6 +1,6 @@
 package Shipment::Temando;
 {
-  $Shipment::Temando::VERSION = '0.01120470';
+  $Shipment::Temando::VERSION = '0.01120790';
 }
 use strict;
 use warnings;
@@ -615,7 +615,7 @@ Shipment::Temando
 
 =head1 VERSION
 
-version 0.01120470
+version 0.01120790
 
 =head1 SYNOPSIS
 
@@ -634,7 +634,7 @@ version 0.01120470
   }
 
   $shipment->rate( 'Service Name' );
-  print $service->cost . "\n";
+  print $shipment->service->cost . "\n";
 
   $shipment->ship( $service->id );
   $shipment->get_package(0)->label->save;

@@ -1,6 +1,6 @@
 package Shipment::Purolator;
 {
-  $Shipment::Purolator::VERSION = '0.01120470';
+  $Shipment::Purolator::VERSION = '0.01120790';
 }
 use strict;
 use warnings;
@@ -739,7 +739,7 @@ Shipment::Purolator
 
 =head1 VERSION
 
-version 0.01120470
+version 0.01120790
 
 =head1 SYNOPSIS
 
@@ -758,7 +758,7 @@ version 0.01120470
   }
 
   $shipment->rate( 'express' );
-  print $service->cost . "\n";
+  print $shipment->service->cost . "\n";
 
   $shipment->ship( 'ground' );
   $shipment->get_package(0)->label->save;

@@ -1,6 +1,6 @@
 package Shipment::Temando::WSDL::Types::DistanceMeasurementType;
 {
-  $Shipment::Temando::WSDL::Types::DistanceMeasurementType::VERSION = '0.01120470';
+  $Shipment::Temando::WSDL::Types::DistanceMeasurementType::VERSION = '0.01120790';
 }
 use strict;
 use warnings;
@@ -25,7 +25,7 @@ Shipment::Temando::WSDL::Types::DistanceMeasurementType
 
 =head1 VERSION
 
-version 0.01120470
+version 0.01120790
 
 =head1 DESCRIPTION
 
