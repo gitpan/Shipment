@@ -1,6 +1,6 @@
 package Shipment::Purolator::WSDL::Types::BillDutiesToParty;
 {
-  $Shipment::Purolator::WSDL::Types::BillDutiesToParty::VERSION = '0.01120790';
+  $Shipment::Purolator::WSDL::Types::BillDutiesToParty::VERSION = '0.01121490';
 }
 use strict;
 use warnings;
@@ -25,7 +25,7 @@ Shipment::Purolator::WSDL::Types::BillDutiesToParty
 
 =head1 VERSION
 
-version 0.01120790
+version 0.01121490
 
 =head1 DESCRIPTION
 

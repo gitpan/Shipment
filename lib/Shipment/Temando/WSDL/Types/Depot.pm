@@ -1,6 +1,6 @@
 package Shipment::Temando::WSDL::Types::Depot;
 {
-  $Shipment::Temando::WSDL::Types::Depot::VERSION = '0.01120790';
+  $Shipment::Temando::WSDL::Types::Depot::VERSION = '0.01121490';
 }
 use strict;
 use warnings;
@@ -114,7 +114,7 @@ Shipment::Temando::WSDL::Types::Depot
 
 =head1 VERSION
 
-version 0.01120790
+version 0.01121490
 
 =head1 DESCRIPTION
 

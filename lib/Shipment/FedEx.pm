@@ -1,6 +1,6 @@
 package Shipment::FedEx;
 {
-  $Shipment::FedEx::VERSION = '0.01120790';
+  $Shipment::FedEx::VERSION = '0.01121490';
 }
 use strict;
 use warnings;
@@ -228,6 +228,10 @@ sub _build_services {
           package => Shipment::Package->new(
             id => 'YOUR_PACKAGING',
             name => 'Customer Supplied',
+          ),
+          cost => Data::Currency->new(
+            $service->get_RatedShipmentDetails->[0]->get_ShipmentRateDetail->get_TotalNetCharge->get_Amount,
+            $service->get_RatedShipmentDetails->[0]->get_ShipmentRateDetail->get_TotalNetCharge->get_Currency
           ),
         );
     }
@@ -799,7 +803,7 @@ Shipment::FedEx
 
 =head1 VERSION
 
-version 0.01120790
+version 0.01121490
 
 =head1 SYNOPSIS
 

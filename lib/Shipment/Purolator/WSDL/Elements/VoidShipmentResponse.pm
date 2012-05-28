@@ -1,7 +1,7 @@
 
 package Shipment::Purolator::WSDL::Elements::VoidShipmentResponse;
 {
-  $Shipment::Purolator::WSDL::Elements::VoidShipmentResponse::VERSION = '0.01120790';
+  $Shipment::Purolator::WSDL::Elements::VoidShipmentResponse::VERSION = '0.01121490';
 }
 use strict;
 use warnings;
@@ -36,7 +36,7 @@ Shipment::Purolator::WSDL::Elements::VoidShipmentResponse
 
 =head1 VERSION
 
-version 0.01120790
+version 0.01121490
 
 =head1 DESCRIPTION
 

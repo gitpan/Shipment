@@ -1,6 +1,6 @@
 package Shipment::Temando::WSDL::Types::BookingQuote;
 {
-  $Shipment::Temando::WSDL::Types::BookingQuote::VERSION = '0.01120790';
+  $Shipment::Temando::WSDL::Types::BookingQuote::VERSION = '0.01121490';
 }
 use strict;
 use warnings;
@@ -95,7 +95,7 @@ __PACKAGE__->_factory(
 
 package Shipment::Temando::WSDL::Types::BookingQuote::_extras;
 {
-  $Shipment::Temando::WSDL::Types::BookingQuote::_extras::VERSION = '0.01120790';
+  $Shipment::Temando::WSDL::Types::BookingQuote::_extras::VERSION = '0.01121490';
 }
 use strict;
 use warnings;
@@ -160,7 +160,7 @@ Shipment::Temando::WSDL::Types::BookingQuote
 
 =head1 VERSION
 
-version 0.01120790
+version 0.01121490
 
 =head1 DESCRIPTION
 

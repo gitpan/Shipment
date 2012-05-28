@@ -1,6 +1,6 @@
 package Shipment::FedEx::WSDL::RateTypes::LabelMaskableDataType;
 {
-  $Shipment::FedEx::WSDL::RateTypes::LabelMaskableDataType::VERSION = '0.01120790';
+  $Shipment::FedEx::WSDL::RateTypes::LabelMaskableDataType::VERSION = '0.01121490';
 }
 use strict;
 use warnings;
@@ -25,7 +25,7 @@ Shipment::FedEx::WSDL::RateTypes::LabelMaskableDataType
 
 =head1 VERSION
 
-version 0.01120790
+version 0.01121490
 
 =head1 DESCRIPTION
 

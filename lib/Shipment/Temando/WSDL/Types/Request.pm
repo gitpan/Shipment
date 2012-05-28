@@ -1,6 +1,6 @@
 package Shipment::Temando::WSDL::Types::Request;
 {
-  $Shipment::Temando::WSDL::Types::Request::VERSION = '0.01120790';
+  $Shipment::Temando::WSDL::Types::Request::VERSION = '0.01121490';
 }
 use strict;
 use warnings;
@@ -100,7 +100,7 @@ __PACKAGE__->_factory(
 
 package Shipment::Temando::WSDL::Types::Request::_anythings;
 {
-  $Shipment::Temando::WSDL::Types::Request::_anythings::VERSION = '0.01120790';
+  $Shipment::Temando::WSDL::Types::Request::_anythings::VERSION = '0.01121490';
 }
 use strict;
 use warnings;
@@ -150,7 +150,7 @@ __PACKAGE__->_factory(
 
 package Shipment::Temando::WSDL::Types::Request::_quotes;
 {
-  $Shipment::Temando::WSDL::Types::Request::_quotes::VERSION = '0.01120790';
+  $Shipment::Temando::WSDL::Types::Request::_quotes::VERSION = '0.01121490';
 }
 use strict;
 use warnings;
@@ -200,7 +200,7 @@ __PACKAGE__->_factory(
 
 package Shipment::Temando::WSDL::Types::Request::_Request::XmlAttr;
 {
-  $Shipment::Temando::WSDL::Types::Request::_Request::XmlAttr::VERSION = '0.01120790';
+  $Shipment::Temando::WSDL::Types::Request::_Request::XmlAttr::VERSION = '0.01121490';
 }
 use base qw(SOAP::WSDL::XSD::Typelib::AttributeSet);
 
@@ -239,7 +239,7 @@ Shipment::Temando::WSDL::Types::Request
 
 =head1 VERSION
 
-version 0.01120790
+version 0.01121490
 
 =head1 DESCRIPTION
 

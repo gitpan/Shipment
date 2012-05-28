@@ -1,7 +1,7 @@
 
 package Shipment::FedEx::WSDL::CloseElements::ReprintGroundCloseDocumentsRequest;
 {
-  $Shipment::FedEx::WSDL::CloseElements::ReprintGroundCloseDocumentsRequest::VERSION = '0.01120790';
+  $Shipment::FedEx::WSDL::CloseElements::ReprintGroundCloseDocumentsRequest::VERSION = '0.01121490';
 }
 use strict;
 use warnings;
@@ -36,7 +36,7 @@ Shipment::FedEx::WSDL::CloseElements::ReprintGroundCloseDocumentsRequest
 
 =head1 VERSION
 
-version 0.01120790
+version 0.01121490
 
 =head1 DESCRIPTION
 

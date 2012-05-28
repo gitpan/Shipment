@@ -37,6 +37,7 @@ my %WriteMakefileArgs = (
     "Moose::Util::TypeConstraints" => 0,
     "MooseX::Aliases" => "0.10",
     "MooseX::Types::DateTime::ButMaintained" => 0,
+    "Net::HTTP" => "6.01",
     "Pod::Usage" => 0,
     "SOAP::Lite" => 0,
     "Scalar::Util" => 0,
@@ -46,7 +47,7 @@ my %WriteMakefileArgs = (
     "strict" => 0,
     "warnings" => 0
   },
-  "VERSION" => "0.01120790",
+  "VERSION" => "0.01121490",
   "test" => {
     "TESTS" => "t/*.t"
   }

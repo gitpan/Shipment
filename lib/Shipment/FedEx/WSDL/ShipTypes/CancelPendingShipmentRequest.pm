@@ -1,6 +1,6 @@
 package Shipment::FedEx::WSDL::ShipTypes::CancelPendingShipmentRequest;
 {
-  $Shipment::FedEx::WSDL::ShipTypes::CancelPendingShipmentRequest::VERSION = '0.01120790';
+  $Shipment::FedEx::WSDL::ShipTypes::CancelPendingShipmentRequest::VERSION = '0.01121490';
 }
 use strict;
 use warnings;
@@ -84,7 +84,7 @@ Shipment::FedEx::WSDL::ShipTypes::CancelPendingShipmentRequest
 
 =head1 VERSION
 
-version 0.01120790
+version 0.01121490
 
 =head1 DESCRIPTION
 

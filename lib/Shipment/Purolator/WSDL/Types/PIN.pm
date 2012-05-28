@@ -1,6 +1,6 @@
 package Shipment::Purolator::WSDL::Types::PIN;
 {
-  $Shipment::Purolator::WSDL::Types::PIN::VERSION = '0.01120790';
+  $Shipment::Purolator::WSDL::Types::PIN::VERSION = '0.01121490';
 }
 use strict;
 use warnings;
@@ -64,7 +64,7 @@ Shipment::Purolator::WSDL::Types::PIN
 
 =head1 VERSION
 
-version 0.01120790
+version 0.01121490
 
 =head1 DESCRIPTION
 
