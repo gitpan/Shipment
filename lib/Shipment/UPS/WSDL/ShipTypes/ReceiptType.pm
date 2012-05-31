@@ -1,6 +1,6 @@
 package Shipment::UPS::WSDL::ShipTypes::ReceiptType;
 {
-  $Shipment::UPS::WSDL::ShipTypes::ReceiptType::VERSION = '0.01121490';
+  $Shipment::UPS::WSDL::ShipTypes::ReceiptType::VERSION = '0.02';
 }
 use strict;
 use warnings;
@@ -72,7 +72,7 @@ Shipment::UPS::WSDL::ShipTypes::ReceiptType
 
 =head1 VERSION
 
-version 0.01121490
+version 0.02
 
 =head1 DESCRIPTION
 

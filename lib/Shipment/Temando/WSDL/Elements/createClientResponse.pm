@@ -1,7 +1,7 @@
 
 package Shipment::Temando::WSDL::Elements::createClientResponse;
 {
-  $Shipment::Temando::WSDL::Elements::createClientResponse::VERSION = '0.01121490';
+  $Shipment::Temando::WSDL::Elements::createClientResponse::VERSION = '0.02';
 }
 use strict;
 use warnings;
@@ -78,7 +78,7 @@ Shipment::Temando::WSDL::Elements::createClientResponse
 
 =head1 VERSION
 
-version 0.01121490
+version 0.02
 
 =head1 DESCRIPTION
 

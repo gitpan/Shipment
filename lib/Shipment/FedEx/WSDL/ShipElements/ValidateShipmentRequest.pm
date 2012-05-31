@@ -1,7 +1,7 @@
 
 package Shipment::FedEx::WSDL::ShipElements::ValidateShipmentRequest;
 {
-  $Shipment::FedEx::WSDL::ShipElements::ValidateShipmentRequest::VERSION = '0.01121490';
+  $Shipment::FedEx::WSDL::ShipElements::ValidateShipmentRequest::VERSION = '0.02';
 }
 use strict;
 use warnings;
@@ -36,7 +36,7 @@ Shipment::FedEx::WSDL::ShipElements::ValidateShipmentRequest
 
 =head1 VERSION
 
-version 0.01121490
+version 0.02
 
 =head1 DESCRIPTION
 

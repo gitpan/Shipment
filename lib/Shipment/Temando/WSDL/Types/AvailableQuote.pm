@@ -1,6 +1,6 @@
 package Shipment::Temando::WSDL::Types::AvailableQuote;
 {
-  $Shipment::Temando::WSDL::Types::AvailableQuote::VERSION = '0.01121490';
+  $Shipment::Temando::WSDL::Types::AvailableQuote::VERSION = '0.02';
 }
 use strict;
 use warnings;
@@ -201,7 +201,7 @@ __PACKAGE__->_factory(
 
 package Shipment::Temando::WSDL::Types::AvailableQuote::_adjustments;
 {
-  $Shipment::Temando::WSDL::Types::AvailableQuote::_adjustments::VERSION = '0.01121490';
+  $Shipment::Temando::WSDL::Types::AvailableQuote::_adjustments::VERSION = '0.02';
 }
 use strict;
 use warnings;
@@ -251,7 +251,7 @@ __PACKAGE__->_factory(
 
 package Shipment::Temando::WSDL::Types::AvailableQuote::_extras;
 {
-  $Shipment::Temando::WSDL::Types::AvailableQuote::_extras::VERSION = '0.01121490';
+  $Shipment::Temando::WSDL::Types::AvailableQuote::_extras::VERSION = '0.02';
 }
 use strict;
 use warnings;
@@ -301,7 +301,7 @@ __PACKAGE__->_factory(
 
 package Shipment::Temando::WSDL::Types::AvailableQuote::_inclusions;
 {
-  $Shipment::Temando::WSDL::Types::AvailableQuote::_inclusions::VERSION = '0.01121490';
+  $Shipment::Temando::WSDL::Types::AvailableQuote::_inclusions::VERSION = '0.02';
 }
 use strict;
 use warnings;
@@ -351,7 +351,7 @@ __PACKAGE__->_factory(
 
 package Shipment::Temando::WSDL::Types::AvailableQuote::_AvailableQuote::XmlAttr;
 {
-  $Shipment::Temando::WSDL::Types::AvailableQuote::_AvailableQuote::XmlAttr::VERSION = '0.01121490';
+  $Shipment::Temando::WSDL::Types::AvailableQuote::_AvailableQuote::XmlAttr::VERSION = '0.02';
 }
 use base qw(SOAP::WSDL::XSD::Typelib::AttributeSet);
 
@@ -390,7 +390,7 @@ Shipment::Temando::WSDL::Types::AvailableQuote
 
 =head1 VERSION
 
-version 0.01121490
+version 0.02
 
 =head1 DESCRIPTION
 

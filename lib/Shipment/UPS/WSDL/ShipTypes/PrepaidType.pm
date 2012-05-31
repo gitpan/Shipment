@@ -1,6 +1,6 @@
 package Shipment::UPS::WSDL::ShipTypes::PrepaidType;
 {
-  $Shipment::UPS::WSDL::ShipTypes::PrepaidType::VERSION = '0.01121490';
+  $Shipment::UPS::WSDL::ShipTypes::PrepaidType::VERSION = '0.02';
 }
 use strict;
 use warnings;
@@ -64,7 +64,7 @@ Shipment::UPS::WSDL::ShipTypes::PrepaidType
 
 =head1 VERSION
 
-version 0.01121490
+version 0.02
 
 =head1 DESCRIPTION
 
