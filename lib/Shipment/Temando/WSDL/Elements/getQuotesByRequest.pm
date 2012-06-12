@@ -1,7 +1,7 @@
 
 package Shipment::Temando::WSDL::Elements::getQuotesByRequest;
 {
-  $Shipment::Temando::WSDL::Elements::getQuotesByRequest::VERSION = '0.02';
+  $Shipment::Temando::WSDL::Elements::getQuotesByRequest::VERSION = '0.03';
 }
 use strict;
 use warnings;
@@ -81,7 +81,7 @@ __PACKAGE__->_factory(
 
 package Shipment::Temando::WSDL::Elements::getQuotesByRequest::_anythings;
 {
-  $Shipment::Temando::WSDL::Elements::getQuotesByRequest::_anythings::VERSION = '0.02';
+  $Shipment::Temando::WSDL::Elements::getQuotesByRequest::_anythings::VERSION = '0.03';
 }
 use strict;
 use warnings;
@@ -149,7 +149,7 @@ Shipment::Temando::WSDL::Elements::getQuotesByRequest
 
 =head1 VERSION
 
-version 0.02
+version 0.03
 
 =head1 DESCRIPTION
 

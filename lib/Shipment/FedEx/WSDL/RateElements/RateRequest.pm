@@ -1,7 +1,7 @@
 
 package Shipment::FedEx::WSDL::RateElements::RateRequest;
 {
-  $Shipment::FedEx::WSDL::RateElements::RateRequest::VERSION = '0.02';
+  $Shipment::FedEx::WSDL::RateElements::RateRequest::VERSION = '0.03';
 }
 use strict;
 use warnings;
@@ -36,7 +36,7 @@ Shipment::FedEx::WSDL::RateElements::RateRequest
 
 =head1 VERSION
 
-version 0.02
+version 0.03
 
 =head1 DESCRIPTION
 

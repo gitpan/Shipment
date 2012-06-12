@@ -1,6 +1,6 @@
 package Shipment::FedEx::WSDL::RateTypes::CustomsClearanceDetail;
 {
-  $Shipment::FedEx::WSDL::RateTypes::CustomsClearanceDetail::VERSION = '0.02';
+  $Shipment::FedEx::WSDL::RateTypes::CustomsClearanceDetail::VERSION = '0.03';
 }
 use strict;
 use warnings;
@@ -129,7 +129,7 @@ Shipment::FedEx::WSDL::RateTypes::CustomsClearanceDetail
 
 =head1 VERSION
 
-version 0.02
+version 0.03
 
 =head1 DESCRIPTION
 

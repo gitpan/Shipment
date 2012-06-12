@@ -1,6 +1,6 @@
 package Shipment::Purolator::WSDL::Types::GetServiceRulesResponseContainer;
 {
-  $Shipment::Purolator::WSDL::Types::GetServiceRulesResponseContainer::VERSION = '0.02';
+  $Shipment::Purolator::WSDL::Types::GetServiceRulesResponseContainer::VERSION = '0.03';
 }
 use strict;
 use warnings;
@@ -82,7 +82,7 @@ Shipment::Purolator::WSDL::Types::GetServiceRulesResponseContainer
 
 =head1 VERSION
 
-version 0.02
+version 0.03
 
 =head1 DESCRIPTION
 

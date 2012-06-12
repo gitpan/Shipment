@@ -1,6 +1,6 @@
 package Shipment::Purolator::WSDL::Types::ArrayOfContentDetail;
 {
-  $Shipment::Purolator::WSDL::Types::ArrayOfContentDetail::VERSION = '0.02';
+  $Shipment::Purolator::WSDL::Types::ArrayOfContentDetail::VERSION = '0.03';
 }
 use strict;
 use warnings;
@@ -64,7 +64,7 @@ Shipment::Purolator::WSDL::Types::ArrayOfContentDetail
 
 =head1 VERSION
 
-version 0.02
+version 0.03
 
 =head1 DESCRIPTION
 

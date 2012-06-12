@@ -1,6 +1,6 @@
 package Shipment::Purolator::WSDL::Types::CreditCardType;
 {
-  $Shipment::Purolator::WSDL::Types::CreditCardType::VERSION = '0.02';
+  $Shipment::Purolator::WSDL::Types::CreditCardType::VERSION = '0.03';
 }
 use strict;
 use warnings;
@@ -25,7 +25,7 @@ Shipment::Purolator::WSDL::Types::CreditCardType
 
 =head1 VERSION
 
-version 0.02
+version 0.03
 
 =head1 DESCRIPTION
 

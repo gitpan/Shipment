@@ -1,6 +1,6 @@
 package Shipment::FedEx::WSDL::RateTypes::EtdDetail;
 {
-  $Shipment::FedEx::WSDL::RateTypes::EtdDetail::VERSION = '0.02';
+  $Shipment::FedEx::WSDL::RateTypes::EtdDetail::VERSION = '0.03';
 }
 use strict;
 use warnings;
@@ -74,7 +74,7 @@ Shipment::FedEx::WSDL::RateTypes::EtdDetail
 
 =head1 VERSION
 
-version 0.02
+version 0.03
 
 =head1 DESCRIPTION
 

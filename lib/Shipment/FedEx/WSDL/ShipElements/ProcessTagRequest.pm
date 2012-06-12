@@ -1,7 +1,7 @@
 
 package Shipment::FedEx::WSDL::ShipElements::ProcessTagRequest;
 {
-  $Shipment::FedEx::WSDL::ShipElements::ProcessTagRequest::VERSION = '0.02';
+  $Shipment::FedEx::WSDL::ShipElements::ProcessTagRequest::VERSION = '0.03';
 }
 use strict;
 use warnings;
@@ -36,7 +36,7 @@ Shipment::FedEx::WSDL::ShipElements::ProcessTagRequest
 
 =head1 VERSION
 
-version 0.02
+version 0.03
 
 =head1 DESCRIPTION
 

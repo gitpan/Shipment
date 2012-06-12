@@ -1,6 +1,6 @@
 package Shipment::FedEx;
 {
-  $Shipment::FedEx::VERSION = '0.02';
+  $Shipment::FedEx::VERSION = '0.03';
 }
 use strict;
 use warnings;
@@ -166,6 +166,10 @@ sub _build_services {
   push @from_streetlines, $self->from_address()->address1;
   push @from_streetlines, $self->from_address()->address2 if $self->from_address()->address2;
 
+  my $total_weight;
+  $total_weight += $_->weight for @{ $self->packages };
+  $total_weight ||= 1;
+
   try {
     $response = $interface->getRates( 
       { 
@@ -212,7 +216,7 @@ sub _build_services {
           PackageDetail => 'INDIVIDUAL_PACKAGES',
           RequestedPackageLineItems =>  { 
             Weight => {
-              Value => 1,
+              Value => $total_weight,
               Units => $units_type_map{$self->weight_unit} || $self->weight_unit,
             }, 
           },
@@ -803,7 +807,7 @@ Shipment::FedEx
 
 =head1 VERSION
 
-version 0.02
+version 0.03
 
 =head1 SYNOPSIS
 

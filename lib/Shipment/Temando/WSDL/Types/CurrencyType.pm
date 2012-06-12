@@ -1,6 +1,6 @@
 package Shipment::Temando::WSDL::Types::CurrencyType;
 {
-  $Shipment::Temando::WSDL::Types::CurrencyType::VERSION = '0.02';
+  $Shipment::Temando::WSDL::Types::CurrencyType::VERSION = '0.03';
 }
 use strict;
 use warnings;
@@ -25,7 +25,7 @@ Shipment::Temando::WSDL::Types::CurrencyType
 
 =head1 VERSION
 
-version 0.02
+version 0.03
 
 =head1 DESCRIPTION
 

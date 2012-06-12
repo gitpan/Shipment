@@ -1,7 +1,7 @@
 
 package Shipment::Purolator::WSDL::Elements::CreateShipmentResponseContainer;
 {
-  $Shipment::Purolator::WSDL::Elements::CreateShipmentResponseContainer::VERSION = '0.02';
+  $Shipment::Purolator::WSDL::Elements::CreateShipmentResponseContainer::VERSION = '0.03';
 }
 use strict;
 use warnings;
@@ -36,7 +36,7 @@ Shipment::Purolator::WSDL::Elements::CreateShipmentResponseContainer
 
 =head1 VERSION
 
-version 0.02
+version 0.03
 
 =head1 DESCRIPTION
 

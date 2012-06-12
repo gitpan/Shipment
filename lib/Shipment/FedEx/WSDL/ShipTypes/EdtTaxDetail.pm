@@ -1,6 +1,6 @@
 package Shipment::FedEx::WSDL::ShipTypes::EdtTaxDetail;
 {
-  $Shipment::FedEx::WSDL::ShipTypes::EdtTaxDetail::VERSION = '0.02';
+  $Shipment::FedEx::WSDL::ShipTypes::EdtTaxDetail::VERSION = '0.03';
 }
 use strict;
 use warnings;
@@ -94,7 +94,7 @@ Shipment::FedEx::WSDL::ShipTypes::EdtTaxDetail
 
 =head1 VERSION
 
-version 0.02
+version 0.03
 
 =head1 DESCRIPTION
 

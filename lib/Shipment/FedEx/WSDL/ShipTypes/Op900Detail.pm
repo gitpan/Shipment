@@ -1,6 +1,6 @@
 package Shipment::FedEx::WSDL::ShipTypes::Op900Detail;
 {
-  $Shipment::FedEx::WSDL::ShipTypes::Op900Detail::VERSION = '0.02';
+  $Shipment::FedEx::WSDL::ShipTypes::Op900Detail::VERSION = '0.03';
 }
 use strict;
 use warnings;
@@ -79,7 +79,7 @@ Shipment::FedEx::WSDL::ShipTypes::Op900Detail
 
 =head1 VERSION
 
-version 0.02
+version 0.03
 
 =head1 DESCRIPTION
 

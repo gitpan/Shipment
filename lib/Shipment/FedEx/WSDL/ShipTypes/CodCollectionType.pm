@@ -1,6 +1,6 @@
 package Shipment::FedEx::WSDL::ShipTypes::CodCollectionType;
 {
-  $Shipment::FedEx::WSDL::ShipTypes::CodCollectionType::VERSION = '0.02';
+  $Shipment::FedEx::WSDL::ShipTypes::CodCollectionType::VERSION = '0.03';
 }
 use strict;
 use warnings;
@@ -25,7 +25,7 @@ Shipment::FedEx::WSDL::ShipTypes::CodCollectionType
 
 =head1 VERSION
 
-version 0.02
+version 0.03
 
 =head1 DESCRIPTION
 
