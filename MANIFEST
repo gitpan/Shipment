@@ -860,6 +860,8 @@ lib/Shipment/Temando/WSDL/Elements/updateClient.pm
 lib/Shipment/Temando/WSDL/Elements/updateClientResponse.pm
 lib/Shipment/Temando/WSDL/Elements/updateLocation.pm
 lib/Shipment/Temando/WSDL/Elements/updateLocationResponse.pm
+lib/Shipment/Temando/WSDL/Elements/updateRequest.pm
+lib/Shipment/Temando/WSDL/Elements/updateRequestResponse.pm
 lib/Shipment/Temando/WSDL/Elements/updateTrackingDetails.pm
 lib/Shipment/Temando/WSDL/Elements/updateTrackingDetailsResponse.pm
 lib/Shipment/Temando/WSDL/Interfaces/quoting_Service/quoting_port.pm
@@ -872,8 +874,11 @@ lib/Shipment/Temando/WSDL/Types/AnimalBreed.pm
 lib/Shipment/Temando/WSDL/Types/AnimalCrate.pm
 lib/Shipment/Temando/WSDL/Types/AnimalType.pm
 lib/Shipment/Temando/WSDL/Types/Anything.pm
+lib/Shipment/Temando/WSDL/Types/AnythingIndex.pm
 lib/Shipment/Temando/WSDL/Types/Anytime.pm
 lib/Shipment/Temando/WSDL/Types/Anywhere.pm
+lib/Shipment/Temando/WSDL/Types/Article.pm
+lib/Shipment/Temando/WSDL/Types/ArticleNumber.pm
 lib/Shipment/Temando/WSDL/Types/AuspostLodgementFacility.pm
 lib/Shipment/Temando/WSDL/Types/AuspostMerchantLocationId.pm
 lib/Shipment/Temando/WSDL/Types/AvailableQuote.pm
@@ -887,6 +892,7 @@ lib/Shipment/Temando/WSDL/Types/CarrierAccountNumber.pm
 lib/Shipment/Temando/WSDL/Types/CarrierConditions.pm
 lib/Shipment/Temando/WSDL/Types/CarrierCreatorId.pm
 lib/Shipment/Temando/WSDL/Types/CarrierId.pm
+lib/Shipment/Temando/WSDL/Types/CarrierPreference.pm
 lib/Shipment/Temando/WSDL/Types/CarrierReference.pm
 lib/Shipment/Temando/WSDL/Types/City.pm
 lib/Shipment/Temando/WSDL/Types/Class.pm
@@ -950,6 +956,7 @@ lib/Shipment/Temando/WSDL/Types/LoginDetails.pm
 lib/Shipment/Temando/WSDL/Types/LoginId.pm
 lib/Shipment/Temando/WSDL/Types/ManifestDocument.pm
 lib/Shipment/Temando/WSDL/Types/ManifestDocumentType.pm
+lib/Shipment/Temando/WSDL/Types/ManifestNumber.pm
 lib/Shipment/Temando/WSDL/Types/ManifestType.pm
 lib/Shipment/Temando/WSDL/Types/Mode.pm
 lib/Shipment/Temando/WSDL/Types/Packaging.pm
@@ -967,6 +974,8 @@ lib/Shipment/Temando/WSDL/Types/PortType.pm
 lib/Shipment/Temando/WSDL/Types/PostalCode.pm
 lib/Shipment/Temando/WSDL/Types/PromotionCode.pm
 lib/Shipment/Temando/WSDL/Types/Quantity.pm
+lib/Shipment/Temando/WSDL/Types/QuoteFilter.pm
+lib/Shipment/Temando/WSDL/Types/QuotePreference.pm
 lib/Shipment/Temando/WSDL/Types/RateName.pm
 lib/Shipment/Temando/WSDL/Types/ReadyTime.pm
 lib/Shipment/Temando/WSDL/Types/Request.pm
@@ -979,6 +988,7 @@ lib/Shipment/Temando/WSDL/Types/Surname.pm
 lib/Shipment/Temando/WSDL/Types/TlSubclass.pm
 lib/Shipment/Temando/WSDL/Types/TrackingFurtherDetails.pm
 lib/Shipment/Temando/WSDL/Types/TrackingStatus.pm
+lib/Shipment/Temando/WSDL/Types/UpdateAction.pm
 lib/Shipment/Temando/WSDL/Types/VehicleDescription.pm
 lib/Shipment/Temando/WSDL/Types/VehicleMake.pm
 lib/Shipment/Temando/WSDL/Types/VehicleModel.pm

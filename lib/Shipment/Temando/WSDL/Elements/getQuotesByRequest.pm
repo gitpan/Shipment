@@ -1,7 +1,7 @@
 
 package Shipment::Temando::WSDL::Elements::getQuotesByRequest;
 {
-  $Shipment::Temando::WSDL::Elements::getQuotesByRequest::VERSION = '0.03';
+  $Shipment::Temando::WSDL::Elements::getQuotesByRequest::VERSION = '0.04';
 }
 use strict;
 use warnings;
@@ -39,6 +39,7 @@ my %anythings_of :ATTR(:get<anythings>);
 my %anywhere_of :ATTR(:get<anywhere>);
 my %anytime_of :ATTR(:get<anytime>);
 my %general_of :ATTR(:get<general>);
+my %quoteFilter_of :ATTR(:get<quoteFilter>);
 my %clientId_of :ATTR(:get<clientId>);
 
 __PACKAGE__->_factory(
@@ -46,6 +47,7 @@ __PACKAGE__->_factory(
         anywhere
         anytime
         general
+        quoteFilter
         clientId
 
     ) ],
@@ -54,6 +56,7 @@ __PACKAGE__->_factory(
         'anywhere' => \%anywhere_of,
         'anytime' => \%anytime_of,
         'general' => \%general_of,
+        'quoteFilter' => \%quoteFilter_of,
         'clientId' => \%clientId_of,
     },
     {
@@ -62,6 +65,7 @@ __PACKAGE__->_factory(
         'anywhere' => 'Shipment::Temando::WSDL::Types::Anywhere',
         'anytime' => 'Shipment::Temando::WSDL::Types::Anytime',
         'general' => 'Shipment::Temando::WSDL::Types::General',
+        'quoteFilter' => 'Shipment::Temando::WSDL::Types::QuoteFilter',
         'clientId' => 'Shipment::Temando::WSDL::Types::ClientId',
     },
     {
@@ -70,6 +74,7 @@ __PACKAGE__->_factory(
         'anywhere' => 'anywhere',
         'anytime' => 'anytime',
         'general' => 'general',
+        'quoteFilter' => 'quoteFilter',
         'clientId' => 'clientId',
     }
 );
@@ -81,7 +86,7 @@ __PACKAGE__->_factory(
 
 package Shipment::Temando::WSDL::Elements::getQuotesByRequest::_anythings;
 {
-  $Shipment::Temando::WSDL::Elements::getQuotesByRequest::_anythings::VERSION = '0.03';
+  $Shipment::Temando::WSDL::Elements::getQuotesByRequest::_anythings::VERSION = '0.04';
 }
 use strict;
 use warnings;
@@ -149,7 +154,7 @@ Shipment::Temando::WSDL::Elements::getQuotesByRequest
 
 =head1 VERSION
 
-version 0.03
+version 0.04
 
 =head1 DESCRIPTION
 
@@ -186,6 +191,11 @@ methods:
 
  $element->set_general($data);
  $element->get_general();
+
+=item * quoteFilter
+
+ $element->set_quoteFilter($data);
+ $element->get_quoteFilter();
 
 =item * clientId
 
@@ -309,6 +319,20 @@ Constructor. The following data structure may be passed to new():
    },
    general =>  { # Shipment::Temando::WSDL::Types::General
      goodsValue => $some_value, # CurrencyAmount
+   },
+   quoteFilter =>  { # Shipment::Temando::WSDL::Types::QuoteFilter
+     preference => $some_value, # QuotePreference
+     carriers =>  {
+       carrier =>  { # Shipment::Temando::WSDL::Types::CarrierPreference
+         carrierId => $some_value, # CarrierId
+         deliveryMethods =>  {
+           deliveryMethod => $some_value, # DeliveryMethod
+         },
+       },
+     },
+     extras =>  {
+       summary => $some_value, # ExtraSummary
+     },
    },
    clientId => $some_value, # ClientId
  },

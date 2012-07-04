@@ -1,7 +1,7 @@
 
 package Shipment::FedEx::WSDL::CloseElements::GroundCloseReportsReprintReply;
 {
-  $Shipment::FedEx::WSDL::CloseElements::GroundCloseReportsReprintReply::VERSION = '0.03';
+  $Shipment::FedEx::WSDL::CloseElements::GroundCloseReportsReprintReply::VERSION = '0.04';
 }
 use strict;
 use warnings;
@@ -36,7 +36,7 @@ Shipment::FedEx::WSDL::CloseElements::GroundCloseReportsReprintReply
 
 =head1 VERSION
 
-version 0.03
+version 0.04
 
 =head1 DESCRIPTION
 

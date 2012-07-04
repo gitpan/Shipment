@@ -1,7 +1,7 @@
 
 package Shipment::Temando::WSDL::Elements::getQuotesByRequestResponse;
 {
-  $Shipment::Temando::WSDL::Elements::getQuotesByRequestResponse::VERSION = '0.03';
+  $Shipment::Temando::WSDL::Elements::getQuotesByRequestResponse::VERSION = '0.04';
 }
 use strict;
 use warnings;
@@ -78,7 +78,7 @@ Shipment::Temando::WSDL::Elements::getQuotesByRequestResponse
 
 =head1 VERSION
 
-version 0.03
+version 0.04
 
 =head1 DESCRIPTION
 
@@ -121,6 +121,15 @@ Constructor. The following data structure may be passed to new():
      consignmentDocumentType => $some_value, # ConsignmentDocumentType
      labelDocument => $some_value, # LabelDocument
      labelDocumentType => $some_value, # LabelDocumentType
+     manifestNumber => $some_value, # ManifestNumber
+     articles =>  {
+       article =>  { # Shipment::Temando::WSDL::Types::Article
+         anythingIndex => $some_value, # AnythingIndex
+         articleNumber => $some_value, # ArticleNumber
+         labelDocument => $some_value, # LabelDocument
+         labelDocumentType => $some_value, # LabelDocumentType
+       },
+     },
      trackingStatus => $some_value, # TrackingStatus
      trackingStatusOccurred => $some_value, # Datetime
      trackingLastChecked => $some_value, # Datetime

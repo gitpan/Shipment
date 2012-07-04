@@ -1,6 +1,6 @@
 package Shipment::Temando::WSDL::Interfaces::quoting_Service::quoting_port;
 {
-  $Shipment::Temando::WSDL::Interfaces::quoting_Service::quoting_port::VERSION = '0.03';
+  $Shipment::Temando::WSDL::Interfaces::quoting_Service::quoting_port::VERSION = '0.04';
 }
 use strict;
 use warnings;
@@ -14,8 +14,9 @@ our $ns_url;
 require Shipment::Temando::WSDL::Typemaps::quoting_Service
     if not Shipment::Temando::WSDL::Typemaps::quoting_Service->can('get_class');
 
-sub START {
 
+sub START {
+ 
     my $service_address;
     if ($_[2]->{live}) {
     	$service_address = 'https://api.temando.com/soapServer.html';
@@ -55,8 +56,7 @@ sub getQuotesByRequest {
             namespace => 'http://schemas.xmlsoap.org/wsdl/soap/',
             encodingStyle => '',
             parts => [qw( Shipment::Temando::WSDL::Elements::TemandoSecurity )],
-
-   
+            
         },
         headerfault => {
             
@@ -100,7 +100,6 @@ sub makeBookingByRequest {
             encodingStyle => '',
             parts => [qw( Shipment::Temando::WSDL::Elements::TemandoSecurity )],
 
-            
         },
         headerfault => {
             
@@ -143,7 +142,6 @@ sub getRequest {
             namespace => 'http://schemas.xmlsoap.org/wsdl/soap/',
             encodingStyle => '',
             parts => [qw( Shipment::Temando::WSDL::Elements::TemandoSecurity )],
-
             
         },
         headerfault => {
@@ -187,7 +185,6 @@ sub getRequestsRequiringBooking {
             namespace => 'http://schemas.xmlsoap.org/wsdl/soap/',
             encodingStyle => '',
             parts => [qw( Shipment::Temando::WSDL::Elements::TemandoSecurity )],
-
             
         },
         headerfault => {
@@ -231,7 +228,6 @@ sub addBookingDetails {
             namespace => 'http://schemas.xmlsoap.org/wsdl/soap/',
             encodingStyle => '',
             parts => [qw( Shipment::Temando::WSDL::Elements::TemandoSecurity )],
-
             
         },
         headerfault => {
@@ -275,7 +271,6 @@ sub createClient {
             namespace => 'http://schemas.xmlsoap.org/wsdl/soap/',
             encodingStyle => '',
             parts => [qw( Shipment::Temando::WSDL::Elements::TemandoSecurity )],
-
             
         },
         headerfault => {
@@ -319,7 +314,6 @@ sub updateClient {
             namespace => 'http://schemas.xmlsoap.org/wsdl/soap/',
             encodingStyle => '',
             parts => [qw( Shipment::Temando::WSDL::Elements::TemandoSecurity )],
-
             
         },
         headerfault => {
@@ -363,7 +357,6 @@ sub getClient {
             namespace => 'http://schemas.xmlsoap.org/wsdl/soap/',
             encodingStyle => '',
             parts => [qw( Shipment::Temando::WSDL::Elements::TemandoSecurity )],
-
             
         },
         headerfault => {
@@ -407,7 +400,6 @@ sub lodgeDispatch {
             namespace => 'http://schemas.xmlsoap.org/wsdl/soap/',
             encodingStyle => '',
             parts => [qw( Shipment::Temando::WSDL::Elements::TemandoSecurity )],
-
             
         },
         headerfault => {
@@ -451,7 +443,6 @@ sub cancelRequest {
             namespace => 'http://schemas.xmlsoap.org/wsdl/soap/',
             encodingStyle => '',
             parts => [qw( Shipment::Temando::WSDL::Elements::TemandoSecurity )],
-
             
         },
         headerfault => {
@@ -495,7 +486,6 @@ sub updateTrackingDetails {
             namespace => 'http://schemas.xmlsoap.org/wsdl/soap/',
             encodingStyle => '',
             parts => [qw( Shipment::Temando::WSDL::Elements::TemandoSecurity )],
-
             
         },
         headerfault => {
@@ -539,7 +529,6 @@ sub getManifest {
             namespace => 'http://schemas.xmlsoap.org/wsdl/soap/',
             encodingStyle => '',
             parts => [qw( Shipment::Temando::WSDL::Elements::TemandoSecurity )],
-
             
         },
         headerfault => {
@@ -583,7 +572,6 @@ sub confirmManifest {
             namespace => 'http://schemas.xmlsoap.org/wsdl/soap/',
             encodingStyle => '',
             parts => [qw( Shipment::Temando::WSDL::Elements::TemandoSecurity )],
-
             
         },
         headerfault => {
@@ -627,7 +615,6 @@ sub getLocations {
             namespace => 'http://schemas.xmlsoap.org/wsdl/soap/',
             encodingStyle => '',
             parts => [qw( Shipment::Temando::WSDL::Elements::TemandoSecurity )],
-
             
         },
         headerfault => {
@@ -671,7 +658,6 @@ sub createLocation {
             namespace => 'http://schemas.xmlsoap.org/wsdl/soap/',
             encodingStyle => '',
             parts => [qw( Shipment::Temando::WSDL::Elements::TemandoSecurity )],
-
             
         },
         headerfault => {
@@ -715,7 +701,6 @@ sub updateLocation {
             namespace => 'http://schemas.xmlsoap.org/wsdl/soap/',
             encodingStyle => '',
             parts => [qw( Shipment::Temando::WSDL::Elements::TemandoSecurity )],
-
             
         },
         headerfault => {
@@ -779,7 +764,7 @@ Shipment::Temando::WSDL::Interfaces::quoting_Service::quoting_port
 
 =head1 VERSION
 
-version 0.03
+version 0.04
 
 =head1 SYNOPSIS
 
@@ -956,6 +941,20 @@ Returns a L<Shipment::Temando::WSDL::Elements::getQuotesByRequestResponse|Shipme
     },
     general =>  { # Shipment::Temando::WSDL::Types::General
       goodsValue => $some_value, # CurrencyAmount
+    },
+    quoteFilter =>  { # Shipment::Temando::WSDL::Types::QuoteFilter
+      preference => $some_value, # QuotePreference
+      carriers =>  {
+        carrier =>  { # Shipment::Temando::WSDL::Types::CarrierPreference
+          carrierId => $some_value, # CarrierId
+          deliveryMethods =>  {
+            deliveryMethod => $some_value, # DeliveryMethod
+          },
+        },
+      },
+      extras =>  {
+        summary => $some_value, # ExtraSummary
+      },
     },
     clientId => $some_value, # ClientId
   },,
@@ -1144,6 +1143,20 @@ Returns a L<Shipment::Temando::WSDL::Elements::makeBookingByRequestResponse|Ship
             },
           },
         },
+      },
+    },
+    quoteFilter =>  { # Shipment::Temando::WSDL::Types::QuoteFilter
+      preference => $some_value, # QuotePreference
+      carriers =>  {
+        carrier =>  { # Shipment::Temando::WSDL::Types::CarrierPreference
+          carrierId => $some_value, # CarrierId
+          deliveryMethods =>  {
+            deliveryMethod => $some_value, # DeliveryMethod
+          },
+        },
+      },
+      extras =>  {
+        summary => $some_value, # ExtraSummary
       },
     },
     payment =>  { # Shipment::Temando::WSDL::Types::Payment
@@ -1476,7 +1489,7 @@ Returns a L<Shipment::Temando::WSDL::Elements::updateLocationResponse|Shipment::
 
 =head1 AUTHOR
 
-Generated by SOAP::WSDL on Mon Jan  9 22:46:02 2012
+Generated by SOAP::WSDL on Sun Jul  1 23:12:19 2012
 
 =head1 AUTHORS
 

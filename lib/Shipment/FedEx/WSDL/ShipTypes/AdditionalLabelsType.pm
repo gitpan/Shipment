@@ -1,6 +1,6 @@
 package Shipment::FedEx::WSDL::ShipTypes::AdditionalLabelsType;
 {
-  $Shipment::FedEx::WSDL::ShipTypes::AdditionalLabelsType::VERSION = '0.03';
+  $Shipment::FedEx::WSDL::ShipTypes::AdditionalLabelsType::VERSION = '0.04';
 }
 use strict;
 use warnings;
@@ -25,7 +25,7 @@ Shipment::FedEx::WSDL::ShipTypes::AdditionalLabelsType
 
 =head1 VERSION
 
-version 0.03
+version 0.04
 
 =head1 DESCRIPTION
 

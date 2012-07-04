@@ -1,7 +1,7 @@
 # ABSTRACT: Interface to Popular Shipping Services
 package Shipment;
 {
-  $Shipment::VERSION = '0.03';
+  $Shipment::VERSION = '0.04';
 }
 
 use Moose;
@@ -61,7 +61,7 @@ Shipment - Interface to Popular Shipping Services
 
 =head1 VERSION
 
-version 0.03
+version 0.04
 
 =head1 SYNOPSIS
 

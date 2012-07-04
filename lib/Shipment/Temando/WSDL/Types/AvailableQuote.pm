@@ -1,6 +1,6 @@
 package Shipment::Temando::WSDL::Types::AvailableQuote;
 {
-  $Shipment::Temando::WSDL::Types::AvailableQuote::VERSION = '0.03';
+  $Shipment::Temando::WSDL::Types::AvailableQuote::VERSION = '0.04';
 }
 use strict;
 use warnings;
@@ -31,6 +31,8 @@ my %consignmentDocument_of :ATTR(:get<consignmentDocument>);
 my %consignmentDocumentType_of :ATTR(:get<consignmentDocumentType>);
 my %labelDocument_of :ATTR(:get<labelDocument>);
 my %labelDocumentType_of :ATTR(:get<labelDocumentType>);
+my %manifestNumber_of :ATTR(:get<manifestNumber>);
+my %articles_of :ATTR(:get<articles>);
 my %trackingStatus_of :ATTR(:get<trackingStatus>);
 my %trackingStatusOccurred_of :ATTR(:get<trackingStatusOccurred>);
 my %trackingLastChecked_of :ATTR(:get<trackingLastChecked>);
@@ -64,6 +66,8 @@ __PACKAGE__->_factory(
         consignmentDocumentType
         labelDocument
         labelDocumentType
+        manifestNumber
+        articles
         trackingStatus
         trackingStatusOccurred
         trackingLastChecked
@@ -98,6 +102,8 @@ __PACKAGE__->_factory(
         'consignmentDocumentType' => \%consignmentDocumentType_of,
         'labelDocument' => \%labelDocument_of,
         'labelDocumentType' => \%labelDocumentType_of,
+        'manifestNumber' => \%manifestNumber_of,
+        'articles' => \%articles_of,
         'trackingStatus' => \%trackingStatus_of,
         'trackingStatusOccurred' => \%trackingStatusOccurred_of,
         'trackingLastChecked' => \%trackingLastChecked_of,
@@ -131,6 +137,9 @@ __PACKAGE__->_factory(
         'consignmentDocumentType' => 'Shipment::Temando::WSDL::Types::ConsignmentDocumentType',
         'labelDocument' => 'Shipment::Temando::WSDL::Types::LabelDocument',
         'labelDocumentType' => 'Shipment::Temando::WSDL::Types::LabelDocumentType',
+        'manifestNumber' => 'Shipment::Temando::WSDL::Types::ManifestNumber',
+
+        'articles' => 'Shipment::Temando::WSDL::Types::AvailableQuote::_articles',
         'trackingStatus' => 'Shipment::Temando::WSDL::Types::TrackingStatus',
         'trackingStatusOccurred' => 'Shipment::Temando::WSDL::Types::Datetime',
         'trackingLastChecked' => 'Shipment::Temando::WSDL::Types::Datetime',
@@ -168,6 +177,8 @@ __PACKAGE__->_factory(
         'consignmentDocumentType' => 'consignmentDocumentType',
         'labelDocument' => 'labelDocument',
         'labelDocumentType' => 'labelDocumentType',
+        'manifestNumber' => 'manifestNumber',
+        'articles' => 'articles',
         'trackingStatus' => 'trackingStatus',
         'trackingStatusOccurred' => 'trackingStatusOccurred',
         'trackingLastChecked' => 'trackingLastChecked',
@@ -201,7 +212,7 @@ __PACKAGE__->_factory(
 
 package Shipment::Temando::WSDL::Types::AvailableQuote::_adjustments;
 {
-  $Shipment::Temando::WSDL::Types::AvailableQuote::_adjustments::VERSION = '0.03';
+  $Shipment::Temando::WSDL::Types::AvailableQuote::_adjustments::VERSION = '0.04';
 }
 use strict;
 use warnings;
@@ -249,9 +260,59 @@ __PACKAGE__->_factory(
 
 
 
+package Shipment::Temando::WSDL::Types::AvailableQuote::_articles;
+{
+  $Shipment::Temando::WSDL::Types::AvailableQuote::_articles::VERSION = '0.04';
+}
+use strict;
+use warnings;
+{
+our $XML_ATTRIBUTE_CLASS;
+undef $XML_ATTRIBUTE_CLASS;
+
+sub __get_attr_class {
+    return $XML_ATTRIBUTE_CLASS;
+}
+
+use Class::Std::Fast::Storable constructor => 'none';
+use base qw(SOAP::WSDL::XSD::Typelib::ComplexType);
+
+Class::Std::initialize();
+
+{ # BLOCK to scope variables
+
+my %article_of :ATTR(:get<article>);
+
+__PACKAGE__->_factory(
+    [ qw(        article
+
+    ) ],
+    {
+        'article' => \%article_of,
+    },
+    {
+        'article' => 'Shipment::Temando::WSDL::Types::Article',
+    },
+    {
+
+        'article' => 'article',
+    }
+);
+
+} # end BLOCK
+
+
+
+
+
+
+}
+
+
+
 package Shipment::Temando::WSDL::Types::AvailableQuote::_extras;
 {
-  $Shipment::Temando::WSDL::Types::AvailableQuote::_extras::VERSION = '0.03';
+  $Shipment::Temando::WSDL::Types::AvailableQuote::_extras::VERSION = '0.04';
 }
 use strict;
 use warnings;
@@ -301,7 +362,7 @@ __PACKAGE__->_factory(
 
 package Shipment::Temando::WSDL::Types::AvailableQuote::_inclusions;
 {
-  $Shipment::Temando::WSDL::Types::AvailableQuote::_inclusions::VERSION = '0.03';
+  $Shipment::Temando::WSDL::Types::AvailableQuote::_inclusions::VERSION = '0.04';
 }
 use strict;
 use warnings;
@@ -351,7 +412,7 @@ __PACKAGE__->_factory(
 
 package Shipment::Temando::WSDL::Types::AvailableQuote::_AvailableQuote::XmlAttr;
 {
-  $Shipment::Temando::WSDL::Types::AvailableQuote::_AvailableQuote::XmlAttr::VERSION = '0.03';
+  $Shipment::Temando::WSDL::Types::AvailableQuote::_AvailableQuote::XmlAttr::VERSION = '0.04';
 }
 use base qw(SOAP::WSDL::XSD::Typelib::AttributeSet);
 
@@ -390,7 +451,7 @@ Shipment::Temando::WSDL::Types::AvailableQuote
 
 =head1 VERSION
 
-version 0.03
+version 0.04
 
 =head1 DESCRIPTION
 
@@ -419,6 +480,10 @@ methods:
 =item * labelDocument (min/maxOccurs: 0/1)
 
 =item * labelDocumentType (min/maxOccurs: 0/1)
+
+=item * manifestNumber (min/maxOccurs: 0/1)
+
+=item * articles (min/maxOccurs: 0/1)
 
 =item * trackingStatus (min/maxOccurs: 0/1)
 
@@ -487,6 +552,15 @@ Constructor. The following data structure may be passed to new():
    consignmentDocumentType => $some_value, # ConsignmentDocumentType
    labelDocument => $some_value, # LabelDocument
    labelDocumentType => $some_value, # LabelDocumentType
+   manifestNumber => $some_value, # ManifestNumber
+   articles =>  {
+     article =>  { # Shipment::Temando::WSDL::Types::Article
+       anythingIndex => $some_value, # AnythingIndex
+       articleNumber => $some_value, # ArticleNumber
+       labelDocument => $some_value, # LabelDocument
+       labelDocumentType => $some_value, # LabelDocumentType
+     },
+   },
    trackingStatus => $some_value, # TrackingStatus
    trackingStatusOccurred => $some_value, # Datetime
    trackingLastChecked => $some_value, # Datetime
