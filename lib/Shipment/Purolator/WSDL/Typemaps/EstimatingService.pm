@@ -1,7 +1,7 @@
 
 package Shipment::Purolator::WSDL::Typemaps::EstimatingService;
 {
-  $Shipment::Purolator::WSDL::Typemaps::EstimatingService::VERSION = '0.04';
+  $Shipment::Purolator::WSDL::Typemaps::EstimatingService::VERSION = '0.1';
 }
 use strict;
 use warnings;
@@ -478,8 +478,6 @@ sub get_typemap {
 
 1;
 
-
-
 =pod
 
 =head1 NAME
@@ -488,7 +486,7 @@ Shipment::Purolator::WSDL::Typemaps::EstimatingService
 
 =head1 VERSION
 
-version 0.04
+version 0.1
 
 =head1 DESCRIPTION
 
@@ -498,29 +496,18 @@ Typemap created by SOAP::WSDL for map-based SOAP message parsers.
 
 Shipment::Purolator::WSDL::Typemaps::EstimatingService - typemap for EstimatingService
 
-=head1 AUTHORS
-
-=over 4
-
-=item *
+=head1 AUTHOR
 
 Andrew Baerg <baergaj@cpan.org>
 
-=item *
-
-Al Newkirk <awncorp@cpan.org>
-
-=back
-
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2010 by Andrew Baerg.
+This software is copyright (c) 2013 by Andrew Baerg.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-
 
 __END__
 

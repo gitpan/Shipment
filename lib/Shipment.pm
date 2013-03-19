@@ -1,7 +1,7 @@
 # ABSTRACT: Interface to Popular Shipping Services
 package Shipment;
 {
-  $Shipment::VERSION = '0.04';
+  $Shipment::VERSION = '0.1';
 }
 
 use Moose;
@@ -53,6 +53,7 @@ sub package {
 1;
 
 __END__
+
 =pod
 
 =head1 NAME
@@ -61,7 +62,7 @@ Shipment - Interface to Popular Shipping Services
 
 =head1 VERSION
 
-version 0.04
+version 0.1
 
 =head1 SYNOPSIS
 
@@ -128,26 +129,15 @@ See L<Shipment::Address> for more details.
 The package method returns a L<Shipment::Package> object.
 See L<Shipment::Package> for more details.
 
-=head1 AUTHORS
-
-=over 4
-
-=item *
+=head1 AUTHOR
 
 Andrew Baerg <baergaj@cpan.org>
 
-=item *
-
-Al Newkirk <awncorp@cpan.org>
-
-=back
-
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2010 by Andrew Baerg.
+This software is copyright (c) 2013 by Andrew Baerg.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-

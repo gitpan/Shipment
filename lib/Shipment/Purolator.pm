@@ -1,6 +1,6 @@
 package Shipment::Purolator;
 {
-  $Shipment::Purolator::VERSION = '0.04';
+  $Shipment::Purolator::VERSION = '0.1';
 }
 use strict;
 use warnings;
@@ -194,25 +194,36 @@ sub rate {
 
     my @pieces;
     foreach (@{ $self->packages }) {
-      push @pieces,
-        {
-            Weight => {
-              Value => sprintf("%.0f", $_->weight) || 1,
-              WeightUnit => $self->weight_unit,
-            },
-            Length => {
-              Value => $_->length,
-              DimensionUnit => $self->dim_unit,
-            },
-            Width => {
-              Value => $_->width,
-              DimensionUnit => $self->dim_unit,
-            },
-            Height => {
-              Value => $_->height,
-              DimensionUnit => $self->dim_unit,
-            },
-        };
+      if ($self->package_type eq 'custom') {
+        push @pieces,
+          {
+              Weight => {
+                Value => sprintf("%.0f", $_->weight) || 1,
+                WeightUnit => $self->weight_unit,
+              },
+              Length => {
+                Value => $_->length,
+                DimensionUnit => $self->dim_unit,
+              },
+              Width => {
+                Value => $_->width,
+                DimensionUnit => $self->dim_unit,
+              },
+              Height => {
+                Value => $_->height,
+                DimensionUnit => $self->dim_unit,
+              },
+          };
+      }
+      else {
+        push @pieces,
+          {
+              Weight => {
+                Value => sprintf("%.0f", $_->weight) || 1,
+                WeightUnit => $self->weight_unit,
+              },
+          };
+      }
     }
 
     use Shipment::Purolator::WSDL::Interfaces::EstimatingService::EstimatingServiceEndpoint;
@@ -379,25 +390,36 @@ sub ship {
 
     my @pieces;
     foreach (@{ $self->packages }) {
-      push @pieces,
-        {
-            Weight => {
-              Value => sprintf("%.0f", $_->weight) || 1,
-              WeightUnit => $self->weight_unit,
-            },
-            Length => {
-              Value => $_->length,
-              DimensionUnit => $self->dim_unit,
-            },
-            Width => {
-              Value => $_->width,
-              DimensionUnit => $self->dim_unit,
-            },
-            Height => {
-              Value => $_->height,
-              DimensionUnit => $self->dim_unit,
-            },
-        };
+      if ($self->package_type eq 'custom') {
+        push @pieces,
+          {
+              Weight => {
+                Value => sprintf("%.0f", $_->weight) || 1,
+                WeightUnit => $self->weight_unit,
+              },
+              Length => {
+                Value => $_->length,
+                DimensionUnit => $self->dim_unit,
+              },
+              Width => {
+                Value => $_->width,
+                DimensionUnit => $self->dim_unit,
+              },
+              Height => {
+                Value => $_->height,
+                DimensionUnit => $self->dim_unit,
+              },
+          };
+      }
+      else {
+        push @pieces,
+          {
+              Weight => {
+                Value => sprintf("%.0f", $_->weight) || 1,
+                WeightUnit => $self->weight_unit,
+              },
+          };
+      }
     }
 
     use Shipment::Purolator::WSDL::Interfaces::ShippingService::ShippingServiceEndpoint;
@@ -559,48 +581,9 @@ sub fetch_documents {
     );
     #warn $response;
 
+    my $document_url;
     try {
-      use LWP::UserAgent;
-      use Shipment::Label;
-      my $ua = LWP::UserAgent->new('Shipping::Purolator');
-      my $req = HTTP::Request->new(GET => $response->get_Documents()->get_Document()->get_DocumentDetails()->[0]->get_DocumentDetail()->get_URL()->get_value);
-      ## for multi-piece shipments, the labels are not always ready immediately after generating the shipment... sleep for a couple of seconds before trying.
-      sleep 2;
-      my $res = $ua->request($req);
-
-      if ($res->is_success) {
-        $self->documents(
-          Shipment::Label->new(
-            tracking_id   => $self->tracking_id,
-            content_type  => $res->header('Content-Type'),
-            data          => $res->content,
-            file_name     => $self->tracking_id . '-documents.pdf',
-          )
-        );
-
-        foreach ($self->all_packages) {
-          $_->label->content_type( $res->header('Content-Type') );
-          $_->label->data( $res->content );
-          $_->label->file_name( $_->tracking_id . '.pdf' );
-        }
-      } else {
-        warn $res->status_line;
-        $self->documents(
-          Shipment::Label->new(
-            tracking_id   => $self->tracking_id,
-            content_type  => 'text/plain',
-            data          => $req->uri,
-            file_name     => $self->tracking_id . '-documents.pdf',
-          )
-        );
-
-        foreach ($self->all_packages) {
-          $_->label->content_type( 'text/plain' );
-          $_->label->data( $req->uri );
-          $_->label->file_name( $_->tracking_id . '.pdf' );
-        } 
-      }
-
+      $document_url = $response->get_Documents()->get_Document()->get_DocumentDetails()->[0]->get_DocumentDetail()->get_URL()->get_value;
     } catch {
       warn $_;
       try {
@@ -612,6 +595,47 @@ sub fetch_documents {
         $self->error( $response->get_faultstring->get_value );
       };
     };
+
+    use LWP::UserAgent;
+    use Shipment::Label;
+    my $ua = LWP::UserAgent->new('Shipping::Purolator');
+    my $req = HTTP::Request->new(GET => $document_url);
+
+    ## for multi-piece shipments, the labels are not always ready immediately after generating the shipment... try 10 times, sleeping for a second in between each try.
+    my $label_success;
+    my $res;
+    for (1..10) {
+      $res = $ua->request($req);
+      sleep 1 && next unless $res->is_success && $res->content;
+
+      $label_success = 1;
+      $self->documents(
+        Shipment::Label->new(
+          tracking_id   => $self->tracking_id,
+          content_type  => $res->header('Content-Type'),
+          data          => $res->content,
+          file_name     => $self->tracking_id . '-documents.pdf',
+        )
+      );
+
+      foreach ($self->all_packages) {
+        $_->label->content_type( $res->header('Content-Type') );
+        $_->label->data( $res->content );
+        $_->label->file_name( $_->tracking_id . '.pdf' );
+      }
+    }
+
+    if (!$label_success) {
+      if (!$res->is_success) {
+        warn $res->status_line;
+        $self->error( "Failed to retrieve label(s) from " . $document_url . ": " . $res->status_line );
+      }
+      else {
+        warn "No content returned from label url: " . $document_url;
+        $self->error( "Failed to retrieve label(s) from " . $document_url );
+      }
+      $self->cancel;
+    }
 }
 
 
@@ -731,6 +755,7 @@ no Moose::Util::TypeConstraints;
 1;
 
 __END__
+
 =pod
 
 =head1 NAME
@@ -739,7 +764,7 @@ Shipment::Purolator
 
 =head1 VERSION
 
-version 0.04
+version 0.1
 
 =head1 SYNOPSIS
 
@@ -878,26 +903,15 @@ have been warned.
 This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.
 
-=head1 AUTHORS
-
-=over 4
-
-=item *
+=head1 AUTHOR
 
 Andrew Baerg <baergaj@cpan.org>
 
-=item *
-
-Al Newkirk <awncorp@cpan.org>
-
-=back
-
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2010 by Andrew Baerg.
+This software is copyright (c) 2013 by Andrew Baerg.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-

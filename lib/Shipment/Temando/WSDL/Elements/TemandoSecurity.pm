@@ -1,7 +1,7 @@
 
 package Shipment::Temando::WSDL::Elements::TemandoSecurity;
 {
-  $Shipment::Temando::WSDL::Elements::TemandoSecurity::VERSION = '0.04';
+  $Shipment::Temando::WSDL::Elements::TemandoSecurity::VERSION = '0.1';
 }
 use strict;
 use warnings;
@@ -60,7 +60,7 @@ __PACKAGE__->_factory(
 
 package Shipment::Temando::WSDL::Elements::TemandoSecurity::_UsernameToken;
 {
-  $Shipment::Temando::WSDL::Elements::TemandoSecurity::_UsernameToken::VERSION = '0.04';
+  $Shipment::Temando::WSDL::Elements::TemandoSecurity::_UsernameToken::VERSION = '0.1';
 }
 use strict;
 use warnings;
@@ -123,10 +123,8 @@ __PACKAGE__->_factory(
 
 1;
 
-
-
-
 __END__
+
 =pod
 
 =head1 NAME
@@ -135,7 +133,7 @@ Shipment::Temando::WSDL::Elements::TemandoSecurity
 
 =head1 VERSION
 
-version 0.04
+version 0.1
 
 =head1 DESCRIPTION
 
@@ -178,26 +176,15 @@ Constructor. The following data structure may be passed to new():
 
 Andrew Baerg
 
-=head1 AUTHORS
-
-=over 4
-
-=item *
+=head1 AUTHOR
 
 Andrew Baerg <baergaj@cpan.org>
 
-=item *
-
-Al Newkirk <awncorp@cpan.org>
-
-=back
-
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2010 by Andrew Baerg.
+This software is copyright (c) 2013 by Andrew Baerg.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-

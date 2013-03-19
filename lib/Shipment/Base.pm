@@ -1,6 +1,6 @@
 package Shipment::Base;
 {
-  $Shipment::Base::VERSION = '0.04';
+  $Shipment::Base::VERSION = '0.1';
 }
 use strict;
 use warnings;
@@ -289,6 +289,7 @@ no Moose;
 1;
 
 __END__
+
 =pod
 
 =head1 NAME
@@ -297,7 +298,7 @@ Shipment::Base
 
 =head1 VERSION
 
-version 0.04
+version 0.1
 
 =head1 SYNOPSIS
 
@@ -587,26 +588,15 @@ have been warned.
 This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.
 
-=head1 AUTHORS
-
-=over 4
-
-=item *
+=head1 AUTHOR
 
 Andrew Baerg <baergaj@cpan.org>
 
-=item *
-
-Al Newkirk <awncorp@cpan.org>
-
-=back
-
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2010 by Andrew Baerg.
+This software is copyright (c) 2013 by Andrew Baerg.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-

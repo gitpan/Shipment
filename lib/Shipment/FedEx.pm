@@ -1,6 +1,6 @@
 package Shipment::FedEx;
 {
-  $Shipment::FedEx::VERSION = '0.04';
+  $Shipment::FedEx::VERSION = '0.1';
 }
 use strict;
 use warnings;
@@ -170,6 +170,35 @@ sub _build_services {
   $total_weight += $_->weight for @{ $self->packages };
   $total_weight ||= 1;
 
+  my $options;
+  $options->{SpecialServiceTypes} = 'SIGNATURE_OPTION';
+  $options->{SignatureOptionDetail}->{OptionType} = $signature_type_map{$self->signature_type} || $self->signature_type;
+
+  my @pieces;
+  my $sequence = 1;
+  foreach (@{ $self->packages }) {
+    push @pieces,
+      { 
+          SequenceNumber => $sequence,
+          InsuredValue =>  {
+            Currency =>  $_->insured_value->code || $self->currency,
+            Amount =>  $_->insured_value->value,
+          },
+          Weight => {
+            Value => $_->weight,
+            Units => $units_type_map{$self->weight_unit} || $self->weight_unit,
+          },
+          Dimensions => {
+            Length => $_->length,
+            Width => $_->width,
+            Height => $_->height,
+            Units => $units_type_map{$self->dim_unit} || $self->dim_unit,
+          },
+          SpecialServicesRequested => $options,
+      };
+    $sequence++;
+  }
+
   try {
     $response = $interface->getRates( 
       { 
@@ -212,14 +241,9 @@ sub _build_services {
               Residential         =>  $self->residential_address,
             },
           },
-          PackageCount =>  1,
+          PackageCount =>  $self->count_packages,
           PackageDetail => 'INDIVIDUAL_PACKAGES',
-          RequestedPackageLineItems =>  { 
-            Weight => {
-              Value => $total_weight,
-              Units => $units_type_map{$self->weight_unit} || $self->weight_unit,
-            }, 
-          },
+          RequestedPackageLineItems =>  \@pieces,
         },
       },
     );
@@ -799,6 +823,7 @@ no Moose;
 1;
 
 __END__
+
 =pod
 
 =head1 NAME
@@ -807,7 +832,7 @@ Shipment::FedEx
 
 =head1 VERSION
 
-version 0.04
+version 0.1
 
 =head1 SYNOPSIS
 
@@ -954,26 +979,15 @@ have been warned.
 This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.
 
-=head1 AUTHORS
-
-=over 4
-
-=item *
+=head1 AUTHOR
 
 Andrew Baerg <baergaj@cpan.org>
 
-=item *
-
-Al Newkirk <awncorp@cpan.org>
-
-=back
-
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2010 by Andrew Baerg.
+This software is copyright (c) 2013 by Andrew Baerg.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-

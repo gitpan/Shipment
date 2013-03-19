@@ -2,7 +2,7 @@ NAME
     Shipment - Interface to Popular Shipping Services
 
 VERSION
-    version 0.04
+    version 0.1
 
 SYNOPSIS
       use Shipment;
@@ -59,13 +59,11 @@ METHODS
     The package method returns a Shipment::Package object. See
     Shipment::Package for more details.
 
-AUTHORS
-    *   Andrew Baerg <baergaj@cpan.org>
-
-    *   Al Newkirk <awncorp@cpan.org>
+AUTHOR
+    Andrew Baerg <baergaj@cpan.org>
 
 COPYRIGHT AND LICENSE
-    This software is copyright (c) 2010 by Andrew Baerg.
+    This software is copyright (c) 2013 by Andrew Baerg.
 
     This is free software; you can redistribute it and/or modify it under
     the same terms as the Perl 5 programming language system itself.

@@ -2,7 +2,7 @@
 
 package wsdl2perl;
 {
-  $wsdl2perl::VERSION = '0.04';
+  $wsdl2perl::VERSION = '0.1';
 }
 
 
@@ -111,7 +111,9 @@ $SOAP::WSDL::Trace = $opt{verbose};
 SOAP::WSDL::Build->wsdl2perl(types => delete $opt{xmltypes}, %opt);
 
 1;
+
 __END__
+
 =pod
 
 =head1 NAME
@@ -120,7 +122,7 @@ wsdl2perl
 
 =head1 VERSION
 
-version 0.04
+version 0.1
 
 =head1 SYNOPSIS
 
@@ -244,26 +246,15 @@ the same terms as perl itself
 
 Martin Kutter E<lt>martin.kutter fen-net.deE<gt>
 
-=head1 AUTHORS
-
-=over 4
-
-=item *
+=head1 AUTHOR
 
 Andrew Baerg <baergaj@cpan.org>
 
-=item *
-
-Al Newkirk <awncorp@cpan.org>
-
-=back
-
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2010 by Andrew Baerg.
+This software is copyright (c) 2013 by Andrew Baerg.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-
