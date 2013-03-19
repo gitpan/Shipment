@@ -1,7 +1,7 @@
 
 package Shipment::UPS::WSDL::RateElements::UPSSecurity;
 {
-  $Shipment::UPS::WSDL::RateElements::UPSSecurity::VERSION = '0.1';
+  $Shipment::UPS::WSDL::RateElements::UPSSecurity::VERSION = '0.11';
 }
 use strict;
 use warnings;
@@ -67,7 +67,7 @@ __PACKAGE__->_factory(
 
 package Shipment::UPS::WSDL::RateElements::UPSSecurity::_ServiceAccessToken;
 {
-  $Shipment::UPS::WSDL::RateElements::UPSSecurity::_ServiceAccessToken::VERSION = '0.1';
+  $Shipment::UPS::WSDL::RateElements::UPSSecurity::_ServiceAccessToken::VERSION = '0.11';
 }
 use strict;
 use warnings;
@@ -119,7 +119,7 @@ __PACKAGE__->_factory(
 
 package Shipment::UPS::WSDL::RateElements::UPSSecurity::_UsernameToken;
 {
-  $Shipment::UPS::WSDL::RateElements::UPSSecurity::_UsernameToken::VERSION = '0.1';
+  $Shipment::UPS::WSDL::RateElements::UPSSecurity::_UsernameToken::VERSION = '0.11';
 }
 use strict;
 use warnings;
@@ -192,7 +192,7 @@ Shipment::UPS::WSDL::RateElements::UPSSecurity
 
 =head1 VERSION
 
-version 0.1
+version 0.11
 
 =head1 DESCRIPTION
 

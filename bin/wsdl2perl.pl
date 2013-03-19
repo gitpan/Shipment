@@ -2,7 +2,7 @@
 
 package wsdl2perl;
 {
-  $wsdl2perl::VERSION = '0.1';
+  $wsdl2perl::VERSION = '0.11';
 }
 
 
@@ -122,7 +122,7 @@ wsdl2perl
 
 =head1 VERSION
 
-version 0.1
+version 0.11
 
 =head1 SYNOPSIS
 

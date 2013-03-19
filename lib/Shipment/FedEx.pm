@@ -1,6 +1,6 @@
 package Shipment::FedEx;
 {
-  $Shipment::FedEx::VERSION = '0.1';
+  $Shipment::FedEx::VERSION = '0.11';
 }
 use strict;
 use warnings;
@@ -175,28 +175,39 @@ sub _build_services {
   $options->{SignatureOptionDetail}->{OptionType} = $signature_type_map{$self->signature_type} || $self->signature_type;
 
   my @pieces;
-  my $sequence = 1;
-  foreach (@{ $self->packages }) {
+  if ($self->count_packages) {
+    my $sequence = 1;
+    foreach (@{ $self->packages }) {
+      push @pieces,
+        { 
+            SequenceNumber => $sequence,
+            InsuredValue =>  {
+              Currency =>  $_->insured_value->code || $self->currency,
+              Amount =>  $_->insured_value->value,
+            },
+            Weight => {
+              Value => $_->weight,
+              Units => $units_type_map{$self->weight_unit} || $self->weight_unit,
+            },
+            Dimensions => {
+              Length => $_->length,
+              Width => $_->width,
+              Height => $_->height,
+              Units => $units_type_map{$self->dim_unit} || $self->dim_unit,
+            },
+            SpecialServicesRequested => $options,
+        };
+      $sequence++;
+    }
+  }
+  else {
     push @pieces,
-      { 
-          SequenceNumber => $sequence,
-          InsuredValue =>  {
-            Currency =>  $_->insured_value->code || $self->currency,
-            Amount =>  $_->insured_value->value,
-          },
-          Weight => {
-            Value => $_->weight,
-            Units => $units_type_map{$self->weight_unit} || $self->weight_unit,
-          },
-          Dimensions => {
-            Length => $_->length,
-            Width => $_->width,
-            Height => $_->height,
-            Units => $units_type_map{$self->dim_unit} || $self->dim_unit,
-          },
-          SpecialServicesRequested => $options,
+      {
+        Weight => {
+          Value => $total_weight,
+          Units => $units_type_map{$self->weight_unit} || $self->weight_unit,
+        }, 
       };
-    $sequence++;
   }
 
   try {
@@ -241,7 +252,7 @@ sub _build_services {
               Residential         =>  $self->residential_address,
             },
           },
-          PackageCount =>  $self->count_packages,
+          PackageCount =>  $self->count_packages || 1,
           PackageDetail => 'INDIVIDUAL_PACKAGES',
           RequestedPackageLineItems =>  \@pieces,
         },
@@ -832,7 +843,7 @@ Shipment::FedEx
 
 =head1 VERSION
 
-version 0.1
+version 0.11
 
 =head1 SYNOPSIS
 

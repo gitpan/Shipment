@@ -1,6 +1,6 @@
 package Shipment::Purolator::WSDL::Types::ManifestBatchDetail;
 {
-  $Shipment::Purolator::WSDL::Types::ManifestBatchDetail::VERSION = '0.1';
+  $Shipment::Purolator::WSDL::Types::ManifestBatchDetail::VERSION = '0.11';
 }
 use strict;
 use warnings;
@@ -77,7 +77,7 @@ Shipment::Purolator::WSDL::Types::ManifestBatchDetail
 
 =head1 VERSION
 
-version 0.1
+version 0.11
 
 =head1 DESCRIPTION
 

@@ -1,6 +1,6 @@
 package Shipment::Temando::WSDL::Types::ManifestDocument;
 {
-  $Shipment::Temando::WSDL::Types::ManifestDocument::VERSION = '0.1';
+  $Shipment::Temando::WSDL::Types::ManifestDocument::VERSION = '0.11';
 }
 use strict;
 use warnings;
@@ -25,7 +25,7 @@ Shipment::Temando::WSDL::Types::ManifestDocument
 
 =head1 VERSION
 
-version 0.1
+version 0.11
 
 =head1 DESCRIPTION
 

@@ -1,6 +1,6 @@
 package Shipment::FedEx::WSDL::RateInterfaces::RateService::RateServicePort;
 {
-  $Shipment::FedEx::WSDL::RateInterfaces::RateService::RateServicePort::VERSION = '0.1';
+  $Shipment::FedEx::WSDL::RateInterfaces::RateService::RateServicePort::VERSION = '0.11';
 }
 use strict;
 use warnings;
@@ -103,7 +103,7 @@ Shipment::FedEx::WSDL::RateInterfaces::RateService::RateServicePort
 
 =head1 VERSION
 
-version 0.1
+version 0.11
 
 =head1 SYNOPSIS
 

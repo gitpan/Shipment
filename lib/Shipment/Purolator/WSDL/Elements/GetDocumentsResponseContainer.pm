@@ -1,7 +1,7 @@
 
 package Shipment::Purolator::WSDL::Elements::GetDocumentsResponseContainer;
 {
-  $Shipment::Purolator::WSDL::Elements::GetDocumentsResponseContainer::VERSION = '0.1';
+  $Shipment::Purolator::WSDL::Elements::GetDocumentsResponseContainer::VERSION = '0.11';
 }
 use strict;
 use warnings;
@@ -34,7 +34,7 @@ Shipment::Purolator::WSDL::Elements::GetDocumentsResponseContainer
 
 =head1 VERSION
 
-version 0.1
+version 0.11
 
 =head1 DESCRIPTION
 

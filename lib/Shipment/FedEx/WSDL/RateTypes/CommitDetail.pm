@@ -1,6 +1,6 @@
 package Shipment::FedEx::WSDL::RateTypes::CommitDetail;
 {
-  $Shipment::FedEx::WSDL::RateTypes::CommitDetail::VERSION = '0.1';
+  $Shipment::FedEx::WSDL::RateTypes::CommitDetail::VERSION = '0.11';
 }
 use strict;
 use warnings;
@@ -167,7 +167,7 @@ Shipment::FedEx::WSDL::RateTypes::CommitDetail
 
 =head1 VERSION
 
-version 0.1
+version 0.11
 
 =head1 DESCRIPTION
 

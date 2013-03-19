@@ -1,6 +1,6 @@
 package Shipment::UPS::WSDL::RateInterfaces::RateService::RatePort;
 {
-  $Shipment::UPS::WSDL::RateInterfaces::RateService::RatePort::VERSION = '0.1';
+  $Shipment::UPS::WSDL::RateInterfaces::RateService::RatePort::VERSION = '0.11';
 }
 use strict;
 use warnings;
@@ -108,7 +108,7 @@ Shipment::UPS::WSDL::RateInterfaces::RateService::RatePort
 
 =head1 VERSION
 
-version 0.1
+version 0.11
 
 =head1 SYNOPSIS
 

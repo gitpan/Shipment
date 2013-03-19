@@ -1,6 +1,6 @@
 package Shipment::Purolator::WSDL::Types::ArrayOfOptionRule;
 {
-  $Shipment::Purolator::WSDL::Types::ArrayOfOptionRule::VERSION = '0.1';
+  $Shipment::Purolator::WSDL::Types::ArrayOfOptionRule::VERSION = '0.11';
 }
 use strict;
 use warnings;
@@ -62,7 +62,7 @@ Shipment::Purolator::WSDL::Types::ArrayOfOptionRule
 
 =head1 VERSION
 
-version 0.1
+version 0.11
 
 =head1 DESCRIPTION
 
