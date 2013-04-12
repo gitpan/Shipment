@@ -1,7 +1,7 @@
 
 package Shipment::Purolator::WSDL::Typemaps::ServiceAvailabilityService;
 {
-  $Shipment::Purolator::WSDL::Typemaps::ServiceAvailabilityService::VERSION = '0.11';
+  $Shipment::Purolator::WSDL::Typemaps::ServiceAvailabilityService::VERSION = '0.12';
 }
 use strict;
 use warnings;
@@ -233,7 +233,7 @@ Shipment::Purolator::WSDL::Typemaps::ServiceAvailabilityService
 
 =head1 VERSION
 
-version 0.11
+version 0.12
 
 =head1 DESCRIPTION
 

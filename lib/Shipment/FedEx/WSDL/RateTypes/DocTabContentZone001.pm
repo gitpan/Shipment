@@ -1,6 +1,6 @@
 package Shipment::FedEx::WSDL::RateTypes::DocTabContentZone001;
 {
-  $Shipment::FedEx::WSDL::RateTypes::DocTabContentZone001::VERSION = '0.11';
+  $Shipment::FedEx::WSDL::RateTypes::DocTabContentZone001::VERSION = '0.12';
 }
 use strict;
 use warnings;
@@ -62,7 +62,7 @@ Shipment::FedEx::WSDL::RateTypes::DocTabContentZone001
 
 =head1 VERSION
 
-version 0.11
+version 0.12
 
 =head1 DESCRIPTION
 

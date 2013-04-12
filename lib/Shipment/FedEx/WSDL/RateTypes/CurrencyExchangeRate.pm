@@ -1,6 +1,6 @@
 package Shipment::FedEx::WSDL::RateTypes::CurrencyExchangeRate;
 {
-  $Shipment::FedEx::WSDL::RateTypes::CurrencyExchangeRate::VERSION = '0.11';
+  $Shipment::FedEx::WSDL::RateTypes::CurrencyExchangeRate::VERSION = '0.12';
 }
 use strict;
 use warnings;
@@ -72,7 +72,7 @@ Shipment::FedEx::WSDL::RateTypes::CurrencyExchangeRate
 
 =head1 VERSION
 
-version 0.11
+version 0.12
 
 =head1 DESCRIPTION
 

@@ -1,7 +1,7 @@
 
 package Shipment::FedEx::WSDL::ShipElements::ProcessShipmentReply;
 {
-  $Shipment::FedEx::WSDL::ShipElements::ProcessShipmentReply::VERSION = '0.11';
+  $Shipment::FedEx::WSDL::ShipElements::ProcessShipmentReply::VERSION = '0.12';
 }
 use strict;
 use warnings;
@@ -34,7 +34,7 @@ Shipment::FedEx::WSDL::ShipElements::ProcessShipmentReply
 
 =head1 VERSION
 
-version 0.11
+version 0.12
 
 =head1 DESCRIPTION
 

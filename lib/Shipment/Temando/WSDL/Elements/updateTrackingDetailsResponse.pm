@@ -1,7 +1,7 @@
 
 package Shipment::Temando::WSDL::Elements::updateTrackingDetailsResponse;
 {
-  $Shipment::Temando::WSDL::Elements::updateTrackingDetailsResponse::VERSION = '0.11';
+  $Shipment::Temando::WSDL::Elements::updateTrackingDetailsResponse::VERSION = '0.12';
 }
 use strict;
 use warnings;
@@ -55,7 +55,7 @@ Shipment::Temando::WSDL::Elements::updateTrackingDetailsResponse
 
 =head1 VERSION
 
-version 0.11
+version 0.12
 
 =head1 DESCRIPTION
 

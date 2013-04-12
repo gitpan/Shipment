@@ -1,6 +1,6 @@
 package Shipment::FedEx::WSDL::RateTypes::WebAuthenticationDetail;
 {
-  $Shipment::FedEx::WSDL::RateTypes::WebAuthenticationDetail::VERSION = '0.11';
+  $Shipment::FedEx::WSDL::RateTypes::WebAuthenticationDetail::VERSION = '0.12';
 }
 use strict;
 use warnings;
@@ -62,7 +62,7 @@ Shipment::FedEx::WSDL::RateTypes::WebAuthenticationDetail
 
 =head1 VERSION
 
-version 0.11
+version 0.12
 
 =head1 DESCRIPTION
 

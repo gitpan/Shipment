@@ -1,7 +1,7 @@
 
 package Shipment::UPS::WSDL::ShipElements::ShipAcceptRequest;
 {
-  $Shipment::UPS::WSDL::ShipElements::ShipAcceptRequest::VERSION = '0.11';
+  $Shipment::UPS::WSDL::ShipElements::ShipAcceptRequest::VERSION = '0.12';
 }
 use strict;
 use warnings;
@@ -82,7 +82,7 @@ Shipment::UPS::WSDL::ShipElements::ShipAcceptRequest
 
 =head1 VERSION
 
-version 0.11
+version 0.12
 
 =head1 DESCRIPTION
 

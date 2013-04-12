@@ -1,6 +1,6 @@
 package Shipment::FedEx::WSDL::ShipTypes::PickupDetail;
 {
-  $Shipment::FedEx::WSDL::ShipTypes::PickupDetail::VERSION = '0.11';
+  $Shipment::FedEx::WSDL::ShipTypes::PickupDetail::VERSION = '0.12';
 }
 use strict;
 use warnings;
@@ -82,7 +82,7 @@ Shipment::FedEx::WSDL::ShipTypes::PickupDetail
 
 =head1 VERSION
 
-version 0.11
+version 0.12
 
 =head1 DESCRIPTION
 

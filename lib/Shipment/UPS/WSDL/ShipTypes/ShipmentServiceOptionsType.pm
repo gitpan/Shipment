@@ -1,6 +1,6 @@
 package Shipment::UPS::WSDL::ShipTypes::ShipmentServiceOptionsType;
 {
-  $Shipment::UPS::WSDL::ShipTypes::ShipmentServiceOptionsType::VERSION = '0.11';
+  $Shipment::UPS::WSDL::ShipTypes::ShipmentServiceOptionsType::VERSION = '0.12';
 }
 use strict;
 use warnings;
@@ -117,7 +117,7 @@ Shipment::UPS::WSDL::ShipTypes::ShipmentServiceOptionsType
 
 =head1 VERSION
 
-version 0.11
+version 0.12
 
 =head1 DESCRIPTION
 

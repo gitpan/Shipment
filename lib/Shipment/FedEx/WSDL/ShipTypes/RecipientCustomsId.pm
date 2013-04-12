@@ -1,6 +1,6 @@
 package Shipment::FedEx::WSDL::ShipTypes::RecipientCustomsId;
 {
-  $Shipment::FedEx::WSDL::ShipTypes::RecipientCustomsId::VERSION = '0.11';
+  $Shipment::FedEx::WSDL::ShipTypes::RecipientCustomsId::VERSION = '0.12';
 }
 use strict;
 use warnings;
@@ -67,7 +67,7 @@ Shipment::FedEx::WSDL::ShipTypes::RecipientCustomsId
 
 =head1 VERSION
 
-version 0.11
+version 0.12
 
 =head1 DESCRIPTION
 

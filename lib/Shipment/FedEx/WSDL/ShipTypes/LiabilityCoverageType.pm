@@ -1,6 +1,6 @@
 package Shipment::FedEx::WSDL::ShipTypes::LiabilityCoverageType;
 {
-  $Shipment::FedEx::WSDL::ShipTypes::LiabilityCoverageType::VERSION = '0.11';
+  $Shipment::FedEx::WSDL::ShipTypes::LiabilityCoverageType::VERSION = '0.12';
 }
 use strict;
 use warnings;
@@ -25,7 +25,7 @@ Shipment::FedEx::WSDL::ShipTypes::LiabilityCoverageType
 
 =head1 VERSION
 
-version 0.11
+version 0.12
 
 =head1 DESCRIPTION
 

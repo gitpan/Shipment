@@ -1,6 +1,6 @@
 package Shipment::FedEx::WSDL::RateTypes::TrackingIdType;
 {
-  $Shipment::FedEx::WSDL::RateTypes::TrackingIdType::VERSION = '0.11';
+  $Shipment::FedEx::WSDL::RateTypes::TrackingIdType::VERSION = '0.12';
 }
 use strict;
 use warnings;
@@ -25,7 +25,7 @@ Shipment::FedEx::WSDL::RateTypes::TrackingIdType
 
 =head1 VERSION
 
-version 0.11
+version 0.12
 
 =head1 DESCRIPTION
 

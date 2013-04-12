@@ -1,6 +1,6 @@
 package Shipment::Temando::WSDL::Types::QuoteFilter;
 {
-  $Shipment::Temando::WSDL::Types::QuoteFilter::VERSION = '0.11';
+  $Shipment::Temando::WSDL::Types::QuoteFilter::VERSION = '0.12';
 }
 use strict;
 use warnings;
@@ -61,7 +61,7 @@ __PACKAGE__->_factory(
 
 package Shipment::Temando::WSDL::Types::QuoteFilter::_carriers;
 {
-  $Shipment::Temando::WSDL::Types::QuoteFilter::_carriers::VERSION = '0.11';
+  $Shipment::Temando::WSDL::Types::QuoteFilter::_carriers::VERSION = '0.12';
 }
 use strict;
 use warnings;
@@ -111,7 +111,7 @@ __PACKAGE__->_factory(
 
 package Shipment::Temando::WSDL::Types::QuoteFilter::_extras;
 {
-  $Shipment::Temando::WSDL::Types::QuoteFilter::_extras::VERSION = '0.11';
+  $Shipment::Temando::WSDL::Types::QuoteFilter::_extras::VERSION = '0.12';
 }
 use strict;
 use warnings;
@@ -174,7 +174,7 @@ Shipment::Temando::WSDL::Types::QuoteFilter
 
 =head1 VERSION
 
-version 0.11
+version 0.12
 
 =head1 DESCRIPTION
 

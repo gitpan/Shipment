@@ -1,7 +1,7 @@
 
 package Shipment::FedEx::WSDL::CloseElements::SmartPostCloseRequest;
 {
-  $Shipment::FedEx::WSDL::CloseElements::SmartPostCloseRequest::VERSION = '0.11';
+  $Shipment::FedEx::WSDL::CloseElements::SmartPostCloseRequest::VERSION = '0.12';
 }
 use strict;
 use warnings;
@@ -34,7 +34,7 @@ Shipment::FedEx::WSDL::CloseElements::SmartPostCloseRequest
 
 =head1 VERSION
 
-version 0.11
+version 0.12
 
 =head1 DESCRIPTION
 

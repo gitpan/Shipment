@@ -1,6 +1,6 @@
 package Shipment::Base;
 {
-  $Shipment::Base::VERSION = '0.11';
+  $Shipment::Base::VERSION = '0.12';
 }
 use strict;
 use warnings;
@@ -189,7 +189,7 @@ has 'notice' => (
 has 'references' => (
   traits => ['Array'],
   is => 'rw',
-  isa => 'ArrayRef[Str]',
+  isa => 'ArrayRef[Maybe[Str]]',
   default => sub { [] },
   handles => {
     all_references => 'elements',
@@ -298,7 +298,7 @@ Shipment::Base
 
 =head1 VERSION
 
-version 0.11
+version 0.12
 
 =head1 SYNOPSIS
 
