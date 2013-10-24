@@ -1,6 +1,6 @@
 package Shipment::UPS;
 {
-  $Shipment::UPS::VERSION = '0.12';
+  $Shipment::UPS::VERSION = '0.13';
 }
 use strict;
 use warnings;
@@ -71,6 +71,13 @@ has 'label_height' => (
 has 'control_log_receipt' => (
   is => 'rw',
   isa => 'Shipment::Label',
+);
+
+
+has 'carbon_neutral' => (
+  is => 'rw',
+  isa => 'Bool',
+  default => undef,
 );
 
 
@@ -183,8 +190,20 @@ sub _build_services {
   my $rating_options;
   $rating_options->{NegotiatedRatesIndicator} = 1 if $self->negotiated_rates;
 
+    my @from_addresslines = (
+      $self->from_address->address1, 
+      $self->from_address->address2, 
+      $self->from_address->address3
+    );
+    my @to_addresslines = (
+      $self->to_address->address1, 
+      $self->to_address->address2, 
+      $self->to_address->address3
+    );
+
   my $shipto = { 
             Address => {
+              AddressLine       => \@to_addresslines,
               City              => $self->to_address()->city,
               StateProvinceCode => $self->to_address()->province_code,
               PostalCode        => $self->to_address()->postal_code,
@@ -204,6 +223,7 @@ sub _build_services {
           Shipper => {
             ShipperNumber => $self->account,
             Address => {
+              AddressLine       => \@from_addresslines,
               City              => $self->from_address()->city,
               StateProvinceCode => $self->from_address()->province_code,
               PostalCode        => $self->from_address()->postal_code,
@@ -301,6 +321,9 @@ sub rate {
     my $rating_options;
     $rating_options->{NegotiatedRatesIndicator} = 1 if $self->negotiated_rates;
 
+    my $shipment_options;
+    $shipment_options->{UPScarbonneutralIndicator} = '' if $self->carbon_neutral;
+
     my @pieces;
     foreach (@{ $self->packages }) {
       $options->{DeclaredValue}->{MonetaryValue} = $_->insured_value->value;
@@ -327,9 +350,21 @@ sub rate {
         };
     }
 
+    my @from_addresslines = (
+      $self->from_address->address1, 
+      $self->from_address->address2, 
+      $self->from_address->address3
+    );
+    my @to_addresslines = (
+      $self->to_address->address1, 
+      $self->to_address->address2, 
+      $self->to_address->address3
+    );
+
 
   my $shipto = { 
             Address => {
+              AddressLine       => \@to_addresslines,
               City              => $self->to_address()->city,
               StateProvinceCode => $self->to_address()->province_code,
               PostalCode        => $self->to_address()->postal_code,
@@ -358,6 +393,7 @@ sub rate {
           Shipper => {
             ShipperNumber => $self->account,
             Address => {
+              AddressLine       => \@from_addresslines,
               City              => $self->from_address->city,
               StateProvinceCode => $self->from_address->province_code,
               PostalCode        => $self->from_address->postal_code,
@@ -370,6 +406,7 @@ sub rate {
             Code => $service_id,
           },
           Package => \@pieces,
+          ShipmentServiceOptions => $shipment_options,
         },
       },
       {
@@ -447,6 +484,7 @@ sub ship {
       $shipment_options->{Notification}->{EMail}->{EMailAddress} = $self->to_address->email;
       $shipment_options->{Notification}->{EMail}->{SubjectCode} = '03'; 
     }
+    $shipment_options->{UPScarbonneutralIndicator} = '' if $self->carbon_neutral;
 
     my $rating_options;
     $rating_options->{NegotiatedRatesIndicator} = 1 if $self->negotiated_rates;
@@ -982,7 +1020,7 @@ Shipment::UPS
 
 =head1 VERSION
 
-version 0.12
+version 0.13
 
 =head1 SYNOPSIS
 
@@ -1063,6 +1101,12 @@ The label height. Can be either 6" or 8". The label width is fixed at 4".
 In certain cases (i.e. for shipments with declared value over $999), UPS will return a control log receipt which must be printed off along with the label.
 
 type: Shipment::Label
+
+=head2 carbon_neutral
+
+Set the Carbon Neutral Indicator - http://www.ups.com/content/us/en/resources/ship/carbonneutral/shipping.html
+
+type: Bool
 
 =head1 Type Maps
 

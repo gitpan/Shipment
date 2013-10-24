@@ -1,6 +1,6 @@
 package Shipment::Purolator::WSDL::Types::GetFullEstimateRequestContainer;
 {
-  $Shipment::Purolator::WSDL::Types::GetFullEstimateRequestContainer::VERSION = '0.12';
+  $Shipment::Purolator::WSDL::Types::GetFullEstimateRequestContainer::VERSION = '0.13';
 }
 use strict;
 use warnings;
@@ -70,7 +70,7 @@ Shipment::Purolator::WSDL::Types::GetFullEstimateRequestContainer
 
 =head1 VERSION
 
-version 0.12
+version 0.13
 
 =head1 DESCRIPTION
 

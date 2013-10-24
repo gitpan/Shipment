@@ -1,6 +1,6 @@
 package Shipment::FedEx::WSDL::ShipInterfaces::ShipService::ShipServicePort;
 {
-  $Shipment::FedEx::WSDL::ShipInterfaces::ShipService::ShipServicePort::VERSION = '0.12';
+  $Shipment::FedEx::WSDL::ShipInterfaces::ShipService::ShipServicePort::VERSION = '0.13';
 }
 use strict;
 use warnings;
@@ -331,7 +331,7 @@ Shipment::FedEx::WSDL::ShipInterfaces::ShipService::ShipServicePort
 
 =head1 VERSION
 
-version 0.12
+version 0.13
 
 =head1 SYNOPSIS
 

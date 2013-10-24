@@ -1,7 +1,7 @@
 
 package Shipment::Purolator::WSDL::Elements::GetShipmentManifestDocumentRequest;
 {
-  $Shipment::Purolator::WSDL::Elements::GetShipmentManifestDocumentRequest::VERSION = '0.12';
+  $Shipment::Purolator::WSDL::Elements::GetShipmentManifestDocumentRequest::VERSION = '0.13';
 }
 use strict;
 use warnings;
@@ -34,7 +34,7 @@ Shipment::Purolator::WSDL::Elements::GetShipmentManifestDocumentRequest
 
 =head1 VERSION
 
-version 0.12
+version 0.13
 
 =head1 DESCRIPTION
 

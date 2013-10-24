@@ -1,6 +1,6 @@
 package Shipment::UPS::WSDL::ShipInterfaces::ShipService::ShipPort;
 {
-  $Shipment::UPS::WSDL::ShipInterfaces::ShipService::ShipPort::VERSION = '0.12';
+  $Shipment::UPS::WSDL::ShipInterfaces::ShipService::ShipPort::VERSION = '0.13';
 }
 use strict;
 use warnings;
@@ -194,7 +194,7 @@ Shipment::UPS::WSDL::ShipInterfaces::ShipService::ShipPort
 
 =head1 VERSION
 
-version 0.12
+version 0.13
 
 =head1 SYNOPSIS
 
