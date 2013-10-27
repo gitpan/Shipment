@@ -1,7 +1,7 @@
 
 package Shipment::Temando::WSDL::Elements::updateRequest;
 {
-  $Shipment::Temando::WSDL::Elements::updateRequest::VERSION = '0.13';
+  $Shipment::Temando::WSDL::Elements::updateRequest::VERSION = '0.14';
 }
 use strict;
 use warnings;
@@ -107,7 +107,7 @@ __PACKAGE__->_factory(
 
 package Shipment::Temando::WSDL::Elements::updateRequest::_anythings;
 {
-  $Shipment::Temando::WSDL::Elements::updateRequest::_anythings::VERSION = '0.13';
+  $Shipment::Temando::WSDL::Elements::updateRequest::_anythings::VERSION = '0.14';
 }
 use strict;
 use warnings;
@@ -157,7 +157,7 @@ __PACKAGE__->_factory(
 
 package Shipment::Temando::WSDL::Elements::updateRequest::_articles;
 {
-  $Shipment::Temando::WSDL::Elements::updateRequest::_articles::VERSION = '0.13';
+  $Shipment::Temando::WSDL::Elements::updateRequest::_articles::VERSION = '0.14';
 }
 use strict;
 use warnings;
@@ -223,7 +223,7 @@ Shipment::Temando::WSDL::Elements::updateRequest
 
 =head1 VERSION
 
-version 0.13
+version 0.14
 
 =head1 DESCRIPTION
 

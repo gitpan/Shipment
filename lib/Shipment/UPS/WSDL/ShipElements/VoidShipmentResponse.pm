@@ -1,7 +1,7 @@
 
 package Shipment::UPS::WSDL::ShipElements::VoidShipmentResponse;
 {
-  $Shipment::UPS::WSDL::ShipElements::VoidShipmentResponse::VERSION = '0.13';
+  $Shipment::UPS::WSDL::ShipElements::VoidShipmentResponse::VERSION = '0.14';
 }
 use strict;
 use warnings;
@@ -72,7 +72,7 @@ __PACKAGE__->_factory(
 
 package Shipment::UPS::WSDL::ShipElements::VoidShipmentResponse::_SummaryResult;
 {
-  $Shipment::UPS::WSDL::ShipElements::VoidShipmentResponse::_SummaryResult::VERSION = '0.13';
+  $Shipment::UPS::WSDL::ShipElements::VoidShipmentResponse::_SummaryResult::VERSION = '0.14';
 }
 use strict;
 use warnings;
@@ -138,7 +138,7 @@ Shipment::UPS::WSDL::ShipElements::VoidShipmentResponse
 
 =head1 VERSION
 
-version 0.13
+version 0.14
 
 =head1 DESCRIPTION
 

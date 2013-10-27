@@ -1,6 +1,6 @@
 package Shipment::FedEx::WSDL::ShipTypes::NaftaProducer;
 {
-  $Shipment::FedEx::WSDL::ShipTypes::NaftaProducer::VERSION = '0.13';
+  $Shipment::FedEx::WSDL::ShipTypes::NaftaProducer::VERSION = '0.14';
 }
 use strict;
 use warnings;
@@ -67,7 +67,7 @@ Shipment::FedEx::WSDL::ShipTypes::NaftaProducer
 
 =head1 VERSION
 
-version 0.13
+version 0.14
 
 =head1 DESCRIPTION
 

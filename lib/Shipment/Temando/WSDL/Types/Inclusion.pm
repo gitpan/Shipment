@@ -1,6 +1,6 @@
 package Shipment::Temando::WSDL::Types::Inclusion;
 {
-  $Shipment::Temando::WSDL::Types::Inclusion::VERSION = '0.13';
+  $Shipment::Temando::WSDL::Types::Inclusion::VERSION = '0.14';
 }
 use strict;
 use warnings;
@@ -67,7 +67,7 @@ Shipment::Temando::WSDL::Types::Inclusion
 
 =head1 VERSION
 
-version 0.13
+version 0.14
 
 =head1 DESCRIPTION
 

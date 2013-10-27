@@ -1,6 +1,6 @@
 package Shipment::Temando::WSDL::Types::TlSubclass;
 {
-  $Shipment::Temando::WSDL::Types::TlSubclass::VERSION = '0.13';
+  $Shipment::Temando::WSDL::Types::TlSubclass::VERSION = '0.14';
 }
 use strict;
 use warnings;
@@ -25,7 +25,7 @@ Shipment::Temando::WSDL::Types::TlSubclass
 
 =head1 VERSION
 
-version 0.13
+version 0.14
 
 =head1 DESCRIPTION
 

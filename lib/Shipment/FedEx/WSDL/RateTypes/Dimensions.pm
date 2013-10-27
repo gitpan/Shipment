@@ -1,6 +1,6 @@
 package Shipment::FedEx::WSDL::RateTypes::Dimensions;
 {
-  $Shipment::FedEx::WSDL::RateTypes::Dimensions::VERSION = '0.13';
+  $Shipment::FedEx::WSDL::RateTypes::Dimensions::VERSION = '0.14';
 }
 use strict;
 use warnings;
@@ -67,7 +67,7 @@ __PACKAGE__->_factory(
 
 package Shipment::FedEx::WSDL::RateTypes::Dimensions::_Height;
 {
-  $Shipment::FedEx::WSDL::RateTypes::Dimensions::_Height::VERSION = '0.13';
+  $Shipment::FedEx::WSDL::RateTypes::Dimensions::_Height::VERSION = '0.14';
 }
 use strict;
 use warnings;
@@ -83,7 +83,7 @@ use base qw(
 
 package Shipment::FedEx::WSDL::RateTypes::Dimensions::_Length;
 {
-  $Shipment::FedEx::WSDL::RateTypes::Dimensions::_Length::VERSION = '0.13';
+  $Shipment::FedEx::WSDL::RateTypes::Dimensions::_Length::VERSION = '0.14';
 }
 use strict;
 use warnings;
@@ -99,7 +99,7 @@ use base qw(
 
 package Shipment::FedEx::WSDL::RateTypes::Dimensions::_Width;
 {
-  $Shipment::FedEx::WSDL::RateTypes::Dimensions::_Width::VERSION = '0.13';
+  $Shipment::FedEx::WSDL::RateTypes::Dimensions::_Width::VERSION = '0.14';
 }
 use strict;
 use warnings;
@@ -128,7 +128,7 @@ Shipment::FedEx::WSDL::RateTypes::Dimensions
 
 =head1 VERSION
 
-version 0.13
+version 0.14
 
 =head1 DESCRIPTION
 

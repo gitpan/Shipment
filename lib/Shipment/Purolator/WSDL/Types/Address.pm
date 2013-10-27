@@ -1,6 +1,6 @@
 package Shipment::Purolator::WSDL::Types::Address;
 {
-  $Shipment::Purolator::WSDL::Types::Address::VERSION = '0.13';
+  $Shipment::Purolator::WSDL::Types::Address::VERSION = '0.14';
 }
 use strict;
 use warnings;
@@ -147,7 +147,7 @@ Shipment::Purolator::WSDL::Types::Address
 
 =head1 VERSION
 
-version 0.13
+version 0.14
 
 =head1 DESCRIPTION
 

@@ -1,6 +1,6 @@
 package Shipment::FedEx::WSDL::ShipTypes::B13AFilingOptionType;
 {
-  $Shipment::FedEx::WSDL::ShipTypes::B13AFilingOptionType::VERSION = '0.13';
+  $Shipment::FedEx::WSDL::ShipTypes::B13AFilingOptionType::VERSION = '0.14';
 }
 use strict;
 use warnings;
@@ -25,7 +25,7 @@ Shipment::FedEx::WSDL::ShipTypes::B13AFilingOptionType
 
 =head1 VERSION
 
-version 0.13
+version 0.14
 
 =head1 DESCRIPTION
 

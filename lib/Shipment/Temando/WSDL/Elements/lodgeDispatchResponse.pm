@@ -1,7 +1,7 @@
 
 package Shipment::Temando::WSDL::Elements::lodgeDispatchResponse;
 {
-  $Shipment::Temando::WSDL::Elements::lodgeDispatchResponse::VERSION = '0.13';
+  $Shipment::Temando::WSDL::Elements::lodgeDispatchResponse::VERSION = '0.14';
 }
 use strict;
 use warnings;
@@ -55,7 +55,7 @@ Shipment::Temando::WSDL::Elements::lodgeDispatchResponse
 
 =head1 VERSION
 
-version 0.13
+version 0.14
 
 =head1 DESCRIPTION
 

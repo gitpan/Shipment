@@ -1,6 +1,6 @@
 package Shipment::UPS::WSDL::ShipTypes::InternationalFormType;
 {
-  $Shipment::UPS::WSDL::ShipTypes::InternationalFormType::VERSION = '0.13';
+  $Shipment::UPS::WSDL::ShipTypes::InternationalFormType::VERSION = '0.14';
 }
 use strict;
 use warnings;
@@ -227,7 +227,7 @@ Shipment::UPS::WSDL::ShipTypes::InternationalFormType
 
 =head1 VERSION
 
-version 0.13
+version 0.14
 
 =head1 DESCRIPTION
 

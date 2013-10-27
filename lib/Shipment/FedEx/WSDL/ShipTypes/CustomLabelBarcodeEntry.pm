@@ -1,6 +1,6 @@
 package Shipment::FedEx::WSDL::ShipTypes::CustomLabelBarcodeEntry;
 {
-  $Shipment::FedEx::WSDL::ShipTypes::CustomLabelBarcodeEntry::VERSION = '0.13';
+  $Shipment::FedEx::WSDL::ShipTypes::CustomLabelBarcodeEntry::VERSION = '0.14';
 }
 use strict;
 use warnings;
@@ -87,7 +87,7 @@ Shipment::FedEx::WSDL::ShipTypes::CustomLabelBarcodeEntry
 
 =head1 VERSION
 
-version 0.13
+version 0.14
 
 =head1 DESCRIPTION
 

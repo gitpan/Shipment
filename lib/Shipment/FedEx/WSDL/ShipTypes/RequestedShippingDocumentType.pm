@@ -1,6 +1,6 @@
 package Shipment::FedEx::WSDL::ShipTypes::RequestedShippingDocumentType;
 {
-  $Shipment::FedEx::WSDL::ShipTypes::RequestedShippingDocumentType::VERSION = '0.13';
+  $Shipment::FedEx::WSDL::ShipTypes::RequestedShippingDocumentType::VERSION = '0.14';
 }
 use strict;
 use warnings;
@@ -25,7 +25,7 @@ Shipment::FedEx::WSDL::ShipTypes::RequestedShippingDocumentType
 
 =head1 VERSION
 
-version 0.13
+version 0.14
 
 =head1 DESCRIPTION
 

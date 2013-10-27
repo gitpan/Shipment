@@ -1,6 +1,6 @@
 package Shipment::FedEx;
 {
-  $Shipment::FedEx::VERSION = '0.13';
+  $Shipment::FedEx::VERSION = '0.14';
 }
 use strict;
 use warnings;
@@ -843,7 +843,7 @@ Shipment::FedEx
 
 =head1 VERSION
 
-version 0.13
+version 0.14
 
 =head1 SYNOPSIS
 

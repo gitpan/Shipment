@@ -1,6 +1,6 @@
 package Shipment::UPS::WSDL::RateTypes::BillingWeightType;
 {
-  $Shipment::UPS::WSDL::RateTypes::BillingWeightType::VERSION = '0.13';
+  $Shipment::UPS::WSDL::RateTypes::BillingWeightType::VERSION = '0.14';
 }
 use strict;
 use warnings;
@@ -67,7 +67,7 @@ Shipment::UPS::WSDL::RateTypes::BillingWeightType
 
 =head1 VERSION
 
-version 0.13
+version 0.14
 
 =head1 DESCRIPTION
 

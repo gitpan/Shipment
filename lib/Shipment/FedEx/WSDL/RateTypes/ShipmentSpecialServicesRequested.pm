@@ -1,6 +1,6 @@
 package Shipment::FedEx::WSDL::RateTypes::ShipmentSpecialServicesRequested;
 {
-  $Shipment::FedEx::WSDL::RateTypes::ShipmentSpecialServicesRequested::VERSION = '0.13';
+  $Shipment::FedEx::WSDL::RateTypes::ShipmentSpecialServicesRequested::VERSION = '0.14';
 }
 use strict;
 use warnings;
@@ -117,7 +117,7 @@ Shipment::FedEx::WSDL::RateTypes::ShipmentSpecialServicesRequested
 
 =head1 VERSION
 
-version 0.13
+version 0.14
 
 =head1 DESCRIPTION
 
