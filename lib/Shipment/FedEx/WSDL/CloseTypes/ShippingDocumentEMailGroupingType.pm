@@ -1,6 +1,6 @@
 package Shipment::FedEx::WSDL::CloseTypes::ShippingDocumentEMailGroupingType;
 {
-  $Shipment::FedEx::WSDL::CloseTypes::ShippingDocumentEMailGroupingType::VERSION = '0.14';
+  $Shipment::FedEx::WSDL::CloseTypes::ShippingDocumentEMailGroupingType::VERSION = '0.15';
 }
 use strict;
 use warnings;
@@ -25,7 +25,7 @@ Shipment::FedEx::WSDL::CloseTypes::ShippingDocumentEMailGroupingType
 
 =head1 VERSION
 
-version 0.14
+version 0.15
 
 =head1 DESCRIPTION
 

@@ -1,7 +1,7 @@
 
 package Shipment::UPS::WSDL::ShipElements::ShipConfirmResponse;
 {
-  $Shipment::UPS::WSDL::ShipElements::ShipConfirmResponse::VERSION = '0.14';
+  $Shipment::UPS::WSDL::ShipElements::ShipConfirmResponse::VERSION = '0.15';
 }
 use strict;
 use warnings;
@@ -82,7 +82,7 @@ Shipment::UPS::WSDL::ShipElements::ShipConfirmResponse
 
 =head1 VERSION
 
-version 0.14
+version 0.15
 
 =head1 DESCRIPTION
 

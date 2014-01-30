@@ -1,7 +1,7 @@
 
 package Shipment::Temando::WSDL::Elements::TemandoSecurity;
 {
-  $Shipment::Temando::WSDL::Elements::TemandoSecurity::VERSION = '0.14';
+  $Shipment::Temando::WSDL::Elements::TemandoSecurity::VERSION = '0.15';
 }
 use strict;
 use warnings;
@@ -60,7 +60,7 @@ __PACKAGE__->_factory(
 
 package Shipment::Temando::WSDL::Elements::TemandoSecurity::_UsernameToken;
 {
-  $Shipment::Temando::WSDL::Elements::TemandoSecurity::_UsernameToken::VERSION = '0.14';
+  $Shipment::Temando::WSDL::Elements::TemandoSecurity::_UsernameToken::VERSION = '0.15';
 }
 use strict;
 use warnings;
@@ -133,7 +133,7 @@ Shipment::Temando::WSDL::Elements::TemandoSecurity
 
 =head1 VERSION
 
-version 0.14
+version 0.15
 
 =head1 DESCRIPTION
 

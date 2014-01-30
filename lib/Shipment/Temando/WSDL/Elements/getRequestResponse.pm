@@ -1,7 +1,7 @@
 
 package Shipment::Temando::WSDL::Elements::getRequestResponse;
 {
-  $Shipment::Temando::WSDL::Elements::getRequestResponse::VERSION = '0.14';
+  $Shipment::Temando::WSDL::Elements::getRequestResponse::VERSION = '0.15';
 }
 use strict;
 use warnings;
@@ -76,7 +76,7 @@ Shipment::Temando::WSDL::Elements::getRequestResponse
 
 =head1 VERSION
 
-version 0.14
+version 0.15
 
 =head1 DESCRIPTION
 

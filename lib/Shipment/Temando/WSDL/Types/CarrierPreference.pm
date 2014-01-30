@@ -1,6 +1,6 @@
 package Shipment::Temando::WSDL::Types::CarrierPreference;
 {
-  $Shipment::Temando::WSDL::Types::CarrierPreference::VERSION = '0.14';
+  $Shipment::Temando::WSDL::Types::CarrierPreference::VERSION = '0.15';
 }
 use strict;
 use warnings;
@@ -55,7 +55,7 @@ __PACKAGE__->_factory(
 
 package Shipment::Temando::WSDL::Types::CarrierPreference::_deliveryMethods;
 {
-  $Shipment::Temando::WSDL::Types::CarrierPreference::_deliveryMethods::VERSION = '0.14';
+  $Shipment::Temando::WSDL::Types::CarrierPreference::_deliveryMethods::VERSION = '0.15';
 }
 use strict;
 use warnings;
@@ -118,7 +118,7 @@ Shipment::Temando::WSDL::Types::CarrierPreference
 
 =head1 VERSION
 
-version 0.14
+version 0.15
 
 =head1 DESCRIPTION
 

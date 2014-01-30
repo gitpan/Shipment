@@ -1,6 +1,6 @@
 package Shipment::Temando::WSDL::Types::AuspostLodgementFacility;
 {
-  $Shipment::Temando::WSDL::Types::AuspostLodgementFacility::VERSION = '0.14';
+  $Shipment::Temando::WSDL::Types::AuspostLodgementFacility::VERSION = '0.15';
 }
 use strict;
 use warnings;
@@ -25,7 +25,7 @@ Shipment::Temando::WSDL::Types::AuspostLodgementFacility
 
 =head1 VERSION
 
-version 0.14
+version 0.15
 
 =head1 DESCRIPTION
 

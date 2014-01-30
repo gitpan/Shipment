@@ -1,6 +1,6 @@
 package Shipment::FedEx::WSDL::ShipTypes::ErrorLabelBehaviorType;
 {
-  $Shipment::FedEx::WSDL::ShipTypes::ErrorLabelBehaviorType::VERSION = '0.14';
+  $Shipment::FedEx::WSDL::ShipTypes::ErrorLabelBehaviorType::VERSION = '0.15';
 }
 use strict;
 use warnings;
@@ -25,7 +25,7 @@ Shipment::FedEx::WSDL::ShipTypes::ErrorLabelBehaviorType
 
 =head1 VERSION
 
-version 0.14
+version 0.15
 
 =head1 DESCRIPTION
 

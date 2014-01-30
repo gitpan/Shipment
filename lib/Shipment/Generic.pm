@@ -1,6 +1,6 @@
 package Shipment::Generic;
 {
-  $Shipment::Generic::VERSION = '0.14';
+  $Shipment::Generic::VERSION = '0.15';
 }
 use strict;
 use warnings;
@@ -115,7 +115,7 @@ Shipment::Generic
 
 =head1 VERSION
 
-version 0.14
+version 0.15
 
 =head1 SYNOPSIS
 

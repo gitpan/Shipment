@@ -1,6 +1,6 @@
 package Shipment::Purolator::WSDL::Types::VoidShipmentResponseContainer;
 {
-  $Shipment::Purolator::WSDL::Types::VoidShipmentResponseContainer::VERSION = '0.14';
+  $Shipment::Purolator::WSDL::Types::VoidShipmentResponseContainer::VERSION = '0.15';
 }
 use strict;
 use warnings;
@@ -70,7 +70,7 @@ Shipment::Purolator::WSDL::Types::VoidShipmentResponseContainer
 
 =head1 VERSION
 
-version 0.14
+version 0.15
 
 =head1 DESCRIPTION
 

@@ -1,6 +1,6 @@
 package Shipment::UPS::WSDL::ShipTypes::ForwardAgentType;
 {
-  $Shipment::UPS::WSDL::ShipTypes::ForwardAgentType::VERSION = '0.14';
+  $Shipment::UPS::WSDL::ShipTypes::ForwardAgentType::VERSION = '0.15';
 }
 use strict;
 use warnings;
@@ -72,7 +72,7 @@ Shipment::UPS::WSDL::ShipTypes::ForwardAgentType
 
 =head1 VERSION
 
-version 0.14
+version 0.15
 
 =head1 DESCRIPTION
 
