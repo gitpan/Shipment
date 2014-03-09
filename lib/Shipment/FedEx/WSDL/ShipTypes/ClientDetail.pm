@@ -1,14 +1,12 @@
 package Shipment::FedEx::WSDL::ShipTypes::ClientDetail;
-{
-  $Shipment::FedEx::WSDL::ShipTypes::ClientDetail::VERSION = '0.15';
-}
+$Shipment::FedEx::WSDL::ShipTypes::ClientDetail::VERSION = '0.16';
 use strict;
 use warnings;
 
 
 __PACKAGE__->_set_element_form_qualified(1);
 
-sub get_xmlns { 'http://fedex.com/ws/ship/v9' };
+sub get_xmlns {'http://fedex.com/ws/ship/v9'}
 
 our $XML_ATTRIBUTE_CLASS;
 undef $XML_ATTRIBUTE_CLASS;
@@ -22,47 +20,41 @@ use base qw(SOAP::WSDL::XSD::Typelib::ComplexType);
 
 Class::Std::initialize();
 
-{ # BLOCK to scope variables
+{    # BLOCK to scope variables
 
-my %AccountNumber_of :ATTR(:get<AccountNumber>);
-my %MeterNumber_of :ATTR(:get<MeterNumber>);
-my %IntegratorId_of :ATTR(:get<IntegratorId>);
-my %Localization_of :ATTR(:get<Localization>);
+    my %AccountNumber_of : ATTR(:get<AccountNumber>);
+    my %MeterNumber_of : ATTR(:get<MeterNumber>);
+    my %IntegratorId_of : ATTR(:get<IntegratorId>);
+    my %Localization_of : ATTR(:get<Localization>);
 
-__PACKAGE__->_factory(
-    [ qw(        AccountNumber
-        MeterNumber
-        IntegratorId
-        Localization
+    __PACKAGE__->_factory(
+        [   qw(        AccountNumber
+              MeterNumber
+              IntegratorId
+              Localization
 
-    ) ],
-    {
-        'AccountNumber' => \%AccountNumber_of,
-        'MeterNumber' => \%MeterNumber_of,
-        'IntegratorId' => \%IntegratorId_of,
-        'Localization' => \%Localization_of,
-    },
-    {
-        'AccountNumber' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
-        'MeterNumber' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
-        'IntegratorId' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
-        'Localization' => 'Shipment::FedEx::WSDL::ShipTypes::Localization',
-    },
-    {
+              )
+        ],
+        {   'AccountNumber' => \%AccountNumber_of,
+            'MeterNumber'   => \%MeterNumber_of,
+            'IntegratorId'  => \%IntegratorId_of,
+            'Localization'  => \%Localization_of,
+        },
+        {   'AccountNumber' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
+            'MeterNumber'   => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
+            'IntegratorId'  => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
+            'Localization' => 'Shipment::FedEx::WSDL::ShipTypes::Localization',
+        },
+        {
 
-        'AccountNumber' => 'AccountNumber',
-        'MeterNumber' => 'MeterNumber',
-        'IntegratorId' => 'IntegratorId',
-        'Localization' => 'Localization',
-    }
-);
+            'AccountNumber' => 'AccountNumber',
+            'MeterNumber'   => 'MeterNumber',
+            'IntegratorId'  => 'IntegratorId',
+            'Localization'  => 'Localization',
+        }
+    );
 
-} # end BLOCK
-
-
-
-
-
+}    # end BLOCK
 
 
 1;
@@ -71,13 +63,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Shipment::FedEx::WSDL::ShipTypes::ClientDetail
 
 =head1 VERSION
 
-version 0.15
+version 0.16
 
 =head1 DESCRIPTION
 

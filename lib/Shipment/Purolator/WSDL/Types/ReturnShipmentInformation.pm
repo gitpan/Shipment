@@ -1,14 +1,12 @@
 package Shipment::Purolator::WSDL::Types::ReturnShipmentInformation;
-{
-  $Shipment::Purolator::WSDL::Types::ReturnShipmentInformation::VERSION = '0.15';
-}
+$Shipment::Purolator::WSDL::Types::ReturnShipmentInformation::VERSION = '0.16';
 use strict;
 use warnings;
 
 
 __PACKAGE__->_set_element_form_qualified(1);
 
-sub get_xmlns { 'http://purolator.com/pws/datatypes/v1' };
+sub get_xmlns {'http://purolator.com/pws/datatypes/v1'}
 
 our $XML_ATTRIBUTE_CLASS;
 undef $XML_ATTRIBUTE_CLASS;
@@ -22,37 +20,33 @@ use base qw(SOAP::WSDL::XSD::Typelib::ComplexType);
 
 Class::Std::initialize();
 
-{ # BLOCK to scope variables
+{    # BLOCK to scope variables
 
-my %NumberOfReturnShipments_of :ATTR(:get<NumberOfReturnShipments>);
-my %ReturnShipment_of :ATTR(:get<ReturnShipment>);
+    my %NumberOfReturnShipments_of : ATTR(:get<NumberOfReturnShipments>);
+    my %ReturnShipment_of : ATTR(:get<ReturnShipment>);
 
-__PACKAGE__->_factory(
-    [ qw(        NumberOfReturnShipments
-        ReturnShipment
+    __PACKAGE__->_factory(
+        [   qw(        NumberOfReturnShipments
+              ReturnShipment
 
-    ) ],
-    {
-        'NumberOfReturnShipments' => \%NumberOfReturnShipments_of,
-        'ReturnShipment' => \%ReturnShipment_of,
-    },
-    {
-        'NumberOfReturnShipments' => 'SOAP::WSDL::XSD::Typelib::Builtin::int',
-        'ReturnShipment' => 'Shipment::Purolator::WSDL::Types::ReturnShipment',
-    },
-    {
+              )
+        ],
+        {   'NumberOfReturnShipments' => \%NumberOfReturnShipments_of,
+            'ReturnShipment'          => \%ReturnShipment_of,
+        },
+        {   'NumberOfReturnShipments' =>
+              'SOAP::WSDL::XSD::Typelib::Builtin::int',
+            'ReturnShipment' =>
+              'Shipment::Purolator::WSDL::Types::ReturnShipment',
+        },
+        {
 
-        'NumberOfReturnShipments' => 'NumberOfReturnShipments',
-        'ReturnShipment' => 'ReturnShipment',
-    }
-);
+            'NumberOfReturnShipments' => 'NumberOfReturnShipments',
+            'ReturnShipment'          => 'ReturnShipment',
+        }
+    );
 
-} # end BLOCK
-
-
-
-
-
+}    # end BLOCK
 
 
 1;
@@ -61,13 +55,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Shipment::Purolator::WSDL::Types::ReturnShipmentInformation
 
 =head1 VERSION
 
-version 0.15
+version 0.16
 
 =head1 DESCRIPTION
 

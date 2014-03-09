@@ -1,14 +1,12 @@
 package Shipment::UPS::WSDL::ShipTypes::LabelStockSizeType;
-{
-  $Shipment::UPS::WSDL::ShipTypes::LabelStockSizeType::VERSION = '0.15';
-}
+$Shipment::UPS::WSDL::ShipTypes::LabelStockSizeType::VERSION = '0.16';
 use strict;
 use warnings;
 
 
 __PACKAGE__->_set_element_form_qualified(1);
 
-sub get_xmlns { 'http://www.ups.com/XMLSchema/XOLTWS/Ship/v1.0' };
+sub get_xmlns {'http://www.ups.com/XMLSchema/XOLTWS/Ship/v1.0'}
 
 our $XML_ATTRIBUTE_CLASS;
 undef $XML_ATTRIBUTE_CLASS;
@@ -22,37 +20,31 @@ use base qw(SOAP::WSDL::XSD::Typelib::ComplexType);
 
 Class::Std::initialize();
 
-{ # BLOCK to scope variables
+{    # BLOCK to scope variables
 
-my %Height_of :ATTR(:get<Height>);
-my %Width_of :ATTR(:get<Width>);
+    my %Height_of : ATTR(:get<Height>);
+    my %Width_of : ATTR(:get<Width>);
 
-__PACKAGE__->_factory(
-    [ qw(        Height
-        Width
+    __PACKAGE__->_factory(
+        [   qw(        Height
+              Width
 
-    ) ],
-    {
-        'Height' => \%Height_of,
-        'Width' => \%Width_of,
-    },
-    {
-        'Height' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
-        'Width' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
-    },
-    {
+              )
+        ],
+        {   'Height' => \%Height_of,
+            'Width'  => \%Width_of,
+        },
+        {   'Height' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
+            'Width'  => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
+        },
+        {
 
-        'Height' => 'Height',
-        'Width' => 'Width',
-    }
-);
+            'Height' => 'Height',
+            'Width'  => 'Width',
+        }
+    );
 
-} # end BLOCK
-
-
-
-
-
+}    # end BLOCK
 
 
 1;
@@ -61,13 +53,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Shipment::UPS::WSDL::ShipTypes::LabelStockSizeType
 
 =head1 VERSION
 
-version 0.15
+version 0.16
 
 =head1 DESCRIPTION
 

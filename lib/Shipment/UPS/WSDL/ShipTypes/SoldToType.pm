@@ -1,14 +1,12 @@
 package Shipment::UPS::WSDL::ShipTypes::SoldToType;
-{
-  $Shipment::UPS::WSDL::ShipTypes::SoldToType::VERSION = '0.15';
-}
+$Shipment::UPS::WSDL::ShipTypes::SoldToType::VERSION = '0.16';
 use strict;
 use warnings;
 
 
 __PACKAGE__->_set_element_form_qualified(1);
 
-sub get_xmlns { 'http://www.ups.com/XMLSchema/XOLTWS/IF/v1.0' };
+sub get_xmlns {'http://www.ups.com/XMLSchema/XOLTWS/IF/v1.0'}
 
 our $XML_ATTRIBUTE_CLASS;
 undef $XML_ATTRIBUTE_CLASS;
@@ -19,63 +17,59 @@ sub __get_attr_class {
 
 
 use base qw(Shipment::UPS::WSDL::ShipTypes::CompanyInfoType);
+
 # Variety: sequence
 use Class::Std::Fast::Storable constructor => 'none';
 use base qw(SOAP::WSDL::XSD::Typelib::ComplexType);
 
 Class::Std::initialize();
 
-{ # BLOCK to scope variables
+{    # BLOCK to scope variables
 
-my %Name_of :ATTR(:get<Name>);
-my %AttentionName_of :ATTR(:get<AttentionName>);
-my %TaxIdentificationNumber_of :ATTR(:get<TaxIdentificationNumber>);
-my %Phone_of :ATTR(:get<Phone>);
-my %Option_of :ATTR(:get<Option>);
-my %Address_of :ATTR(:get<Address>);
+    my %Name_of : ATTR(:get<Name>);
+    my %AttentionName_of : ATTR(:get<AttentionName>);
+    my %TaxIdentificationNumber_of : ATTR(:get<TaxIdentificationNumber>);
+    my %Phone_of : ATTR(:get<Phone>);
+    my %Option_of : ATTR(:get<Option>);
+    my %Address_of : ATTR(:get<Address>);
 
-__PACKAGE__->_factory(
-    [ qw(        Name
-        AttentionName
-        TaxIdentificationNumber
-        Phone
-        Option
-        Address
+    __PACKAGE__->_factory(
+        [   qw(        Name
+              AttentionName
+              TaxIdentificationNumber
+              Phone
+              Option
+              Address
 
-    ) ],
-    {
-        'Name' => \%Name_of,
-        'AttentionName' => \%AttentionName_of,
-        'TaxIdentificationNumber' => \%TaxIdentificationNumber_of,
-        'Phone' => \%Phone_of,
-        'Option' => \%Option_of,
-        'Address' => \%Address_of,
-    },
-    {
-        'Name' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
-        'AttentionName' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
-        'TaxIdentificationNumber' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
-        'Phone' => 'Shipment::UPS::WSDL::ShipTypes::PhoneType',
-        'Option' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
-        'Address' => 'Shipment::UPS::WSDL::ShipTypes::AddressType',
-    },
-    {
+              )
+        ],
+        {   'Name'                    => \%Name_of,
+            'AttentionName'           => \%AttentionName_of,
+            'TaxIdentificationNumber' => \%TaxIdentificationNumber_of,
+            'Phone'                   => \%Phone_of,
+            'Option'                  => \%Option_of,
+            'Address'                 => \%Address_of,
+        },
+        {   'Name'          => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
+            'AttentionName' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
+            'TaxIdentificationNumber' =>
+              'SOAP::WSDL::XSD::Typelib::Builtin::string',
+            'Phone'   => 'Shipment::UPS::WSDL::ShipTypes::PhoneType',
+            'Option'  => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
+            'Address' => 'Shipment::UPS::WSDL::ShipTypes::AddressType',
+        },
+        {
 
-        'Name' => 'Name',
-        'AttentionName' => 'AttentionName',
-        'TaxIdentificationNumber' => 'TaxIdentificationNumber',
-        'Phone' => 'Phone',
-        'Option' => 'Option',
-        'Address' => 'Address',
-    }
-);
+            'Name'                    => 'Name',
+            'AttentionName'           => 'AttentionName',
+            'TaxIdentificationNumber' => 'TaxIdentificationNumber',
+            'Phone'                   => 'Phone',
+            'Option'                  => 'Option',
+            'Address'                 => 'Address',
+        }
+    );
 
-} # end BLOCK
-
-
-
-
-
+}    # end BLOCK
 
 
 1;
@@ -84,13 +78,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Shipment::UPS::WSDL::ShipTypes::SoldToType
 
 =head1 VERSION
 
-version 0.15
+version 0.16
 
 =head1 DESCRIPTION
 

@@ -1,14 +1,12 @@
 package Shipment::FedEx::WSDL::RateTypes::Dimensions;
-{
-  $Shipment::FedEx::WSDL::RateTypes::Dimensions::VERSION = '0.15';
-}
+$Shipment::FedEx::WSDL::RateTypes::Dimensions::VERSION = '0.16';
 use strict;
 use warnings;
 
 
 __PACKAGE__->_set_element_form_qualified(1);
 
-sub get_xmlns { 'http://fedex.com/ws/rate/v9' };
+sub get_xmlns {'http://fedex.com/ws/rate/v9'}
 
 our $XML_ATTRIBUTE_CLASS;
 undef $XML_ATTRIBUTE_CLASS;
@@ -22,98 +20,86 @@ use base qw(SOAP::WSDL::XSD::Typelib::ComplexType);
 
 Class::Std::initialize();
 
-{ # BLOCK to scope variables
+{    # BLOCK to scope variables
 
-my %Length_of :ATTR(:get<Length>);
-my %Width_of :ATTR(:get<Width>);
-my %Height_of :ATTR(:get<Height>);
-my %Units_of :ATTR(:get<Units>);
+    my %Length_of : ATTR(:get<Length>);
+    my %Width_of : ATTR(:get<Width>);
+    my %Height_of : ATTR(:get<Height>);
+    my %Units_of : ATTR(:get<Units>);
 
-__PACKAGE__->_factory(
-    [ qw(        Length
-        Width
-        Height
-        Units
+    __PACKAGE__->_factory(
+        [   qw(        Length
+              Width
+              Height
+              Units
 
-    ) ],
-    {
-        'Length' => \%Length_of,
-        'Width' => \%Width_of,
-        'Height' => \%Height_of,
-        'Units' => \%Units_of,
-    },
-    {
+              )
+        ],
+        {   'Length' => \%Length_of,
+            'Width'  => \%Width_of,
+            'Height' => \%Height_of,
+            'Units'  => \%Units_of,
+        },
+        {
 
-        'Length' => 'Shipment::FedEx::WSDL::RateTypes::Dimensions::_Length',
+            'Length' =>
+              'Shipment::FedEx::WSDL::RateTypes::Dimensions::_Length',
 
-        'Width' => 'Shipment::FedEx::WSDL::RateTypes::Dimensions::_Width',
+            'Width' => 'Shipment::FedEx::WSDL::RateTypes::Dimensions::_Width',
 
-        'Height' => 'Shipment::FedEx::WSDL::RateTypes::Dimensions::_Height',
-        'Units' => 'Shipment::FedEx::WSDL::RateTypes::LinearUnits',
-    },
-    {
+            'Height' =>
+              'Shipment::FedEx::WSDL::RateTypes::Dimensions::_Height',
+            'Units' => 'Shipment::FedEx::WSDL::RateTypes::LinearUnits',
+        },
+        {
 
-        'Length' => 'Length',
-        'Width' => 'Width',
-        'Height' => 'Height',
-        'Units' => 'Units',
-    }
-);
+            'Length' => 'Length',
+            'Width'  => 'Width',
+            'Height' => 'Height',
+            'Units'  => 'Units',
+        }
+    );
 
-} # end BLOCK
-
-
+}    # end BLOCK
 
 
 package Shipment::FedEx::WSDL::RateTypes::Dimensions::_Height;
-{
-  $Shipment::FedEx::WSDL::RateTypes::Dimensions::_Height::VERSION = '0.15';
-}
+$Shipment::FedEx::WSDL::RateTypes::Dimensions::_Height::VERSION = '0.16';
 use strict;
 use warnings;
 {
 # derivation by restriction
-use base qw(
-    SOAP::WSDL::XSD::Typelib::Builtin::nonNegativeInteger);
+    use base qw(
+      SOAP::WSDL::XSD::Typelib::Builtin::nonNegativeInteger);
 
 
 }
-
 
 
 package Shipment::FedEx::WSDL::RateTypes::Dimensions::_Length;
-{
-  $Shipment::FedEx::WSDL::RateTypes::Dimensions::_Length::VERSION = '0.15';
-}
+$Shipment::FedEx::WSDL::RateTypes::Dimensions::_Length::VERSION = '0.16';
 use strict;
 use warnings;
 {
 # derivation by restriction
-use base qw(
-    SOAP::WSDL::XSD::Typelib::Builtin::nonNegativeInteger);
+    use base qw(
+      SOAP::WSDL::XSD::Typelib::Builtin::nonNegativeInteger);
 
 
 }
-
 
 
 package Shipment::FedEx::WSDL::RateTypes::Dimensions::_Width;
-{
-  $Shipment::FedEx::WSDL::RateTypes::Dimensions::_Width::VERSION = '0.15';
-}
+$Shipment::FedEx::WSDL::RateTypes::Dimensions::_Width::VERSION = '0.16';
 use strict;
 use warnings;
 {
 # derivation by restriction
-use base qw(
-    SOAP::WSDL::XSD::Typelib::Builtin::nonNegativeInteger);
+    use base qw(
+      SOAP::WSDL::XSD::Typelib::Builtin::nonNegativeInteger);
 
 
 }
-
-
-
-
 
 
 1;
@@ -122,13 +108,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Shipment::FedEx::WSDL::RateTypes::Dimensions
 
 =head1 VERSION
 
-version 0.15
+version 0.16
 
 =head1 DESCRIPTION
 

@@ -1,14 +1,12 @@
 package Shipment::FedEx::WSDL::RateTypes::FreightRateDetail;
-{
-  $Shipment::FedEx::WSDL::RateTypes::FreightRateDetail::VERSION = '0.15';
-}
+$Shipment::FedEx::WSDL::RateTypes::FreightRateDetail::VERSION = '0.16';
 use strict;
 use warnings;
 
 
 __PACKAGE__->_set_element_form_qualified(1);
 
-sub get_xmlns { 'http://fedex.com/ws/rate/v9' };
+sub get_xmlns {'http://fedex.com/ws/rate/v9'}
 
 our $XML_ATTRIBUTE_CLASS;
 undef $XML_ATTRIBUTE_CLASS;
@@ -22,47 +20,44 @@ use base qw(SOAP::WSDL::XSD::Typelib::ComplexType);
 
 Class::Std::initialize();
 
-{ # BLOCK to scope variables
+{    # BLOCK to scope variables
 
-my %QuoteNumber_of :ATTR(:get<QuoteNumber>);
-my %BaseChargeCalculation_of :ATTR(:get<BaseChargeCalculation>);
-my %BaseCharges_of :ATTR(:get<BaseCharges>);
-my %Notations_of :ATTR(:get<Notations>);
+    my %QuoteNumber_of : ATTR(:get<QuoteNumber>);
+    my %BaseChargeCalculation_of : ATTR(:get<BaseChargeCalculation>);
+    my %BaseCharges_of : ATTR(:get<BaseCharges>);
+    my %Notations_of : ATTR(:get<Notations>);
 
-__PACKAGE__->_factory(
-    [ qw(        QuoteNumber
-        BaseChargeCalculation
-        BaseCharges
-        Notations
+    __PACKAGE__->_factory(
+        [   qw(        QuoteNumber
+              BaseChargeCalculation
+              BaseCharges
+              Notations
 
-    ) ],
-    {
-        'QuoteNumber' => \%QuoteNumber_of,
-        'BaseChargeCalculation' => \%BaseChargeCalculation_of,
-        'BaseCharges' => \%BaseCharges_of,
-        'Notations' => \%Notations_of,
-    },
-    {
-        'QuoteNumber' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
-        'BaseChargeCalculation' => 'Shipment::FedEx::WSDL::RateTypes::FreightBaseChargeCalculationType',
-        'BaseCharges' => 'Shipment::FedEx::WSDL::RateTypes::FreightBaseCharge',
-        'Notations' => 'Shipment::FedEx::WSDL::RateTypes::FreightRateNotation',
-    },
-    {
+              )
+        ],
+        {   'QuoteNumber'           => \%QuoteNumber_of,
+            'BaseChargeCalculation' => \%BaseChargeCalculation_of,
+            'BaseCharges'           => \%BaseCharges_of,
+            'Notations'             => \%Notations_of,
+        },
+        {   'QuoteNumber' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
+            'BaseChargeCalculation' =>
+              'Shipment::FedEx::WSDL::RateTypes::FreightBaseChargeCalculationType',
+            'BaseCharges' =>
+              'Shipment::FedEx::WSDL::RateTypes::FreightBaseCharge',
+            'Notations' =>
+              'Shipment::FedEx::WSDL::RateTypes::FreightRateNotation',
+        },
+        {
 
-        'QuoteNumber' => 'QuoteNumber',
-        'BaseChargeCalculation' => 'BaseChargeCalculation',
-        'BaseCharges' => 'BaseCharges',
-        'Notations' => 'Notations',
-    }
-);
+            'QuoteNumber'           => 'QuoteNumber',
+            'BaseChargeCalculation' => 'BaseChargeCalculation',
+            'BaseCharges'           => 'BaseCharges',
+            'Notations'             => 'Notations',
+        }
+    );
 
-} # end BLOCK
-
-
-
-
-
+}    # end BLOCK
 
 
 1;
@@ -71,13 +66,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Shipment::FedEx::WSDL::RateTypes::FreightRateDetail
 
 =head1 VERSION
 
-version 0.15
+version 0.16
 
 =head1 DESCRIPTION
 

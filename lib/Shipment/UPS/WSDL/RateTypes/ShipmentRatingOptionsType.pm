@@ -1,14 +1,12 @@
 package Shipment::UPS::WSDL::RateTypes::ShipmentRatingOptionsType;
-{
-  $Shipment::UPS::WSDL::RateTypes::ShipmentRatingOptionsType::VERSION = '0.15';
-}
+$Shipment::UPS::WSDL::RateTypes::ShipmentRatingOptionsType::VERSION = '0.16';
 use strict;
 use warnings;
 
 
 __PACKAGE__->_set_element_form_qualified(1);
 
-sub get_xmlns { 'http://www.ups.com/XMLSchema/XOLTWS/Rate/v1.1' };
+sub get_xmlns {'http://www.ups.com/XMLSchema/XOLTWS/Rate/v1.1'}
 
 our $XML_ATTRIBUTE_CLASS;
 undef $XML_ATTRIBUTE_CLASS;
@@ -22,37 +20,33 @@ use base qw(SOAP::WSDL::XSD::Typelib::ComplexType);
 
 Class::Std::initialize();
 
-{ # BLOCK to scope variables
+{    # BLOCK to scope variables
 
-my %NegotiatedRatesIndicator_of :ATTR(:get<NegotiatedRatesIndicator>);
-my %FRSShipmentIndicator_of :ATTR(:get<FRSShipmentIndicator>);
+    my %NegotiatedRatesIndicator_of : ATTR(:get<NegotiatedRatesIndicator>);
+    my %FRSShipmentIndicator_of : ATTR(:get<FRSShipmentIndicator>);
 
-__PACKAGE__->_factory(
-    [ qw(        NegotiatedRatesIndicator
-        FRSShipmentIndicator
+    __PACKAGE__->_factory(
+        [   qw(        NegotiatedRatesIndicator
+              FRSShipmentIndicator
 
-    ) ],
-    {
-        'NegotiatedRatesIndicator' => \%NegotiatedRatesIndicator_of,
-        'FRSShipmentIndicator' => \%FRSShipmentIndicator_of,
-    },
-    {
-        'NegotiatedRatesIndicator' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
-        'FRSShipmentIndicator' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
-    },
-    {
+              )
+        ],
+        {   'NegotiatedRatesIndicator' => \%NegotiatedRatesIndicator_of,
+            'FRSShipmentIndicator'     => \%FRSShipmentIndicator_of,
+        },
+        {   'NegotiatedRatesIndicator' =>
+              'SOAP::WSDL::XSD::Typelib::Builtin::string',
+            'FRSShipmentIndicator' =>
+              'SOAP::WSDL::XSD::Typelib::Builtin::string',
+        },
+        {
 
-        'NegotiatedRatesIndicator' => 'NegotiatedRatesIndicator',
-        'FRSShipmentIndicator' => 'FRSShipmentIndicator',
-    }
-);
+            'NegotiatedRatesIndicator' => 'NegotiatedRatesIndicator',
+            'FRSShipmentIndicator'     => 'FRSShipmentIndicator',
+        }
+    );
 
-} # end BLOCK
-
-
-
-
-
+}    # end BLOCK
 
 
 1;
@@ -61,13 +55,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Shipment::UPS::WSDL::RateTypes::ShipmentRatingOptionsType
 
 =head1 VERSION
 
-version 0.15
+version 0.16
 
 =head1 DESCRIPTION
 

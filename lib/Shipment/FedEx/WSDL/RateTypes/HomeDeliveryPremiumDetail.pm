@@ -1,14 +1,12 @@
 package Shipment::FedEx::WSDL::RateTypes::HomeDeliveryPremiumDetail;
-{
-  $Shipment::FedEx::WSDL::RateTypes::HomeDeliveryPremiumDetail::VERSION = '0.15';
-}
+$Shipment::FedEx::WSDL::RateTypes::HomeDeliveryPremiumDetail::VERSION = '0.16';
 use strict;
 use warnings;
 
 
 __PACKAGE__->_set_element_form_qualified(1);
 
-sub get_xmlns { 'http://fedex.com/ws/rate/v9' };
+sub get_xmlns {'http://fedex.com/ws/rate/v9'}
 
 our $XML_ATTRIBUTE_CLASS;
 undef $XML_ATTRIBUTE_CLASS;
@@ -22,42 +20,37 @@ use base qw(SOAP::WSDL::XSD::Typelib::ComplexType);
 
 Class::Std::initialize();
 
-{ # BLOCK to scope variables
+{    # BLOCK to scope variables
 
-my %HomeDeliveryPremiumType_of :ATTR(:get<HomeDeliveryPremiumType>);
-my %Date_of :ATTR(:get<Date>);
-my %PhoneNumber_of :ATTR(:get<PhoneNumber>);
+    my %HomeDeliveryPremiumType_of : ATTR(:get<HomeDeliveryPremiumType>);
+    my %Date_of : ATTR(:get<Date>);
+    my %PhoneNumber_of : ATTR(:get<PhoneNumber>);
 
-__PACKAGE__->_factory(
-    [ qw(        HomeDeliveryPremiumType
-        Date
-        PhoneNumber
+    __PACKAGE__->_factory(
+        [   qw(        HomeDeliveryPremiumType
+              Date
+              PhoneNumber
 
-    ) ],
-    {
-        'HomeDeliveryPremiumType' => \%HomeDeliveryPremiumType_of,
-        'Date' => \%Date_of,
-        'PhoneNumber' => \%PhoneNumber_of,
-    },
-    {
-        'HomeDeliveryPremiumType' => 'Shipment::FedEx::WSDL::RateTypes::HomeDeliveryPremiumType',
-        'Date' => 'SOAP::WSDL::XSD::Typelib::Builtin::date',
-        'PhoneNumber' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
-    },
-    {
+              )
+        ],
+        {   'HomeDeliveryPremiumType' => \%HomeDeliveryPremiumType_of,
+            'Date'                    => \%Date_of,
+            'PhoneNumber'             => \%PhoneNumber_of,
+        },
+        {   'HomeDeliveryPremiumType' =>
+              'Shipment::FedEx::WSDL::RateTypes::HomeDeliveryPremiumType',
+            'Date'        => 'SOAP::WSDL::XSD::Typelib::Builtin::date',
+            'PhoneNumber' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
+        },
+        {
 
-        'HomeDeliveryPremiumType' => 'HomeDeliveryPremiumType',
-        'Date' => 'Date',
-        'PhoneNumber' => 'PhoneNumber',
-    }
-);
+            'HomeDeliveryPremiumType' => 'HomeDeliveryPremiumType',
+            'Date'                    => 'Date',
+            'PhoneNumber'             => 'PhoneNumber',
+        }
+    );
 
-} # end BLOCK
-
-
-
-
-
+}    # end BLOCK
 
 
 1;
@@ -66,13 +59,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Shipment::FedEx::WSDL::RateTypes::HomeDeliveryPremiumDetail
 
 =head1 VERSION
 
-version 0.15
+version 0.16
 
 =head1 DESCRIPTION
 

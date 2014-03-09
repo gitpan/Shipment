@@ -1,14 +1,12 @@
 package Shipment::FedEx::WSDL::RateTypes::ConfigurableLabelReferenceEntry;
-{
-  $Shipment::FedEx::WSDL::RateTypes::ConfigurableLabelReferenceEntry::VERSION = '0.15';
-}
+$Shipment::FedEx::WSDL::RateTypes::ConfigurableLabelReferenceEntry::VERSION = '0.16';
 use strict;
 use warnings;
 
 
 __PACKAGE__->_set_element_form_qualified(1);
 
-sub get_xmlns { 'http://fedex.com/ws/rate/v9' };
+sub get_xmlns {'http://fedex.com/ws/rate/v9'}
 
 our $XML_ATTRIBUTE_CLASS;
 undef $XML_ATTRIBUTE_CLASS;
@@ -22,47 +20,42 @@ use base qw(SOAP::WSDL::XSD::Typelib::ComplexType);
 
 Class::Std::initialize();
 
-{ # BLOCK to scope variables
+{    # BLOCK to scope variables
 
-my %ZoneNumber_of :ATTR(:get<ZoneNumber>);
-my %Header_of :ATTR(:get<Header>);
-my %DataField_of :ATTR(:get<DataField>);
-my %LiteralValue_of :ATTR(:get<LiteralValue>);
+    my %ZoneNumber_of : ATTR(:get<ZoneNumber>);
+    my %Header_of : ATTR(:get<Header>);
+    my %DataField_of : ATTR(:get<DataField>);
+    my %LiteralValue_of : ATTR(:get<LiteralValue>);
 
-__PACKAGE__->_factory(
-    [ qw(        ZoneNumber
-        Header
-        DataField
-        LiteralValue
+    __PACKAGE__->_factory(
+        [   qw(        ZoneNumber
+              Header
+              DataField
+              LiteralValue
 
-    ) ],
-    {
-        'ZoneNumber' => \%ZoneNumber_of,
-        'Header' => \%Header_of,
-        'DataField' => \%DataField_of,
-        'LiteralValue' => \%LiteralValue_of,
-    },
-    {
-        'ZoneNumber' => 'SOAP::WSDL::XSD::Typelib::Builtin::positiveInteger',
-        'Header' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
-        'DataField' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
-        'LiteralValue' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
-    },
-    {
+              )
+        ],
+        {   'ZoneNumber'   => \%ZoneNumber_of,
+            'Header'       => \%Header_of,
+            'DataField'    => \%DataField_of,
+            'LiteralValue' => \%LiteralValue_of,
+        },
+        {   'ZoneNumber' =>
+              'SOAP::WSDL::XSD::Typelib::Builtin::positiveInteger',
+            'Header'       => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
+            'DataField'    => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
+            'LiteralValue' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
+        },
+        {
 
-        'ZoneNumber' => 'ZoneNumber',
-        'Header' => 'Header',
-        'DataField' => 'DataField',
-        'LiteralValue' => 'LiteralValue',
-    }
-);
+            'ZoneNumber'   => 'ZoneNumber',
+            'Header'       => 'Header',
+            'DataField'    => 'DataField',
+            'LiteralValue' => 'LiteralValue',
+        }
+    );
 
-} # end BLOCK
-
-
-
-
-
+}    # end BLOCK
 
 
 1;
@@ -71,13 +64,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Shipment::FedEx::WSDL::RateTypes::ConfigurableLabelReferenceEntry
 
 =head1 VERSION
 
-version 0.15
+version 0.16
 
 =head1 DESCRIPTION
 

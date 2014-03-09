@@ -1,14 +1,12 @@
 package Shipment::FedEx::WSDL::ShipTypes::DateRange;
-{
-  $Shipment::FedEx::WSDL::ShipTypes::DateRange::VERSION = '0.15';
-}
+$Shipment::FedEx::WSDL::ShipTypes::DateRange::VERSION = '0.16';
 use strict;
 use warnings;
 
 
 __PACKAGE__->_set_element_form_qualified(1);
 
-sub get_xmlns { 'http://fedex.com/ws/ship/v9' };
+sub get_xmlns {'http://fedex.com/ws/ship/v9'}
 
 our $XML_ATTRIBUTE_CLASS;
 undef $XML_ATTRIBUTE_CLASS;
@@ -22,37 +20,31 @@ use base qw(SOAP::WSDL::XSD::Typelib::ComplexType);
 
 Class::Std::initialize();
 
-{ # BLOCK to scope variables
+{    # BLOCK to scope variables
 
-my %Begins_of :ATTR(:get<Begins>);
-my %Ends_of :ATTR(:get<Ends>);
+    my %Begins_of : ATTR(:get<Begins>);
+    my %Ends_of : ATTR(:get<Ends>);
 
-__PACKAGE__->_factory(
-    [ qw(        Begins
-        Ends
+    __PACKAGE__->_factory(
+        [   qw(        Begins
+              Ends
 
-    ) ],
-    {
-        'Begins' => \%Begins_of,
-        'Ends' => \%Ends_of,
-    },
-    {
-        'Begins' => 'SOAP::WSDL::XSD::Typelib::Builtin::date',
-        'Ends' => 'SOAP::WSDL::XSD::Typelib::Builtin::date',
-    },
-    {
+              )
+        ],
+        {   'Begins' => \%Begins_of,
+            'Ends'   => \%Ends_of,
+        },
+        {   'Begins' => 'SOAP::WSDL::XSD::Typelib::Builtin::date',
+            'Ends'   => 'SOAP::WSDL::XSD::Typelib::Builtin::date',
+        },
+        {
 
-        'Begins' => 'Begins',
-        'Ends' => 'Ends',
-    }
-);
+            'Begins' => 'Begins',
+            'Ends'   => 'Ends',
+        }
+    );
 
-} # end BLOCK
-
-
-
-
-
+}    # end BLOCK
 
 
 1;
@@ -61,13 +53,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Shipment::FedEx::WSDL::ShipTypes::DateRange
 
 =head1 VERSION
 
-version 0.15
+version 0.16
 
 =head1 DESCRIPTION
 

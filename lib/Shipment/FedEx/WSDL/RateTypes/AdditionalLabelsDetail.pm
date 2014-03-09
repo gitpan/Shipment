@@ -1,14 +1,12 @@
 package Shipment::FedEx::WSDL::RateTypes::AdditionalLabelsDetail;
-{
-  $Shipment::FedEx::WSDL::RateTypes::AdditionalLabelsDetail::VERSION = '0.15';
-}
+$Shipment::FedEx::WSDL::RateTypes::AdditionalLabelsDetail::VERSION = '0.16';
 use strict;
 use warnings;
 
 
 __PACKAGE__->_set_element_form_qualified(1);
 
-sub get_xmlns { 'http://fedex.com/ws/rate/v9' };
+sub get_xmlns {'http://fedex.com/ws/rate/v9'}
 
 our $XML_ATTRIBUTE_CLASS;
 undef $XML_ATTRIBUTE_CLASS;
@@ -22,37 +20,31 @@ use base qw(SOAP::WSDL::XSD::Typelib::ComplexType);
 
 Class::Std::initialize();
 
-{ # BLOCK to scope variables
+{    # BLOCK to scope variables
 
-my %Type_of :ATTR(:get<Type>);
-my %Count_of :ATTR(:get<Count>);
+    my %Type_of : ATTR(:get<Type>);
+    my %Count_of : ATTR(:get<Count>);
 
-__PACKAGE__->_factory(
-    [ qw(        Type
-        Count
+    __PACKAGE__->_factory(
+        [   qw(        Type
+              Count
 
-    ) ],
-    {
-        'Type' => \%Type_of,
-        'Count' => \%Count_of,
-    },
-    {
-        'Type' => 'Shipment::FedEx::WSDL::RateTypes::AdditionalLabelsType',
-        'Count' => 'SOAP::WSDL::XSD::Typelib::Builtin::nonNegativeInteger',
-    },
-    {
+              )
+        ],
+        {   'Type'  => \%Type_of,
+            'Count' => \%Count_of,
+        },
+        {   'Type' => 'Shipment::FedEx::WSDL::RateTypes::AdditionalLabelsType',
+            'Count' => 'SOAP::WSDL::XSD::Typelib::Builtin::nonNegativeInteger',
+        },
+        {
 
-        'Type' => 'Type',
-        'Count' => 'Count',
-    }
-);
+            'Type'  => 'Type',
+            'Count' => 'Count',
+        }
+    );
 
-} # end BLOCK
-
-
-
-
-
+}    # end BLOCK
 
 
 1;
@@ -61,13 +53,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Shipment::FedEx::WSDL::RateTypes::AdditionalLabelsDetail
 
 =head1 VERSION
 
-version 0.15
+version 0.16
 
 =head1 DESCRIPTION
 

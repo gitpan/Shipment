@@ -1,14 +1,12 @@
 package Shipment::FedEx::WSDL::RateTypes::SignatureOptionDetail;
-{
-  $Shipment::FedEx::WSDL::RateTypes::SignatureOptionDetail::VERSION = '0.15';
-}
+$Shipment::FedEx::WSDL::RateTypes::SignatureOptionDetail::VERSION = '0.16';
 use strict;
 use warnings;
 
 
 __PACKAGE__->_set_element_form_qualified(1);
 
-sub get_xmlns { 'http://fedex.com/ws/rate/v9' };
+sub get_xmlns {'http://fedex.com/ws/rate/v9'}
 
 our $XML_ATTRIBUTE_CLASS;
 undef $XML_ATTRIBUTE_CLASS;
@@ -22,37 +20,33 @@ use base qw(SOAP::WSDL::XSD::Typelib::ComplexType);
 
 Class::Std::initialize();
 
-{ # BLOCK to scope variables
+{    # BLOCK to scope variables
 
-my %OptionType_of :ATTR(:get<OptionType>);
-my %SignatureReleaseNumber_of :ATTR(:get<SignatureReleaseNumber>);
+    my %OptionType_of : ATTR(:get<OptionType>);
+    my %SignatureReleaseNumber_of : ATTR(:get<SignatureReleaseNumber>);
 
-__PACKAGE__->_factory(
-    [ qw(        OptionType
-        SignatureReleaseNumber
+    __PACKAGE__->_factory(
+        [   qw(        OptionType
+              SignatureReleaseNumber
 
-    ) ],
-    {
-        'OptionType' => \%OptionType_of,
-        'SignatureReleaseNumber' => \%SignatureReleaseNumber_of,
-    },
-    {
-        'OptionType' => 'Shipment::FedEx::WSDL::RateTypes::SignatureOptionType',
-        'SignatureReleaseNumber' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
-    },
-    {
+              )
+        ],
+        {   'OptionType'             => \%OptionType_of,
+            'SignatureReleaseNumber' => \%SignatureReleaseNumber_of,
+        },
+        {   'OptionType' =>
+              'Shipment::FedEx::WSDL::RateTypes::SignatureOptionType',
+            'SignatureReleaseNumber' =>
+              'SOAP::WSDL::XSD::Typelib::Builtin::string',
+        },
+        {
 
-        'OptionType' => 'OptionType',
-        'SignatureReleaseNumber' => 'SignatureReleaseNumber',
-    }
-);
+            'OptionType'             => 'OptionType',
+            'SignatureReleaseNumber' => 'SignatureReleaseNumber',
+        }
+    );
 
-} # end BLOCK
-
-
-
-
-
+}    # end BLOCK
 
 
 1;
@@ -61,13 +55,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Shipment::FedEx::WSDL::RateTypes::SignatureOptionDetail
 
 =head1 VERSION
 
-version 0.15
+version 0.16
 
 =head1 DESCRIPTION
 

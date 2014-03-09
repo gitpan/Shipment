@@ -1,14 +1,12 @@
 package Shipment::UPS::WSDL::ShipTypes::ProductWeightType;
-{
-  $Shipment::UPS::WSDL::ShipTypes::ProductWeightType::VERSION = '0.15';
-}
+$Shipment::UPS::WSDL::ShipTypes::ProductWeightType::VERSION = '0.16';
 use strict;
 use warnings;
 
 
 __PACKAGE__->_set_element_form_qualified(1);
 
-sub get_xmlns { 'http://www.ups.com/XMLSchema/XOLTWS/IF/v1.0' };
+sub get_xmlns {'http://www.ups.com/XMLSchema/XOLTWS/IF/v1.0'}
 
 our $XML_ATTRIBUTE_CLASS;
 undef $XML_ATTRIBUTE_CLASS;
@@ -22,37 +20,32 @@ use base qw(SOAP::WSDL::XSD::Typelib::ComplexType);
 
 Class::Std::initialize();
 
-{ # BLOCK to scope variables
+{    # BLOCK to scope variables
 
-my %UnitOfMeasurement_of :ATTR(:get<UnitOfMeasurement>);
-my %Weight_of :ATTR(:get<Weight>);
+    my %UnitOfMeasurement_of : ATTR(:get<UnitOfMeasurement>);
+    my %Weight_of : ATTR(:get<Weight>);
 
-__PACKAGE__->_factory(
-    [ qw(        UnitOfMeasurement
-        Weight
+    __PACKAGE__->_factory(
+        [   qw(        UnitOfMeasurement
+              Weight
 
-    ) ],
-    {
-        'UnitOfMeasurement' => \%UnitOfMeasurement_of,
-        'Weight' => \%Weight_of,
-    },
-    {
-        'UnitOfMeasurement' => 'Shipment::UPS::WSDL::ShipTypes::UnitOfMeasurementType',
-        'Weight' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
-    },
-    {
+              )
+        ],
+        {   'UnitOfMeasurement' => \%UnitOfMeasurement_of,
+            'Weight'            => \%Weight_of,
+        },
+        {   'UnitOfMeasurement' =>
+              'Shipment::UPS::WSDL::ShipTypes::UnitOfMeasurementType',
+            'Weight' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
+        },
+        {
 
-        'UnitOfMeasurement' => 'UnitOfMeasurement',
-        'Weight' => 'Weight',
-    }
-);
+            'UnitOfMeasurement' => 'UnitOfMeasurement',
+            'Weight'            => 'Weight',
+        }
+    );
 
-} # end BLOCK
-
-
-
-
-
+}    # end BLOCK
 
 
 1;
@@ -61,13 +54,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Shipment::UPS::WSDL::ShipTypes::ProductWeightType
 
 =head1 VERSION
 
-version 0.15
+version 0.16
 
 =head1 DESCRIPTION
 

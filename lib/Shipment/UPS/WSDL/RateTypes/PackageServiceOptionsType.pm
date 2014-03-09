@@ -1,14 +1,12 @@
 package Shipment::UPS::WSDL::RateTypes::PackageServiceOptionsType;
-{
-  $Shipment::UPS::WSDL::RateTypes::PackageServiceOptionsType::VERSION = '0.15';
-}
+$Shipment::UPS::WSDL::RateTypes::PackageServiceOptionsType::VERSION = '0.16';
 use strict;
 use warnings;
 
 
 __PACKAGE__->_set_element_form_qualified(1);
 
-sub get_xmlns { 'http://www.ups.com/XMLSchema/XOLTWS/Rate/v1.1' };
+sub get_xmlns {'http://www.ups.com/XMLSchema/XOLTWS/Rate/v1.1'}
 
 our $XML_ATTRIBUTE_CLASS;
 undef $XML_ATTRIBUTE_CLASS;
@@ -22,47 +20,45 @@ use base qw(SOAP::WSDL::XSD::Typelib::ComplexType);
 
 Class::Std::initialize();
 
-{ # BLOCK to scope variables
+{    # BLOCK to scope variables
 
-my %DeliveryConfirmation_of :ATTR(:get<DeliveryConfirmation>);
-my %COD_of :ATTR(:get<COD>);
-my %DeclaredValue_of :ATTR(:get<DeclaredValue>);
-my %VerbalConfirmationIndicator_of :ATTR(:get<VerbalConfirmationIndicator>);
+    my %DeliveryConfirmation_of : ATTR(:get<DeliveryConfirmation>);
+    my %COD_of : ATTR(:get<COD>);
+    my %DeclaredValue_of : ATTR(:get<DeclaredValue>);
+    my %VerbalConfirmationIndicator_of :
+      ATTR(:get<VerbalConfirmationIndicator>);
 
-__PACKAGE__->_factory(
-    [ qw(        DeliveryConfirmation
-        COD
-        DeclaredValue
-        VerbalConfirmationIndicator
+    __PACKAGE__->_factory(
+        [   qw(        DeliveryConfirmation
+              COD
+              DeclaredValue
+              VerbalConfirmationIndicator
 
-    ) ],
-    {
-        'DeliveryConfirmation' => \%DeliveryConfirmation_of,
-        'COD' => \%COD_of,
-        'DeclaredValue' => \%DeclaredValue_of,
-        'VerbalConfirmationIndicator' => \%VerbalConfirmationIndicator_of,
-    },
-    {
-        'DeliveryConfirmation' => 'Shipment::UPS::WSDL::RateTypes::DeliveryConfirmationType',
-        'COD' => 'Shipment::UPS::WSDL::RateTypes::CODType',
-        'DeclaredValue' => 'Shipment::UPS::WSDL::RateTypes::InsuredValueType',
-        'VerbalConfirmationIndicator' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
-    },
-    {
+              )
+        ],
+        {   'DeliveryConfirmation'        => \%DeliveryConfirmation_of,
+            'COD'                         => \%COD_of,
+            'DeclaredValue'               => \%DeclaredValue_of,
+            'VerbalConfirmationIndicator' => \%VerbalConfirmationIndicator_of,
+        },
+        {   'DeliveryConfirmation' =>
+              'Shipment::UPS::WSDL::RateTypes::DeliveryConfirmationType',
+            'COD' => 'Shipment::UPS::WSDL::RateTypes::CODType',
+            'DeclaredValue' =>
+              'Shipment::UPS::WSDL::RateTypes::InsuredValueType',
+            'VerbalConfirmationIndicator' =>
+              'SOAP::WSDL::XSD::Typelib::Builtin::string',
+        },
+        {
 
-        'DeliveryConfirmation' => 'DeliveryConfirmation',
-        'COD' => 'COD',
-        'DeclaredValue' => 'DeclaredValue',
-        'VerbalConfirmationIndicator' => 'VerbalConfirmationIndicator',
-    }
-);
+            'DeliveryConfirmation'        => 'DeliveryConfirmation',
+            'COD'                         => 'COD',
+            'DeclaredValue'               => 'DeclaredValue',
+            'VerbalConfirmationIndicator' => 'VerbalConfirmationIndicator',
+        }
+    );
 
-} # end BLOCK
-
-
-
-
-
+}    # end BLOCK
 
 
 1;
@@ -71,13 +67,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Shipment::UPS::WSDL::RateTypes::PackageServiceOptionsType
 
 =head1 VERSION
 
-version 0.15
+version 0.16
 
 =head1 DESCRIPTION
 

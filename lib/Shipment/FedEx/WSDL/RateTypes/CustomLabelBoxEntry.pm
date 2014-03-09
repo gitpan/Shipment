@@ -1,14 +1,12 @@
 package Shipment::FedEx::WSDL::RateTypes::CustomLabelBoxEntry;
-{
-  $Shipment::FedEx::WSDL::RateTypes::CustomLabelBoxEntry::VERSION = '0.15';
-}
+$Shipment::FedEx::WSDL::RateTypes::CustomLabelBoxEntry::VERSION = '0.16';
 use strict;
 use warnings;
 
 
 __PACKAGE__->_set_element_form_qualified(1);
 
-sub get_xmlns { 'http://fedex.com/ws/rate/v9' };
+sub get_xmlns {'http://fedex.com/ws/rate/v9'}
 
 our $XML_ATTRIBUTE_CLASS;
 undef $XML_ATTRIBUTE_CLASS;
@@ -22,37 +20,33 @@ use base qw(SOAP::WSDL::XSD::Typelib::ComplexType);
 
 Class::Std::initialize();
 
-{ # BLOCK to scope variables
+{    # BLOCK to scope variables
 
-my %TopLeftCorner_of :ATTR(:get<TopLeftCorner>);
-my %BottomRightCorner_of :ATTR(:get<BottomRightCorner>);
+    my %TopLeftCorner_of : ATTR(:get<TopLeftCorner>);
+    my %BottomRightCorner_of : ATTR(:get<BottomRightCorner>);
 
-__PACKAGE__->_factory(
-    [ qw(        TopLeftCorner
-        BottomRightCorner
+    __PACKAGE__->_factory(
+        [   qw(        TopLeftCorner
+              BottomRightCorner
 
-    ) ],
-    {
-        'TopLeftCorner' => \%TopLeftCorner_of,
-        'BottomRightCorner' => \%BottomRightCorner_of,
-    },
-    {
-        'TopLeftCorner' => 'Shipment::FedEx::WSDL::RateTypes::CustomLabelPosition',
-        'BottomRightCorner' => 'Shipment::FedEx::WSDL::RateTypes::CustomLabelPosition',
-    },
-    {
+              )
+        ],
+        {   'TopLeftCorner'     => \%TopLeftCorner_of,
+            'BottomRightCorner' => \%BottomRightCorner_of,
+        },
+        {   'TopLeftCorner' =>
+              'Shipment::FedEx::WSDL::RateTypes::CustomLabelPosition',
+            'BottomRightCorner' =>
+              'Shipment::FedEx::WSDL::RateTypes::CustomLabelPosition',
+        },
+        {
 
-        'TopLeftCorner' => 'TopLeftCorner',
-        'BottomRightCorner' => 'BottomRightCorner',
-    }
-);
+            'TopLeftCorner'     => 'TopLeftCorner',
+            'BottomRightCorner' => 'BottomRightCorner',
+        }
+    );
 
-} # end BLOCK
-
-
-
-
-
+}    # end BLOCK
 
 
 1;
@@ -61,13 +55,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Shipment::FedEx::WSDL::RateTypes::CustomLabelBoxEntry
 
 =head1 VERSION
 
-version 0.15
+version 0.16
 
 =head1 DESCRIPTION
 

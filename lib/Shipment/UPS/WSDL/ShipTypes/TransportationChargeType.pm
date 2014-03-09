@@ -1,14 +1,12 @@
 package Shipment::UPS::WSDL::ShipTypes::TransportationChargeType;
-{
-  $Shipment::UPS::WSDL::ShipTypes::TransportationChargeType::VERSION = '0.15';
-}
+$Shipment::UPS::WSDL::ShipTypes::TransportationChargeType::VERSION = '0.16';
 use strict;
 use warnings;
 
 
 __PACKAGE__->_set_element_form_qualified(1);
 
-sub get_xmlns { 'http://www.ups.com/XMLSchema/XOLTWS/Ship/v1.0' };
+sub get_xmlns {'http://www.ups.com/XMLSchema/XOLTWS/Ship/v1.0'}
 
 our $XML_ATTRIBUTE_CLASS;
 undef $XML_ATTRIBUTE_CLASS;
@@ -22,47 +20,43 @@ use base qw(SOAP::WSDL::XSD::Typelib::ComplexType);
 
 Class::Std::initialize();
 
-{ # BLOCK to scope variables
+{    # BLOCK to scope variables
 
-my %GrossCharge_of :ATTR(:get<GrossCharge>);
-my %DiscountAmount_of :ATTR(:get<DiscountAmount>);
-my %DiscountPercentage_of :ATTR(:get<DiscountPercentage>);
-my %NetCharge_of :ATTR(:get<NetCharge>);
+    my %GrossCharge_of : ATTR(:get<GrossCharge>);
+    my %DiscountAmount_of : ATTR(:get<DiscountAmount>);
+    my %DiscountPercentage_of : ATTR(:get<DiscountPercentage>);
+    my %NetCharge_of : ATTR(:get<NetCharge>);
 
-__PACKAGE__->_factory(
-    [ qw(        GrossCharge
-        DiscountAmount
-        DiscountPercentage
-        NetCharge
+    __PACKAGE__->_factory(
+        [   qw(        GrossCharge
+              DiscountAmount
+              DiscountPercentage
+              NetCharge
 
-    ) ],
-    {
-        'GrossCharge' => \%GrossCharge_of,
-        'DiscountAmount' => \%DiscountAmount_of,
-        'DiscountPercentage' => \%DiscountPercentage_of,
-        'NetCharge' => \%NetCharge_of,
-    },
-    {
-        'GrossCharge' => 'Shipment::UPS::WSDL::ShipTypes::ShipChargeType',
-        'DiscountAmount' => 'Shipment::UPS::WSDL::ShipTypes::ShipChargeType',
-        'DiscountPercentage' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
-        'NetCharge' => 'Shipment::UPS::WSDL::ShipTypes::ShipChargeType',
-    },
-    {
+              )
+        ],
+        {   'GrossCharge'        => \%GrossCharge_of,
+            'DiscountAmount'     => \%DiscountAmount_of,
+            'DiscountPercentage' => \%DiscountPercentage_of,
+            'NetCharge'          => \%NetCharge_of,
+        },
+        {   'GrossCharge' => 'Shipment::UPS::WSDL::ShipTypes::ShipChargeType',
+            'DiscountAmount' =>
+              'Shipment::UPS::WSDL::ShipTypes::ShipChargeType',
+            'DiscountPercentage' =>
+              'SOAP::WSDL::XSD::Typelib::Builtin::string',
+            'NetCharge' => 'Shipment::UPS::WSDL::ShipTypes::ShipChargeType',
+        },
+        {
 
-        'GrossCharge' => 'GrossCharge',
-        'DiscountAmount' => 'DiscountAmount',
-        'DiscountPercentage' => 'DiscountPercentage',
-        'NetCharge' => 'NetCharge',
-    }
-);
+            'GrossCharge'        => 'GrossCharge',
+            'DiscountAmount'     => 'DiscountAmount',
+            'DiscountPercentage' => 'DiscountPercentage',
+            'NetCharge'          => 'NetCharge',
+        }
+    );
 
-} # end BLOCK
-
-
-
-
-
+}    # end BLOCK
 
 
 1;
@@ -71,13 +65,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Shipment::UPS::WSDL::ShipTypes::TransportationChargeType
 
 =head1 VERSION
 
-version 0.15
+version 0.16
 
 =head1 DESCRIPTION
 

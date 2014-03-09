@@ -1,14 +1,12 @@
 package Shipment::Purolator::WSDL::Types::GetFullEstimateRequestContainer;
-{
-  $Shipment::Purolator::WSDL::Types::GetFullEstimateRequestContainer::VERSION = '0.15';
-}
+$Shipment::Purolator::WSDL::Types::GetFullEstimateRequestContainer::VERSION = '0.16';
 use strict;
 use warnings;
 
 
 __PACKAGE__->_set_element_form_qualified(1);
 
-sub get_xmlns { 'http://purolator.com/pws/datatypes/v1' };
+sub get_xmlns {'http://purolator.com/pws/datatypes/v1'}
 
 our $XML_ATTRIBUTE_CLASS;
 undef $XML_ATTRIBUTE_CLASS;
@@ -19,43 +17,42 @@ sub __get_attr_class {
 
 
 use base qw(Shipment::Purolator::WSDL::Types::RequestContainer);
+
 # Variety: sequence
 use Class::Std::Fast::Storable constructor => 'none';
 use base qw(SOAP::WSDL::XSD::Typelib::ComplexType);
 
 Class::Std::initialize();
 
-{ # BLOCK to scope variables
+{    # BLOCK to scope variables
 
-my %Shipment_of :ATTR(:get<Shipment>);
-my %ShowAlternativeServicesIndicator_of :ATTR(:get<ShowAlternativeServicesIndicator>);
+    my %Shipment_of : ATTR(:get<Shipment>);
+    my %ShowAlternativeServicesIndicator_of :
+      ATTR(:get<ShowAlternativeServicesIndicator>);
 
-__PACKAGE__->_factory(
-    [ qw(        Shipment
-        ShowAlternativeServicesIndicator
+    __PACKAGE__->_factory(
+        [   qw(        Shipment
+              ShowAlternativeServicesIndicator
 
-    ) ],
-    {
-        'Shipment' => \%Shipment_of,
-        'ShowAlternativeServicesIndicator' => \%ShowAlternativeServicesIndicator_of,
-    },
-    {
-        'Shipment' => 'Shipment::Purolator::WSDL::Types::Shipment',
-        'ShowAlternativeServicesIndicator' => 'SOAP::WSDL::XSD::Typelib::Builtin::boolean',
-    },
-    {
+              )
+        ],
+        {   'Shipment' => \%Shipment_of,
+            'ShowAlternativeServicesIndicator' =>
+              \%ShowAlternativeServicesIndicator_of,
+        },
+        {   'Shipment' => 'Shipment::Purolator::WSDL::Types::Shipment',
+            'ShowAlternativeServicesIndicator' =>
+              'SOAP::WSDL::XSD::Typelib::Builtin::boolean',
+        },
+        {
 
-        'Shipment' => 'Shipment',
-        'ShowAlternativeServicesIndicator' => 'ShowAlternativeServicesIndicator',
-    }
-);
+            'Shipment' => 'Shipment',
+            'ShowAlternativeServicesIndicator' =>
+              'ShowAlternativeServicesIndicator',
+        }
+    );
 
-} # end BLOCK
-
-
-
-
-
+}    # end BLOCK
 
 
 1;
@@ -64,13 +61,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Shipment::Purolator::WSDL::Types::GetFullEstimateRequestContainer
 
 =head1 VERSION
 
-version 0.15
+version 0.16
 
 =head1 DESCRIPTION
 

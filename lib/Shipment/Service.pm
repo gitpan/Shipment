@@ -1,7 +1,5 @@
 package Shipment::Service;
-{
-  $Shipment::Service::VERSION = '0.15';
-}
+$Shipment::Service::VERSION = '0.16';
 use strict;
 use warnings;
 
@@ -12,116 +10,115 @@ use Moose 2.0000;
 
 
 has 'id' => (
-  is => 'rw',
-  isa => 'Str',
+    is  => 'rw',
+    isa => 'Str',
 );
 
 has 'carrier_id' => (
-  is => 'rw',
-  isa => 'Str',
+    is  => 'rw',
+    isa => 'Str',
 );
 
 
 has 'name' => (
-  is => 'rw',
-  isa => 'Str',
+    is  => 'rw',
+    isa => 'Str',
 );
 
 has 'carrier_name' => (
-  is => 'rw',
-  isa => 'Str',
+    is  => 'rw',
+    isa => 'Str',
 );
 
 has 'service_name' => (
-  is => 'rw',
-  isa => 'Str',
+    is  => 'rw',
+    isa => 'Str',
 );
 
 
 has 'package' => (
-  is => 'rw',
-  isa => 'Shipment::Package',
+    is  => 'rw',
+    isa => 'Shipment::Package',
 );
 
 
 has 'etd' => (
-  is => 'rw',
-  isa => 'Num',
+    is  => 'rw',
+    isa => 'Num',
 );
 
 has 'pickup_etd' => (
-  is => 'rw',
-  isa => 'Num',
+    is  => 'rw',
+    isa => 'Num',
 );
 
 
 has 'ship_date' => (
-  is => 'rw',
-  isa => DateTime,
-  coerce => 1,
+    is     => 'rw',
+    isa    => DateTime,
+    coerce => 1,
 );
 
 
 has 'eta' => (
-  is => 'rw',
-  isa => DateTime,
-  coerce => 1,
+    is     => 'rw',
+    isa    => DateTime,
+    coerce => 1,
 );
 
 
 has 'guaranteed' => (
-  is => 'rw',
-  isa => 'Bool',
-  default => 0,
+    is      => 'rw',
+    isa     => 'Bool',
+    default => 0,
 );
 
 
 has 'cost' => (
-  is => 'rw',
-  isa => 'Data::Currency',
-  default => sub { Data::Currency->new(0) },
+    is      => 'rw',
+    isa     => 'Data::Currency',
+    default => sub { Data::Currency->new(0) },
 );
 
 has 'base_cost' => (
-  is => 'rw',
-  isa => 'Data::Currency',
-  default => sub { Data::Currency->new(0) },
+    is      => 'rw',
+    isa     => 'Data::Currency',
+    default => sub { Data::Currency->new(0) },
 );
 
 has 'tax' => (
-  is => 'rw',
-  isa => 'Data::Currency',
-  default => sub { Data::Currency->new(0) },
+    is      => 'rw',
+    isa     => 'Data::Currency',
+    default => sub { Data::Currency->new(0) },
 );
 
 
 has 'extra_charges' => (
-  is => 'rw',
-  isa => 'Data::Currency',
-  default => sub { Data::Currency->new(0) },
+    is      => 'rw',
+    isa     => 'Data::Currency',
+    default => sub { Data::Currency->new(0) },
 );
 
 has 'adjustments' => (
-  is => 'rw',
-  isa => 'Data::Currency',
-  default => sub { Data::Currency->new(0) },
+    is      => 'rw',
+    isa     => 'Data::Currency',
+    default => sub { Data::Currency->new(0) },
 );
 
 
 has 'options' => (
-  is => 'rw',
-  isa => 'HashRef[Str]',
+    is  => 'rw',
+    isa => 'HashRef[Str]',
 );
 
 
 has 'extras' => (
-  is => 'rw',
-  isa => 'HashRef[Shipment::Service]',
-  default => sub { {} },
+    is      => 'rw',
+    isa     => 'HashRef[Shipment::Service]',
+    default => sub { {} },
 );
 
 no Moose;
-
 
 
 1;
@@ -130,13 +127,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Shipment::Service
 
 =head1 VERSION
 
-version 0.15
+version 0.16
 
 =head1 SYNOPSIS
 

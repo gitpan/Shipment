@@ -1,14 +1,16 @@
 package Shipment::Temando::WSDL::Types::Adjustment;
-{
-  $Shipment::Temando::WSDL::Types::Adjustment::VERSION = '0.15';
-}
+$Shipment::Temando::WSDL::Types::Adjustment::VERSION = '0.16';
 use strict;
 use warnings;
 
 
 __PACKAGE__->_set_element_form_qualified(0);
 
-sub get_xmlns { 'http://' . $Shipment::Temando::WSDL::Interfaces::quoting_Service::quoting_port::ns_url . '/schema/2009_06/common.xsd' };
+sub get_xmlns {
+    'http://'
+      . $Shipment::Temando::WSDL::Interfaces::quoting_Service::quoting_port::ns_url
+      . '/schema/2009_06/common.xsd';
+}
 
 our $XML_ATTRIBUTE_CLASS;
 undef $XML_ATTRIBUTE_CLASS;
@@ -22,42 +24,37 @@ use base qw(SOAP::WSDL::XSD::Typelib::ComplexType);
 
 Class::Std::initialize();
 
-{ # BLOCK to scope variables
+{    # BLOCK to scope variables
 
-my %description_of :ATTR(:get<description>);
-my %amount_of :ATTR(:get<amount>);
-my %tax_of :ATTR(:get<tax>);
+    my %description_of : ATTR(:get<description>);
+    my %amount_of : ATTR(:get<amount>);
+    my %tax_of : ATTR(:get<tax>);
 
-__PACKAGE__->_factory(
-    [ qw(        description
-        amount
-        tax
+    __PACKAGE__->_factory(
+        [   qw(        description
+              amount
+              tax
 
-    ) ],
-    {
-        'description' => \%description_of,
-        'amount' => \%amount_of,
-        'tax' => \%tax_of,
-    },
-    {
-        'description' => 'Shipment::Temando::WSDL::Types::AdjustmentDescription',
-        'amount' => 'Shipment::Temando::WSDL::Types::CurrencyAmount',
-        'tax' => 'Shipment::Temando::WSDL::Types::CurrencyAmount',
-    },
-    {
+              )
+        ],
+        {   'description' => \%description_of,
+            'amount'      => \%amount_of,
+            'tax'         => \%tax_of,
+        },
+        {   'description' =>
+              'Shipment::Temando::WSDL::Types::AdjustmentDescription',
+            'amount' => 'Shipment::Temando::WSDL::Types::CurrencyAmount',
+            'tax'    => 'Shipment::Temando::WSDL::Types::CurrencyAmount',
+        },
+        {
 
-        'description' => 'description',
-        'amount' => 'amount',
-        'tax' => 'tax',
-    }
-);
+            'description' => 'description',
+            'amount'      => 'amount',
+            'tax'         => 'tax',
+        }
+    );
 
-} # end BLOCK
-
-
-
-
-
+}    # end BLOCK
 
 
 1;
@@ -66,13 +63,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Shipment::Temando::WSDL::Types::Adjustment
 
 =head1 VERSION
 
-version 0.15
+version 0.16
 
 =head1 DESCRIPTION
 

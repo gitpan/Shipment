@@ -1,14 +1,12 @@
 package Shipment::UPS::WSDL::RateTypes::LocationType;
-{
-  $Shipment::UPS::WSDL::RateTypes::LocationType::VERSION = '0.15';
-}
+$Shipment::UPS::WSDL::RateTypes::LocationType::VERSION = '0.16';
 use strict;
 use warnings;
 
 
 __PACKAGE__->_set_element_form_qualified(1);
 
-sub get_xmlns { 'http://www.ups.com/XMLSchema/XOLTWS/Error/v1.1' };
+sub get_xmlns {'http://www.ups.com/XMLSchema/XOLTWS/Error/v1.1'}
 
 our $XML_ATTRIBUTE_CLASS;
 undef $XML_ATTRIBUTE_CLASS;
@@ -22,42 +20,37 @@ use base qw(SOAP::WSDL::XSD::Typelib::ComplexType);
 
 Class::Std::initialize();
 
-{ # BLOCK to scope variables
+{    # BLOCK to scope variables
 
-my %LocationElementName_of :ATTR(:get<LocationElementName>);
-my %XPathOfElement_of :ATTR(:get<XPathOfElement>);
-my %OriginalValue_of :ATTR(:get<OriginalValue>);
+    my %LocationElementName_of : ATTR(:get<LocationElementName>);
+    my %XPathOfElement_of : ATTR(:get<XPathOfElement>);
+    my %OriginalValue_of : ATTR(:get<OriginalValue>);
 
-__PACKAGE__->_factory(
-    [ qw(        LocationElementName
-        XPathOfElement
-        OriginalValue
+    __PACKAGE__->_factory(
+        [   qw(        LocationElementName
+              XPathOfElement
+              OriginalValue
 
-    ) ],
-    {
-        'LocationElementName' => \%LocationElementName_of,
-        'XPathOfElement' => \%XPathOfElement_of,
-        'OriginalValue' => \%OriginalValue_of,
-    },
-    {
-        'LocationElementName' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
-        'XPathOfElement' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
-        'OriginalValue' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
-    },
-    {
+              )
+        ],
+        {   'LocationElementName' => \%LocationElementName_of,
+            'XPathOfElement'      => \%XPathOfElement_of,
+            'OriginalValue'       => \%OriginalValue_of,
+        },
+        {   'LocationElementName' =>
+              'SOAP::WSDL::XSD::Typelib::Builtin::string',
+            'XPathOfElement' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
+            'OriginalValue'  => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
+        },
+        {
 
-        'LocationElementName' => 'LocationElementName',
-        'XPathOfElement' => 'XPathOfElement',
-        'OriginalValue' => 'OriginalValue',
-    }
-);
+            'LocationElementName' => 'LocationElementName',
+            'XPathOfElement'      => 'XPathOfElement',
+            'OriginalValue'       => 'OriginalValue',
+        }
+    );
 
-} # end BLOCK
-
-
-
-
-
+}    # end BLOCK
 
 
 1;
@@ -66,13 +59,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Shipment::UPS::WSDL::RateTypes::LocationType
 
 =head1 VERSION
 
-version 0.15
+version 0.16
 
 =head1 DESCRIPTION
 

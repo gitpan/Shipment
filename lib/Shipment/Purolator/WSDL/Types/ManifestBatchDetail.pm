@@ -1,14 +1,12 @@
 package Shipment::Purolator::WSDL::Types::ManifestBatchDetail;
-{
-  $Shipment::Purolator::WSDL::Types::ManifestBatchDetail::VERSION = '0.15';
-}
+$Shipment::Purolator::WSDL::Types::ManifestBatchDetail::VERSION = '0.16';
 use strict;
 use warnings;
 
 
 __PACKAGE__->_set_element_form_qualified(1);
 
-sub get_xmlns { 'http://purolator.com/pws/datatypes/v1' };
+sub get_xmlns {'http://purolator.com/pws/datatypes/v1'}
 
 our $XML_ATTRIBUTE_CLASS;
 undef $XML_ATTRIBUTE_CLASS;
@@ -22,47 +20,42 @@ use base qw(SOAP::WSDL::XSD::Typelib::ComplexType);
 
 Class::Std::initialize();
 
-{ # BLOCK to scope variables
+{    # BLOCK to scope variables
 
-my %DocumentType_of :ATTR(:get<DocumentType>);
-my %Description_of :ATTR(:get<Description>);
-my %DocumentStatus_of :ATTR(:get<DocumentStatus>);
-my %URL_of :ATTR(:get<URL>);
+    my %DocumentType_of : ATTR(:get<DocumentType>);
+    my %Description_of : ATTR(:get<Description>);
+    my %DocumentStatus_of : ATTR(:get<DocumentStatus>);
+    my %URL_of : ATTR(:get<URL>);
 
-__PACKAGE__->_factory(
-    [ qw(        DocumentType
-        Description
-        DocumentStatus
-        URL
+    __PACKAGE__->_factory(
+        [   qw(        DocumentType
+              Description
+              DocumentStatus
+              URL
 
-    ) ],
-    {
-        'DocumentType' => \%DocumentType_of,
-        'Description' => \%Description_of,
-        'DocumentStatus' => \%DocumentStatus_of,
-        'URL' => \%URL_of,
-    },
-    {
-        'DocumentType' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
-        'Description' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
-        'DocumentStatus' => 'Shipment::Purolator::WSDL::Types::DocumentStatus',
-        'URL' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
-    },
-    {
+              )
+        ],
+        {   'DocumentType'   => \%DocumentType_of,
+            'Description'    => \%Description_of,
+            'DocumentStatus' => \%DocumentStatus_of,
+            'URL'            => \%URL_of,
+        },
+        {   'DocumentType' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
+            'Description'  => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
+            'DocumentStatus' =>
+              'Shipment::Purolator::WSDL::Types::DocumentStatus',
+            'URL' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
+        },
+        {
 
-        'DocumentType' => 'DocumentType',
-        'Description' => 'Description',
-        'DocumentStatus' => 'DocumentStatus',
-        'URL' => 'URL',
-    }
-);
+            'DocumentType'   => 'DocumentType',
+            'Description'    => 'Description',
+            'DocumentStatus' => 'DocumentStatus',
+            'URL'            => 'URL',
+        }
+    );
 
-} # end BLOCK
-
-
-
-
-
+}    # end BLOCK
 
 
 1;
@@ -71,13 +64,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Shipment::Purolator::WSDL::Types::ManifestBatchDetail
 
 =head1 VERSION
 
-version 0.15
+version 0.16
 
 =head1 DESCRIPTION
 

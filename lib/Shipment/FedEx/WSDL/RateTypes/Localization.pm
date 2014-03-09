@@ -1,14 +1,12 @@
 package Shipment::FedEx::WSDL::RateTypes::Localization;
-{
-  $Shipment::FedEx::WSDL::RateTypes::Localization::VERSION = '0.15';
-}
+$Shipment::FedEx::WSDL::RateTypes::Localization::VERSION = '0.16';
 use strict;
 use warnings;
 
 
 __PACKAGE__->_set_element_form_qualified(1);
 
-sub get_xmlns { 'http://fedex.com/ws/rate/v9' };
+sub get_xmlns {'http://fedex.com/ws/rate/v9'}
 
 our $XML_ATTRIBUTE_CLASS;
 undef $XML_ATTRIBUTE_CLASS;
@@ -22,37 +20,31 @@ use base qw(SOAP::WSDL::XSD::Typelib::ComplexType);
 
 Class::Std::initialize();
 
-{ # BLOCK to scope variables
+{    # BLOCK to scope variables
 
-my %LanguageCode_of :ATTR(:get<LanguageCode>);
-my %LocaleCode_of :ATTR(:get<LocaleCode>);
+    my %LanguageCode_of : ATTR(:get<LanguageCode>);
+    my %LocaleCode_of : ATTR(:get<LocaleCode>);
 
-__PACKAGE__->_factory(
-    [ qw(        LanguageCode
-        LocaleCode
+    __PACKAGE__->_factory(
+        [   qw(        LanguageCode
+              LocaleCode
 
-    ) ],
-    {
-        'LanguageCode' => \%LanguageCode_of,
-        'LocaleCode' => \%LocaleCode_of,
-    },
-    {
-        'LanguageCode' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
-        'LocaleCode' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
-    },
-    {
+              )
+        ],
+        {   'LanguageCode' => \%LanguageCode_of,
+            'LocaleCode'   => \%LocaleCode_of,
+        },
+        {   'LanguageCode' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
+            'LocaleCode'   => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
+        },
+        {
 
-        'LanguageCode' => 'LanguageCode',
-        'LocaleCode' => 'LocaleCode',
-    }
-);
+            'LanguageCode' => 'LanguageCode',
+            'LocaleCode'   => 'LocaleCode',
+        }
+    );
 
-} # end BLOCK
-
-
-
-
-
+}    # end BLOCK
 
 
 1;
@@ -61,13 +53,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Shipment::FedEx::WSDL::RateTypes::Localization
 
 =head1 VERSION
 
-version 0.15
+version 0.16
 
 =head1 DESCRIPTION
 

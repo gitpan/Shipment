@@ -1,14 +1,12 @@
 package Shipment::UPS::WSDL::ShipTypes::VerbalConfirmationType;
-{
-  $Shipment::UPS::WSDL::ShipTypes::VerbalConfirmationType::VERSION = '0.15';
-}
+$Shipment::UPS::WSDL::ShipTypes::VerbalConfirmationType::VERSION = '0.16';
 use strict;
 use warnings;
 
 
 __PACKAGE__->_set_element_form_qualified(1);
 
-sub get_xmlns { 'http://www.ups.com/XMLSchema/XOLTWS/Ship/v1.0' };
+sub get_xmlns {'http://www.ups.com/XMLSchema/XOLTWS/Ship/v1.0'}
 
 our $XML_ATTRIBUTE_CLASS;
 undef $XML_ATTRIBUTE_CLASS;
@@ -22,32 +20,24 @@ use base qw(SOAP::WSDL::XSD::Typelib::ComplexType);
 
 Class::Std::initialize();
 
-{ # BLOCK to scope variables
+{    # BLOCK to scope variables
 
-my %ContactInfo_of :ATTR(:get<ContactInfo>);
+    my %ContactInfo_of : ATTR(:get<ContactInfo>);
 
-__PACKAGE__->_factory(
-    [ qw(        ContactInfo
+    __PACKAGE__->_factory(
+        [   qw(        ContactInfo
 
-    ) ],
-    {
-        'ContactInfo' => \%ContactInfo_of,
-    },
-    {
-        'ContactInfo' => 'Shipment::UPS::WSDL::ShipTypes::ContactInfoType',
-    },
-    {
+              )
+        ],
+        {'ContactInfo' => \%ContactInfo_of,},
+        {'ContactInfo' => 'Shipment::UPS::WSDL::ShipTypes::ContactInfoType',},
+        {
 
-        'ContactInfo' => 'ContactInfo',
-    }
-);
+            'ContactInfo' => 'ContactInfo',
+        }
+    );
 
-} # end BLOCK
-
-
-
-
-
+}    # end BLOCK
 
 
 1;
@@ -56,13 +46,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Shipment::UPS::WSDL::ShipTypes::VerbalConfirmationType
 
 =head1 VERSION
 
-version 0.15
+version 0.16
 
 =head1 DESCRIPTION
 

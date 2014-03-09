@@ -1,10 +1,7 @@
 #!/usr/bin/perl -w
 
 package wsdl2perl;
-{
-  $wsdl2perl::VERSION = '0.15';
-}
-
+$wsdl2perl::VERSION = '0.16';
 
 eval 'exec /usr/bin/perl -w -S $0 ${1+"$@"}'
     if 0; # not running under some shell
@@ -116,13 +113,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 wsdl2perl
 
 =head1 VERSION
 
-version 0.15
+version 0.16
 
 =head1 SYNOPSIS
 

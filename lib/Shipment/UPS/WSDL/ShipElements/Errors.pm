@@ -1,67 +1,59 @@
 
 package Shipment::UPS::WSDL::ShipElements::Errors;
-{
-  $Shipment::UPS::WSDL::ShipElements::Errors::VERSION = '0.15';
-}
+$Shipment::UPS::WSDL::ShipElements::Errors::VERSION = '0.16';
 use strict;
 use warnings;
 
-{ # BLOCK to scope variables
+{    # BLOCK to scope variables
 
-sub get_xmlns { 'http://www.ups.com/XMLSchema/XOLTWS/Error/v1.1' }
+    sub get_xmlns {'http://www.ups.com/XMLSchema/XOLTWS/Error/v1.1'}
 
-__PACKAGE__->__set_name('Errors');
-__PACKAGE__->__set_nillable();
-__PACKAGE__->__set_minOccurs();
-__PACKAGE__->__set_maxOccurs();
-__PACKAGE__->__set_ref();
+    __PACKAGE__->__set_name('Errors');
+    __PACKAGE__->__set_nillable();
+    __PACKAGE__->__set_minOccurs();
+    __PACKAGE__->__set_maxOccurs();
+    __PACKAGE__->__set_ref();
 
-use base qw(
-    SOAP::WSDL::XSD::Typelib::Element
-    SOAP::WSDL::XSD::Typelib::ComplexType
-);
+    use base qw(
+      SOAP::WSDL::XSD::Typelib::Element
+      SOAP::WSDL::XSD::Typelib::ComplexType
+    );
 
-our $XML_ATTRIBUTE_CLASS;
-undef $XML_ATTRIBUTE_CLASS;
+    our $XML_ATTRIBUTE_CLASS;
+    undef $XML_ATTRIBUTE_CLASS;
 
-sub __get_attr_class {
-    return $XML_ATTRIBUTE_CLASS;
-}
-
-use Class::Std::Fast::Storable constructor => 'none';
-use base qw(SOAP::WSDL::XSD::Typelib::ComplexType);
-
-Class::Std::initialize();
-
-{ # BLOCK to scope variables
-
-my %ErrorDetail_of :ATTR(:get<ErrorDetail>);
-
-__PACKAGE__->_factory(
-    [ qw(        ErrorDetail
-
-    ) ],
-    {
-        'ErrorDetail' => \%ErrorDetail_of,
-    },
-    {
-        'ErrorDetail' => 'Shipment::UPS::WSDL::ShipTypes::ErrorDetailType',
-    },
-    {
-
-        'ErrorDetail' => 'ErrorDetail',
+    sub __get_attr_class {
+        return $XML_ATTRIBUTE_CLASS;
     }
-);
 
-} # end BLOCK
+    use Class::Std::Fast::Storable constructor => 'none';
+    use base qw(SOAP::WSDL::XSD::Typelib::ComplexType);
+
+    Class::Std::initialize();
+
+    {    # BLOCK to scope variables
+
+        my %ErrorDetail_of : ATTR(:get<ErrorDetail>);
+
+        __PACKAGE__->_factory(
+            [   qw(        ErrorDetail
+
+                  )
+            ],
+            {'ErrorDetail' => \%ErrorDetail_of,},
+            {   'ErrorDetail' =>
+                  'Shipment::UPS::WSDL::ShipTypes::ErrorDetailType',
+            },
+            {
+
+                'ErrorDetail' => 'ErrorDetail',
+            }
+        );
+
+    }    # end BLOCK
 
 
-
-
-
-
-} # end of BLOCK
-
+}    # end of BLOCK
 
 
 1;
@@ -70,13 +62,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Shipment::UPS::WSDL::ShipElements::Errors
 
 =head1 VERSION
 
-version 0.15
+version 0.16
 
 =head1 DESCRIPTION
 

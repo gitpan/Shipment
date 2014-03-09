@@ -1,24 +1,22 @@
 
 package Shipment::FedEx::WSDL::CloseElements::SmartPostCloseReply;
-{
-  $Shipment::FedEx::WSDL::CloseElements::SmartPostCloseReply::VERSION = '0.15';
-}
+$Shipment::FedEx::WSDL::CloseElements::SmartPostCloseReply::VERSION = '0.16';
 use strict;
 use warnings;
 
-{ # BLOCK to scope variables
+{    # BLOCK to scope variables
 
-sub get_xmlns { 'http://fedex.com/ws/close/v2' }
+    sub get_xmlns {'http://fedex.com/ws/close/v2'}
 
-__PACKAGE__->__set_name('SmartPostCloseReply');
-__PACKAGE__->__set_nillable();
-__PACKAGE__->__set_minOccurs();
-__PACKAGE__->__set_maxOccurs();
-__PACKAGE__->__set_ref();
-use base qw(
-    SOAP::WSDL::XSD::Typelib::Element
-    Shipment::FedEx::WSDL::CloseTypes::SmartPostCloseReply
-);
+    __PACKAGE__->__set_name('SmartPostCloseReply');
+    __PACKAGE__->__set_nillable();
+    __PACKAGE__->__set_minOccurs();
+    __PACKAGE__->__set_maxOccurs();
+    __PACKAGE__->__set_ref();
+    use base qw(
+      SOAP::WSDL::XSD::Typelib::Element
+      Shipment::FedEx::WSDL::CloseTypes::SmartPostCloseReply
+    );
 
 }
 
@@ -28,13 +26,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Shipment::FedEx::WSDL::CloseElements::SmartPostCloseReply
 
 =head1 VERSION
 
-version 0.15
+version 0.16
 
 =head1 DESCRIPTION
 

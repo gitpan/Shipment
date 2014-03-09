@@ -1,14 +1,12 @@
 package Shipment::FedEx::WSDL::ShipTypes::CompletedSmartPostDetail;
-{
-  $Shipment::FedEx::WSDL::ShipTypes::CompletedSmartPostDetail::VERSION = '0.15';
-}
+$Shipment::FedEx::WSDL::ShipTypes::CompletedSmartPostDetail::VERSION = '0.16';
 use strict;
 use warnings;
 
 
 __PACKAGE__->_set_element_form_qualified(1);
 
-sub get_xmlns { 'http://fedex.com/ws/ship/v9' };
+sub get_xmlns {'http://fedex.com/ws/ship/v9'}
 
 our $XML_ATTRIBUTE_CLASS;
 undef $XML_ATTRIBUTE_CLASS;
@@ -22,37 +20,32 @@ use base qw(SOAP::WSDL::XSD::Typelib::ComplexType);
 
 Class::Std::initialize();
 
-{ # BLOCK to scope variables
+{    # BLOCK to scope variables
 
-my %PickUpCarrier_of :ATTR(:get<PickUpCarrier>);
-my %Machinable_of :ATTR(:get<Machinable>);
+    my %PickUpCarrier_of : ATTR(:get<PickUpCarrier>);
+    my %Machinable_of : ATTR(:get<Machinable>);
 
-__PACKAGE__->_factory(
-    [ qw(        PickUpCarrier
-        Machinable
+    __PACKAGE__->_factory(
+        [   qw(        PickUpCarrier
+              Machinable
 
-    ) ],
-    {
-        'PickUpCarrier' => \%PickUpCarrier_of,
-        'Machinable' => \%Machinable_of,
-    },
-    {
-        'PickUpCarrier' => 'Shipment::FedEx::WSDL::ShipTypes::CarrierCodeType',
-        'Machinable' => 'SOAP::WSDL::XSD::Typelib::Builtin::boolean',
-    },
-    {
+              )
+        ],
+        {   'PickUpCarrier' => \%PickUpCarrier_of,
+            'Machinable'    => \%Machinable_of,
+        },
+        {   'PickUpCarrier' =>
+              'Shipment::FedEx::WSDL::ShipTypes::CarrierCodeType',
+            'Machinable' => 'SOAP::WSDL::XSD::Typelib::Builtin::boolean',
+        },
+        {
 
-        'PickUpCarrier' => 'PickUpCarrier',
-        'Machinable' => 'Machinable',
-    }
-);
+            'PickUpCarrier' => 'PickUpCarrier',
+            'Machinable'    => 'Machinable',
+        }
+    );
 
-} # end BLOCK
-
-
-
-
-
+}    # end BLOCK
 
 
 1;
@@ -61,13 +54,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Shipment::FedEx::WSDL::ShipTypes::CompletedSmartPostDetail
 
 =head1 VERSION
 
-version 0.15
+version 0.16
 
 =head1 DESCRIPTION
 

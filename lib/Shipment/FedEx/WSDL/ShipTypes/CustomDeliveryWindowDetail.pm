@@ -1,14 +1,12 @@
 package Shipment::FedEx::WSDL::ShipTypes::CustomDeliveryWindowDetail;
-{
-  $Shipment::FedEx::WSDL::ShipTypes::CustomDeliveryWindowDetail::VERSION = '0.15';
-}
+$Shipment::FedEx::WSDL::ShipTypes::CustomDeliveryWindowDetail::VERSION = '0.16';
 use strict;
 use warnings;
 
 
 __PACKAGE__->_set_element_form_qualified(1);
 
-sub get_xmlns { 'http://fedex.com/ws/ship/v9' };
+sub get_xmlns {'http://fedex.com/ws/ship/v9'}
 
 our $XML_ATTRIBUTE_CLASS;
 undef $XML_ATTRIBUTE_CLASS;
@@ -22,47 +20,42 @@ use base qw(SOAP::WSDL::XSD::Typelib::ComplexType);
 
 Class::Std::initialize();
 
-{ # BLOCK to scope variables
+{    # BLOCK to scope variables
 
-my %Type_of :ATTR(:get<Type>);
-my %RequestTime_of :ATTR(:get<RequestTime>);
-my %RequestRange_of :ATTR(:get<RequestRange>);
-my %RequestDate_of :ATTR(:get<RequestDate>);
+    my %Type_of : ATTR(:get<Type>);
+    my %RequestTime_of : ATTR(:get<RequestTime>);
+    my %RequestRange_of : ATTR(:get<RequestRange>);
+    my %RequestDate_of : ATTR(:get<RequestDate>);
 
-__PACKAGE__->_factory(
-    [ qw(        Type
-        RequestTime
-        RequestRange
-        RequestDate
+    __PACKAGE__->_factory(
+        [   qw(        Type
+              RequestTime
+              RequestRange
+              RequestDate
 
-    ) ],
-    {
-        'Type' => \%Type_of,
-        'RequestTime' => \%RequestTime_of,
-        'RequestRange' => \%RequestRange_of,
-        'RequestDate' => \%RequestDate_of,
-    },
-    {
-        'Type' => 'Shipment::FedEx::WSDL::ShipTypes::CustomDeliveryWindowType',
-        'RequestTime' => 'SOAP::WSDL::XSD::Typelib::Builtin::time',
-        'RequestRange' => 'Shipment::FedEx::WSDL::ShipTypes::DateRange',
-        'RequestDate' => 'SOAP::WSDL::XSD::Typelib::Builtin::date',
-    },
-    {
+              )
+        ],
+        {   'Type'         => \%Type_of,
+            'RequestTime'  => \%RequestTime_of,
+            'RequestRange' => \%RequestRange_of,
+            'RequestDate'  => \%RequestDate_of,
+        },
+        {   'Type' =>
+              'Shipment::FedEx::WSDL::ShipTypes::CustomDeliveryWindowType',
+            'RequestTime'  => 'SOAP::WSDL::XSD::Typelib::Builtin::time',
+            'RequestRange' => 'Shipment::FedEx::WSDL::ShipTypes::DateRange',
+            'RequestDate'  => 'SOAP::WSDL::XSD::Typelib::Builtin::date',
+        },
+        {
 
-        'Type' => 'Type',
-        'RequestTime' => 'RequestTime',
-        'RequestRange' => 'RequestRange',
-        'RequestDate' => 'RequestDate',
-    }
-);
+            'Type'         => 'Type',
+            'RequestTime'  => 'RequestTime',
+            'RequestRange' => 'RequestRange',
+            'RequestDate'  => 'RequestDate',
+        }
+    );
 
-} # end BLOCK
-
-
-
-
-
+}    # end BLOCK
 
 
 1;
@@ -71,13 +64,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Shipment::FedEx::WSDL::ShipTypes::CustomDeliveryWindowDetail
 
 =head1 VERSION
 
-version 0.15
+version 0.16
 
 =head1 DESCRIPTION
 

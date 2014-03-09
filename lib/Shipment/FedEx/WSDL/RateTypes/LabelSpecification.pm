@@ -1,14 +1,12 @@
 package Shipment::FedEx::WSDL::RateTypes::LabelSpecification;
-{
-  $Shipment::FedEx::WSDL::RateTypes::LabelSpecification::VERSION = '0.15';
-}
+$Shipment::FedEx::WSDL::RateTypes::LabelSpecification::VERSION = '0.16';
 use strict;
 use warnings;
 
 
 __PACKAGE__->_set_element_form_qualified(1);
 
-sub get_xmlns { 'http://fedex.com/ws/rate/v9' };
+sub get_xmlns {'http://fedex.com/ws/rate/v9'}
 
 our $XML_ATTRIBUTE_CLASS;
 undef $XML_ATTRIBUTE_CLASS;
@@ -22,62 +20,63 @@ use base qw(SOAP::WSDL::XSD::Typelib::ComplexType);
 
 Class::Std::initialize();
 
-{ # BLOCK to scope variables
+{    # BLOCK to scope variables
 
-my %LabelFormatType_of :ATTR(:get<LabelFormatType>);
-my %ImageType_of :ATTR(:get<ImageType>);
-my %LabelStockType_of :ATTR(:get<LabelStockType>);
-my %LabelPrintingOrientation_of :ATTR(:get<LabelPrintingOrientation>);
-my %LabelRotation_of :ATTR(:get<LabelRotation>);
-my %PrintedLabelOrigin_of :ATTR(:get<PrintedLabelOrigin>);
-my %CustomerSpecifiedDetail_of :ATTR(:get<CustomerSpecifiedDetail>);
+    my %LabelFormatType_of : ATTR(:get<LabelFormatType>);
+    my %ImageType_of : ATTR(:get<ImageType>);
+    my %LabelStockType_of : ATTR(:get<LabelStockType>);
+    my %LabelPrintingOrientation_of : ATTR(:get<LabelPrintingOrientation>);
+    my %LabelRotation_of : ATTR(:get<LabelRotation>);
+    my %PrintedLabelOrigin_of : ATTR(:get<PrintedLabelOrigin>);
+    my %CustomerSpecifiedDetail_of : ATTR(:get<CustomerSpecifiedDetail>);
 
-__PACKAGE__->_factory(
-    [ qw(        LabelFormatType
-        ImageType
-        LabelStockType
-        LabelPrintingOrientation
-        LabelRotation
-        PrintedLabelOrigin
-        CustomerSpecifiedDetail
+    __PACKAGE__->_factory(
+        [   qw(        LabelFormatType
+              ImageType
+              LabelStockType
+              LabelPrintingOrientation
+              LabelRotation
+              PrintedLabelOrigin
+              CustomerSpecifiedDetail
 
-    ) ],
-    {
-        'LabelFormatType' => \%LabelFormatType_of,
-        'ImageType' => \%ImageType_of,
-        'LabelStockType' => \%LabelStockType_of,
-        'LabelPrintingOrientation' => \%LabelPrintingOrientation_of,
-        'LabelRotation' => \%LabelRotation_of,
-        'PrintedLabelOrigin' => \%PrintedLabelOrigin_of,
-        'CustomerSpecifiedDetail' => \%CustomerSpecifiedDetail_of,
-    },
-    {
-        'LabelFormatType' => 'Shipment::FedEx::WSDL::RateTypes::LabelFormatType',
-        'ImageType' => 'Shipment::FedEx::WSDL::RateTypes::ShippingDocumentImageType',
-        'LabelStockType' => 'Shipment::FedEx::WSDL::RateTypes::LabelStockType',
-        'LabelPrintingOrientation' => 'Shipment::FedEx::WSDL::RateTypes::LabelPrintingOrientationType',
-        'LabelRotation' => 'Shipment::FedEx::WSDL::RateTypes::LabelRotationType',
-        'PrintedLabelOrigin' => 'Shipment::FedEx::WSDL::RateTypes::ContactAndAddress',
-        'CustomerSpecifiedDetail' => 'Shipment::FedEx::WSDL::RateTypes::CustomerSpecifiedLabelDetail',
-    },
-    {
+              )
+        ],
+        {   'LabelFormatType'          => \%LabelFormatType_of,
+            'ImageType'                => \%ImageType_of,
+            'LabelStockType'           => \%LabelStockType_of,
+            'LabelPrintingOrientation' => \%LabelPrintingOrientation_of,
+            'LabelRotation'            => \%LabelRotation_of,
+            'PrintedLabelOrigin'       => \%PrintedLabelOrigin_of,
+            'CustomerSpecifiedDetail'  => \%CustomerSpecifiedDetail_of,
+        },
+        {   'LabelFormatType' =>
+              'Shipment::FedEx::WSDL::RateTypes::LabelFormatType',
+            'ImageType' =>
+              'Shipment::FedEx::WSDL::RateTypes::ShippingDocumentImageType',
+            'LabelStockType' =>
+              'Shipment::FedEx::WSDL::RateTypes::LabelStockType',
+            'LabelPrintingOrientation' =>
+              'Shipment::FedEx::WSDL::RateTypes::LabelPrintingOrientationType',
+            'LabelRotation' =>
+              'Shipment::FedEx::WSDL::RateTypes::LabelRotationType',
+            'PrintedLabelOrigin' =>
+              'Shipment::FedEx::WSDL::RateTypes::ContactAndAddress',
+            'CustomerSpecifiedDetail' =>
+              'Shipment::FedEx::WSDL::RateTypes::CustomerSpecifiedLabelDetail',
+        },
+        {
 
-        'LabelFormatType' => 'LabelFormatType',
-        'ImageType' => 'ImageType',
-        'LabelStockType' => 'LabelStockType',
-        'LabelPrintingOrientation' => 'LabelPrintingOrientation',
-        'LabelRotation' => 'LabelRotation',
-        'PrintedLabelOrigin' => 'PrintedLabelOrigin',
-        'CustomerSpecifiedDetail' => 'CustomerSpecifiedDetail',
-    }
-);
+            'LabelFormatType'          => 'LabelFormatType',
+            'ImageType'                => 'ImageType',
+            'LabelStockType'           => 'LabelStockType',
+            'LabelPrintingOrientation' => 'LabelPrintingOrientation',
+            'LabelRotation'            => 'LabelRotation',
+            'PrintedLabelOrigin'       => 'PrintedLabelOrigin',
+            'CustomerSpecifiedDetail'  => 'CustomerSpecifiedDetail',
+        }
+    );
 
-} # end BLOCK
-
-
-
-
-
+}    # end BLOCK
 
 
 1;
@@ -86,13 +85,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Shipment::FedEx::WSDL::RateTypes::LabelSpecification
 
 =head1 VERSION
 
-version 0.15
+version 0.16
 
 =head1 DESCRIPTION
 

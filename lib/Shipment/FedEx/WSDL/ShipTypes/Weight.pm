@@ -1,14 +1,12 @@
 package Shipment::FedEx::WSDL::ShipTypes::Weight;
-{
-  $Shipment::FedEx::WSDL::ShipTypes::Weight::VERSION = '0.15';
-}
+$Shipment::FedEx::WSDL::ShipTypes::Weight::VERSION = '0.16';
 use strict;
 use warnings;
 
 
 __PACKAGE__->_set_element_form_qualified(1);
 
-sub get_xmlns { 'http://fedex.com/ws/ship/v9' };
+sub get_xmlns {'http://fedex.com/ws/ship/v9'}
 
 our $XML_ATTRIBUTE_CLASS;
 undef $XML_ATTRIBUTE_CLASS;
@@ -22,37 +20,31 @@ use base qw(SOAP::WSDL::XSD::Typelib::ComplexType);
 
 Class::Std::initialize();
 
-{ # BLOCK to scope variables
+{    # BLOCK to scope variables
 
-my %Units_of :ATTR(:get<Units>);
-my %Value_of :ATTR(:get<Value>);
+    my %Units_of : ATTR(:get<Units>);
+    my %Value_of : ATTR(:get<Value>);
 
-__PACKAGE__->_factory(
-    [ qw(        Units
-        Value
+    __PACKAGE__->_factory(
+        [   qw(        Units
+              Value
 
-    ) ],
-    {
-        'Units' => \%Units_of,
-        'Value' => \%Value_of,
-    },
-    {
-        'Units' => 'Shipment::FedEx::WSDL::ShipTypes::WeightUnits',
-        'Value' => 'SOAP::WSDL::XSD::Typelib::Builtin::decimal',
-    },
-    {
+              )
+        ],
+        {   'Units' => \%Units_of,
+            'Value' => \%Value_of,
+        },
+        {   'Units' => 'Shipment::FedEx::WSDL::ShipTypes::WeightUnits',
+            'Value' => 'SOAP::WSDL::XSD::Typelib::Builtin::decimal',
+        },
+        {
 
-        'Units' => 'Units',
-        'Value' => 'Value',
-    }
-);
+            'Units' => 'Units',
+            'Value' => 'Value',
+        }
+    );
 
-} # end BLOCK
-
-
-
-
-
+}    # end BLOCK
 
 
 1;
@@ -61,13 +53,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Shipment::FedEx::WSDL::ShipTypes::Weight
 
 =head1 VERSION
 
-version 0.15
+version 0.16
 
 =head1 DESCRIPTION
 

@@ -1,14 +1,12 @@
 package Shipment::Purolator::WSDL::Types::PaymentInformation;
-{
-  $Shipment::Purolator::WSDL::Types::PaymentInformation::VERSION = '0.15';
-}
+$Shipment::Purolator::WSDL::Types::PaymentInformation::VERSION = '0.16';
 use strict;
 use warnings;
 
 
 __PACKAGE__->_set_element_form_qualified(1);
 
-sub get_xmlns { 'http://purolator.com/pws/datatypes/v1' };
+sub get_xmlns {'http://purolator.com/pws/datatypes/v1'}
 
 our $XML_ATTRIBUTE_CLASS;
 undef $XML_ATTRIBUTE_CLASS;
@@ -22,47 +20,44 @@ use base qw(SOAP::WSDL::XSD::Typelib::ComplexType);
 
 Class::Std::initialize();
 
-{ # BLOCK to scope variables
+{    # BLOCK to scope variables
 
-my %PaymentType_of :ATTR(:get<PaymentType>);
-my %RegisteredAccountNumber_of :ATTR(:get<RegisteredAccountNumber>);
-my %BillingAccountNumber_of :ATTR(:get<BillingAccountNumber>);
-my %CreditCardInformation_of :ATTR(:get<CreditCardInformation>);
+    my %PaymentType_of : ATTR(:get<PaymentType>);
+    my %RegisteredAccountNumber_of : ATTR(:get<RegisteredAccountNumber>);
+    my %BillingAccountNumber_of : ATTR(:get<BillingAccountNumber>);
+    my %CreditCardInformation_of : ATTR(:get<CreditCardInformation>);
 
-__PACKAGE__->_factory(
-    [ qw(        PaymentType
-        RegisteredAccountNumber
-        BillingAccountNumber
-        CreditCardInformation
+    __PACKAGE__->_factory(
+        [   qw(        PaymentType
+              RegisteredAccountNumber
+              BillingAccountNumber
+              CreditCardInformation
 
-    ) ],
-    {
-        'PaymentType' => \%PaymentType_of,
-        'RegisteredAccountNumber' => \%RegisteredAccountNumber_of,
-        'BillingAccountNumber' => \%BillingAccountNumber_of,
-        'CreditCardInformation' => \%CreditCardInformation_of,
-    },
-    {
-        'PaymentType' => 'Shipment::Purolator::WSDL::Types::PaymentType',
-        'RegisteredAccountNumber' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
-        'BillingAccountNumber' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
-        'CreditCardInformation' => 'Shipment::Purolator::WSDL::Types::CreditCardInformation',
-    },
-    {
+              )
+        ],
+        {   'PaymentType'             => \%PaymentType_of,
+            'RegisteredAccountNumber' => \%RegisteredAccountNumber_of,
+            'BillingAccountNumber'    => \%BillingAccountNumber_of,
+            'CreditCardInformation'   => \%CreditCardInformation_of,
+        },
+        {   'PaymentType' => 'Shipment::Purolator::WSDL::Types::PaymentType',
+            'RegisteredAccountNumber' =>
+              'SOAP::WSDL::XSD::Typelib::Builtin::string',
+            'BillingAccountNumber' =>
+              'SOAP::WSDL::XSD::Typelib::Builtin::string',
+            'CreditCardInformation' =>
+              'Shipment::Purolator::WSDL::Types::CreditCardInformation',
+        },
+        {
 
-        'PaymentType' => 'PaymentType',
-        'RegisteredAccountNumber' => 'RegisteredAccountNumber',
-        'BillingAccountNumber' => 'BillingAccountNumber',
-        'CreditCardInformation' => 'CreditCardInformation',
-    }
-);
+            'PaymentType'             => 'PaymentType',
+            'RegisteredAccountNumber' => 'RegisteredAccountNumber',
+            'BillingAccountNumber'    => 'BillingAccountNumber',
+            'CreditCardInformation'   => 'CreditCardInformation',
+        }
+    );
 
-} # end BLOCK
-
-
-
-
-
+}    # end BLOCK
 
 
 1;
@@ -71,13 +66,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Shipment::Purolator::WSDL::Types::PaymentInformation
 
 =head1 VERSION
 
-version 0.15
+version 0.16
 
 =head1 DESCRIPTION
 

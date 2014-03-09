@@ -1,14 +1,12 @@
 package Shipment::UPS::WSDL::ShipTypes::RequestType;
-{
-  $Shipment::UPS::WSDL::ShipTypes::RequestType::VERSION = '0.15';
-}
+$Shipment::UPS::WSDL::ShipTypes::RequestType::VERSION = '0.16';
 use strict;
 use warnings;
 
 
 __PACKAGE__->_set_element_form_qualified(1);
 
-sub get_xmlns { 'http://www.ups.com/XMLSchema/XOLTWS/Common/v1.0' };
+sub get_xmlns {'http://www.ups.com/XMLSchema/XOLTWS/Common/v1.0'}
 
 our $XML_ATTRIBUTE_CLASS;
 undef $XML_ATTRIBUTE_CLASS;
@@ -22,37 +20,32 @@ use base qw(SOAP::WSDL::XSD::Typelib::ComplexType);
 
 Class::Std::initialize();
 
-{ # BLOCK to scope variables
+{    # BLOCK to scope variables
 
-my %RequestOption_of :ATTR(:get<RequestOption>);
-my %TransactionReference_of :ATTR(:get<TransactionReference>);
+    my %RequestOption_of : ATTR(:get<RequestOption>);
+    my %TransactionReference_of : ATTR(:get<TransactionReference>);
 
-__PACKAGE__->_factory(
-    [ qw(        RequestOption
-        TransactionReference
+    __PACKAGE__->_factory(
+        [   qw(        RequestOption
+              TransactionReference
 
-    ) ],
-    {
-        'RequestOption' => \%RequestOption_of,
-        'TransactionReference' => \%TransactionReference_of,
-    },
-    {
-        'RequestOption' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
-        'TransactionReference' => 'Shipment::UPS::WSDL::ShipTypes::TransactionReferenceType',
-    },
-    {
+              )
+        ],
+        {   'RequestOption'        => \%RequestOption_of,
+            'TransactionReference' => \%TransactionReference_of,
+        },
+        {   'RequestOption' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
+            'TransactionReference' =>
+              'Shipment::UPS::WSDL::ShipTypes::TransactionReferenceType',
+        },
+        {
 
-        'RequestOption' => 'RequestOption',
-        'TransactionReference' => 'TransactionReference',
-    }
-);
+            'RequestOption'        => 'RequestOption',
+            'TransactionReference' => 'TransactionReference',
+        }
+    );
 
-} # end BLOCK
-
-
-
-
-
+}    # end BLOCK
 
 
 1;
@@ -61,13 +54,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Shipment::UPS::WSDL::ShipTypes::RequestType
 
 =head1 VERSION
 
-version 0.15
+version 0.16
 
 =head1 DESCRIPTION
 

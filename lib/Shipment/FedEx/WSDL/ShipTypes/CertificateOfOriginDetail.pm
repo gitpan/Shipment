@@ -1,14 +1,12 @@
 package Shipment::FedEx::WSDL::ShipTypes::CertificateOfOriginDetail;
-{
-  $Shipment::FedEx::WSDL::ShipTypes::CertificateOfOriginDetail::VERSION = '0.15';
-}
+$Shipment::FedEx::WSDL::ShipTypes::CertificateOfOriginDetail::VERSION = '0.16';
 use strict;
 use warnings;
 
 
 __PACKAGE__->_set_element_form_qualified(1);
 
-sub get_xmlns { 'http://fedex.com/ws/ship/v9' };
+sub get_xmlns {'http://fedex.com/ws/ship/v9'}
 
 our $XML_ATTRIBUTE_CLASS;
 undef $XML_ATTRIBUTE_CLASS;
@@ -22,37 +20,33 @@ use base qw(SOAP::WSDL::XSD::Typelib::ComplexType);
 
 Class::Std::initialize();
 
-{ # BLOCK to scope variables
+{    # BLOCK to scope variables
 
-my %DocumentFormat_of :ATTR(:get<DocumentFormat>);
-my %CustomerImageUsages_of :ATTR(:get<CustomerImageUsages>);
+    my %DocumentFormat_of : ATTR(:get<DocumentFormat>);
+    my %CustomerImageUsages_of : ATTR(:get<CustomerImageUsages>);
 
-__PACKAGE__->_factory(
-    [ qw(        DocumentFormat
-        CustomerImageUsages
+    __PACKAGE__->_factory(
+        [   qw(        DocumentFormat
+              CustomerImageUsages
 
-    ) ],
-    {
-        'DocumentFormat' => \%DocumentFormat_of,
-        'CustomerImageUsages' => \%CustomerImageUsages_of,
-    },
-    {
-        'DocumentFormat' => 'Shipment::FedEx::WSDL::ShipTypes::ShippingDocumentFormat',
-        'CustomerImageUsages' => 'Shipment::FedEx::WSDL::ShipTypes::CustomerImageUsage',
-    },
-    {
+              )
+        ],
+        {   'DocumentFormat'      => \%DocumentFormat_of,
+            'CustomerImageUsages' => \%CustomerImageUsages_of,
+        },
+        {   'DocumentFormat' =>
+              'Shipment::FedEx::WSDL::ShipTypes::ShippingDocumentFormat',
+            'CustomerImageUsages' =>
+              'Shipment::FedEx::WSDL::ShipTypes::CustomerImageUsage',
+        },
+        {
 
-        'DocumentFormat' => 'DocumentFormat',
-        'CustomerImageUsages' => 'CustomerImageUsages',
-    }
-);
+            'DocumentFormat'      => 'DocumentFormat',
+            'CustomerImageUsages' => 'CustomerImageUsages',
+        }
+    );
 
-} # end BLOCK
-
-
-
-
-
+}    # end BLOCK
 
 
 1;
@@ -61,13 +55,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Shipment::FedEx::WSDL::ShipTypes::CertificateOfOriginDetail
 
 =head1 VERSION
 
-version 0.15
+version 0.16
 
 =head1 DESCRIPTION
 

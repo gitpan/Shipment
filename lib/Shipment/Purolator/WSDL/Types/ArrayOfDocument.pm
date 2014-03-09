@@ -1,14 +1,12 @@
 package Shipment::Purolator::WSDL::Types::ArrayOfDocument;
-{
-  $Shipment::Purolator::WSDL::Types::ArrayOfDocument::VERSION = '0.15';
-}
+$Shipment::Purolator::WSDL::Types::ArrayOfDocument::VERSION = '0.16';
 use strict;
 use warnings;
 
 
 __PACKAGE__->_set_element_form_qualified(1);
 
-sub get_xmlns { 'http://purolator.com/pws/datatypes/v1' };
+sub get_xmlns {'http://purolator.com/pws/datatypes/v1'}
 
 our $XML_ATTRIBUTE_CLASS;
 undef $XML_ATTRIBUTE_CLASS;
@@ -22,32 +20,24 @@ use base qw(SOAP::WSDL::XSD::Typelib::ComplexType);
 
 Class::Std::initialize();
 
-{ # BLOCK to scope variables
+{    # BLOCK to scope variables
 
-my %Document_of :ATTR(:get<Document>);
+    my %Document_of : ATTR(:get<Document>);
 
-__PACKAGE__->_factory(
-    [ qw(        Document
+    __PACKAGE__->_factory(
+        [   qw(        Document
 
-    ) ],
-    {
-        'Document' => \%Document_of,
-    },
-    {
-        'Document' => 'Shipment::Purolator::WSDL::Types::Document',
-    },
-    {
+              )
+        ],
+        {'Document' => \%Document_of,},
+        {'Document' => 'Shipment::Purolator::WSDL::Types::Document',},
+        {
 
-        'Document' => 'Document',
-    }
-);
+            'Document' => 'Document',
+        }
+    );
 
-} # end BLOCK
-
-
-
-
-
+}    # end BLOCK
 
 
 1;
@@ -56,13 +46,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Shipment::Purolator::WSDL::Types::ArrayOfDocument
 
 =head1 VERSION
 
-version 0.15
+version 0.16
 
 =head1 DESCRIPTION
 

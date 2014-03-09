@@ -1,14 +1,12 @@
 package Shipment::UPS::WSDL::RateTypes::DimensionsType;
-{
-  $Shipment::UPS::WSDL::RateTypes::DimensionsType::VERSION = '0.15';
-}
+$Shipment::UPS::WSDL::RateTypes::DimensionsType::VERSION = '0.16';
 use strict;
 use warnings;
 
 
 __PACKAGE__->_set_element_form_qualified(1);
 
-sub get_xmlns { 'http://www.ups.com/XMLSchema/XOLTWS/Rate/v1.1' };
+sub get_xmlns {'http://www.ups.com/XMLSchema/XOLTWS/Rate/v1.1'}
 
 our $XML_ATTRIBUTE_CLASS;
 undef $XML_ATTRIBUTE_CLASS;
@@ -22,47 +20,42 @@ use base qw(SOAP::WSDL::XSD::Typelib::ComplexType);
 
 Class::Std::initialize();
 
-{ # BLOCK to scope variables
+{    # BLOCK to scope variables
 
-my %UnitOfMeasurement_of :ATTR(:get<UnitOfMeasurement>);
-my %Length_of :ATTR(:get<Length>);
-my %Width_of :ATTR(:get<Width>);
-my %Height_of :ATTR(:get<Height>);
+    my %UnitOfMeasurement_of : ATTR(:get<UnitOfMeasurement>);
+    my %Length_of : ATTR(:get<Length>);
+    my %Width_of : ATTR(:get<Width>);
+    my %Height_of : ATTR(:get<Height>);
 
-__PACKAGE__->_factory(
-    [ qw(        UnitOfMeasurement
-        Length
-        Width
-        Height
+    __PACKAGE__->_factory(
+        [   qw(        UnitOfMeasurement
+              Length
+              Width
+              Height
 
-    ) ],
-    {
-        'UnitOfMeasurement' => \%UnitOfMeasurement_of,
-        'Length' => \%Length_of,
-        'Width' => \%Width_of,
-        'Height' => \%Height_of,
-    },
-    {
-        'UnitOfMeasurement' => 'Shipment::UPS::WSDL::RateTypes::CodeDescriptionType',
-        'Length' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
-        'Width' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
-        'Height' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
-    },
-    {
+              )
+        ],
+        {   'UnitOfMeasurement' => \%UnitOfMeasurement_of,
+            'Length'            => \%Length_of,
+            'Width'             => \%Width_of,
+            'Height'            => \%Height_of,
+        },
+        {   'UnitOfMeasurement' =>
+              'Shipment::UPS::WSDL::RateTypes::CodeDescriptionType',
+            'Length' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
+            'Width'  => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
+            'Height' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
+        },
+        {
 
-        'UnitOfMeasurement' => 'UnitOfMeasurement',
-        'Length' => 'Length',
-        'Width' => 'Width',
-        'Height' => 'Height',
-    }
-);
+            'UnitOfMeasurement' => 'UnitOfMeasurement',
+            'Length'            => 'Length',
+            'Width'             => 'Width',
+            'Height'            => 'Height',
+        }
+    );
 
-} # end BLOCK
-
-
-
-
-
+}    # end BLOCK
 
 
 1;
@@ -71,13 +64,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Shipment::UPS::WSDL::RateTypes::DimensionsType
 
 =head1 VERSION
 
-version 0.15
+version 0.16
 
 =head1 DESCRIPTION
 

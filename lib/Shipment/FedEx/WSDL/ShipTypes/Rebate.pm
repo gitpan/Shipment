@@ -1,14 +1,12 @@
 package Shipment::FedEx::WSDL::ShipTypes::Rebate;
-{
-  $Shipment::FedEx::WSDL::ShipTypes::Rebate::VERSION = '0.15';
-}
+$Shipment::FedEx::WSDL::ShipTypes::Rebate::VERSION = '0.16';
 use strict;
 use warnings;
 
 
 __PACKAGE__->_set_element_form_qualified(1);
 
-sub get_xmlns { 'http://fedex.com/ws/ship/v9' };
+sub get_xmlns {'http://fedex.com/ws/ship/v9'}
 
 our $XML_ATTRIBUTE_CLASS;
 undef $XML_ATTRIBUTE_CLASS;
@@ -22,47 +20,41 @@ use base qw(SOAP::WSDL::XSD::Typelib::ComplexType);
 
 Class::Std::initialize();
 
-{ # BLOCK to scope variables
+{    # BLOCK to scope variables
 
-my %RebateType_of :ATTR(:get<RebateType>);
-my %Description_of :ATTR(:get<Description>);
-my %Amount_of :ATTR(:get<Amount>);
-my %Percent_of :ATTR(:get<Percent>);
+    my %RebateType_of : ATTR(:get<RebateType>);
+    my %Description_of : ATTR(:get<Description>);
+    my %Amount_of : ATTR(:get<Amount>);
+    my %Percent_of : ATTR(:get<Percent>);
 
-__PACKAGE__->_factory(
-    [ qw(        RebateType
-        Description
-        Amount
-        Percent
+    __PACKAGE__->_factory(
+        [   qw(        RebateType
+              Description
+              Amount
+              Percent
 
-    ) ],
-    {
-        'RebateType' => \%RebateType_of,
-        'Description' => \%Description_of,
-        'Amount' => \%Amount_of,
-        'Percent' => \%Percent_of,
-    },
-    {
-        'RebateType' => 'Shipment::FedEx::WSDL::ShipTypes::RebateType',
-        'Description' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
-        'Amount' => 'Shipment::FedEx::WSDL::ShipTypes::Money',
-        'Percent' => 'SOAP::WSDL::XSD::Typelib::Builtin::decimal',
-    },
-    {
+              )
+        ],
+        {   'RebateType'  => \%RebateType_of,
+            'Description' => \%Description_of,
+            'Amount'      => \%Amount_of,
+            'Percent'     => \%Percent_of,
+        },
+        {   'RebateType'  => 'Shipment::FedEx::WSDL::ShipTypes::RebateType',
+            'Description' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
+            'Amount'      => 'Shipment::FedEx::WSDL::ShipTypes::Money',
+            'Percent'     => 'SOAP::WSDL::XSD::Typelib::Builtin::decimal',
+        },
+        {
 
-        'RebateType' => 'RebateType',
-        'Description' => 'Description',
-        'Amount' => 'Amount',
-        'Percent' => 'Percent',
-    }
-);
+            'RebateType'  => 'RebateType',
+            'Description' => 'Description',
+            'Amount'      => 'Amount',
+            'Percent'     => 'Percent',
+        }
+    );
 
-} # end BLOCK
-
-
-
-
-
+}    # end BLOCK
 
 
 1;
@@ -71,13 +63,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Shipment::FedEx::WSDL::ShipTypes::Rebate
 
 =head1 VERSION
 
-version 0.15
+version 0.16
 
 =head1 DESCRIPTION
 

@@ -1,24 +1,22 @@
 
 package Shipment::FedEx::WSDL::RateElements::RateReply;
-{
-  $Shipment::FedEx::WSDL::RateElements::RateReply::VERSION = '0.15';
-}
+$Shipment::FedEx::WSDL::RateElements::RateReply::VERSION = '0.16';
 use strict;
 use warnings;
 
-{ # BLOCK to scope variables
+{    # BLOCK to scope variables
 
-sub get_xmlns { 'http://fedex.com/ws/rate/v9' }
+    sub get_xmlns {'http://fedex.com/ws/rate/v9'}
 
-__PACKAGE__->__set_name('RateReply');
-__PACKAGE__->__set_nillable();
-__PACKAGE__->__set_minOccurs();
-__PACKAGE__->__set_maxOccurs();
-__PACKAGE__->__set_ref();
-use base qw(
-    SOAP::WSDL::XSD::Typelib::Element
-    Shipment::FedEx::WSDL::RateTypes::RateReply
-);
+    __PACKAGE__->__set_name('RateReply');
+    __PACKAGE__->__set_nillable();
+    __PACKAGE__->__set_minOccurs();
+    __PACKAGE__->__set_maxOccurs();
+    __PACKAGE__->__set_ref();
+    use base qw(
+      SOAP::WSDL::XSD::Typelib::Element
+      Shipment::FedEx::WSDL::RateTypes::RateReply
+    );
 
 }
 
@@ -28,13 +26,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Shipment::FedEx::WSDL::RateElements::RateReply
 
 =head1 VERSION
 
-version 0.15
+version 0.16
 
 =head1 DESCRIPTION
 

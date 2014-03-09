@@ -1,16 +1,17 @@
 package Shipment::Temando::WSDL::Types::Cubic;
-{
-  $Shipment::Temando::WSDL::Types::Cubic::VERSION = '0.15';
-}
+$Shipment::Temando::WSDL::Types::Cubic::VERSION = '0.16';
 use strict;
 use warnings;
 
-sub get_xmlns { 'http://' . $Shipment::Temando::WSDL::Interfaces::quoting_Service::quoting_port::ns_url . '/schema/2009_06/common.xsd'};
+sub get_xmlns {
+    'http://'
+      . $Shipment::Temando::WSDL::Interfaces::quoting_Service::quoting_port::ns_url
+      . '/schema/2009_06/common.xsd';
+}
 
 # derivation by restriction
 use base qw(
-    SOAP::WSDL::XSD::Typelib::Builtin::decimal);
-
+  SOAP::WSDL::XSD::Typelib::Builtin::decimal);
 
 
 1;
@@ -19,13 +20,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Shipment::Temando::WSDL::Types::Cubic
 
 =head1 VERSION
 
-version 0.15
+version 0.16
 
 =head1 DESCRIPTION
 

@@ -1,14 +1,12 @@
 package Shipment::FedEx::WSDL::RateTypes::CustomLabelPosition;
-{
-  $Shipment::FedEx::WSDL::RateTypes::CustomLabelPosition::VERSION = '0.15';
-}
+$Shipment::FedEx::WSDL::RateTypes::CustomLabelPosition::VERSION = '0.16';
 use strict;
 use warnings;
 
 
 __PACKAGE__->_set_element_form_qualified(1);
 
-sub get_xmlns { 'http://fedex.com/ws/rate/v9' };
+sub get_xmlns {'http://fedex.com/ws/rate/v9'}
 
 our $XML_ATTRIBUTE_CLASS;
 undef $XML_ATTRIBUTE_CLASS;
@@ -22,37 +20,31 @@ use base qw(SOAP::WSDL::XSD::Typelib::ComplexType);
 
 Class::Std::initialize();
 
-{ # BLOCK to scope variables
+{    # BLOCK to scope variables
 
-my %X_of :ATTR(:get<X>);
-my %Y_of :ATTR(:get<Y>);
+    my %X_of : ATTR(:get<X>);
+    my %Y_of : ATTR(:get<Y>);
 
-__PACKAGE__->_factory(
-    [ qw(        X
-        Y
+    __PACKAGE__->_factory(
+        [   qw(        X
+              Y
 
-    ) ],
-    {
-        'X' => \%X_of,
-        'Y' => \%Y_of,
-    },
-    {
-        'X' => 'SOAP::WSDL::XSD::Typelib::Builtin::nonNegativeInteger',
-        'Y' => 'SOAP::WSDL::XSD::Typelib::Builtin::nonNegativeInteger',
-    },
-    {
+              )
+        ],
+        {   'X' => \%X_of,
+            'Y' => \%Y_of,
+        },
+        {   'X' => 'SOAP::WSDL::XSD::Typelib::Builtin::nonNegativeInteger',
+            'Y' => 'SOAP::WSDL::XSD::Typelib::Builtin::nonNegativeInteger',
+        },
+        {
 
-        'X' => 'X',
-        'Y' => 'Y',
-    }
-);
+            'X' => 'X',
+            'Y' => 'Y',
+        }
+    );
 
-} # end BLOCK
-
-
-
-
-
+}    # end BLOCK
 
 
 1;
@@ -61,13 +53,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Shipment::FedEx::WSDL::RateTypes::CustomLabelPosition
 
 =head1 VERSION
 
-version 0.15
+version 0.16
 
 =head1 DESCRIPTION
 

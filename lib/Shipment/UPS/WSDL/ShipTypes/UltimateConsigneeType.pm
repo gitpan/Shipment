@@ -1,14 +1,12 @@
 package Shipment::UPS::WSDL::ShipTypes::UltimateConsigneeType;
-{
-  $Shipment::UPS::WSDL::ShipTypes::UltimateConsigneeType::VERSION = '0.15';
-}
+$Shipment::UPS::WSDL::ShipTypes::UltimateConsigneeType::VERSION = '0.16';
 use strict;
 use warnings;
 
 
 __PACKAGE__->_set_element_form_qualified(1);
 
-sub get_xmlns { 'http://www.ups.com/XMLSchema/XOLTWS/IF/v1.0' };
+sub get_xmlns {'http://www.ups.com/XMLSchema/XOLTWS/IF/v1.0'}
 
 our $XML_ATTRIBUTE_CLASS;
 undef $XML_ATTRIBUTE_CLASS;
@@ -22,37 +20,31 @@ use base qw(SOAP::WSDL::XSD::Typelib::ComplexType);
 
 Class::Std::initialize();
 
-{ # BLOCK to scope variables
+{    # BLOCK to scope variables
 
-my %CompanyName_of :ATTR(:get<CompanyName>);
-my %Address_of :ATTR(:get<Address>);
+    my %CompanyName_of : ATTR(:get<CompanyName>);
+    my %Address_of : ATTR(:get<Address>);
 
-__PACKAGE__->_factory(
-    [ qw(        CompanyName
-        Address
+    __PACKAGE__->_factory(
+        [   qw(        CompanyName
+              Address
 
-    ) ],
-    {
-        'CompanyName' => \%CompanyName_of,
-        'Address' => \%Address_of,
-    },
-    {
-        'CompanyName' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
-        'Address' => 'Shipment::UPS::WSDL::ShipTypes::AddressType',
-    },
-    {
+              )
+        ],
+        {   'CompanyName' => \%CompanyName_of,
+            'Address'     => \%Address_of,
+        },
+        {   'CompanyName' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
+            'Address'     => 'Shipment::UPS::WSDL::ShipTypes::AddressType',
+        },
+        {
 
-        'CompanyName' => 'CompanyName',
-        'Address' => 'Address',
-    }
-);
+            'CompanyName' => 'CompanyName',
+            'Address'     => 'Address',
+        }
+    );
 
-} # end BLOCK
-
-
-
-
-
+}    # end BLOCK
 
 
 1;
@@ -61,13 +53,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Shipment::UPS::WSDL::ShipTypes::UltimateConsigneeType
 
 =head1 VERSION
 
-version 0.15
+version 0.16
 
 =head1 DESCRIPTION
 

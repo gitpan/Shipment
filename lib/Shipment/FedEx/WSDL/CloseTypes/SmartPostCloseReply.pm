@@ -1,14 +1,12 @@
 package Shipment::FedEx::WSDL::CloseTypes::SmartPostCloseReply;
-{
-  $Shipment::FedEx::WSDL::CloseTypes::SmartPostCloseReply::VERSION = '0.15';
-}
+$Shipment::FedEx::WSDL::CloseTypes::SmartPostCloseReply::VERSION = '0.16';
 use strict;
 use warnings;
 
 
 __PACKAGE__->_set_element_form_qualified(1);
 
-sub get_xmlns { 'http://fedex.com/ws/close/v2' };
+sub get_xmlns {'http://fedex.com/ws/close/v2'}
 
 our $XML_ATTRIBUTE_CLASS;
 undef $XML_ATTRIBUTE_CLASS;
@@ -22,47 +20,44 @@ use base qw(SOAP::WSDL::XSD::Typelib::ComplexType);
 
 Class::Std::initialize();
 
-{ # BLOCK to scope variables
+{    # BLOCK to scope variables
 
-my %HighestSeverity_of :ATTR(:get<HighestSeverity>);
-my %Notifications_of :ATTR(:get<Notifications>);
-my %TransactionDetail_of :ATTR(:get<TransactionDetail>);
-my %Version_of :ATTR(:get<Version>);
+    my %HighestSeverity_of : ATTR(:get<HighestSeverity>);
+    my %Notifications_of : ATTR(:get<Notifications>);
+    my %TransactionDetail_of : ATTR(:get<TransactionDetail>);
+    my %Version_of : ATTR(:get<Version>);
 
-__PACKAGE__->_factory(
-    [ qw(        HighestSeverity
-        Notifications
-        TransactionDetail
-        Version
+    __PACKAGE__->_factory(
+        [   qw(        HighestSeverity
+              Notifications
+              TransactionDetail
+              Version
 
-    ) ],
-    {
-        'HighestSeverity' => \%HighestSeverity_of,
-        'Notifications' => \%Notifications_of,
-        'TransactionDetail' => \%TransactionDetail_of,
-        'Version' => \%Version_of,
-    },
-    {
-        'HighestSeverity' => 'Shipment::FedEx::WSDL::CloseTypes::NotificationSeverityType',
-        'Notifications' => 'Shipment::FedEx::WSDL::CloseTypes::Notification',
-        'TransactionDetail' => 'Shipment::FedEx::WSDL::CloseTypes::TransactionDetail',
-        'Version' => 'Shipment::FedEx::WSDL::CloseTypes::VersionId',
-    },
-    {
+              )
+        ],
+        {   'HighestSeverity'   => \%HighestSeverity_of,
+            'Notifications'     => \%Notifications_of,
+            'TransactionDetail' => \%TransactionDetail_of,
+            'Version'           => \%Version_of,
+        },
+        {   'HighestSeverity' =>
+              'Shipment::FedEx::WSDL::CloseTypes::NotificationSeverityType',
+            'Notifications' =>
+              'Shipment::FedEx::WSDL::CloseTypes::Notification',
+            'TransactionDetail' =>
+              'Shipment::FedEx::WSDL::CloseTypes::TransactionDetail',
+            'Version' => 'Shipment::FedEx::WSDL::CloseTypes::VersionId',
+        },
+        {
 
-        'HighestSeverity' => 'HighestSeverity',
-        'Notifications' => 'Notifications',
-        'TransactionDetail' => 'TransactionDetail',
-        'Version' => 'Version',
-    }
-);
+            'HighestSeverity'   => 'HighestSeverity',
+            'Notifications'     => 'Notifications',
+            'TransactionDetail' => 'TransactionDetail',
+            'Version'           => 'Version',
+        }
+    );
 
-} # end BLOCK
-
-
-
-
-
+}    # end BLOCK
 
 
 1;
@@ -71,13 +66,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Shipment::FedEx::WSDL::CloseTypes::SmartPostCloseReply
 
 =head1 VERSION
 
-version 0.15
+version 0.16
 
 =head1 DESCRIPTION
 

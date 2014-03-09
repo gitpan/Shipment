@@ -1,14 +1,12 @@
 package Shipment::Purolator::WSDL::Types::OtherInformation;
-{
-  $Shipment::Purolator::WSDL::Types::OtherInformation::VERSION = '0.15';
-}
+$Shipment::Purolator::WSDL::Types::OtherInformation::VERSION = '0.16';
 use strict;
 use warnings;
 
 
 __PACKAGE__->_set_element_form_qualified(1);
 
-sub get_xmlns { 'http://purolator.com/pws/datatypes/v1' };
+sub get_xmlns {'http://purolator.com/pws/datatypes/v1'}
 
 our $XML_ATTRIBUTE_CLASS;
 undef $XML_ATTRIBUTE_CLASS;
@@ -22,37 +20,32 @@ use base qw(SOAP::WSDL::XSD::Typelib::ComplexType);
 
 Class::Std::initialize();
 
-{ # BLOCK to scope variables
+{    # BLOCK to scope variables
 
-my %CostCentre_of :ATTR(:get<CostCentre>);
-my %SpecialInstructions_of :ATTR(:get<SpecialInstructions>);
+    my %CostCentre_of : ATTR(:get<CostCentre>);
+    my %SpecialInstructions_of : ATTR(:get<SpecialInstructions>);
 
-__PACKAGE__->_factory(
-    [ qw(        CostCentre
-        SpecialInstructions
+    __PACKAGE__->_factory(
+        [   qw(        CostCentre
+              SpecialInstructions
 
-    ) ],
-    {
-        'CostCentre' => \%CostCentre_of,
-        'SpecialInstructions' => \%SpecialInstructions_of,
-    },
-    {
-        'CostCentre' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
-        'SpecialInstructions' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
-    },
-    {
+              )
+        ],
+        {   'CostCentre'          => \%CostCentre_of,
+            'SpecialInstructions' => \%SpecialInstructions_of,
+        },
+        {   'CostCentre' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
+            'SpecialInstructions' =>
+              'SOAP::WSDL::XSD::Typelib::Builtin::string',
+        },
+        {
 
-        'CostCentre' => 'CostCentre',
-        'SpecialInstructions' => 'SpecialInstructions',
-    }
-);
+            'CostCentre'          => 'CostCentre',
+            'SpecialInstructions' => 'SpecialInstructions',
+        }
+    );
 
-} # end BLOCK
-
-
-
-
-
+}    # end BLOCK
 
 
 1;
@@ -61,13 +54,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Shipment::Purolator::WSDL::Types::OtherInformation
 
 =head1 VERSION
 
-version 0.15
+version 0.16
 
 =head1 DESCRIPTION
 

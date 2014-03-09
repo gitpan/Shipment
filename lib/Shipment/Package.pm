@@ -1,7 +1,5 @@
 package Shipment::Package;
-{
-  $Shipment::Package::VERSION = '0.15';
-}
+$Shipment::Package::VERSION = '0.16';
 use strict;
 use warnings;
 
@@ -12,92 +10,92 @@ use Moose 2.0000;
 
 
 has 'id' => (
-  is => 'rw',
-  isa => 'Str',
+    is  => 'rw',
+    isa => 'Str',
 );
 
 
 has 'type' => (
-  is => 'rw',
-  isa => 'Str',
+    is  => 'rw',
+    isa => 'Str',
 );
 
 
 has 'name' => (
-  is => 'rw',
-  isa => 'Str',
+    is  => 'rw',
+    isa => 'Str',
 );
 
 
 has 'notes' => (
-  is => 'rw',
-  isa => 'Str',
+    is  => 'rw',
+    isa => 'Str',
 );
 
 
 has 'fragile' => (
-  is => 'rw',
-  isa => 'Bool',
-  default => 0,
+    is      => 'rw',
+    isa     => 'Bool',
+    default => 0,
 );
 
 
 has 'weight' => (
-  is => 'rw',
-  isa => 'Num',
+    is  => 'rw',
+    isa => 'Num',
 );
 
 
 has 'length' => (
-  is => 'rw',
-  isa => 'Num',
+    is  => 'rw',
+    isa => 'Num',
 );
 
 has 'width' => (
-  is => 'rw',
-  isa => 'Num',
+    is  => 'rw',
+    isa => 'Num',
 );
 
 has 'height' => (
-  is => 'rw',
-  isa => 'Num',
+    is  => 'rw',
+    isa => 'Num',
 );
 
 
 has 'insured_value' => (
-  is => 'rw',
-  isa => 'Data::Currency',
-  default => sub { Data::Currency->new(0) }, 
+    is      => 'rw',
+    isa     => 'Data::Currency',
+    default => sub { Data::Currency->new(0) },
 );
 
 
 has 'goods_value' => (
-  is => 'rw',
-  isa => 'Data::Currency',
-  lazy => 1,
-  default => sub {
-    my $self = shift;
-    return $self->insured_value;
-  },
+    is      => 'rw',
+    isa     => 'Data::Currency',
+    lazy    => 1,
+    default => sub {
+        my $self = shift;
+        return $self->insured_value;
+    },
 );
 
 
 has 'label' => (
-  is => 'rw',
-  isa => 'Shipment::Label',
+    is  => 'rw',
+    isa => 'Shipment::Label',
 );
 
 
 has 'tracking_id' => (
-  is => 'rw',
-  isa => 'Str',
+    is  => 'rw',
+    isa => 'Str',
 );
 
 
 has 'cost' => (
-  is => 'rw',
-  isa => 'Data::Currency',
-  default => sub { Data::Currency->new(0) },
+    is      => 'rw',
+    isa     => 'Data::Currency',
+    default => sub { Data::Currency->new(0) },
 );
 
 no Moose;
@@ -109,13 +107,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Shipment::Package
 
 =head1 VERSION
 
-version 0.15
+version 0.16
 
 =head1 SYNOPSIS
 

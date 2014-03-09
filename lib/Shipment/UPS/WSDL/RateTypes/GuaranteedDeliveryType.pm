@@ -1,14 +1,12 @@
 package Shipment::UPS::WSDL::RateTypes::GuaranteedDeliveryType;
-{
-  $Shipment::UPS::WSDL::RateTypes::GuaranteedDeliveryType::VERSION = '0.15';
-}
+$Shipment::UPS::WSDL::RateTypes::GuaranteedDeliveryType::VERSION = '0.16';
 use strict;
 use warnings;
 
 
 __PACKAGE__->_set_element_form_qualified(1);
 
-sub get_xmlns { 'http://www.ups.com/XMLSchema/XOLTWS/Rate/v1.1' };
+sub get_xmlns {'http://www.ups.com/XMLSchema/XOLTWS/Rate/v1.1'}
 
 our $XML_ATTRIBUTE_CLASS;
 undef $XML_ATTRIBUTE_CLASS;
@@ -22,37 +20,32 @@ use base qw(SOAP::WSDL::XSD::Typelib::ComplexType);
 
 Class::Std::initialize();
 
-{ # BLOCK to scope variables
+{    # BLOCK to scope variables
 
-my %BusinessDaysInTransit_of :ATTR(:get<BusinessDaysInTransit>);
-my %DeliveryByTime_of :ATTR(:get<DeliveryByTime>);
+    my %BusinessDaysInTransit_of : ATTR(:get<BusinessDaysInTransit>);
+    my %DeliveryByTime_of : ATTR(:get<DeliveryByTime>);
 
-__PACKAGE__->_factory(
-    [ qw(        BusinessDaysInTransit
-        DeliveryByTime
+    __PACKAGE__->_factory(
+        [   qw(        BusinessDaysInTransit
+              DeliveryByTime
 
-    ) ],
-    {
-        'BusinessDaysInTransit' => \%BusinessDaysInTransit_of,
-        'DeliveryByTime' => \%DeliveryByTime_of,
-    },
-    {
-        'BusinessDaysInTransit' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
-        'DeliveryByTime' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
-    },
-    {
+              )
+        ],
+        {   'BusinessDaysInTransit' => \%BusinessDaysInTransit_of,
+            'DeliveryByTime'        => \%DeliveryByTime_of,
+        },
+        {   'BusinessDaysInTransit' =>
+              'SOAP::WSDL::XSD::Typelib::Builtin::string',
+            'DeliveryByTime' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
+        },
+        {
 
-        'BusinessDaysInTransit' => 'BusinessDaysInTransit',
-        'DeliveryByTime' => 'DeliveryByTime',
-    }
-);
+            'BusinessDaysInTransit' => 'BusinessDaysInTransit',
+            'DeliveryByTime'        => 'DeliveryByTime',
+        }
+    );
 
-} # end BLOCK
-
-
-
-
-
+}    # end BLOCK
 
 
 1;
@@ -61,13 +54,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Shipment::UPS::WSDL::RateTypes::GuaranteedDeliveryType
 
 =head1 VERSION
 
-version 0.15
+version 0.16
 
 =head1 DESCRIPTION
 

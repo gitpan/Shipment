@@ -1,14 +1,12 @@
 package Shipment::FedEx::WSDL::ShipTypes::GeneralAgencyAgreementDetail;
-{
-  $Shipment::FedEx::WSDL::ShipTypes::GeneralAgencyAgreementDetail::VERSION = '0.15';
-}
+$Shipment::FedEx::WSDL::ShipTypes::GeneralAgencyAgreementDetail::VERSION = '0.16';
 use strict;
 use warnings;
 
 
 __PACKAGE__->_set_element_form_qualified(1);
 
-sub get_xmlns { 'http://fedex.com/ws/ship/v9' };
+sub get_xmlns {'http://fedex.com/ws/ship/v9'}
 
 our $XML_ATTRIBUTE_CLASS;
 undef $XML_ATTRIBUTE_CLASS;
@@ -22,32 +20,26 @@ use base qw(SOAP::WSDL::XSD::Typelib::ComplexType);
 
 Class::Std::initialize();
 
-{ # BLOCK to scope variables
+{    # BLOCK to scope variables
 
-my %Format_of :ATTR(:get<Format>);
+    my %Format_of : ATTR(:get<Format>);
 
-__PACKAGE__->_factory(
-    [ qw(        Format
+    __PACKAGE__->_factory(
+        [   qw(        Format
 
-    ) ],
-    {
-        'Format' => \%Format_of,
-    },
-    {
-        'Format' => 'Shipment::FedEx::WSDL::ShipTypes::ShippingDocumentFormat',
-    },
-    {
+              )
+        ],
+        {'Format' => \%Format_of,},
+        {   'Format' =>
+              'Shipment::FedEx::WSDL::ShipTypes::ShippingDocumentFormat',
+        },
+        {
 
-        'Format' => 'Format',
-    }
-);
+            'Format' => 'Format',
+        }
+    );
 
-} # end BLOCK
-
-
-
-
-
+}    # end BLOCK
 
 
 1;
@@ -56,13 +48,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Shipment::FedEx::WSDL::ShipTypes::GeneralAgencyAgreementDetail
 
 =head1 VERSION
 
-version 0.15
+version 0.16
 
 =head1 DESCRIPTION
 

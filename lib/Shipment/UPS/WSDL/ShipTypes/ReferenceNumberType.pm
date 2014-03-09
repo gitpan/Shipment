@@ -1,14 +1,12 @@
 package Shipment::UPS::WSDL::ShipTypes::ReferenceNumberType;
-{
-  $Shipment::UPS::WSDL::ShipTypes::ReferenceNumberType::VERSION = '0.15';
-}
+$Shipment::UPS::WSDL::ShipTypes::ReferenceNumberType::VERSION = '0.16';
 use strict;
 use warnings;
 
 
 __PACKAGE__->_set_element_form_qualified(1);
 
-sub get_xmlns { 'http://www.ups.com/XMLSchema/XOLTWS/Ship/v1.0' };
+sub get_xmlns {'http://www.ups.com/XMLSchema/XOLTWS/Ship/v1.0'}
 
 our $XML_ATTRIBUTE_CLASS;
 undef $XML_ATTRIBUTE_CLASS;
@@ -22,42 +20,36 @@ use base qw(SOAP::WSDL::XSD::Typelib::ComplexType);
 
 Class::Std::initialize();
 
-{ # BLOCK to scope variables
+{    # BLOCK to scope variables
 
-my %BarCodeIndicator_of :ATTR(:get<BarCodeIndicator>);
-my %Code_of :ATTR(:get<Code>);
-my %Value_of :ATTR(:get<Value>);
+    my %BarCodeIndicator_of : ATTR(:get<BarCodeIndicator>);
+    my %Code_of : ATTR(:get<Code>);
+    my %Value_of : ATTR(:get<Value>);
 
-__PACKAGE__->_factory(
-    [ qw(        BarCodeIndicator
-        Code
-        Value
+    __PACKAGE__->_factory(
+        [   qw(        BarCodeIndicator
+              Code
+              Value
 
-    ) ],
-    {
-        'BarCodeIndicator' => \%BarCodeIndicator_of,
-        'Code' => \%Code_of,
-        'Value' => \%Value_of,
-    },
-    {
-        'BarCodeIndicator' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
-        'Code' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
-        'Value' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
-    },
-    {
+              )
+        ],
+        {   'BarCodeIndicator' => \%BarCodeIndicator_of,
+            'Code'             => \%Code_of,
+            'Value'            => \%Value_of,
+        },
+        {   'BarCodeIndicator' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
+            'Code'             => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
+            'Value'            => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
+        },
+        {
 
-        'BarCodeIndicator' => 'BarCodeIndicator',
-        'Code' => 'Code',
-        'Value' => 'Value',
-    }
-);
+            'BarCodeIndicator' => 'BarCodeIndicator',
+            'Code'             => 'Code',
+            'Value'            => 'Value',
+        }
+    );
 
-} # end BLOCK
-
-
-
-
-
+}    # end BLOCK
 
 
 1;
@@ -66,13 +58,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Shipment::UPS::WSDL::ShipTypes::ReferenceNumberType
 
 =head1 VERSION
 
-version 0.15
+version 0.16
 
 =head1 DESCRIPTION
 

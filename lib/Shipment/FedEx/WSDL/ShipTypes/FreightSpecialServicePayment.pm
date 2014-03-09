@@ -1,14 +1,12 @@
 package Shipment::FedEx::WSDL::ShipTypes::FreightSpecialServicePayment;
-{
-  $Shipment::FedEx::WSDL::ShipTypes::FreightSpecialServicePayment::VERSION = '0.15';
-}
+$Shipment::FedEx::WSDL::ShipTypes::FreightSpecialServicePayment::VERSION = '0.16';
 use strict;
 use warnings;
 
 
 __PACKAGE__->_set_element_form_qualified(1);
 
-sub get_xmlns { 'http://fedex.com/ws/ship/v9' };
+sub get_xmlns {'http://fedex.com/ws/ship/v9'}
 
 our $XML_ATTRIBUTE_CLASS;
 undef $XML_ATTRIBUTE_CLASS;
@@ -22,37 +20,33 @@ use base qw(SOAP::WSDL::XSD::Typelib::ComplexType);
 
 Class::Std::initialize();
 
-{ # BLOCK to scope variables
+{    # BLOCK to scope variables
 
-my %SpecialService_of :ATTR(:get<SpecialService>);
-my %PaymentType_of :ATTR(:get<PaymentType>);
+    my %SpecialService_of : ATTR(:get<SpecialService>);
+    my %PaymentType_of : ATTR(:get<PaymentType>);
 
-__PACKAGE__->_factory(
-    [ qw(        SpecialService
-        PaymentType
+    __PACKAGE__->_factory(
+        [   qw(        SpecialService
+              PaymentType
 
-    ) ],
-    {
-        'SpecialService' => \%SpecialService_of,
-        'PaymentType' => \%PaymentType_of,
-    },
-    {
-        'SpecialService' => 'Shipment::FedEx::WSDL::ShipTypes::ShipmentSpecialServiceType',
-        'PaymentType' => 'Shipment::FedEx::WSDL::ShipTypes::FreightAccountPaymentType',
-    },
-    {
+              )
+        ],
+        {   'SpecialService' => \%SpecialService_of,
+            'PaymentType'    => \%PaymentType_of,
+        },
+        {   'SpecialService' =>
+              'Shipment::FedEx::WSDL::ShipTypes::ShipmentSpecialServiceType',
+            'PaymentType' =>
+              'Shipment::FedEx::WSDL::ShipTypes::FreightAccountPaymentType',
+        },
+        {
 
-        'SpecialService' => 'SpecialService',
-        'PaymentType' => 'PaymentType',
-    }
-);
+            'SpecialService' => 'SpecialService',
+            'PaymentType'    => 'PaymentType',
+        }
+    );
 
-} # end BLOCK
-
-
-
-
-
+}    # end BLOCK
 
 
 1;
@@ -61,13 +55,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Shipment::FedEx::WSDL::ShipTypes::FreightSpecialServicePayment
 
 =head1 VERSION
 
-version 0.15
+version 0.16
 
 =head1 DESCRIPTION
 

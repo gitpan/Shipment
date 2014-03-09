@@ -1,7 +1,5 @@
 package Shipment::UPS::WSDL::RateInterfaces::RateService::RatePort;
-{
-  $Shipment::UPS::WSDL::RateInterfaces::RateService::RatePort::VERSION = '0.15';
-}
+$Shipment::UPS::WSDL::RateInterfaces::RateService::RatePort::VERSION = '0.16';
 use strict;
 use warnings;
 use Class::Std::Fast::Storable;
@@ -11,89 +9,97 @@ use base qw(SOAP::WSDL::Client::Base);
 
 # only load if it hasn't been loaded before
 require Shipment::UPS::WSDL::RateTypemaps::RateService
-    if not Shipment::UPS::WSDL::RateTypemaps::RateService->can('get_class');
+  if not Shipment::UPS::WSDL::RateTypemaps::RateService->can('get_class');
 
 
 sub START {
-    
+
     my $proxy_domain = $_[2]->{proxy_domain} || 'wwwcie.ups.com';
 
-    $_[0]->set_proxy('https://' . $proxy_domain . '/webservices/Rate') if not $_[2]->{proxy};
+    $_[0]->set_proxy('https://' . $proxy_domain . '/webservices/Rate')
+      if not $_[2]->{proxy};
 
     $_[0]->set_class_resolver('Shipment::UPS::WSDL::RateTypemaps::RateService')
-        if not $_[2]->{class_resolver};
+      if not $_[2]->{class_resolver};
 
     $_[0]->set_prefix($_[2]->{use_prefix}) if exists $_[2]->{use_prefix};
 }
 
 sub ProcessRate {
     my ($self, $body, $header) = @_;
-    die "ProcessRate must be called as object method (\$self is <$self>)" if not blessed($self);
-    return $self->SUPER::call({
-        operation => 'ProcessRate',
-        soap_action => 'http://onlinetools.ups.com/webservices/RateBinding/v1.1',
-        style => 'document',
-        body => {
-            
+    die "ProcessRate must be called as object method (\$self is <$self>)"
+      if not blessed($self);
+    return $self->SUPER::call(
+        {   operation => 'ProcessRate',
+            soap_action =>
+              'http://onlinetools.ups.com/webservices/RateBinding/v1.1',
+            style => 'document',
+            body  => {
 
-           'use'            => 'literal',
-            namespace       => 'http://schemas.xmlsoap.org/wsdl/soap/',
-            encodingStyle   => '',
-            parts           =>  [qw( Shipment::UPS::WSDL::RateElements::RateRequest )],
-        },
-        header => {
-            
-           'use' => 'literal',
-            namespace => 'http://schemas.xmlsoap.org/wsdl/soap/',
-            encodingStyle => '',
-            parts => [qw( Shipment::UPS::WSDL::RateElements::UPSSecurity )],
 
-        },
-        headerfault => {
-            
-        },
-        response => {
+                'use'         => 'literal',
+                namespace     => 'http://schemas.xmlsoap.org/wsdl/soap/',
+                encodingStyle => '',
+                parts =>
+                  [qw( Shipment::UPS::WSDL::RateElements::RateRequest )],
+            },
             header => {
-                
-            },
-            body => {
-                
 
-           'use'            => 'literal',
-            namespace       => 'http://schemas.xmlsoap.org/wsdl/soap/',
-            encodingStyle   => '',
-            parts           =>  [qw( Shipment::UPS::WSDL::RateElements::RateResponse )],
+                'use'         => 'literal',
+                namespace     => 'http://schemas.xmlsoap.org/wsdl/soap/',
+                encodingStyle => '',
+                parts =>
+                  [qw( Shipment::UPS::WSDL::RateElements::UPSSecurity )],
+
             },
-        }
-    }, $body, $header);
+            headerfault => {
+
+            },
+            response => {
+                header => {
+
+                },
+                body => {
+
+
+                    'use'         => 'literal',
+                    namespace     => 'http://schemas.xmlsoap.org/wsdl/soap/',
+                    encodingStyle => '',
+                    parts =>
+                      [qw( Shipment::UPS::WSDL::RateElements::RateResponse )],
+                },
+            }
+        },
+        $body,
+        $header
+    );
 }
-
-
-
 
 
 sub _get_name_resolver {
 
     my $prefix_1 = {
-              'attribute' => 'Shipment::UPS::WSDL::RateAttributes',
-              'typemap' => 'Shipment::UPS::WSDL::RateTypemaps',
-              'interface' => 'Shipment::UPS::WSDL::RateInterfaces',
-              'type' => 'Shipment::UPS::WSDL::RateTypes',
-              'server' => 'Shipment::UPS::WSDL::RateServer',
-              'element' => 'Shipment::UPS::WSDL::RateElements'
-            };
+        'attribute' => 'Shipment::UPS::WSDL::RateAttributes',
+        'typemap'   => 'Shipment::UPS::WSDL::RateTypemaps',
+        'interface' => 'Shipment::UPS::WSDL::RateInterfaces',
+        'type'      => 'Shipment::UPS::WSDL::RateTypes',
+        'server'    => 'Shipment::UPS::WSDL::RateServer',
+        'element'   => 'Shipment::UPS::WSDL::RateElements'
+    };
 
 
-    return SOAP::WSDL::Generator::Template::Plugin::XSD->new({
-        prefix_resolver => SOAP::WSDL::Generator::PrefixResolver->new({
-            namespace_prefix_map => {
-                'http://www.w3.org/2001/XMLSchema' => 'SOAP::WSDL::XSD::Typelib::Builtin',
-            },
-            namespace_map => {
-            },
-            prefix => $prefix_1,
-        })
-    });
+    return SOAP::WSDL::Generator::Template::Plugin::XSD->new(
+        {   prefix_resolver => SOAP::WSDL::Generator::PrefixResolver->new(
+                {   namespace_prefix_map => {
+                        'http://www.w3.org/2001/XMLSchema' =>
+                          'SOAP::WSDL::XSD::Typelib::Builtin',
+                    },
+                    namespace_map => {},
+                    prefix        => $prefix_1,
+                }
+            )
+        }
+    );
 }
 
 1;
@@ -102,13 +108,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Shipment::UPS::WSDL::RateInterfaces::RateService::RatePort
 
 =head1 VERSION
 
-version 0.15
+version 0.16
 
 =head1 SYNOPSIS
 

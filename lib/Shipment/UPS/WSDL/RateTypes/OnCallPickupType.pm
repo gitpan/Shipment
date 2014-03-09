@@ -1,14 +1,12 @@
 package Shipment::UPS::WSDL::RateTypes::OnCallPickupType;
-{
-  $Shipment::UPS::WSDL::RateTypes::OnCallPickupType::VERSION = '0.15';
-}
+$Shipment::UPS::WSDL::RateTypes::OnCallPickupType::VERSION = '0.16';
 use strict;
 use warnings;
 
 
 __PACKAGE__->_set_element_form_qualified(1);
 
-sub get_xmlns { 'http://www.ups.com/XMLSchema/XOLTWS/Rate/v1.1' };
+sub get_xmlns {'http://www.ups.com/XMLSchema/XOLTWS/Rate/v1.1'}
 
 our $XML_ATTRIBUTE_CLASS;
 undef $XML_ATTRIBUTE_CLASS;
@@ -22,32 +20,24 @@ use base qw(SOAP::WSDL::XSD::Typelib::ComplexType);
 
 Class::Std::initialize();
 
-{ # BLOCK to scope variables
+{    # BLOCK to scope variables
 
-my %Schedule_of :ATTR(:get<Schedule>);
+    my %Schedule_of : ATTR(:get<Schedule>);
 
-__PACKAGE__->_factory(
-    [ qw(        Schedule
+    __PACKAGE__->_factory(
+        [   qw(        Schedule
 
-    ) ],
-    {
-        'Schedule' => \%Schedule_of,
-    },
-    {
-        'Schedule' => 'Shipment::UPS::WSDL::RateTypes::ScheduleType',
-    },
-    {
+              )
+        ],
+        {'Schedule' => \%Schedule_of,},
+        {'Schedule' => 'Shipment::UPS::WSDL::RateTypes::ScheduleType',},
+        {
 
-        'Schedule' => 'Schedule',
-    }
-);
+            'Schedule' => 'Schedule',
+        }
+    );
 
-} # end BLOCK
-
-
-
-
-
+}    # end BLOCK
 
 
 1;
@@ -56,13 +46,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Shipment::UPS::WSDL::RateTypes::OnCallPickupType
 
 =head1 VERSION
 
-version 0.15
+version 0.16
 
 =head1 DESCRIPTION
 

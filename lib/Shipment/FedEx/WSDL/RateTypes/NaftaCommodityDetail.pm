@@ -1,14 +1,12 @@
 package Shipment::FedEx::WSDL::RateTypes::NaftaCommodityDetail;
-{
-  $Shipment::FedEx::WSDL::RateTypes::NaftaCommodityDetail::VERSION = '0.15';
-}
+$Shipment::FedEx::WSDL::RateTypes::NaftaCommodityDetail::VERSION = '0.16';
 use strict;
 use warnings;
 
 
 __PACKAGE__->_set_element_form_qualified(1);
 
-sub get_xmlns { 'http://fedex.com/ws/rate/v9' };
+sub get_xmlns {'http://fedex.com/ws/rate/v9'}
 
 our $XML_ATTRIBUTE_CLASS;
 undef $XML_ATTRIBUTE_CLASS;
@@ -22,52 +20,50 @@ use base qw(SOAP::WSDL::XSD::Typelib::ComplexType);
 
 Class::Std::initialize();
 
-{ # BLOCK to scope variables
+{    # BLOCK to scope variables
 
-my %PreferenceCriterion_of :ATTR(:get<PreferenceCriterion>);
-my %ProducerDetermination_of :ATTR(:get<ProducerDetermination>);
-my %ProducerId_of :ATTR(:get<ProducerId>);
-my %NetCostMethod_of :ATTR(:get<NetCostMethod>);
-my %NetCostDateRange_of :ATTR(:get<NetCostDateRange>);
+    my %PreferenceCriterion_of : ATTR(:get<PreferenceCriterion>);
+    my %ProducerDetermination_of : ATTR(:get<ProducerDetermination>);
+    my %ProducerId_of : ATTR(:get<ProducerId>);
+    my %NetCostMethod_of : ATTR(:get<NetCostMethod>);
+    my %NetCostDateRange_of : ATTR(:get<NetCostDateRange>);
 
-__PACKAGE__->_factory(
-    [ qw(        PreferenceCriterion
-        ProducerDetermination
-        ProducerId
-        NetCostMethod
-        NetCostDateRange
+    __PACKAGE__->_factory(
+        [   qw(        PreferenceCriterion
+              ProducerDetermination
+              ProducerId
+              NetCostMethod
+              NetCostDateRange
 
-    ) ],
-    {
-        'PreferenceCriterion' => \%PreferenceCriterion_of,
-        'ProducerDetermination' => \%ProducerDetermination_of,
-        'ProducerId' => \%ProducerId_of,
-        'NetCostMethod' => \%NetCostMethod_of,
-        'NetCostDateRange' => \%NetCostDateRange_of,
-    },
-    {
-        'PreferenceCriterion' => 'Shipment::FedEx::WSDL::RateTypes::NaftaPreferenceCriterionCode',
-        'ProducerDetermination' => 'Shipment::FedEx::WSDL::RateTypes::NaftaProducerDeterminationCode',
-        'ProducerId' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
-        'NetCostMethod' => 'Shipment::FedEx::WSDL::RateTypes::NaftaNetCostMethodCode',
-        'NetCostDateRange' => 'Shipment::FedEx::WSDL::RateTypes::DateRange',
-    },
-    {
+              )
+        ],
+        {   'PreferenceCriterion'   => \%PreferenceCriterion_of,
+            'ProducerDetermination' => \%ProducerDetermination_of,
+            'ProducerId'            => \%ProducerId_of,
+            'NetCostMethod'         => \%NetCostMethod_of,
+            'NetCostDateRange'      => \%NetCostDateRange_of,
+        },
+        {   'PreferenceCriterion' =>
+              'Shipment::FedEx::WSDL::RateTypes::NaftaPreferenceCriterionCode',
+            'ProducerDetermination' =>
+              'Shipment::FedEx::WSDL::RateTypes::NaftaProducerDeterminationCode',
+            'ProducerId' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
+            'NetCostMethod' =>
+              'Shipment::FedEx::WSDL::RateTypes::NaftaNetCostMethodCode',
+            'NetCostDateRange' =>
+              'Shipment::FedEx::WSDL::RateTypes::DateRange',
+        },
+        {
 
-        'PreferenceCriterion' => 'PreferenceCriterion',
-        'ProducerDetermination' => 'ProducerDetermination',
-        'ProducerId' => 'ProducerId',
-        'NetCostMethod' => 'NetCostMethod',
-        'NetCostDateRange' => 'NetCostDateRange',
-    }
-);
+            'PreferenceCriterion'   => 'PreferenceCriterion',
+            'ProducerDetermination' => 'ProducerDetermination',
+            'ProducerId'            => 'ProducerId',
+            'NetCostMethod'         => 'NetCostMethod',
+            'NetCostDateRange'      => 'NetCostDateRange',
+        }
+    );
 
-} # end BLOCK
-
-
-
-
-
+}    # end BLOCK
 
 
 1;
@@ -76,13 +72,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Shipment::FedEx::WSDL::RateTypes::NaftaCommodityDetail
 
 =head1 VERSION
 
-version 0.15
+version 0.16
 
 =head1 DESCRIPTION
 

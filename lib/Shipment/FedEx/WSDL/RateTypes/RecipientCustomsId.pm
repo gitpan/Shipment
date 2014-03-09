@@ -1,14 +1,12 @@
 package Shipment::FedEx::WSDL::RateTypes::RecipientCustomsId;
-{
-  $Shipment::FedEx::WSDL::RateTypes::RecipientCustomsId::VERSION = '0.15';
-}
+$Shipment::FedEx::WSDL::RateTypes::RecipientCustomsId::VERSION = '0.16';
 use strict;
 use warnings;
 
 
 __PACKAGE__->_set_element_form_qualified(1);
 
-sub get_xmlns { 'http://fedex.com/ws/rate/v9' };
+sub get_xmlns {'http://fedex.com/ws/rate/v9'}
 
 our $XML_ATTRIBUTE_CLASS;
 undef $XML_ATTRIBUTE_CLASS;
@@ -22,37 +20,32 @@ use base qw(SOAP::WSDL::XSD::Typelib::ComplexType);
 
 Class::Std::initialize();
 
-{ # BLOCK to scope variables
+{    # BLOCK to scope variables
 
-my %Type_of :ATTR(:get<Type>);
-my %Value_of :ATTR(:get<Value>);
+    my %Type_of : ATTR(:get<Type>);
+    my %Value_of : ATTR(:get<Value>);
 
-__PACKAGE__->_factory(
-    [ qw(        Type
-        Value
+    __PACKAGE__->_factory(
+        [   qw(        Type
+              Value
 
-    ) ],
-    {
-        'Type' => \%Type_of,
-        'Value' => \%Value_of,
-    },
-    {
-        'Type' => 'Shipment::FedEx::WSDL::RateTypes::RecipientCustomsIdType',
-        'Value' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
-    },
-    {
+              )
+        ],
+        {   'Type'  => \%Type_of,
+            'Value' => \%Value_of,
+        },
+        {   'Type' =>
+              'Shipment::FedEx::WSDL::RateTypes::RecipientCustomsIdType',
+            'Value' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
+        },
+        {
 
-        'Type' => 'Type',
-        'Value' => 'Value',
-    }
-);
+            'Type'  => 'Type',
+            'Value' => 'Value',
+        }
+    );
 
-} # end BLOCK
-
-
-
-
-
+}    # end BLOCK
 
 
 1;
@@ -61,13 +54,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Shipment::FedEx::WSDL::RateTypes::RecipientCustomsId
 
 =head1 VERSION
 
-version 0.15
+version 0.16
 
 =head1 DESCRIPTION
 

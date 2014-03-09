@@ -1,14 +1,12 @@
 package Shipment::FedEx::WSDL::CloseTypes::CloseDocumentSpecification;
-{
-  $Shipment::FedEx::WSDL::CloseTypes::CloseDocumentSpecification::VERSION = '0.15';
-}
+$Shipment::FedEx::WSDL::CloseTypes::CloseDocumentSpecification::VERSION = '0.16';
 use strict;
 use warnings;
 
 
 __PACKAGE__->_set_element_form_qualified(1);
 
-sub get_xmlns { 'http://fedex.com/ws/close/v2' };
+sub get_xmlns {'http://fedex.com/ws/close/v2'}
 
 our $XML_ATTRIBUTE_CLASS;
 undef $XML_ATTRIBUTE_CLASS;
@@ -22,37 +20,32 @@ use base qw(SOAP::WSDL::XSD::Typelib::ComplexType);
 
 Class::Std::initialize();
 
-{ # BLOCK to scope variables
+{    # BLOCK to scope variables
 
-my %CloseDocumentTypes_of :ATTR(:get<CloseDocumentTypes>);
-my %Op950Detail_of :ATTR(:get<Op950Detail>);
+    my %CloseDocumentTypes_of : ATTR(:get<CloseDocumentTypes>);
+    my %Op950Detail_of : ATTR(:get<Op950Detail>);
 
-__PACKAGE__->_factory(
-    [ qw(        CloseDocumentTypes
-        Op950Detail
+    __PACKAGE__->_factory(
+        [   qw(        CloseDocumentTypes
+              Op950Detail
 
-    ) ],
-    {
-        'CloseDocumentTypes' => \%CloseDocumentTypes_of,
-        'Op950Detail' => \%Op950Detail_of,
-    },
-    {
-        'CloseDocumentTypes' => 'Shipment::FedEx::WSDL::CloseTypes::CloseDocumentType',
-        'Op950Detail' => 'Shipment::FedEx::WSDL::CloseTypes::Op950Detail',
-    },
-    {
+              )
+        ],
+        {   'CloseDocumentTypes' => \%CloseDocumentTypes_of,
+            'Op950Detail'        => \%Op950Detail_of,
+        },
+        {   'CloseDocumentTypes' =>
+              'Shipment::FedEx::WSDL::CloseTypes::CloseDocumentType',
+            'Op950Detail' => 'Shipment::FedEx::WSDL::CloseTypes::Op950Detail',
+        },
+        {
 
-        'CloseDocumentTypes' => 'CloseDocumentTypes',
-        'Op950Detail' => 'Op950Detail',
-    }
-);
+            'CloseDocumentTypes' => 'CloseDocumentTypes',
+            'Op950Detail'        => 'Op950Detail',
+        }
+    );
 
-} # end BLOCK
-
-
-
-
-
+}    # end BLOCK
 
 
 1;
@@ -61,13 +54,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Shipment::FedEx::WSDL::CloseTypes::CloseDocumentSpecification
 
 =head1 VERSION
 
-version 0.15
+version 0.16
 
 =head1 DESCRIPTION
 

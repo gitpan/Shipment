@@ -1,9 +1,6 @@
 # ABSTRACT: Interface to Popular Shipping Services
 package Shipment;
-{
-  $Shipment::VERSION = '0.15';
-}
-
+$Shipment::VERSION = '0.16';
 use Moose;
 
 use Shipment::Address;
@@ -14,40 +11,45 @@ use Shipment::Purolator;
 use Shipment::UPS;
 
 
-
 sub generic {
-    shift; return Shipment::Generic->new(@_)
+    shift;
+    return Shipment::Generic->new(@_);
 }
 
 
-
 sub fedex {
-    shift; return Shipment::FedEx->new(@_)
+    shift;
+    return Shipment::FedEx->new(@_);
 }
 
 
 sub purolator {
-    shift; return Shipment::Purolator->new(@_)
+    shift;
+    return Shipment::Purolator->new(@_);
 }
 
 
 sub ups {
-    shift; return Shipment::UPS->new(@_)
+    shift;
+    return Shipment::UPS->new(@_);
 }
 
 
 sub temando {
-    shift; return Shipment::UPS->new(@_)
+    shift;
+    return Shipment::UPS->new(@_);
 }
 
 
 sub address {
-    shift; return Shipment::Address->new(@_)
+    shift;
+    return Shipment::Address->new(@_);
 }
 
 
 sub package {
-    shift; return Shipment::Package->new(@_)
+    shift;
+    return Shipment::Package->new(@_);
 }
 
 1;
@@ -56,13 +58,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Shipment - Interface to Popular Shipping Services
 
 =head1 VERSION
 
-version 0.15
+version 0.16
 
 =head1 SYNOPSIS
 

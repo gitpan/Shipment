@@ -1,7 +1,5 @@
 package Shipment::Address;
-{
-  $Shipment::Address::VERSION = '0.15';
-}
+$Shipment::Address::VERSION = '0.16';
 use strict;
 use warnings;
 
@@ -12,127 +10,131 @@ use Moose::Util::TypeConstraints;
 
 
 has 'name' => (
-  is => 'rw',
-  isa => 'Str',
-  alias => 'contact',
-  default => '',
+    is      => 'rw',
+    isa     => 'Str',
+    alias   => 'contact',
+    default => '',
 );
 
 
 has 'company' => (
-  is => 'rw',
-  isa => 'Str',
-  default => 'n/a',
+    is      => 'rw',
+    isa     => 'Str',
+    default => 'n/a',
 );
 
 
 has 'address_type' => (
-  is => 'rw',
-  isa => enum( [ qw/residential business/ ] ),
-  default => 'business',
+    is      => 'rw',
+    isa     => enum([qw/residential business/]),
+    default => 'business',
 );
 
 
 has 'address1' => (
-  is => 'rw',
-  isa => 'Str',
-  default => '',
+    is      => 'rw',
+    isa     => 'Str',
+    default => '',
 );
 
 has 'address2' => (
-  is => 'rw',
-  isa => 'Str',
-  default => '',
+    is      => 'rw',
+    isa     => 'Str',
+    default => '',
 );
 
 has 'address3' => (
-  is => 'rw',
-  isa => 'Str',
-  default => '',
+    is      => 'rw',
+    isa     => 'Str',
+    default => '',
 );
 
 
 has 'city' => (
-  is => 'rw',
-  isa => 'Str',
-  alias => 'town',
-  default => '',
+    is      => 'rw',
+    isa     => 'Str',
+    alias   => 'town',
+    default => '',
 );
 
 
 has 'province' => (
-  is => 'rw',
-  isa => 'Str',
-  alias => 'state',
-  default => '',
+    is      => 'rw',
+    isa     => 'Str',
+    alias   => 'state',
+    default => '',
 );
 
 
 has 'province_code' => (
-  is => 'ro',
-  isa => 'Str',
-  alias => 'state_code',
-  lazy => 1,
-  default => sub {
-    my $self = shift;
+    is      => 'ro',
+    isa     => 'Str',
+    alias   => 'state_code',
+    lazy    => 1,
+    default => sub {
+        my $self = shift;
 
-    return '' unless ($self->province && $self->country);
+        return '' unless ($self->province && $self->country);
 
-    use Locale::SubCountry;
-    my $country = new Locale::SubCountry($self->country_code);
+        use Locale::SubCountry;
+        my $country = new Locale::SubCountry($self->country_code);
 
-    return ($country->code($self->province) eq 'unknown') ? $self->province : $country->code($self->province) if $country;
-    return $self->province;
-  },
+        return ($country->code($self->province) eq 'unknown')
+          ? $self->province
+          : $country->code($self->province)
+          if $country;
+        return $self->province;
+    },
 );
 
 
 has 'postal_code' => (
-  is => 'rw',
-  isa => 'Str',
-  alias => 'zip',
-  default => '',
+    is      => 'rw',
+    isa     => 'Str',
+    alias   => 'zip',
+    default => '',
 );
 
 
 has 'country' => (
-  is => 'rw',
-  isa => 'Str',
-  default => '',
+    is      => 'rw',
+    isa     => 'Str',
+    default => '',
 );
 
 
 has 'country_code' => (
-  is => 'ro',
-  lazy => 1,
-  default => sub {
-    my $self = shift;
+    is      => 'ro',
+    lazy    => 1,
+    default => sub {
+        my $self = shift;
 
-    return '' unless $self->country;
+        return '' unless $self->country;
 
-    use Locale::SubCountry;
-    my $country = new Locale::SubCountry($self->country);
+        use Locale::SubCountry;
+        my $country = new Locale::SubCountry($self->country);
 
-    return $country->country_code if $country;
-    return $self->country;
-  },
+        return $country->country_code if $country;
+        return $self->country;
+    },
 );
 
 
 has 'address_components' => (
-  is => 'ro',
-  isa => 'HashRef[Str]',
-  lazy => 1,
-  builder => '_build_address_components',
+    is      => 'ro',
+    isa     => 'HashRef[Str]',
+    lazy    => 1,
+    builder => '_build_address_components',
 );
 
-sub _build_address_components { 
+sub _build_address_components {
     my $self = shift;
 
     my %components;
     $components{street} = uc($self->address1);
 
-    $components{direction} = ($components{street} =~ s/\b(N|E|S|W|NE|NW|SE|SW|SO|NO|O)\b//) ? $1 : '';
+    $components{direction} =
+      ($components{street} =~ s/\b(N|E|S|W|NE|NW|SE|SW|SO|NO|O)\b//) ? $1 : '';
     $components{number} = ($components{street} =~ s/^(\d+)//) ? $1 : '';
     $components{street} =~ s/(^\s+|\s+$)//g;
 
@@ -141,44 +143,47 @@ sub _build_address_components {
 
 
 has 'phone' => (
-  is => 'rw',
-  isa => 'Str',
-  default => "",
+    is      => 'rw',
+    isa     => 'Str',
+    default => "",
 );
 
 
 has 'phone_components' => (
-  is => 'ro',
-  isa => 'HashRef[Str]',
-  lazy => 1,
-  builder => '_build_phone_components',
+    is      => 'ro',
+    isa     => 'HashRef[Str]',
+    lazy    => 1,
+    builder => '_build_phone_components',
 );
 
 sub _build_phone_components {
-  my $self = shift;
+    my $self = shift;
 
-  my %components;
+    my %components;
 
-  my $phone = $self->phone;
-  $phone =~ s/[\sa-zA-Z]+.+$//;
-  $phone =~ s/\s//g;
+    my $phone = $self->phone;
+    $phone =~ s/[\sa-zA-Z]+.+$//;
+    $phone =~ s/\s//g;
 
-  my @parts = ($phone =~ /^([0-9]( |-)?)?(\(?[0-9]{3}\)?|[0-9]{3})( |-)?([0-9]{3}( |-)?[0-9]{4}|[a-zA-Z0-9]{7})$/);
+    my @parts =
+      ($phone
+          =~ /^([0-9]( |-)?)?(\(?[0-9]{3}\)?|[0-9]{3})( |-)?([0-9]{3}( |-)?[0-9]{4}|[a-zA-Z0-9]{7})$/
+      );
 
-  $components{country} = $parts[0] || "1";
-  $components{area} = $parts[2] || "";
-  $components{area} =~ s/\D//g;
-  $components{phone} = $parts[4] || $phone || "";
-  $components{phone} =~ s/\D//g;
-  
-  \%components;
+    $components{country} = $parts[0] || "1";
+    $components{area}    = $parts[2] || "";
+    $components{area} =~ s/\D//g;
+    $components{phone} = $parts[4] || $phone || "";
+    $components{phone} =~ s/\D//g;
+
+    \%components;
 }
 
 
 has 'email' => (
-  is => 'rw',
-  isa => 'Str',
-  default => "",
+    is      => 'rw',
+    isa     => 'Str',
+    default => "",
 );
 
 no Moose;
@@ -190,13 +195,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Shipment::Address
 
 =head1 VERSION
 
-version 0.15
+version 0.16
 
 =head1 SYNOPSIS
 

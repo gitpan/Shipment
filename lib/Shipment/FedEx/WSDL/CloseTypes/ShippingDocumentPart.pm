@@ -1,14 +1,12 @@
 package Shipment::FedEx::WSDL::CloseTypes::ShippingDocumentPart;
-{
-  $Shipment::FedEx::WSDL::CloseTypes::ShippingDocumentPart::VERSION = '0.15';
-}
+$Shipment::FedEx::WSDL::CloseTypes::ShippingDocumentPart::VERSION = '0.16';
 use strict;
 use warnings;
 
 
 __PACKAGE__->_set_element_form_qualified(1);
 
-sub get_xmlns { 'http://fedex.com/ws/close/v2' };
+sub get_xmlns {'http://fedex.com/ws/close/v2'}
 
 our $XML_ATTRIBUTE_CLASS;
 undef $XML_ATTRIBUTE_CLASS;
@@ -22,37 +20,32 @@ use base qw(SOAP::WSDL::XSD::Typelib::ComplexType);
 
 Class::Std::initialize();
 
-{ # BLOCK to scope variables
+{    # BLOCK to scope variables
 
-my %DocumentPartSequenceNumber_of :ATTR(:get<DocumentPartSequenceNumber>);
-my %Image_of :ATTR(:get<Image>);
+    my %DocumentPartSequenceNumber_of : ATTR(:get<DocumentPartSequenceNumber>);
+    my %Image_of : ATTR(:get<Image>);
 
-__PACKAGE__->_factory(
-    [ qw(        DocumentPartSequenceNumber
-        Image
+    __PACKAGE__->_factory(
+        [   qw(        DocumentPartSequenceNumber
+              Image
 
-    ) ],
-    {
-        'DocumentPartSequenceNumber' => \%DocumentPartSequenceNumber_of,
-        'Image' => \%Image_of,
-    },
-    {
-        'DocumentPartSequenceNumber' => 'SOAP::WSDL::XSD::Typelib::Builtin::positiveInteger',
-        'Image' => 'SOAP::WSDL::XSD::Typelib::Builtin::base64Binary',
-    },
-    {
+              )
+        ],
+        {   'DocumentPartSequenceNumber' => \%DocumentPartSequenceNumber_of,
+            'Image'                      => \%Image_of,
+        },
+        {   'DocumentPartSequenceNumber' =>
+              'SOAP::WSDL::XSD::Typelib::Builtin::positiveInteger',
+            'Image' => 'SOAP::WSDL::XSD::Typelib::Builtin::base64Binary',
+        },
+        {
 
-        'DocumentPartSequenceNumber' => 'DocumentPartSequenceNumber',
-        'Image' => 'Image',
-    }
-);
+            'DocumentPartSequenceNumber' => 'DocumentPartSequenceNumber',
+            'Image'                      => 'Image',
+        }
+    );
 
-} # end BLOCK
-
-
-
-
-
+}    # end BLOCK
 
 
 1;
@@ -61,13 +54,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Shipment::FedEx::WSDL::CloseTypes::ShippingDocumentPart
 
 =head1 VERSION
 
-version 0.15
+version 0.16
 
 =head1 DESCRIPTION
 

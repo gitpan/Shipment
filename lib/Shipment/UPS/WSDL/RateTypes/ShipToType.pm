@@ -1,14 +1,12 @@
 package Shipment::UPS::WSDL::RateTypes::ShipToType;
-{
-  $Shipment::UPS::WSDL::RateTypes::ShipToType::VERSION = '0.15';
-}
+$Shipment::UPS::WSDL::RateTypes::ShipToType::VERSION = '0.16';
 use strict;
 use warnings;
 
 
 __PACKAGE__->_set_element_form_qualified(1);
 
-sub get_xmlns { 'http://www.ups.com/XMLSchema/XOLTWS/Rate/v1.1' };
+sub get_xmlns {'http://www.ups.com/XMLSchema/XOLTWS/Rate/v1.1'}
 
 our $XML_ATTRIBUTE_CLASS;
 undef $XML_ATTRIBUTE_CLASS;
@@ -22,37 +20,31 @@ use base qw(SOAP::WSDL::XSD::Typelib::ComplexType);
 
 Class::Std::initialize();
 
-{ # BLOCK to scope variables
+{    # BLOCK to scope variables
 
-my %Name_of :ATTR(:get<Name>);
-my %Address_of :ATTR(:get<Address>);
+    my %Name_of : ATTR(:get<Name>);
+    my %Address_of : ATTR(:get<Address>);
 
-__PACKAGE__->_factory(
-    [ qw(        Name
-        Address
+    __PACKAGE__->_factory(
+        [   qw(        Name
+              Address
 
-    ) ],
-    {
-        'Name' => \%Name_of,
-        'Address' => \%Address_of,
-    },
-    {
-        'Name' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
-        'Address' => 'Shipment::UPS::WSDL::RateTypes::ShipToAddressType',
-    },
-    {
+              )
+        ],
+        {   'Name'    => \%Name_of,
+            'Address' => \%Address_of,
+        },
+        {   'Name'    => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
+            'Address' => 'Shipment::UPS::WSDL::RateTypes::ShipToAddressType',
+        },
+        {
 
-        'Name' => 'Name',
-        'Address' => 'Address',
-    }
-);
+            'Name'    => 'Name',
+            'Address' => 'Address',
+        }
+    );
 
-} # end BLOCK
-
-
-
-
-
+}    # end BLOCK
 
 
 1;
@@ -61,13 +53,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Shipment::UPS::WSDL::RateTypes::ShipToType
 
 =head1 VERSION
 
-version 0.15
+version 0.16
 
 =head1 DESCRIPTION
 

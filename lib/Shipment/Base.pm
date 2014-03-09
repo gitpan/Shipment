@@ -1,7 +1,5 @@
 package Shipment::Base;
-{
-  $Shipment::Base::VERSION = '0.15';
-}
+$Shipment::Base::VERSION = '0.16';
 use strict;
 use warnings;
 
@@ -13,273 +11,265 @@ use Moose::Util::TypeConstraints;
 use MooseX::Types::DateTime::ButMaintained qw( DateTime );
 
 
-has 'from_address' => ( 
-  is => 'rw',
-  isa => 'Shipment::Address',
+has 'from_address' => (
+    is  => 'rw',
+    isa => 'Shipment::Address',
 );
 
 has 'to_address' => (
-  is => 'rw',
-  isa => 'Shipment::Address',
+    is  => 'rw',
+    isa => 'Shipment::Address',
 );
 
 
 has 'account' => (
-  is => 'rw',
-  isa => 'Str',
+    is  => 'rw',
+    isa => 'Str',
 );
 
 
 has 'bill_account' => (
-  is => 'rw',
-  isa => 'Str', 
-  default => sub { 
-    my $self = shift;
-    return $self->account;
-  },
-  lazy => 1,
+    is      => 'rw',
+    isa     => 'Str',
+    default => sub {
+        my $self = shift;
+        return $self->account;
+    },
+    lazy => 1,
 );
 
 
 has 'bill_address' => (
-  is => 'rw',
-  isa => 'Shipment::Address',
+    is  => 'rw',
+    isa => 'Shipment::Address',
 );
 
 
-enum 'BillingOptions' => qw( sender recipient third_party );
+enum 'BillingOptions' => [qw( sender recipient third_party )];
 
 has 'bill_type' => (
-  is => 'rw',
-  isa => 'BillingOptions',
-  default => 'sender',
+    is      => 'rw',
+    isa     => 'BillingOptions',
+    default => 'sender',
 );
 
 
-enum 'PickupOptions' => qw( pickup dropoff );
+enum 'PickupOptions' => [qw( pickup dropoff )];
 
 has 'pickup_type' => (
-  is => 'rw',
-  isa => 'PickupOptions',
-  default => 'pickup'
+    is      => 'rw',
+    isa     => 'PickupOptions',
+    default => 'pickup'
 );
 
 
-enum 'PrinterOptions' => qw( pdf thermal image );
+enum 'PrinterOptions' => [qw( pdf thermal image )];
 
 has 'printer_type' => (
-  is => 'rw',
-  isa => 'Str',
-  default => 'pdf',
+    is      => 'rw',
+    isa     => 'Str',
+    default => 'pdf',
 );
 
 
-enum 'SignatureOptions' => qw( default required not_required adult );
+enum 'SignatureOptions' => [qw( default required not_required adult )];
 
 has 'signature_type' => (
-  is => 'rw',
-  isa => 'SignatureOptions',
-  default => 'default',
+    is      => 'rw',
+    isa     => 'SignatureOptions',
+    default => 'default',
 );
 
 
-enum 'PackageOptions' => qw( custom envelope tube box pack );
+enum 'PackageOptions' => [qw( custom envelope tube box pack )];
 
 has 'package_type' => (
-  is => 'rw',
-  isa => 'PackageOptions',
-  default => 'custom',
+    is      => 'rw',
+    isa     => 'PackageOptions',
+    default => 'custom',
 );
 
 
 has 'packages' => (
-  traits => ['Array'],
-  is => 'rw',
-  isa => 'ArrayRef[Shipment::Package]',
-  default => sub { [] },
-  handles => {
-    all_packages => 'elements',
-    get_package  => 'get',
-    add_package  => 'push',
-    count_packages => 'count',
-  },
+    traits  => ['Array'],
+    is      => 'rw',
+    isa     => 'ArrayRef[Shipment::Package]',
+    default => sub { [] },
+    handles => {
+        all_packages   => 'elements',
+        get_package    => 'get',
+        add_package    => 'push',
+        count_packages => 'count',
+    },
 );
 
 
 has 'weight_unit' => (
-  is => 'rw',
-  isa => enum( [ qw( lb kg ) ] ),
-  default => 'lb',
+    is      => 'rw',
+    isa     => enum([qw( lb kg )]),
+    default => 'lb',
 );
 
 has 'dim_unit' => (
-  is => 'rw',
-  isa => enum( [ qw( in cm ) ] ),
-  default => 'in',
+    is      => 'rw',
+    isa     => enum([qw( in cm )]),
+    default => 'in',
 );
 
 
 has 'currency' => (
-  is => 'rw',
-  isa => 'Str',
-  default => 'USD',
+    is      => 'rw',
+    isa     => 'Str',
+    default => 'USD',
 );
 
 
 has 'pickup_date' => (
-  is => 'rw',
-  isa => DateTime,
-  coerce => 1,
+    is     => 'rw',
+    isa    => DateTime,
+    coerce => 1,
 );
 
 
 has 'services' => (
-  traits => ['Hash'],
-  is => 'ro',
-  isa => 'HashRef[Shipment::Service]',
-  lazy => 1,
-  builder => '_build_services',
-  handles => {
-    all_services => 'values',
-  },
+    traits  => ['Hash'],
+    is      => 'ro',
+    isa     => 'HashRef[Shipment::Service]',
+    lazy    => 1,
+    builder => '_build_services',
+    handles => {all_services => 'values',},
 );
 
 
 has 'service' => (
-  is => 'rw',
-  isa => 'Shipment::Service',
+    is  => 'rw',
+    isa => 'Shipment::Service',
 );
 
 
 has 'tracking_id' => (
-  is => 'rw',
-  isa => 'Str',
+    is  => 'rw',
+    isa => 'Str',
 );
 
 
 has 'documents' => (
-  is => 'rw',
-  isa => 'Shipment::Label',
+    is  => 'rw',
+    isa => 'Shipment::Label',
 );
 
 
 has 'manifest' => (
-  is => 'rw',
-  isa => 'Shipment::Label',
+    is  => 'rw',
+    isa => 'Shipment::Label',
 );
 
 
 has 'error' => (
-  is => 'rw',
-  isa => 'Str',
+    is  => 'rw',
+    isa => 'Str',
 );
 
 
 has 'notice' => (
-  traits  => ['String'],
-  is => 'rw',
-  isa => 'Str',
-  default => q{},
-  handles => {
-    add_notice  => 'append',
-  },
+    traits  => ['String'],
+    is      => 'rw',
+    isa     => 'Str',
+    default => q{},
+    handles => {add_notice => 'append',},
 );
 
 
 has 'references' => (
-  traits => ['Array'],
-  is => 'rw',
-  isa => 'ArrayRef[Maybe[Str]]',
-  default => sub { [] },
-  handles => {
-    all_references => 'elements',
-    get_reference  => 'get',
-    add_reference  => 'push',
-    count_references => 'count',
-  },
+    traits  => ['Array'],
+    is      => 'rw',
+    isa     => 'ArrayRef[Maybe[Str]]',
+    default => sub { [] },
+    handles => {
+        all_references   => 'elements',
+        get_reference    => 'get',
+        add_reference    => 'push',
+        count_references => 'count',
+    },
 );
 
 
 has 'special_instructions' => (
-  is => 'rw',
-  isa => 'Str',
+    is  => 'rw',
+    isa => 'Str',
 );
 
 
 has 'carbon_offset' => (
-  is => 'rw',
-  isa => 'Bool',
-  default => 0,
+    is      => 'rw',
+    isa     => 'Bool',
+    default => 0,
 );
 
 
 sub _build_services {
-  warn "routine '_build_services' has not been implemented";
-  { 
-    ground => 
-      Shipment::Service->new(
-        id => 'ground',
-        name => 'Example Ground Service',
-        etd => 4, ## Estimated Transit Days
-        cost => Data::Currency->new(1),
-      ),
-    express => 
-      Shipment::Service->new(
-        id => 'express',
-        name => 'Example Express Service',
-        etd => 2, ## Estimated Transit Days
-        cost => Data::Currency->new(10),
-      ),
-    priority => 
-      Shipment::Service->new(
-        id => 'priority',
-        name => 'Example Priority Service',
-        etd => 1, ## Estimated Transit Days
-        cost => Data::Currency->new(100),
-      ),
-  }
+    warn "routine '_build_services' has not been implemented";
+    {   ground => Shipment::Service->new(
+            id   => 'ground',
+            name => 'Example Ground Service',
+            etd  => 4,                          ## Estimated Transit Days
+            cost => Data::Currency->new(1),
+        ),
+        express => Shipment::Service->new(
+            id   => 'express',
+            name => 'Example Express Service',
+            etd  => 2,                           ## Estimated Transit Days
+            cost => Data::Currency->new(10),
+        ),
+        priority => Shipment::Service->new(
+            id   => 'priority',
+            name => 'Example Priority Service',
+            etd  => 1,                            ## Estimated Transit Days
+            cost => Data::Currency->new(100),
+        ),
+    };
 }
 
 
 sub rate {
-  my ( $self, $service_id ) = @_;
+    my ($self, $service_id) = @_;
 
-  warn "routine 'rate' is not implemented for $self";
+    warn "routine 'rate' is not implemented for $self";
 }
 
 
 sub ship {
-  my ( $self, $service_id ) = @_;
+    my ($self, $service_id) = @_;
 
-  warn "routine 'ship' is not implemented for $self";
+    warn "routine 'ship' is not implemented for $self";
 }
 
 
 sub return {
-  my ( $self, $service_id ) = @_;
+    my ($self, $service_id) = @_;
 
-  warn "routine 'return' is not implemented for $self";
+    warn "routine 'return' is not implemented for $self";
 }
 
 
 sub cancel {
-  my ( $self, $service_id ) = @_;
+    my ($self, $service_id) = @_;
 
-  warn "routine 'cancel' is not implemented for $self";
+    warn "routine 'cancel' is not implemented for $self";
 }
 
 
 sub end_of_day {
-  my ( $self, $service_id ) = @_;
+    my ($self, $service_id) = @_;
 
-  warn "routine 'end_of_day' is not implemented for $self";
+    warn "routine 'end_of_day' is not implemented for $self";
 }
 
 
 sub track {
-  my $self = shift;
+    my $self = shift;
 
-  warn "routine 'track' is not implemented for $self";
+    warn "routine 'track' is not implemented for $self";
 }
 
 no Moose::Util::TypeConstraints;
@@ -292,13 +282,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Shipment::Base
 
 =head1 VERSION
 
-version 0.15
+version 0.16
 
 =head1 SYNOPSIS
 

@@ -1,24 +1,22 @@
 
 package Shipment::Purolator::WSDL::Elements::PackageInformation;
-{
-  $Shipment::Purolator::WSDL::Elements::PackageInformation::VERSION = '0.15';
-}
+$Shipment::Purolator::WSDL::Elements::PackageInformation::VERSION = '0.16';
 use strict;
 use warnings;
 
-{ # BLOCK to scope variables
+{    # BLOCK to scope variables
 
-sub get_xmlns { 'http://purolator.com/pws/datatypes/v1' }
+    sub get_xmlns {'http://purolator.com/pws/datatypes/v1'}
 
-__PACKAGE__->__set_name('PackageInformation');
-__PACKAGE__->__set_nillable(1);
-__PACKAGE__->__set_minOccurs();
-__PACKAGE__->__set_maxOccurs();
-__PACKAGE__->__set_ref();
-use base qw(
-    SOAP::WSDL::XSD::Typelib::Element
-    Shipment::Purolator::WSDL::Types::PackageInformation
-);
+    __PACKAGE__->__set_name('PackageInformation');
+    __PACKAGE__->__set_nillable(1);
+    __PACKAGE__->__set_minOccurs();
+    __PACKAGE__->__set_maxOccurs();
+    __PACKAGE__->__set_ref();
+    use base qw(
+      SOAP::WSDL::XSD::Typelib::Element
+      Shipment::Purolator::WSDL::Types::PackageInformation
+    );
 
 }
 
@@ -28,13 +26,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Shipment::Purolator::WSDL::Elements::PackageInformation
 
 =head1 VERSION
 
-version 0.15
+version 0.16
 
 =head1 DESCRIPTION
 

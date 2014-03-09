@@ -1,24 +1,24 @@
 
 package Shipment::Purolator::WSDL::Elements::ArrayOfValidationDetail;
-{
-  $Shipment::Purolator::WSDL::Elements::ArrayOfValidationDetail::VERSION = '0.15';
-}
+$Shipment::Purolator::WSDL::Elements::ArrayOfValidationDetail::VERSION = '0.16';
 use strict;
 use warnings;
 
-{ # BLOCK to scope variables
+{    # BLOCK to scope variables
 
-sub get_xmlns { 'http://schemas.datacontract.org/2004/07/Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WCF' }
+    sub get_xmlns {
+        'http://schemas.datacontract.org/2004/07/Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WCF'
+    }
 
-__PACKAGE__->__set_name('ArrayOfValidationDetail');
-__PACKAGE__->__set_nillable(1);
-__PACKAGE__->__set_minOccurs();
-__PACKAGE__->__set_maxOccurs();
-__PACKAGE__->__set_ref();
-use base qw(
-    SOAP::WSDL::XSD::Typelib::Element
-    Shipment::Purolator::WSDL::Types::ArrayOfValidationDetail
-);
+    __PACKAGE__->__set_name('ArrayOfValidationDetail');
+    __PACKAGE__->__set_nillable(1);
+    __PACKAGE__->__set_minOccurs();
+    __PACKAGE__->__set_maxOccurs();
+    __PACKAGE__->__set_ref();
+    use base qw(
+      SOAP::WSDL::XSD::Typelib::Element
+      Shipment::Purolator::WSDL::Types::ArrayOfValidationDetail
+    );
 
 }
 
@@ -28,13 +28,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Shipment::Purolator::WSDL::Elements::ArrayOfValidationDetail
 
 =head1 VERSION
 
-version 0.15
+version 0.16
 
 =head1 DESCRIPTION
 

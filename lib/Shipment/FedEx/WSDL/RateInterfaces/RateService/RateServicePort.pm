@@ -1,7 +1,5 @@
 package Shipment::FedEx::WSDL::RateInterfaces::RateService::RateServicePort;
-{
-  $Shipment::FedEx::WSDL::RateInterfaces::RateService::RateServicePort::VERSION = '0.15';
-}
+$Shipment::FedEx::WSDL::RateInterfaces::RateService::RateServicePort::VERSION = '0.16';
 use strict;
 use warnings;
 use Class::Std::Fast::Storable;
@@ -11,84 +9,91 @@ use base qw(SOAP::WSDL::Client::Base);
 
 # only load if it hasn't been loaded before
 require Shipment::FedEx::WSDL::RateTypemaps::RateService
-    if not Shipment::FedEx::WSDL::RateTypemaps::RateService->can('get_class');
+  if not Shipment::FedEx::WSDL::RateTypemaps::RateService->can('get_class');
 
 
 sub START {
 
     my $proxy_domain = $_[2]->{proxy_domain} || 'wsbeta.fedex.com:443';
 
-    $_[0]->set_proxy('https://' . $proxy_domain . '/web-services/rate') if not $_[2]->{proxy};
+    $_[0]->set_proxy('https://' . $proxy_domain . '/web-services/rate')
+      if not $_[2]->{proxy};
 
-    $_[0]->set_class_resolver('Shipment::FedEx::WSDL::RateTypemaps::RateService')
-        if not $_[2]->{class_resolver};
+    $_[0]
+      ->set_class_resolver('Shipment::FedEx::WSDL::RateTypemaps::RateService')
+      if not $_[2]->{class_resolver};
 
     $_[0]->set_prefix($_[2]->{use_prefix}) if exists $_[2]->{use_prefix};
 }
 
 sub getRates {
     my ($self, $body, $header) = @_;
-    die "getRates must be called as object method (\$self is <$self>)" if not blessed($self);
-    return $self->SUPER::call({
-        operation => 'getRates',
-        soap_action => 'getRates',
-        style => 'document',
-        body => {
-            
+    die "getRates must be called as object method (\$self is <$self>)"
+      if not blessed($self);
+    return $self->SUPER::call(
+        {   operation   => 'getRates',
+            soap_action => 'getRates',
+            style       => 'document',
+            body        => {
 
-           'use'            => 'literal',
-            namespace       => 'http://schemas.xmlsoap.org/wsdl/soap/',
-            encodingStyle   => '',
-            parts           =>  [qw( Shipment::FedEx::WSDL::RateElements::RateRequest )],
-        },
-        header => {
-            
-        },
-        headerfault => {
-            
-        },
-        response => {
+
+                'use'         => 'literal',
+                namespace     => 'http://schemas.xmlsoap.org/wsdl/soap/',
+                encodingStyle => '',
+                parts =>
+                  [qw( Shipment::FedEx::WSDL::RateElements::RateRequest )],
+            },
             header => {
-                
-            },
-            body => {
-                
 
-           'use'            => 'literal',
-            namespace       => 'http://schemas.xmlsoap.org/wsdl/soap/',
-            encodingStyle   => '',
-            parts           =>  [qw( Shipment::FedEx::WSDL::RateElements::RateReply )],
             },
-        }
-    }, $body, $header);
+            headerfault => {
+
+            },
+            response => {
+                header => {
+
+                },
+                body => {
+
+
+                    'use'         => 'literal',
+                    namespace     => 'http://schemas.xmlsoap.org/wsdl/soap/',
+                    encodingStyle => '',
+                    parts =>
+                      [qw( Shipment::FedEx::WSDL::RateElements::RateReply )],
+                },
+            }
+        },
+        $body,
+        $header
+    );
 }
-
-
-
 
 
 sub _get_name_resolver {
 
     my $prefix_1 = {
-              'attribute' => 'Shipment::FedEx::WSDL::RateAttributes',
-              'typemap' => 'Shipment::FedEx::WSDL::RateTypemaps',
-              'interface' => 'Shipment::FedEx::WSDL::RateInterfaces',
-              'type' => 'Shipment::FedEx::WSDL::RateTypes',
-              'server' => 'Shipment::FedEx::WSDL::RateServer',
-              'element' => 'Shipment::FedEx::WSDL::RateElements'
-            };
+        'attribute' => 'Shipment::FedEx::WSDL::RateAttributes',
+        'typemap'   => 'Shipment::FedEx::WSDL::RateTypemaps',
+        'interface' => 'Shipment::FedEx::WSDL::RateInterfaces',
+        'type'      => 'Shipment::FedEx::WSDL::RateTypes',
+        'server'    => 'Shipment::FedEx::WSDL::RateServer',
+        'element'   => 'Shipment::FedEx::WSDL::RateElements'
+    };
 
 
-    return SOAP::WSDL::Generator::Template::Plugin::XSD->new({
-        prefix_resolver => SOAP::WSDL::Generator::PrefixResolver->new({
-            namespace_prefix_map => {
-                'http://www.w3.org/2001/XMLSchema' => 'SOAP::WSDL::XSD::Typelib::Builtin',
-            },
-            namespace_map => {
-            },
-            prefix => $prefix_1,
-        })
-    });
+    return SOAP::WSDL::Generator::Template::Plugin::XSD->new(
+        {   prefix_resolver => SOAP::WSDL::Generator::PrefixResolver->new(
+                {   namespace_prefix_map => {
+                        'http://www.w3.org/2001/XMLSchema' =>
+                          'SOAP::WSDL::XSD::Typelib::Builtin',
+                    },
+                    namespace_map => {},
+                    prefix        => $prefix_1,
+                }
+            )
+        }
+    );
 }
 
 1;
@@ -97,13 +102,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Shipment::FedEx::WSDL::RateInterfaces::RateService::RateServicePort
 
 =head1 VERSION
 
-version 0.15
+version 0.16
 
 =head1 SYNOPSIS
 

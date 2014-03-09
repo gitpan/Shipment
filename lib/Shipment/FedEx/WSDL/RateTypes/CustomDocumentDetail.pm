@@ -1,14 +1,12 @@
 package Shipment::FedEx::WSDL::RateTypes::CustomDocumentDetail;
-{
-  $Shipment::FedEx::WSDL::RateTypes::CustomDocumentDetail::VERSION = '0.15';
-}
+$Shipment::FedEx::WSDL::RateTypes::CustomDocumentDetail::VERSION = '0.16';
 use strict;
 use warnings;
 
 
 __PACKAGE__->_set_element_form_qualified(1);
 
-sub get_xmlns { 'http://fedex.com/ws/rate/v9' };
+sub get_xmlns {'http://fedex.com/ws/rate/v9'}
 
 our $XML_ATTRIBUTE_CLASS;
 undef $XML_ATTRIBUTE_CLASS;
@@ -22,47 +20,44 @@ use base qw(SOAP::WSDL::XSD::Typelib::ComplexType);
 
 Class::Std::initialize();
 
-{ # BLOCK to scope variables
+{    # BLOCK to scope variables
 
-my %Format_of :ATTR(:get<Format>);
-my %LabelPrintingOrientation_of :ATTR(:get<LabelPrintingOrientation>);
-my %LabelRotation_of :ATTR(:get<LabelRotation>);
-my %SpecificationId_of :ATTR(:get<SpecificationId>);
+    my %Format_of : ATTR(:get<Format>);
+    my %LabelPrintingOrientation_of : ATTR(:get<LabelPrintingOrientation>);
+    my %LabelRotation_of : ATTR(:get<LabelRotation>);
+    my %SpecificationId_of : ATTR(:get<SpecificationId>);
 
-__PACKAGE__->_factory(
-    [ qw(        Format
-        LabelPrintingOrientation
-        LabelRotation
-        SpecificationId
+    __PACKAGE__->_factory(
+        [   qw(        Format
+              LabelPrintingOrientation
+              LabelRotation
+              SpecificationId
 
-    ) ],
-    {
-        'Format' => \%Format_of,
-        'LabelPrintingOrientation' => \%LabelPrintingOrientation_of,
-        'LabelRotation' => \%LabelRotation_of,
-        'SpecificationId' => \%SpecificationId_of,
-    },
-    {
-        'Format' => 'Shipment::FedEx::WSDL::RateTypes::ShippingDocumentFormat',
-        'LabelPrintingOrientation' => 'Shipment::FedEx::WSDL::RateTypes::LabelPrintingOrientationType',
-        'LabelRotation' => 'Shipment::FedEx::WSDL::RateTypes::LabelRotationType',
-        'SpecificationId' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
-    },
-    {
+              )
+        ],
+        {   'Format'                   => \%Format_of,
+            'LabelPrintingOrientation' => \%LabelPrintingOrientation_of,
+            'LabelRotation'            => \%LabelRotation_of,
+            'SpecificationId'          => \%SpecificationId_of,
+        },
+        {   'Format' =>
+              'Shipment::FedEx::WSDL::RateTypes::ShippingDocumentFormat',
+            'LabelPrintingOrientation' =>
+              'Shipment::FedEx::WSDL::RateTypes::LabelPrintingOrientationType',
+            'LabelRotation' =>
+              'Shipment::FedEx::WSDL::RateTypes::LabelRotationType',
+            'SpecificationId' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
+        },
+        {
 
-        'Format' => 'Format',
-        'LabelPrintingOrientation' => 'LabelPrintingOrientation',
-        'LabelRotation' => 'LabelRotation',
-        'SpecificationId' => 'SpecificationId',
-    }
-);
+            'Format'                   => 'Format',
+            'LabelPrintingOrientation' => 'LabelPrintingOrientation',
+            'LabelRotation'            => 'LabelRotation',
+            'SpecificationId'          => 'SpecificationId',
+        }
+    );
 
-} # end BLOCK
-
-
-
-
-
+}    # end BLOCK
 
 
 1;
@@ -71,13 +66,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Shipment::FedEx::WSDL::RateTypes::CustomDocumentDetail
 
 =head1 VERSION
 
-version 0.15
+version 0.16
 
 =head1 DESCRIPTION
 

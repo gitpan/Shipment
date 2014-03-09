@@ -1,24 +1,24 @@
 
 package Shipment::Purolator::WSDL::Elements::ValidationFault;
-{
-  $Shipment::Purolator::WSDL::Elements::ValidationFault::VERSION = '0.15';
-}
+$Shipment::Purolator::WSDL::Elements::ValidationFault::VERSION = '0.16';
 use strict;
 use warnings;
 
-{ # BLOCK to scope variables
+{    # BLOCK to scope variables
 
-sub get_xmlns { 'http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation' }
+    sub get_xmlns {
+        'http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation'
+    }
 
-__PACKAGE__->__set_name('ValidationFault');
-__PACKAGE__->__set_nillable(1);
-__PACKAGE__->__set_minOccurs();
-__PACKAGE__->__set_maxOccurs();
-__PACKAGE__->__set_ref();
-use base qw(
-    SOAP::WSDL::XSD::Typelib::Element
-    Shipment::Purolator::WSDL::Types::ValidationFault
-);
+    __PACKAGE__->__set_name('ValidationFault');
+    __PACKAGE__->__set_nillable(1);
+    __PACKAGE__->__set_minOccurs();
+    __PACKAGE__->__set_maxOccurs();
+    __PACKAGE__->__set_ref();
+    use base qw(
+      SOAP::WSDL::XSD::Typelib::Element
+      Shipment::Purolator::WSDL::Types::ValidationFault
+    );
 
 }
 
@@ -28,13 +28,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Shipment::Purolator::WSDL::Elements::ValidationFault
 
 =head1 VERSION
 
-version 0.15
+version 0.16
 
 =head1 DESCRIPTION
 

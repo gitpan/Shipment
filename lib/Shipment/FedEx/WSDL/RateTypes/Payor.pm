@@ -1,14 +1,12 @@
 package Shipment::FedEx::WSDL::RateTypes::Payor;
-{
-  $Shipment::FedEx::WSDL::RateTypes::Payor::VERSION = '0.15';
-}
+$Shipment::FedEx::WSDL::RateTypes::Payor::VERSION = '0.16';
 use strict;
 use warnings;
 
 
 __PACKAGE__->_set_element_form_qualified(1);
 
-sub get_xmlns { 'http://fedex.com/ws/rate/v9' };
+sub get_xmlns {'http://fedex.com/ws/rate/v9'}
 
 our $XML_ATTRIBUTE_CLASS;
 undef $XML_ATTRIBUTE_CLASS;
@@ -22,37 +20,31 @@ use base qw(SOAP::WSDL::XSD::Typelib::ComplexType);
 
 Class::Std::initialize();
 
-{ # BLOCK to scope variables
+{    # BLOCK to scope variables
 
-my %AccountNumber_of :ATTR(:get<AccountNumber>);
-my %CountryCode_of :ATTR(:get<CountryCode>);
+    my %AccountNumber_of : ATTR(:get<AccountNumber>);
+    my %CountryCode_of : ATTR(:get<CountryCode>);
 
-__PACKAGE__->_factory(
-    [ qw(        AccountNumber
-        CountryCode
+    __PACKAGE__->_factory(
+        [   qw(        AccountNumber
+              CountryCode
 
-    ) ],
-    {
-        'AccountNumber' => \%AccountNumber_of,
-        'CountryCode' => \%CountryCode_of,
-    },
-    {
-        'AccountNumber' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
-        'CountryCode' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
-    },
-    {
+              )
+        ],
+        {   'AccountNumber' => \%AccountNumber_of,
+            'CountryCode'   => \%CountryCode_of,
+        },
+        {   'AccountNumber' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
+            'CountryCode'   => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
+        },
+        {
 
-        'AccountNumber' => 'AccountNumber',
-        'CountryCode' => 'CountryCode',
-    }
-);
+            'AccountNumber' => 'AccountNumber',
+            'CountryCode'   => 'CountryCode',
+        }
+    );
 
-} # end BLOCK
-
-
-
-
-
+}    # end BLOCK
 
 
 1;
@@ -61,13 +53,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Shipment::FedEx::WSDL::RateTypes::Payor
 
 =head1 VERSION
 
-version 0.15
+version 0.16
 
 =head1 DESCRIPTION
 
