@@ -1,5 +1,5 @@
 package Shipment::UPS::WSDL::ShipInterfaces::ShipService::ShipPort;
-$Shipment::UPS::WSDL::ShipInterfaces::ShipService::ShipPort::VERSION = '0.16';
+$Shipment::UPS::WSDL::ShipInterfaces::ShipService::ShipPort::VERSION = '0.17';
 use strict;
 use warnings;
 use Class::Std::Fast::Storable;
@@ -223,7 +223,7 @@ Shipment::UPS::WSDL::ShipInterfaces::ShipService::ShipPort
 
 =head1 VERSION
 
-version 0.16
+version 0.17
 
 =head1 SYNOPSIS
 

@@ -1,5 +1,5 @@
 package Shipment::FedEx::WSDL::ShipTypes::ContentRecord;
-$Shipment::FedEx::WSDL::ShipTypes::ContentRecord::VERSION = '0.16';
+$Shipment::FedEx::WSDL::ShipTypes::ContentRecord::VERSION = '0.17';
 use strict;
 use warnings;
 
@@ -72,7 +72,7 @@ Shipment::FedEx::WSDL::ShipTypes::ContentRecord
 
 =head1 VERSION
 
-version 0.16
+version 0.17
 
 =head1 DESCRIPTION
 

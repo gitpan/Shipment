@@ -1,5 +1,5 @@
 package Shipment::FedEx::WSDL::ShipTypes::LinearMeasure;
-$Shipment::FedEx::WSDL::ShipTypes::LinearMeasure::VERSION = '0.16';
+$Shipment::FedEx::WSDL::ShipTypes::LinearMeasure::VERSION = '0.17';
 use strict;
 use warnings;
 
@@ -61,7 +61,7 @@ Shipment::FedEx::WSDL::ShipTypes::LinearMeasure
 
 =head1 VERSION
 
-version 0.16
+version 0.17
 
 =head1 DESCRIPTION
 

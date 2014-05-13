@@ -1,5 +1,5 @@
 package Shipment::Temando::WSDL::Types::CountryCode;
-$Shipment::Temando::WSDL::Types::CountryCode::VERSION = '0.16';
+$Shipment::Temando::WSDL::Types::CountryCode::VERSION = '0.17';
 use strict;
 use warnings;
 
@@ -28,7 +28,7 @@ Shipment::Temando::WSDL::Types::CountryCode
 
 =head1 VERSION
 
-version 0.16
+version 0.17
 
 =head1 DESCRIPTION
 

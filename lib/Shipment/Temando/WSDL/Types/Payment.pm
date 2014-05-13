@@ -1,5 +1,5 @@
 package Shipment::Temando::WSDL::Types::Payment;
-$Shipment::Temando::WSDL::Types::Payment::VERSION = '0.16';
+$Shipment::Temando::WSDL::Types::Payment::VERSION = '0.17';
 use strict;
 use warnings;
 
@@ -91,7 +91,7 @@ Shipment::Temando::WSDL::Types::Payment
 
 =head1 VERSION
 
-version 0.16
+version 0.17
 
 =head1 DESCRIPTION
 

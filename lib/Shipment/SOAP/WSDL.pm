@@ -1,5 +1,5 @@
 package Shipment::SOAP::WSDL;
-$Shipment::SOAP::WSDL::VERSION = '0.16';
+$Shipment::SOAP::WSDL::VERSION = '0.17';
 
 BEGIN {
     my %fatpacked;
@@ -9243,9 +9243,8 @@ SOAP_WSDL_XSD_TYPELIB_BUILTIN_UNSIGNEDSHORT
           my $type = $CLASSES_OF{ $class }->{ $name }
               or croak "No class given for $name";
   
-          # require all types here
-          $type->isa('UNIVERSAL')
-              or eval "require $type"
+          Class::Load::is_class_loaded($type)
+             or eval { Class::Load::load_class $type }
                   or croak $@;
   
           # check now, so we don't need to do it later.
@@ -9738,7 +9737,7 @@ Shipment::SOAP::WSDL
 
 =head1 VERSION
 
-version 0.16
+version 0.17
 
 =head1 AUTHOR
 

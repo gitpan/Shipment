@@ -1,5 +1,5 @@
 package Shipment::FedEx::WSDL::ShipTypes::LinearUnits;
-$Shipment::FedEx::WSDL::ShipTypes::LinearUnits::VERSION = '0.16';
+$Shipment::FedEx::WSDL::ShipTypes::LinearUnits::VERSION = '0.17';
 use strict;
 use warnings;
 
@@ -24,7 +24,7 @@ Shipment::FedEx::WSDL::ShipTypes::LinearUnits
 
 =head1 VERSION
 
-version 0.16
+version 0.17
 
 =head1 DESCRIPTION
 

@@ -1,5 +1,5 @@
 package Shipment::Purolator::WSDL::Types::PaymentInformation;
-$Shipment::Purolator::WSDL::Types::PaymentInformation::VERSION = '0.16';
+$Shipment::Purolator::WSDL::Types::PaymentInformation::VERSION = '0.17';
 use strict;
 use warnings;
 
@@ -74,7 +74,7 @@ Shipment::Purolator::WSDL::Types::PaymentInformation
 
 =head1 VERSION
 
-version 0.16
+version 0.17
 
 =head1 DESCRIPTION
 

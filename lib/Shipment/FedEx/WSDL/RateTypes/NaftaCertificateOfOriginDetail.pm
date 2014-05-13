@@ -1,5 +1,5 @@
 package Shipment::FedEx::WSDL::RateTypes::NaftaCertificateOfOriginDetail;
-$Shipment::FedEx::WSDL::RateTypes::NaftaCertificateOfOriginDetail::VERSION = '0.16';
+$Shipment::FedEx::WSDL::RateTypes::NaftaCertificateOfOriginDetail::VERSION = '0.17';
 use strict;
 use warnings;
 
@@ -90,7 +90,7 @@ Shipment::FedEx::WSDL::RateTypes::NaftaCertificateOfOriginDetail
 
 =head1 VERSION
 
-version 0.16
+version 0.17
 
 =head1 DESCRIPTION
 

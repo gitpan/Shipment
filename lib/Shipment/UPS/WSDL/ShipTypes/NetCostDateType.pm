@@ -1,5 +1,5 @@
 package Shipment::UPS::WSDL::ShipTypes::NetCostDateType;
-$Shipment::UPS::WSDL::ShipTypes::NetCostDateType::VERSION = '0.16';
+$Shipment::UPS::WSDL::ShipTypes::NetCostDateType::VERSION = '0.17';
 use strict;
 use warnings;
 
@@ -61,7 +61,7 @@ Shipment::UPS::WSDL::ShipTypes::NetCostDateType
 
 =head1 VERSION
 
-version 0.16
+version 0.17
 
 =head1 DESCRIPTION
 

@@ -1,5 +1,5 @@
 package Shipment::Purolator::WSDL::Types::ArrayOfShipmentEstimate;
-$Shipment::Purolator::WSDL::Types::ArrayOfShipmentEstimate::VERSION = '0.16';
+$Shipment::Purolator::WSDL::Types::ArrayOfShipmentEstimate::VERSION = '0.17';
 use strict;
 use warnings;
 
@@ -56,7 +56,7 @@ Shipment::Purolator::WSDL::Types::ArrayOfShipmentEstimate
 
 =head1 VERSION
 
-version 0.16
+version 0.17
 
 =head1 DESCRIPTION
 

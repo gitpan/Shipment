@@ -1,5 +1,5 @@
 package Shipment::FedEx::WSDL::RateTypes::EMailNotificationFormatType;
-$Shipment::FedEx::WSDL::RateTypes::EMailNotificationFormatType::VERSION = '0.16';
+$Shipment::FedEx::WSDL::RateTypes::EMailNotificationFormatType::VERSION = '0.17';
 use strict;
 use warnings;
 
@@ -24,7 +24,7 @@ Shipment::FedEx::WSDL::RateTypes::EMailNotificationFormatType
 
 =head1 VERSION
 
-version 0.16
+version 0.17
 
 =head1 DESCRIPTION
 

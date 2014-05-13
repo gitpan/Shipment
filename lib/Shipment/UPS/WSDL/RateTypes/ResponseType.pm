@@ -1,5 +1,5 @@
 package Shipment::UPS::WSDL::RateTypes::ResponseType;
-$Shipment::UPS::WSDL::RateTypes::ResponseType::VERSION = '0.16';
+$Shipment::UPS::WSDL::RateTypes::ResponseType::VERSION = '0.17';
 use strict;
 use warnings;
 
@@ -68,7 +68,7 @@ Shipment::UPS::WSDL::RateTypes::ResponseType
 
 =head1 VERSION
 
-version 0.16
+version 0.17
 
 =head1 DESCRIPTION
 

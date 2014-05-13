@@ -1,5 +1,5 @@
 package Shipment::Purolator::WSDL::Types::BusinessRelationship;
-$Shipment::Purolator::WSDL::Types::BusinessRelationship::VERSION = '0.16';
+$Shipment::Purolator::WSDL::Types::BusinessRelationship::VERSION = '0.17';
 use strict;
 use warnings;
 
@@ -24,7 +24,7 @@ Shipment::Purolator::WSDL::Types::BusinessRelationship
 
 =head1 VERSION
 
-version 0.16
+version 0.17
 
 =head1 DESCRIPTION
 
