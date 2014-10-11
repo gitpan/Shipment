@@ -1,5 +1,5 @@
 package Shipment::FedEx::WSDL::RateTypes::ShippingDocumentFormat;
-$Shipment::FedEx::WSDL::RateTypes::ShippingDocumentFormat::VERSION = '0.17';
+$Shipment::FedEx::WSDL::RateTypes::ShippingDocumentFormat::VERSION = '0.18';
 use strict;
 use warnings;
 
@@ -86,7 +86,7 @@ Shipment::FedEx::WSDL::RateTypes::ShippingDocumentFormat
 
 =head1 VERSION
 
-version 0.17
+version 0.18
 
 =head1 DESCRIPTION
 

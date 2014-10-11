@@ -1,6 +1,6 @@
 
 package Shipment::FedEx::WSDL::RateTypemaps::RateService;
-$Shipment::FedEx::WSDL::RateTypemaps::RateService::VERSION = '0.17';
+$Shipment::FedEx::WSDL::RateTypemaps::RateService::VERSION = '0.18';
 use strict;
 use warnings;
 
@@ -2515,7 +2515,7 @@ Shipment::FedEx::WSDL::RateTypemaps::RateService
 
 =head1 VERSION
 
-version 0.17
+version 0.18
 
 =head1 DESCRIPTION
 

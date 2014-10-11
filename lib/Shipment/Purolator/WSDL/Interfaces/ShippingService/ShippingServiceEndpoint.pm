@@ -1,5 +1,5 @@
 package Shipment::Purolator::WSDL::Interfaces::ShippingService::ShippingServiceEndpoint;
-$Shipment::Purolator::WSDL::Interfaces::ShippingService::ShippingServiceEndpoint::VERSION = '0.17';
+$Shipment::Purolator::WSDL::Interfaces::ShippingService::ShippingServiceEndpoint::VERSION = '0.18';
 use strict;
 use warnings;
 use Class::Std::Fast::Storable;
@@ -319,7 +319,7 @@ Shipment::Purolator::WSDL::Interfaces::ShippingService::ShippingServiceEndpoint
 
 =head1 VERSION
 
-version 0.17
+version 0.18
 
 =head1 SYNOPSIS
 

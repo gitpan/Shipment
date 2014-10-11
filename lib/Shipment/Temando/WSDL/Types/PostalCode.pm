@@ -1,5 +1,5 @@
 package Shipment::Temando::WSDL::Types::PostalCode;
-$Shipment::Temando::WSDL::Types::PostalCode::VERSION = '0.17';
+$Shipment::Temando::WSDL::Types::PostalCode::VERSION = '0.18';
 use strict;
 use warnings;
 
@@ -28,7 +28,7 @@ Shipment::Temando::WSDL::Types::PostalCode
 
 =head1 VERSION
 
-version 0.17
+version 0.18
 
 =head1 DESCRIPTION
 

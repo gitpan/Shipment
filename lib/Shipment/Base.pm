@@ -1,5 +1,5 @@
 package Shipment::Base;
-$Shipment::Base::VERSION = '0.17';
+$Shipment::Base::VERSION = '0.18';
 use strict;
 use warnings;
 
@@ -290,7 +290,7 @@ Shipment::Base
 
 =head1 VERSION
 
-version 0.17
+version 0.18
 
 =head1 SYNOPSIS
 

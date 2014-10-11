@@ -1,6 +1,6 @@
 
 package Shipment::Temando::WSDL::Elements::updateLocation;
-$Shipment::Temando::WSDL::Elements::updateLocation::VERSION = '0.17';
+$Shipment::Temando::WSDL::Elements::updateLocation::VERSION = '0.18';
 use strict;
 use warnings;
 
@@ -79,7 +79,7 @@ Shipment::Temando::WSDL::Elements::updateLocation
 
 =head1 VERSION
 
-version 0.17
+version 0.18
 
 =head1 DESCRIPTION
 

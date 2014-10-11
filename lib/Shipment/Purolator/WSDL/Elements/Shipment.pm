@@ -1,6 +1,6 @@
 
 package Shipment::Purolator::WSDL::Elements::Shipment;
-$Shipment::Purolator::WSDL::Elements::Shipment::VERSION = '0.17';
+$Shipment::Purolator::WSDL::Elements::Shipment::VERSION = '0.18';
 use strict;
 use warnings;
 
@@ -34,7 +34,7 @@ Shipment::Purolator::WSDL::Elements::Shipment
 
 =head1 VERSION
 
-version 0.17
+version 0.18
 
 =head1 DESCRIPTION
 

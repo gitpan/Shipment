@@ -1,6 +1,6 @@
 
 package Shipment::UPS::WSDL::RateElements::RateRequest;
-$Shipment::UPS::WSDL::RateElements::RateRequest::VERSION = '0.17';
+$Shipment::UPS::WSDL::RateElements::RateRequest::VERSION = '0.18';
 use strict;
 use warnings;
 
@@ -88,7 +88,7 @@ Shipment::UPS::WSDL::RateElements::RateRequest
 
 =head1 VERSION
 
-version 0.17
+version 0.18
 
 =head1 DESCRIPTION
 

@@ -1,5 +1,5 @@
 package Shipment::FedEx::WSDL::ShipTypes::WebAuthenticationCredential;
-$Shipment::FedEx::WSDL::ShipTypes::WebAuthenticationCredential::VERSION = '0.17';
+$Shipment::FedEx::WSDL::ShipTypes::WebAuthenticationCredential::VERSION = '0.18';
 use strict;
 use warnings;
 
@@ -61,7 +61,7 @@ Shipment::FedEx::WSDL::ShipTypes::WebAuthenticationCredential
 
 =head1 VERSION
 
-version 0.17
+version 0.18
 
 =head1 DESCRIPTION
 

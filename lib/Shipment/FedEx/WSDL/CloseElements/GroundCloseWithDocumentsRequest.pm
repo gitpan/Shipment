@@ -1,6 +1,6 @@
 
 package Shipment::FedEx::WSDL::CloseElements::GroundCloseWithDocumentsRequest;
-$Shipment::FedEx::WSDL::CloseElements::GroundCloseWithDocumentsRequest::VERSION = '0.17';
+$Shipment::FedEx::WSDL::CloseElements::GroundCloseWithDocumentsRequest::VERSION = '0.18';
 use strict;
 use warnings;
 
@@ -34,7 +34,7 @@ Shipment::FedEx::WSDL::CloseElements::GroundCloseWithDocumentsRequest
 
 =head1 VERSION
 
-version 0.17
+version 0.18
 
 =head1 DESCRIPTION
 

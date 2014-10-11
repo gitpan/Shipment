@@ -1,5 +1,5 @@
 package Shipment::FedEx::WSDL::ShipTypes::TaxpayerIdentification;
-$Shipment::FedEx::WSDL::ShipTypes::TaxpayerIdentification::VERSION = '0.17';
+$Shipment::FedEx::WSDL::ShipTypes::TaxpayerIdentification::VERSION = '0.18';
 use strict;
 use warnings;
 
@@ -66,7 +66,7 @@ Shipment::FedEx::WSDL::ShipTypes::TaxpayerIdentification
 
 =head1 VERSION
 
-version 0.17
+version 0.18
 
 =head1 DESCRIPTION
 

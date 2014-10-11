@@ -1,5 +1,5 @@
 package Shipment::Temando::WSDL::Types::Address;
-$Shipment::Temando::WSDL::Types::Address::VERSION = '0.17';
+$Shipment::Temando::WSDL::Types::Address::VERSION = '0.18';
 use strict;
 use warnings;
 
@@ -28,7 +28,7 @@ Shipment::Temando::WSDL::Types::Address
 
 =head1 VERSION
 
-version 0.17
+version 0.18
 
 =head1 DESCRIPTION
 

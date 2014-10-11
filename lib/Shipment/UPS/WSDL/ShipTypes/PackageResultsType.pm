@@ -1,5 +1,5 @@
 package Shipment::UPS::WSDL::ShipTypes::PackageResultsType;
-$Shipment::UPS::WSDL::ShipTypes::PackageResultsType::VERSION = '0.17';
+$Shipment::UPS::WSDL::ShipTypes::PackageResultsType::VERSION = '0.18';
 use strict;
 use warnings;
 
@@ -24,6 +24,7 @@ Class::Std::initialize();
 
     my %TrackingNumber_of : ATTR(:get<TrackingNumber>);
     my %ServiceOptionsCharges_of : ATTR(:get<ServiceOptionsCharges>);
+    my %SurePostDasCharges_of : ATTR(:get<SurePostDasCharges>);
     my %ShippingLabel_of : ATTR(:get<ShippingLabel>);
     my %ShippingReceipt_of : ATTR(:get<ShippingReceipt>);
     my %USPSPICNumber_of : ATTR(:get<USPSPICNumber>);
@@ -31,6 +32,7 @@ Class::Std::initialize();
     __PACKAGE__->_factory(
         [   qw(        TrackingNumber
               ServiceOptionsCharges
+              SurePostDasCharges
               ShippingLabel
               ShippingReceipt
               USPSPICNumber
@@ -39,12 +41,15 @@ Class::Std::initialize();
         ],
         {   'TrackingNumber'        => \%TrackingNumber_of,
             'ServiceOptionsCharges' => \%ServiceOptionsCharges_of,
+            'SurePostDasCharges'    => \%SurePostDasCharges_of,
             'ShippingLabel'         => \%ShippingLabel_of,
             'ShippingReceipt'       => \%ShippingReceipt_of,
             'USPSPICNumber'         => \%USPSPICNumber_of,
         },
         {   'TrackingNumber' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
             'ServiceOptionsCharges' =>
+              'Shipment::UPS::WSDL::ShipTypes::ShipChargeType',
+            'SurePostDasCharges' =>
               'Shipment::UPS::WSDL::ShipTypes::ShipChargeType',
             'ShippingLabel'   => 'Shipment::UPS::WSDL::ShipTypes::LabelType',
             'ShippingReceipt' => 'Shipment::UPS::WSDL::ShipTypes::ReceiptType',
@@ -54,6 +59,7 @@ Class::Std::initialize();
 
             'TrackingNumber'        => 'TrackingNumber',
             'ServiceOptionsCharges' => 'ServiceOptionsCharges',
+            'SurePostDasCharges'    => 'SurePostDasCharges',
             'ShippingLabel'         => 'ShippingLabel',
             'ShippingReceipt'       => 'ShippingReceipt',
             'USPSPICNumber'         => 'USPSPICNumber',
@@ -77,7 +83,7 @@ Shipment::UPS::WSDL::ShipTypes::PackageResultsType
 
 =head1 VERSION
 
-version 0.17
+version 0.18
 
 =head1 DESCRIPTION
 

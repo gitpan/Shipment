@@ -1,5 +1,5 @@
 package Shipment::Temando::WSDL::Types::ItemDescription;
-$Shipment::Temando::WSDL::Types::ItemDescription::VERSION = '0.17';
+$Shipment::Temando::WSDL::Types::ItemDescription::VERSION = '0.18';
 use strict;
 use warnings;
 
@@ -28,7 +28,7 @@ Shipment::Temando::WSDL::Types::ItemDescription
 
 =head1 VERSION
 
-version 0.17
+version 0.18
 
 =head1 DESCRIPTION
 

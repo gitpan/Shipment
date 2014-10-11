@@ -1,5 +1,5 @@
 package Shipment::Purolator::WSDL::Types::ArrayOfOptionIDValuePair;
-$Shipment::Purolator::WSDL::Types::ArrayOfOptionIDValuePair::VERSION = '0.17';
+$Shipment::Purolator::WSDL::Types::ArrayOfOptionIDValuePair::VERSION = '0.18';
 use strict;
 use warnings;
 
@@ -56,7 +56,7 @@ Shipment::Purolator::WSDL::Types::ArrayOfOptionIDValuePair
 
 =head1 VERSION
 
-version 0.17
+version 0.18
 
 =head1 DESCRIPTION
 

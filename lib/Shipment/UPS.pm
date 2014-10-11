@@ -1,5 +1,5 @@
 package Shipment::UPS;
-$Shipment::UPS::VERSION = '0.17';
+$Shipment::UPS::VERSION = '0.18';
 use strict;
 use warnings;
 
@@ -86,19 +86,35 @@ my %service_map = (
     '01' => 'UPS Next Day Air',
     '02' => 'UPS Second Day Air',
     '03' => 'UPS Ground',
-    '07' => 'UPS Worldwide ExpressSM',
-    '08' => 'UPS Worldwide ExpeditedSM',
+    '07' => 'UPS Worldwide Express',
+    '08' => 'UPS Worldwide Expedited',
     '11' => 'UPS Standard',
     '12' => 'UPS Three-Day Select',
     '13' => 'UPS Next Day Air Saver',
-    '14' => 'UPS Next Day Air Early A.M. SM',
-    '54' => 'UPS Worldwide Express PlusSM',
+    '14' => 'UPS Next Day Air Early A.M.',
+    '54' => 'UPS Worldwide Express Plus',
     '59' => 'UPS Second Day Air A.M.',
     '65' => 'UPS Saver',
-    '82' => 'UPS Today StandardSM',
-    '83' => 'UPS Today Dedicated CourrierSM',
+    '82' => 'UPS Today Standard',
+    '83' => 'UPS Today Dedicated Courier',
     '85' => 'UPS Today Express',
     '86' => 'UPS Today Express Saver',
+    '93' => 'UPS SurePost 1 lb or Greater',
+    'CA' => {
+        '01' => 'UPS Express',
+        '13' => 'UPS Express Saver',
+        '65' => 'UPS Worldwide Express Saver',
+        '02' => 'UPS Expedited',
+    },
+);
+
+## Rating code to Shipping code map for cases when they differ
+my %service_code_map = (
+    'CA' => {
+        '07' => '01',
+        '13' => '65',
+        '02' => '08',
+    },
 );
 
 
@@ -169,6 +185,13 @@ has '+printer_type' => (default => 'image',);
 has '+currency' => (default => 'USD',);
 
 
+has 'surepost' => (
+    is      => 'rw',
+    isa     => 'Bool',
+    default => undef,
+);
+
+
 sub _build_services {
     my $self = shift;
 
@@ -181,9 +204,50 @@ sub _build_services {
         {proxy_domain => $self->proxy_domain,});
     my $response;
 
+    my $options;
+    $options->{DeliveryConfirmation}->{DCISType} =
+      $signature_type_map{$self->signature_type}
+      if defined $signature_type_map{$self->signature_type};
+    $options->{DeclaredValue}->{CurrencyCode} = $self->currency;
 
     my $rating_options;
     $rating_options->{NegotiatedRatesIndicator} = 1 if $self->negotiated_rates;
+
+    my $shipment_options;
+    $shipment_options->{UPScarbonneutralIndicator} = ''
+      if $self->carbon_neutral;
+
+    my @pieces;
+    foreach (@{$self->packages}) {
+        $options->{DeclaredValue}->{MonetaryValue} = $_->insured_value->value;
+
+        ## SurePost doesn't accept service options
+        $options = undef if $self->surepost;
+
+        push @pieces,
+          { PackagingType => {
+                Code => $package_type_map{$self->package_type}
+                  || $self->package_type,
+            },
+            Dimensions => {
+                UnitOfMeasurement => {
+                    Code => $units_type_map{$self->dim_unit}
+                      || $self->dim_unit,
+                },
+                Length => $_->length,
+                Width  => $_->width,
+                Height => $_->height,
+            },
+            PackageWeight => {
+                UnitOfMeasurement => {
+                    Code => $units_type_map{$self->weight_unit}
+                      || $self->weight_unit,
+                },
+                Weight => $_->weight,
+            },
+            PackageServiceOptions => $options,
+          };
+    }
 
     my @from_addresslines = (
         $self->from_address->address1,
@@ -207,6 +271,8 @@ sub _build_services {
     };
     $shipto->{Address}->{ResidentialAddressIndicator} = 1
       if $self->{residential_address};
+    $shipto->{Phone}{Number} = $self->to_address->phone
+      if $self->to_address->phone;
 
     my %services;
     try {
@@ -224,21 +290,10 @@ sub _build_services {
                             CountryCode => $self->from_address()->country_code,
                         },
                     },
-                    ShipTo                => $shipto,
-                    ShipmentRatingOptions => $rating_options,
-                    Package               => {
-                        PackagingType => {
-                            Code => $package_type_map{$self->package_type}
-                              || $self->package_type,
-                        },
-                        PackageWeight => {
-                            UnitOfMeasurement => {
-                                Code => $units_type_map{$self->weight_unit}
-                                  || $self->weight_unit,
-                            },
-                            Weight => 1,
-                        },
-                    },
+                    ShipTo                 => $shipto,
+                    ShipmentRatingOptions  => $rating_options,
+                    Package                => \@pieces,
+                    ShipmentServiceOptions => $shipment_options,
                 },
             },
             {   UsernameToken => {
@@ -266,43 +321,64 @@ sub _build_services {
             }
             $services{$service->get_Service()->get_Code()->get_value} =
               Shipment::Service->new(
-                id => $service->get_Service()->get_Code()->get_value,
-                name =>
-                  $service_map{$service->get_Service()->get_Code()->get_value},
+                id   => $service->get_Service()->get_Code()->get_value,
+                name => (
+                    $service_map{$self->from_address()->country_code}
+                      ->{$service->get_Service()->get_Code()->get_value}
+                      || $service_map{$service->get_Service()->get_Code()
+                          ->get_value}
+                ),
                 cost => Data::Currency->new($rate, $currency),
               );
         }
-        $services{ground} =
-          ($services{'03'}) ? $services{'03'} : $services{'11'}
-          if ($services{'03'} || $services{'11'});
-        $services{express}  = $services{'02'} if $services{'02'};
-        $services{priority} = $services{'01'} if $services{'01'};
+        $services{ground} = $services{'03'} || $services{'11'} || undef;
+        $services{express} =
+          $services{'02'} || $services{'13'} || $services{'65'} || undef;
+        $services{priority} = $services{'01'} || undef;
+        foreach (qw/ground express priority/) {
+            delete $services{$_} if !$services{$_};
+        }
 
         $self->notice('');
         if ($response->get_Response->get_Alert) {
             foreach my $alert (@{$response->get_Response->get_Alert}) {
-                warn $alert->get_Description->get_value;
+                warn "Notice: " . $alert->get_Description->get_value;
                 $self->add_notice($alert->get_Description->get_value . "\n");
             }
         }
 
     }
     catch {
-        warn $_;
+        #warn $_;
         try {
-            warn $response->get_detail()->get_Errors()->get_ErrorDetail()
+            warn "Error: "
+              . $response->get_detail()->get_Errors()->get_ErrorDetail()
               ->get_PrimaryErrorCode()->get_Description;
             $self->error(
                 $response->get_detail()->get_Errors()->get_ErrorDetail()
                   ->get_PrimaryErrorCode()->get_Description->get_value);
         }
         catch {
-            warn $_;
-            warn $response->get_faultstring;
+            #warn $_;
+            warn "Error: " . $response->get_faultstring;
             $self->error($response->get_faultstring->get_value);
         };
     };
 
+    if ($self->surepost) {
+        if ($self->error) {
+            $self->add_notice(
+                    'All services other than SurePost failed due to error: '
+                  . $self->error
+                  . "\n");
+            $self->error('');
+        }
+        $services{93} = Shipment::Service->new(
+            id   => '93',
+            name => $service_map{93},
+        );
+        $services{surepost} = $services{93};
+    }
 
     \%services;
 }
@@ -315,7 +391,7 @@ sub rate {
         $service_id = $self->services->{$service_id}->id;
     }
     catch {
-        warn $_;
+        #warn $_;
         warn "service ($service_id) not available";
         $self->error("service ($service_id) not available");
         $service_id = '';
@@ -338,6 +414,10 @@ sub rate {
     my @pieces;
     foreach (@{$self->packages}) {
         $options->{DeclaredValue}->{MonetaryValue} = $_->insured_value->value;
+
+        ## SurePost doesn't accept service options
+        $options = undef if $self->surepost && $service_id eq '93';
+
         push @pieces,
           { PackagingType => {
                 Code => $package_type_map{$self->package_type}
@@ -386,6 +466,8 @@ sub rate {
     };
     $shipto->{Address}->{ResidentialAddressIndicator} = 1
       if $self->{residential_address};
+    $shipto->{Phone}{Number} = $self->to_address->phone
+      if $self->to_address->phone;
 
     use Shipment::UPS::WSDL::RateInterfaces::RateService::RatePort;
 
@@ -445,7 +527,16 @@ sub rate {
         $self->service(
             new Shipment::Service(
                 id   => $service_id,
-                name => $self->services->{$service_id}->name,
+                name => (
+                    $service_map{$self->from_address()->country_code}->{
+                        $response->get_RatedShipment->get_Service->get_Code
+                          ->get_value
+                      }
+                      || $service_map{
+                        $response->get_RatedShipment->get_Service->get_Code
+                          ->get_value
+                      }
+                ),
                 cost => Data::Currency->new($rate, $currency),
             )
         );
@@ -459,7 +550,7 @@ sub rate {
         }
     }
     catch {
-        warn $_;
+        #warn $_;
         try {
             warn $response->get_detail()->get_Errors()->get_ErrorDetail()
               ->get_PrimaryErrorCode()->get_Description;
@@ -468,7 +559,7 @@ sub rate {
                   ->get_PrimaryErrorCode()->get_Description->get_value);
         }
         catch {
-            warn $_;
+            #warn $_;
             warn $response->get_faultstring;
             $self->error($response->get_faultstring->get_value);
         };
@@ -484,7 +575,7 @@ sub ship {
         $service_id = $self->services->{$service_id}->id;
     }
     catch {
-        warn $_;
+        #warn $_;
         warn "service ($service_id) not available";
         $self->error("service ($service_id) not available");
         $service_id = '';
@@ -515,6 +606,10 @@ sub ship {
     foreach (@{$self->packages}) {
         $package_options->{DeclaredValue}->{MonetaryValue} =
           $_->insured_value->value;
+
+        ## SurePost doesn't accept service options
+        $package_options = undef if $self->surepost && $service_id eq '93';
+
         my @references;
         if (   $self->references
             && $self->from_address->country_code =~ /(US|PR)/
@@ -592,6 +687,8 @@ sub ship {
     };
     $shipto->{Address}->{ResidentialAddressIndicator} = 1
       if $self->{residential_address};
+    $shipto->{Phone}{Number} = $self->to_address->phone
+      if $self->to_address->phone;
 
     use Shipment::UPS::WSDL::ShipInterfaces::ShipService::ShipPort;
 
@@ -623,8 +720,14 @@ sub ship {
                     },
                     ShipTo                => $shipto,
                     ShipmentRatingOptions => $rating_options,
-                    Service               => {Code => $service_id,},
-                    Package               => \@pieces,
+                    Service               => {
+                        Code => (
+                            $service_code_map{$self->from_address
+                                  ->country_code}->{$service_id}
+                              || $service_id
+                        ),
+                    },
+                    Package            => \@pieces,
                     PaymentInformation => {ShipmentCharge => $payment_option,},
                     ShipmentServiceOptions => $shipment_options,
                 },
@@ -734,7 +837,7 @@ sub ship {
 
     }
     catch {
-        warn $_;
+        #warn $_;
         try {
             warn $response->get_detail()->get_Errors()->get_ErrorDetail()
               ->get_PrimaryErrorCode()->get_Description;
@@ -743,7 +846,7 @@ sub ship {
                   ->get_PrimaryErrorCode()->get_Description->get_value);
         }
         catch {
-            warn $_;
+            #warn $_;
             warn $response->get_faultstring;
             $self->error($response->get_faultstring->get_value);
         };
@@ -759,7 +862,7 @@ sub return {
         $service_id = $self->services->{$service_id}->id;
     }
     catch {
-        warn $_;
+        #warn $_;
         warn "service ($service_id) not available";
         $self->error("service ($service_id) not available");
         $service_id = '';
@@ -978,7 +1081,7 @@ sub return {
 
     }
     catch {
-        warn $_;
+        #warn $_;
         try {
             warn $response->get_detail()->get_Errors()->get_ErrorDetail()
               ->get_PrimaryErrorCode()->get_Description;
@@ -987,7 +1090,7 @@ sub return {
                   ->get_PrimaryErrorCode()->get_Description->get_value);
         }
         catch {
-            warn $_;
+            #warn $_;
             warn $response->get_faultstring;
             $self->error($response->get_faultstring->get_value);
         };
@@ -1050,7 +1153,7 @@ sub cancel {
 
     }
     catch {
-        warn $_;
+        #warn $_;
         try {
             warn $response->get_detail()->get_Errors()->get_ErrorDetail()
               ->get_PrimaryErrorCode()->get_Description;
@@ -1059,7 +1162,7 @@ sub cancel {
                   ->get_PrimaryErrorCode()->get_Description->get_value);
         }
         catch {
-            warn $_;
+            #warn $_;
             warn $response->get_faultstring;
             $self->error($response->get_faultstring->get_value);
         };
@@ -1087,7 +1190,7 @@ Shipment::UPS
 
 =head1 VERSION
 
-version 0.17
+version 0.18
 
 =head1 SYNOPSIS
 
@@ -1207,6 +1310,10 @@ UPS does offer additional thermal options:
 =head2 default currency
 
 The default currency is USD
+
+=head2 surepost
+
+Enable UPS SurePost
 
 =head1 Class Methods
 

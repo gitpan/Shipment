@@ -1,6 +1,6 @@
 
 package Shipment::UPS::WSDL::RateTypemaps::RateService;
-$Shipment::UPS::WSDL::RateTypemaps::RateService::VERSION = '0.17';
+$Shipment::UPS::WSDL::RateTypemaps::RateService::VERSION = '0.18';
 use strict;
 use warnings;
 
@@ -70,6 +70,8 @@ our $typemap_1 = {
       'SOAP::WSDL::XSD::Typelib::Builtin::string',
     'RateResponse/RatedShipment/RatedPackage/TransportationCharges' =>
       'Shipment::UPS::WSDL::RateTypes::ChargesType',
+    'RateResponse/RatedShipment/RatedPackage/SurePostDasCharges' =>
+      'Shipment::UPS::WSDL::RateTypes::ChargesType',
     'RateRequest/Shipment/Package/Dimensions/Width' =>
       'SOAP::WSDL::XSD::Typelib::Builtin::string',
     'RateRequest/Shipment/Package/PackageServiceOptions/DeclaredValue/CurrencyCode'
@@ -92,6 +94,8 @@ our $typemap_1 = {
     'RateRequest/PickupType' =>
       'Shipment::UPS::WSDL::RateTypes::CodeDescriptionType',
     'RateResponse/RatedShipment/RatedPackage/TransportationCharges/MonetaryValue'
+      => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
+    'RateResponse/RatedShipment/RatedPackage/SurePostDasCharges/MonetaryValue'
       => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
     'RateResponse/RatedShipment/RatedShipmentAlert' =>
       'Shipment::UPS::WSDL::RateTypes::RatedShipmentInfoType',
@@ -266,6 +270,8 @@ our $typemap_1 = {
       'SOAP::WSDL::XSD::Typelib::Builtin::string',
     'RateResponse/RatedShipment/RatedPackage/TransportationCharges/CurrencyCode'
       => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
+    'RateResponse/RatedShipment/RatedPackage/SurePostDasCharges/CurrencyCode'
+      => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
     'RateRequest/Shipment/Package/PackageWeight' =>
       'Shipment::UPS::WSDL::RateTypes::PackageWeightType',
     'RateResponse/Response/ResponseStatus' =>
@@ -431,7 +437,7 @@ Shipment::UPS::WSDL::RateTypemaps::RateService
 
 =head1 VERSION
 
-version 0.17
+version 0.18
 
 =head1 DESCRIPTION
 

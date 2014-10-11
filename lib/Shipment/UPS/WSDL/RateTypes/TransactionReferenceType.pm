@@ -1,5 +1,5 @@
 package Shipment::UPS::WSDL::RateTypes::TransactionReferenceType;
-$Shipment::UPS::WSDL::RateTypes::TransactionReferenceType::VERSION = '0.17';
+$Shipment::UPS::WSDL::RateTypes::TransactionReferenceType::VERSION = '0.18';
 use strict;
 use warnings;
 
@@ -62,7 +62,7 @@ Shipment::UPS::WSDL::RateTypes::TransactionReferenceType
 
 =head1 VERSION
 
-version 0.17
+version 0.18
 
 =head1 DESCRIPTION
 

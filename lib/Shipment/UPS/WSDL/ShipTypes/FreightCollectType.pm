@@ -1,5 +1,5 @@
 package Shipment::UPS::WSDL::ShipTypes::FreightCollectType;
-$Shipment::UPS::WSDL::ShipTypes::FreightCollectType::VERSION = '0.17';
+$Shipment::UPS::WSDL::ShipTypes::FreightCollectType::VERSION = '0.18';
 use strict;
 use warnings;
 
@@ -56,7 +56,7 @@ Shipment::UPS::WSDL::ShipTypes::FreightCollectType
 
 =head1 VERSION
 
-version 0.17
+version 0.18
 
 =head1 DESCRIPTION
 

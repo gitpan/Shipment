@@ -1,5 +1,5 @@
 package Shipment::FedEx::WSDL::RateTypes::UploadDocumentType;
-$Shipment::FedEx::WSDL::RateTypes::UploadDocumentType::VERSION = '0.17';
+$Shipment::FedEx::WSDL::RateTypes::UploadDocumentType::VERSION = '0.18';
 use strict;
 use warnings;
 
@@ -24,7 +24,7 @@ Shipment::FedEx::WSDL::RateTypes::UploadDocumentType
 
 =head1 VERSION
 
-version 0.17
+version 0.18
 
 =head1 DESCRIPTION
 

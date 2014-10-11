@@ -1,5 +1,5 @@
 package Shipment::FedEx::WSDL::ShipTypes::CreatePendingShipmentReply;
-$Shipment::FedEx::WSDL::ShipTypes::CreatePendingShipmentReply::VERSION = '0.17';
+$Shipment::FedEx::WSDL::ShipTypes::CreatePendingShipmentReply::VERSION = '0.18';
 use strict;
 use warnings;
 
@@ -80,7 +80,7 @@ Shipment::FedEx::WSDL::ShipTypes::CreatePendingShipmentReply
 
 =head1 VERSION
 
-version 0.17
+version 0.18
 
 =head1 DESCRIPTION
 

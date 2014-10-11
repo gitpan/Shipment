@@ -1,5 +1,5 @@
 package Shipment::UPS::WSDL::RateTypes::ClientInformationType;
-$Shipment::UPS::WSDL::RateTypes::ClientInformationType::VERSION = '0.17';
+$Shipment::UPS::WSDL::RateTypes::ClientInformationType::VERSION = '0.18';
 use strict;
 use warnings;
 
@@ -46,7 +46,7 @@ Class::Std::initialize();
 
 package Shipment::UPS::WSDL::RateTypes::ClientInformationType::_Property;
 $Shipment::UPS::WSDL::RateTypes::ClientInformationType::_Property::VERSION =
-  '0.17';
+  '0.18';
 use strict;
 use warnings;
 {
@@ -64,7 +64,7 @@ use warnings;
 
     package Shipment::UPS::WSDL::RateTypes::ClientInformationType::_Property::XmlAttr;
     $Shipment::UPS::WSDL::RateTypes::ClientInformationType::_Property::XmlAttr::VERSION
-      = '0.17';
+      = '0.18';
     use base qw(SOAP::WSDL::XSD::Typelib::AttributeSet);
 
     {    # BLOCK to scope variables
@@ -103,7 +103,7 @@ Shipment::UPS::WSDL::RateTypes::ClientInformationType
 
 =head1 VERSION
 
-version 0.17
+version 0.18
 
 =head1 DESCRIPTION
 

@@ -1,5 +1,5 @@
 package Shipment::Temando::WSDL::Interfaces::quoting_Service::quoting_port;
-$Shipment::Temando::WSDL::Interfaces::quoting_Service::quoting_port::VERSION = '0.17';
+$Shipment::Temando::WSDL::Interfaces::quoting_Service::quoting_port::VERSION = '0.18';
 use strict;
 use warnings;
 use Class::Std::Fast::Storable;
@@ -896,7 +896,7 @@ Shipment::Temando::WSDL::Interfaces::quoting_Service::quoting_port
 
 =head1 VERSION
 
-version 0.17
+version 0.18
 
 =head1 SYNOPSIS
 

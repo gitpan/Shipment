@@ -1,5 +1,5 @@
 package Shipment::UPS::WSDL::RateTypes::InvoiceLineTotalType;
-$Shipment::UPS::WSDL::RateTypes::InvoiceLineTotalType::VERSION = '0.17';
+$Shipment::UPS::WSDL::RateTypes::InvoiceLineTotalType::VERSION = '0.18';
 use strict;
 use warnings;
 
@@ -61,7 +61,7 @@ Shipment::UPS::WSDL::RateTypes::InvoiceLineTotalType
 
 =head1 VERSION
 
-version 0.17
+version 0.18
 
 =head1 DESCRIPTION
 

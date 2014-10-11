@@ -1,5 +1,5 @@
 package Shipment::FedEx::WSDL::ShipTypes::RegulatoryControlType;
-$Shipment::FedEx::WSDL::ShipTypes::RegulatoryControlType::VERSION = '0.17';
+$Shipment::FedEx::WSDL::ShipTypes::RegulatoryControlType::VERSION = '0.18';
 use strict;
 use warnings;
 
@@ -24,7 +24,7 @@ Shipment::FedEx::WSDL::ShipTypes::RegulatoryControlType
 
 =head1 VERSION
 
-version 0.17
+version 0.18
 
 =head1 DESCRIPTION
 

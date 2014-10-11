@@ -1,5 +1,5 @@
 package Shipment::FedEx::WSDL::RateTypes::ShippingDocumentEMailDetail;
-$Shipment::FedEx::WSDL::RateTypes::ShippingDocumentEMailDetail::VERSION = '0.17';
+$Shipment::FedEx::WSDL::RateTypes::ShippingDocumentEMailDetail::VERSION = '0.18';
 use strict;
 use warnings;
 
@@ -63,7 +63,7 @@ Shipment::FedEx::WSDL::RateTypes::ShippingDocumentEMailDetail
 
 =head1 VERSION
 
-version 0.17
+version 0.18
 
 =head1 DESCRIPTION
 

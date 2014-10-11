@@ -1,5 +1,5 @@
 package Shipment::FedEx::WSDL::CloseTypes::ReprintGroundCloseDocumentsOptionType;
-$Shipment::FedEx::WSDL::CloseTypes::ReprintGroundCloseDocumentsOptionType::VERSION = '0.17';
+$Shipment::FedEx::WSDL::CloseTypes::ReprintGroundCloseDocumentsOptionType::VERSION = '0.18';
 use strict;
 use warnings;
 
@@ -24,7 +24,7 @@ Shipment::FedEx::WSDL::CloseTypes::ReprintGroundCloseDocumentsOptionType
 
 =head1 VERSION
 
-version 0.17
+version 0.18
 
 =head1 DESCRIPTION
 

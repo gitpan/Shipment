@@ -1,5 +1,5 @@
 package Shipment::FedEx::WSDL::RateTypes::Money;
-$Shipment::FedEx::WSDL::RateTypes::Money::VERSION = '0.17';
+$Shipment::FedEx::WSDL::RateTypes::Money::VERSION = '0.18';
 use strict;
 use warnings;
 
@@ -61,7 +61,7 @@ Shipment::FedEx::WSDL::RateTypes::Money
 
 =head1 VERSION
 
-version 0.17
+version 0.18
 
 =head1 DESCRIPTION
 

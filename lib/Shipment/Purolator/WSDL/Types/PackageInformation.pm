@@ -1,5 +1,5 @@
 package Shipment::Purolator::WSDL::Types::PackageInformation;
-$Shipment::Purolator::WSDL::Types::PackageInformation::VERSION = '0.17';
+$Shipment::Purolator::WSDL::Types::PackageInformation::VERSION = '0.18';
 use strict;
 use warnings;
 
@@ -92,7 +92,7 @@ Shipment::Purolator::WSDL::Types::PackageInformation
 
 =head1 VERSION
 
-version 0.17
+version 0.18
 
 =head1 DESCRIPTION
 

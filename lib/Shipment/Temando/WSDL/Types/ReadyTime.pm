@@ -1,5 +1,5 @@
 package Shipment::Temando::WSDL::Types::ReadyTime;
-$Shipment::Temando::WSDL::Types::ReadyTime::VERSION = '0.17';
+$Shipment::Temando::WSDL::Types::ReadyTime::VERSION = '0.18';
 use strict;
 use warnings;
 
@@ -28,7 +28,7 @@ Shipment::Temando::WSDL::Types::ReadyTime
 
 =head1 VERSION
 
-version 0.17
+version 0.18
 
 =head1 DESCRIPTION
 

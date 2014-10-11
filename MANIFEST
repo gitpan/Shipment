@@ -1037,6 +1037,7 @@ lib/Shipment/UPS/WSDL/RateTypes/PackageServiceOptionsType.pm
 lib/Shipment/UPS/WSDL/RateTypes/PackageType.pm
 lib/Shipment/UPS/WSDL/RateTypes/PackageWeightType.pm
 lib/Shipment/UPS/WSDL/RateTypes/PayerAddressType.pm
+lib/Shipment/UPS/WSDL/RateTypes/PhoneType.pm
 lib/Shipment/UPS/WSDL/RateTypes/RatedPackageType.pm
 lib/Shipment/UPS/WSDL/RateTypes/RatedShipmentInfoType.pm
 lib/Shipment/UPS/WSDL/RateTypes/RatedShipmentType.pm
@@ -1045,6 +1046,7 @@ lib/Shipment/UPS/WSDL/RateTypes/ResponseType.pm
 lib/Shipment/UPS/WSDL/RateTypes/ScheduleType.pm
 lib/Shipment/UPS/WSDL/RateTypes/ShipFromType.pm
 lib/Shipment/UPS/WSDL/RateTypes/ShipToAddressType.pm
+lib/Shipment/UPS/WSDL/RateTypes/ShipToPhoneType.pm
 lib/Shipment/UPS/WSDL/RateTypes/ShipToType.pm
 lib/Shipment/UPS/WSDL/RateTypes/ShipmentChargesType.pm
 lib/Shipment/UPS/WSDL/RateTypes/ShipmentRatingOptionsType.pm
@@ -1179,3 +1181,5 @@ t/generic.t
 t/purolator.t
 t/temando.t
 t/ups.t
+t/ups_canada.t
+t/ups_surepost.t

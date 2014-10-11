@@ -1,5 +1,5 @@
 package Shipment::Temando::WSDL::Types::Extra;
-$Shipment::Temando::WSDL::Types::Extra::VERSION = '0.17';
+$Shipment::Temando::WSDL::Types::Extra::VERSION = '0.18';
 use strict;
 use warnings;
 
@@ -74,7 +74,7 @@ Class::Std::initialize();
 
 
 package Shipment::Temando::WSDL::Types::Extra::_adjustments;
-$Shipment::Temando::WSDL::Types::Extra::_adjustments::VERSION = '0.17';
+$Shipment::Temando::WSDL::Types::Extra::_adjustments::VERSION = '0.18';
 use strict;
 use warnings;
 {
@@ -127,7 +127,7 @@ Shipment::Temando::WSDL::Types::Extra
 
 =head1 VERSION
 
-version 0.17
+version 0.18
 
 =head1 DESCRIPTION
 

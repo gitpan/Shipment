@@ -1,5 +1,5 @@
 package Shipment::UPS::WSDL::RateTypes::RatedPackageType;
-$Shipment::UPS::WSDL::RateTypes::RatedPackageType::VERSION = '0.17';
+$Shipment::UPS::WSDL::RateTypes::RatedPackageType::VERSION = '0.18';
 use strict;
 use warnings;
 
@@ -23,6 +23,7 @@ Class::Std::initialize();
 {    # BLOCK to scope variables
 
     my %TransportationCharges_of : ATTR(:get<TransportationCharges>);
+    my %SurePostDasCharges_of : ATTR(:get<SurePostDasCharges>);
     my %ServiceOptionsCharges_of : ATTR(:get<ServiceOptionsCharges>);
     my %TotalCharges_of : ATTR(:get<TotalCharges>);
     my %Weight_of : ATTR(:get<Weight>);
@@ -30,6 +31,7 @@ Class::Std::initialize();
 
     __PACKAGE__->_factory(
         [   qw(        TransportationCharges
+              SurePostDasCharges
               ServiceOptionsCharges
               TotalCharges
               Weight
@@ -38,12 +40,15 @@ Class::Std::initialize();
               )
         ],
         {   'TransportationCharges' => \%TransportationCharges_of,
+            'SurePostDasCharges'    => \%SurePostDasCharges_of,
             'ServiceOptionsCharges' => \%ServiceOptionsCharges_of,
             'TotalCharges'          => \%TotalCharges_of,
             'Weight'                => \%Weight_of,
             'BillingWeight'         => \%BillingWeight_of,
         },
         {   'TransportationCharges' =>
+              'Shipment::UPS::WSDL::RateTypes::ChargesType',
+            'SurePostDasCharges' =>
               'Shipment::UPS::WSDL::RateTypes::ChargesType',
             'ServiceOptionsCharges' =>
               'Shipment::UPS::WSDL::RateTypes::ChargesType',
@@ -55,6 +60,7 @@ Class::Std::initialize();
         {
 
             'TransportationCharges' => 'TransportationCharges',
+            'SurePostDasCharges'    => 'SurePostDasCharges',
             'ServiceOptionsCharges' => 'ServiceOptionsCharges',
             'TotalCharges'          => 'TotalCharges',
             'Weight'                => 'Weight',
@@ -79,7 +85,7 @@ Shipment::UPS::WSDL::RateTypes::RatedPackageType
 
 =head1 VERSION
 
-version 0.17
+version 0.18
 
 =head1 DESCRIPTION
 

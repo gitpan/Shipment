@@ -1,5 +1,5 @@
 package Shipment::FedEx::WSDL::RateTypes::HoldAtLocationDetail;
-$Shipment::FedEx::WSDL::RateTypes::HoldAtLocationDetail::VERSION = '0.17';
+$Shipment::FedEx::WSDL::RateTypes::HoldAtLocationDetail::VERSION = '0.18';
 use strict;
 use warnings;
 
@@ -78,7 +78,7 @@ Shipment::FedEx::WSDL::RateTypes::HoldAtLocationDetail
 
 =head1 VERSION
 
-version 0.17
+version 0.18
 
 =head1 DESCRIPTION
 

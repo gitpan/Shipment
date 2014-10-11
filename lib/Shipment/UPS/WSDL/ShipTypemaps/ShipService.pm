@@ -1,6 +1,6 @@
 
 package Shipment::UPS::WSDL::ShipTypemaps::ShipService;
-$Shipment::UPS::WSDL::ShipTypemaps::ShipService::VERSION = '0.17';
+$Shipment::UPS::WSDL::ShipTypemaps::ShipService::VERSION = '0.18';
 use strict;
 use warnings;
 
@@ -1530,6 +1530,8 @@ our $typemap_1 = {
       => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
     'ShipmentResponse/ShipmentResults/PackageResults/ServiceOptionsCharges/MonetaryValue'
       => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
+    'ShipmentResponse/ShipmentResults/PackageResults/SurePostDasCharges/MonetaryValue'
+      => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
     'ShipmentResponse/ShipmentResults/PackageResults/TrackingNumber' =>
       'SOAP::WSDL::XSD::Typelib::Builtin::string',
     'ShipmentResponse/ShipmentResults/HighValueReport/Image/ImageFormat/Description'
@@ -1872,6 +1874,8 @@ our $typemap_1 = {
       => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
     'ShipmentResponse/ShipmentResults/PackageResults/ServiceOptionsCharges/CurrencyCode'
       => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
+    'ShipmentResponse/ShipmentResults/PackageResults/SurePostDasCharges/CurrencyCode'
+      => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
     'Errors' => 'Shipment::UPS::WSDL::ShipElements::Errors',
     'ShipAcceptResponse/ShipmentResults/PackageResults/ShippingLabel/HTMLImage'
       => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
@@ -2061,6 +2065,8 @@ our $typemap_1 = {
       'Shipment::UPS::WSDL::ShipTypes::ShipUnitOfMeasurementType',
     'ShipmentResponse/ShipmentResults/PackageResults/ServiceOptionsCharges' =>
       'Shipment::UPS::WSDL::ShipTypes::ShipChargeType',
+    'ShipmentResponse/ShipmentResults/PackageResults/SurePostDasCharges' =>
+      'Shipment::UPS::WSDL::ShipTypes::ShipChargeType',
     'ShipConfirmResponse' =>
       'Shipment::UPS::WSDL::ShipElements::ShipConfirmResponse',
     'ShipConfirmResponse/ShipmentResults/FRSShipmentData/TransportationCharges'
@@ -2118,7 +2124,7 @@ Shipment::UPS::WSDL::ShipTypemaps::ShipService
 
 =head1 VERSION
 
-version 0.17
+version 0.18
 
 =head1 DESCRIPTION
 
